@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-18T00:00:00.000Z",
+  "images": {
+    "portrait": {
+      "section": "首頁",
+      "label": "首頁人物主視覺",
+      "recommended": "建議至少 2200 × 2400，JPG 或 WebP",
+      "src": "assets/images/original/portrait.jpg"
+    },
+    "workshop": {
+      "section": "首頁",
+      "label": "About 區塊人物照",
+      "recommended": "建議至少 2000 × 2000，JPG 或 WebP",
+      "src": "assets/images/original/workshop.jpg"
+    },
+    "ferqoHero": {
+      "section": "Ferqo",
+      "label": "首頁卡片與案例首圖",
+      "recommended": "建議至少 2400 × 1800，16:10 或 4:3",
+      "src": "assets/images/original/ferqoHero.jpg"
+    },
+    "ferqoArtifact": {
+      "section": "Ferqo",
+      "label": "完整專案板",
+      "recommended": "建議寬度至少 2400px；長圖可用 WebP",
+      "src": "assets/images/original/ferqoArtifact.jpg"
+    },
+    "ferqoProcess1": {
+      "section": "Ferqo",
+      "label": "01 挑戰",
+      "recommended": "建議至少 2400px 寬，16:10 或 4:3",
+      "src": "assets/images/original/ferqoProcess1.jpg"
+    },
+    "ferqoProcess2": {
+      "section": "Ferqo",
+      "label": "02 研究洞察",
+      "recommended": "建議至少 2400px 寬，16:10 或 4:3",
+      "src": "assets/images/original/ferqoProcess2.jpg"
+    },
+    "ferqoProcess3": {
+      "section": "Ferqo",
+      "label": "03 設計決策",
+      "recommended": "建議至少 2400px 寬，16:10 或 4:3",
+      "src": "assets/images/original/ferqoProcess3.jpg"
+    },
+    "insuranceHero": {
+      "section": "Insurance SaaS",
+      "label": "首頁卡片與案例首圖",
+      "recommended": "建議至少 2400 × 1800，16:10 或 4:3",
+      "src": "assets/images/original/insuranceHero.jpg"
+    },
+    "insuranceArtifact": {
+      "section": "Insurance SaaS",
+      "label": "完整專案板",
+      "recommended": "建議寬度至少 2400px；長圖可用 WebP",
+      "src": "assets/images/original/insuranceArtifact.jpg"
+    },
+    "insuranceProcess1": {
+      "section": "Insurance SaaS",
+      "label": "01 背景",
+      "recommended": "建議至少 2400px 寬，16:10 或 4:3",
+      "src": "assets/images/original/insuranceProcess1.jpg"
+    },
+    "insuranceProcess2": {
+      "section": "Insurance SaaS",
+      "label": "02 研究與架構",
+      "recommended": "建議至少 2400px 寬，16:10 或 4:3",
+      "src": "assets/images/original/insuranceProcess2.jpg"
+    },
+    "insuranceProcess3": {
+      "section": "Insurance SaaS",
+      "label": "03 核心策略",
+      "recommended": "建議至少 2400px 寬，16:10 或 4:3",
+      "src": "assets/images/original/insuranceProcess3.jpg"
+    },
+    "onesleeveHero": {
+      "section": "OneSleeve",
+      "label": "首頁卡片與案例首圖",
+      "recommended": "建議至少 2400 × 1800，16:10 或 4:3",
+      "src": "assets/images/original/onesleeveHero.jpg"
+    },
+    "onesleeveArtifact": {
+      "section": "OneSleeve",
+      "label": "完整專案板",
+      "recommended": "建議寬度至少 2400px；長圖可用 WebP",
+      "src": "assets/images/original/onesleeveArtifact.jpg"
+    },
+    "onesleeveProcess1": {
+      "section": "OneSleeve",
+      "label": "01 挑戰",
+      "recommended": "建議至少 2400px 寬，16:10 或 4:3",
+      "src": "assets/images/original/onesleeveProcess1.jpg"
+    },
+    "onesleeveProcess2": {
+      "section": "OneSleeve",
+      "label": "02 策略",
+      "recommended": "建議至少 2400px 寬，16:10 或 4:3",
+      "src": "assets/images/original/onesleeveProcess2.jpg"
+    },
+    "onesleeveProcess3": {
+      "section": "OneSleeve",
+      "label": "03 系統基礎",
+      "recommended": "建議至少 2400px 寬，16:10 或 4:3",
+      "src": "assets/images/original/onesleeveProcess3.jpg"
+    },
+    "alphacampHero": {
+      "section": "ALPHA Camp",
+      "label": "首頁卡片與案例首圖",
+      "recommended": "建議至少 2400 × 1800，16:10 或 4:3",
+      "src": "assets/images/original/alphacampHero.jpg"
+    },
+    "alphacampArtifact": {
+      "section": "ALPHA Camp",
+      "label": "完整專案板",
+      "recommended": "建議寬度至少 2400px；長圖可用 WebP",
+      "src": "assets/images/original/alphacampArtifact.jpg"
+    },
+    "alphacampProcess1": {
+      "section": "ALPHA Camp",
+      "label": "01 定義與探索",
+      "recommended": "建議至少 2400px 寬，16:10 或 4:3",
+      "src": "assets/images/original/alphacampProcess1.jpg"
+    },
+    "alphacampProcess2": {
+      "section": "ALPHA Camp",
+      "label": "02 核心洞察",
+      "recommended": "建議至少 2400px 寬，16:10 或 4:3",
+      "src": "assets/images/original/alphacampProcess2.jpg"
+    },
+    "alphacampProcess3": {
+      "section": "ALPHA Camp",
+      "label": "03 概念策略",
+      "recommended": "建議至少 2400px 寬，16:10 或 4:3",
+      "src": "assets/images/original/alphacampProcess3.jpg"
+    }
+  }
+}
