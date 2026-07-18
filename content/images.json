@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-18T12:00:00+08:00",
+  "updatedAt": "2026-07-18T20:05:00+08:00",
   "images": {
     "portrait": {
       "section": "首頁",
@@ -18,7 +18,7 @@
       "section": "Ferqo",
       "label": "首頁卡片與案例首圖",
       "recommended": "建議至少 2400 × 1800，16:10 或 4:3",
-      "src": "assets/images/original/ferqoHero.jpg"
+      "src": "assets/images/original/ferqoHero.png"
     },
     "ferqoArtifact": {
       "section": "Ferqo",
@@ -30,19 +30,73 @@
       "section": "Ferqo",
       "label": "01 挑戰",
       "recommended": "建議至少 2400px 寬，16:10 或 4:3",
-      "src": "assets/images/original/ferqoProcess1.jpg"
+      "src": "assets/images/original/ferqoProcess1.png"
     },
     "ferqoProcess2": {
       "section": "Ferqo",
       "label": "02 研究洞察",
       "recommended": "建議至少 2400px 寬，16:10 或 4:3",
-      "src": "assets/images/original/ferqoProcess2.jpg"
+      "src": "assets/images/original/ferqoProcess2.png"
     },
     "ferqoProcess3": {
       "section": "Ferqo",
       "label": "03 設計決策",
       "recommended": "建議至少 2400px 寬，16:10 或 4:3",
-      "src": "assets/images/original/ferqoProcess3.jpg"
+      "src": "assets/images/original/ferqoProcess3.png"
+    },
+    "ferqoCompare": {
+      "section": "Ferqo",
+      "label": "01 平台限制比較",
+      "recommended": "建議至少 1500px 寬；透明 PNG",
+      "src": "assets/images/original/ferqoCompare.png"
+    },
+    "ferqoStructure": {
+      "section": "Ferqo",
+      "label": "02 系統架構",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/ferqoStructure.png"
+    },
+    "ferqoUserFlow": {
+      "section": "Ferqo",
+      "label": "03 使用者流程",
+      "recommended": "建議至少 1500px 寬；長圖 PNG",
+      "src": "assets/images/original/ferqoUserFlow.png"
+    },
+    "ferqoExplain1": {
+      "section": "Ferqo",
+      "label": "03 Room-based 設計說明",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/ferqoExplain1.png"
+    },
+    "ferqoRevamp": {
+      "section": "Ferqo",
+      "label": "04 最終介面主視覺",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/ferqoRevamp.png"
+    },
+    "ferqoExplain2": {
+      "section": "Ferqo",
+      "label": "04 裝置控制說明",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/ferqoExplain2.png"
+    },
+    "ferqoExplain3": {
+      "section": "Ferqo",
+      "label": "04 Widget 情境控制",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/ferqoExplain3.png"
+    },
+    "ferqoDesignSystem": {
+      "section": "Ferqo",
+      "label": "04 Design System",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/ferqoDesignSystem.png"
+    },
+    "ferqoScreenOverview": {
+      "section": "Ferqo",
+      "label": "04 Screen Overview",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/ferqoScreenOverview.png"
     },
     "insuranceHero": {
       "section": "Insurance SaaS",
