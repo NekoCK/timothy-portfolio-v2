@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-18T20:05:00+08:00",
+  "updatedAt": "2026-07-18T20:18:00+08:00",
   "images": {
     "portrait": {
       "section": "首頁",
@@ -102,7 +102,7 @@
       "section": "Insurance SaaS",
       "label": "首頁卡片與案例首圖",
       "recommended": "建議至少 2400 × 1800，16:10 或 4:3",
-      "src": "assets/images/original/insuranceHero.jpg"
+      "src": "assets/images/original/insuranceHero.png"
     },
     "insuranceArtifact": {
       "section": "Insurance SaaS",
@@ -114,19 +114,103 @@
       "section": "Insurance SaaS",
       "label": "01 背景",
       "recommended": "建議至少 2400px 寬，16:10 或 4:3",
-      "src": "assets/images/original/insuranceProcess1.jpg"
+      "src": "assets/images/original/insuranceProcess1.png"
     },
     "insuranceProcess2": {
       "section": "Insurance SaaS",
       "label": "02 研究與架構",
       "recommended": "建議至少 2400px 寬，16:10 或 4:3",
-      "src": "assets/images/original/insuranceProcess2.jpg"
+      "src": "assets/images/original/insuranceProcess2.png"
     },
     "insuranceProcess3": {
       "section": "Insurance SaaS",
       "label": "03 核心策略",
       "recommended": "建議至少 2400px 寬，16:10 或 4:3",
-      "src": "assets/images/original/insuranceProcess3.jpg"
+      "src": "assets/images/original/insuranceProcess3.png"
+    },
+    "insuranceIxtIntro": {
+      "section": "Insurance SaaS",
+      "label": "01 IXT 專案背景",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/insuranceIxtIntro.png"
+    },
+    "insuranceCompetitive": {
+      "section": "Insurance SaaS",
+      "label": "01 競品研究",
+      "recommended": "建議至少 1700px 寬；PNG",
+      "src": "assets/images/original/insuranceCompetitive.png"
+    },
+    "insuranceRichmond": {
+      "section": "Insurance SaaS",
+      "label": "01 Richmond 市場介面",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/insuranceRichmond.png"
+    },
+    "insuranceSplitFlow": {
+      "section": "Insurance SaaS",
+      "label": "02 長流程拆分",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/insuranceSplitFlow.png"
+    },
+    "insuranceTaskCentered": {
+      "section": "Insurance SaaS",
+      "label": "02 Task-centered 表單",
+      "recommended": "建議至少 800px 寬；PNG",
+      "src": "assets/images/original/insuranceTaskCentered.png"
+    },
+    "insuranceModular": {
+      "section": "Insurance SaaS",
+      "label": "02 模組化內容",
+      "recommended": "建議至少 760px 寬；PNG",
+      "src": "assets/images/original/insuranceModular.png"
+    },
+    "insuranceColorVariant": {
+      "section": "Insurance SaaS",
+      "label": "03 色彩變體",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/insuranceColorVariant.png"
+    },
+    "insuranceDesignSystem": {
+      "section": "Insurance SaaS",
+      "label": "03 Design System",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/insuranceDesignSystem.png"
+    },
+    "insuranceCaseStudies": {
+      "section": "Insurance SaaS",
+      "label": "04 案例畫面",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/insuranceCaseStudies.png"
+    },
+    "insuranceResult1": {
+      "section": "Insurance SaaS",
+      "label": "04 Light Theme 結果",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/insuranceResult1.png"
+    },
+    "insuranceResult2": {
+      "section": "Insurance SaaS",
+      "label": "04 Charcoal Theme 結果",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/insuranceResult2.png"
+    },
+    "insuranceResult3": {
+      "section": "Insurance SaaS",
+      "label": "04 Blue Theme 結果",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/insuranceResult3.png"
+    },
+    "insuranceMarsh": {
+      "section": "Insurance SaaS",
+      "label": "04 Marsh 客戶案例",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/insuranceMarsh.png"
+    },
+    "insuranceShinKong": {
+      "section": "Insurance SaaS",
+      "label": "04 Shin Kong 客戶案例",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/insuranceShinKong.png"
     },
     "onesleeveHero": {
       "section": "OneSleeve",
