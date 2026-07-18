@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-18T00:00:00.000Z",
+  "updatedAt": "2026-07-18T12:00:00+08:00",
   "images": {
     "portrait": {
       "section": "首頁",
@@ -24,7 +24,7 @@
       "section": "Ferqo",
       "label": "完整專案板",
       "recommended": "建議寬度至少 2400px；長圖可用 WebP",
-      "src": "assets/images/original/ferqoArtifact.jpg"
+      "src": "assets/images/original/ferqoArtifact.png"
     },
     "ferqoProcess1": {
       "section": "Ferqo",
@@ -54,7 +54,7 @@
       "section": "Insurance SaaS",
       "label": "完整專案板",
       "recommended": "建議寬度至少 2400px；長圖可用 WebP",
-      "src": "assets/images/original/insuranceArtifact.jpg"
+      "src": "assets/images/original/insuranceArtifact.png"
     },
     "insuranceProcess1": {
       "section": "Insurance SaaS",
@@ -84,7 +84,7 @@
       "section": "OneSleeve",
       "label": "完整專案板",
       "recommended": "建議寬度至少 2400px；長圖可用 WebP",
-      "src": "assets/images/original/onesleeveArtifact.jpg"
+      "src": "assets/images/original/onesleeveArtifact.png"
     },
     "onesleeveProcess1": {
       "section": "OneSleeve",
@@ -114,7 +114,7 @@
       "section": "ALPHA Camp",
       "label": "完整專案板",
       "recommended": "建議寬度至少 2400px；長圖可用 WebP",
-      "src": "assets/images/original/alphacampArtifact.jpg"
+      "src": "assets/images/original/alphacampArtifact.png"
     },
     "alphacampProcess1": {
       "section": "ALPHA Camp",
