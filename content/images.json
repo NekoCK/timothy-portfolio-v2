@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-18T20:18:00+08:00",
+  "updatedAt": "2026-07-18T20:42:00+08:00",
   "images": {
     "portrait": {
       "section": "首頁",
@@ -216,7 +216,7 @@
       "section": "OneSleeve",
       "label": "首頁卡片與案例首圖",
       "recommended": "建議至少 2400 × 1800，16:10 或 4:3",
-      "src": "assets/images/original/onesleeveHero.jpg"
+      "src": "assets/images/original/onesleeveHero.png"
     },
     "onesleeveArtifact": {
       "section": "OneSleeve",
@@ -228,19 +228,85 @@
       "section": "OneSleeve",
       "label": "01 挑戰",
       "recommended": "建議至少 2400px 寬，16:10 或 4:3",
-      "src": "assets/images/original/onesleeveProcess1.jpg"
+      "src": "assets/images/original/onesleeveProcess1.png"
     },
     "onesleeveProcess2": {
       "section": "OneSleeve",
       "label": "02 策略",
       "recommended": "建議至少 2400px 寬，16:10 或 4:3",
-      "src": "assets/images/original/onesleeveProcess2.jpg"
+      "src": "assets/images/original/onesleeveProcess2.png"
     },
     "onesleeveProcess3": {
       "section": "OneSleeve",
       "label": "03 系統基礎",
       "recommended": "建議至少 2400px 寬，16:10 或 4:3",
-      "src": "assets/images/original/onesleeveProcess3.jpg"
+      "src": "assets/images/original/onesleeveProcess3.png"
+    },
+    "onesleeveAdoption": {
+      "section": "OneSleeve",
+      "label": "02 導入模型",
+      "recommended": "建議至少 1400px 寬；透明 PNG",
+      "src": "assets/images/original/onesleeveAdoption.png"
+    },
+    "onesleeveCooperation": {
+      "section": "OneSleeve",
+      "label": "02 跨團隊協作流程",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/onesleeveCooperation.png"
+    },
+    "onesleeveBrandColor": {
+      "section": "OneSleeve",
+      "label": "03 品牌基礎色",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/onesleeveBrandColor.png"
+    },
+    "onesleeveCymetricsPanel": {
+      "section": "OneSleeve",
+      "label": "03 Cymetrics Token Panel",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/onesleeveCymetricsPanel.png"
+    },
+    "onesleeveVulcanPanel": {
+      "section": "OneSleeve",
+      "label": "03 Vulcan Token Panel",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/onesleeveVulcanPanel.png"
+    },
+    "onesleeveUseCase": {
+      "section": "OneSleeve",
+      "label": "03 元件 Use Case",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/onesleeveUseCase.png"
+    },
+    "onesleeveResult1": {
+      "section": "OneSleeve",
+      "label": "04 元件庫總覽",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/onesleeveResult1.png"
+    },
+    "onesleeveResult2": {
+      "section": "OneSleeve",
+      "label": "04 Vulcan Profile List",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/onesleeveResult2.png"
+    },
+    "onesleeveResult4": {
+      "section": "OneSleeve",
+      "label": "04 Vulcan Threat Settings",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/onesleeveResult4.png"
+    },
+    "onesleeveResult5": {
+      "section": "OneSleeve",
+      "label": "04 Cymetrics Dashboard",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/onesleeveResult5.png"
+    },
+    "onesleeveResult6": {
+      "section": "OneSleeve",
+      "label": "04 Cymetrics Partner Table",
+      "recommended": "建議至少 1500px 寬；PNG",
+      "src": "assets/images/original/onesleeveResult6.png"
     },
     "alphacampHero": {
       "section": "ALPHA Camp",
