@@ -157,7 +157,7 @@
     return `<article class="media-item" data-layout="${escapeHtml(item.layout || "wide")}">
       <div class="media-item__preview"><img src="${escapeHtml(source)}" alt="${escapeHtml(item.alt || item.caption || "Section image")}"></div>
       <div class="media-item__body">
-        <div class="media-item__toolbar"><strong>圖片 ${mediaIndex + 1}</strong><select data-bind="sections.${sectionIndex}.media.${mediaIndex}.layout"><option value="wide"${(item.layout || "wide") === "wide" ? " selected" : ""}>全寬</option><option value="half"${item.layout === "half" ? " selected" : ""}>半寬</option><option value="portrait"${item.layout === "portrait" ? " selected" : ""}>直式置中</option></select></div>
+        <div class="media-item__toolbar"><strong>圖片 ${mediaIndex + 1}</strong><select data-bind="sections.${sectionIndex}.media.${mediaIndex}.layout"><option value="wide"${(item.layout || "wide") === "wide" ? " selected" : ""}>全寬</option><option value="compact"${item.layout === "compact" ? " selected" : ""}>內縮寬</option><option value="half"${item.layout === "half" ? " selected" : ""}>半寬（連續兩張並排）</option><option value="portrait"${item.layout === "portrait" ? " selected" : ""}>直式置中</option></select></div>
         <div class="media-fields">
           ${field("圖片說明", `sections.${sectionIndex}.media.${mediaIndex}.caption`, item.caption || "", { textarea: true })}
           ${field("替代文字（無障礙）", `sections.${sectionIndex}.media.${mediaIndex}.alt`, item.alt || "")}
@@ -191,7 +191,7 @@
         </div>
         <div class="subheading"><h3>重點卡片</h3><button class="button button--secondary" type="button" data-add-point data-section-index="${sectionIndex}">＋ 新增重點</button></div>
         <div class="point-list">${points.map((point, index) => pointMarkup(point, sectionIndex, index)).join("")}</div>
-        <div class="subheading"><div><h3>Section 圖片</h3><span>${media.length} 張；全寬圖片能保持案例頁最一致的視覺節奏。</span></div><button class="button button--primary" type="button" data-add-media data-section-index="${sectionIndex}">＋ 新增圖片</button></div>
+        <div class="subheading"><div><h3>Section 圖片</h3><span>${media.length} 張；可用全寬、內縮、半寬成對或直式置中建立案例敘事節奏。</span></div><button class="button button--primary" type="button" data-add-media data-section-index="${sectionIndex}">＋ 新增圖片</button></div>
         <div class="media-list">${media.length ? media.map((item, index) => mediaMarkup(item, sectionIndex, index)).join("") : `<div class="empty-media">這個 section 還沒有圖片，可以從右上方新增。</div>`}</div>
       </div>
     </section>`;
