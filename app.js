@@ -321,16 +321,6 @@
           </div>
         </section>
 
-        <section class="source-section">
-          <div class="shell">
-            <header class="source-header reveal"><div><span class="eyebrow">${escapeHtml(ui.sourceBoard)}</span><h2>${escapeHtml(ui.sourceBoardTitle)}</h2></div><p>${escapeHtml(ui.sourceBoardBody)}</p></header>
-            <div class="source-frame reveal">
-              <button type="button" data-zoom-src="${escapeHtml(project.sourceBoard)}" data-zoom-caption="${escapeHtml(`${project.name} — ${ui.sourceBoard}`)}" aria-label="${escapeHtml(ui.openBoard)}"><img src="${escapeHtml(project.sourceBoard)}" alt="${escapeHtml(`${project.name} — ${ui.sourceBoard}`)}" loading="lazy"></button>
-              <div class="source-actions"><span class="button button-secondary" aria-hidden="true">${escapeHtml(ui.openBoard)} ↗</span></div>
-            </div>
-          </div>
-        </section>
-
         ${renderRelated(slug)}
 
         <section class="section section-tight">
