@@ -196,7 +196,7 @@
                 },
                 {
                   "asset": "assets/images/original/ferqoProcess3.png",
-                  "layout": "wide",
+                  "layout": "portrait",
                   "caption": "Legacy and redesigned structures: device categories become room and scenario entry points.",
                   "alt": "Legacy and redesigned structures: device categories become room and scenario entry points."
                 }
@@ -207,21 +207,23 @@
               "label": "Research & key insight",
               "title": "The stable mental model was the home—not the technology inside it.",
               "body": [
-                "Contextual interviews and scenario walkthroughs focused on what people were trying to accomplish before asking how they used a specific device. Across nine interviews, users described rooms, household members, time, and routines far more naturally than protocols or product categories.",
-                "This reframed the core problem: the interface did not need a better device catalogue. It needed to translate technical capability into the language of daily life."
+                "Contextual interviews and scenario walkthroughs captured the language of residents, installers, customer support, product, and engineering. Residents described rooms, people, time, and routines; internal teams surfaced setup risk, vendor constraints, and the cost of supporting exceptions.",
+                "Those views did not point to one obvious answer. Users wanted simplicity, the business wanted ecosystem breadth, and engineering needed an MVP that could work across uneven device capabilities.",
+                "I synthesized the evidence into four decision criteria—frequency, cognitive load, technical feasibility, and clarity of feedback. The common ground was the home itself: a stable mental model that could absorb vendor complexity without exposing it."
               ],
+              "quote": "The final direction was not one stakeholder’s preferred structure. It was the smallest shared model that every group could support.",
               "points": [
                 {
-                  "title": "Context over control",
-                  "text": "Users wanted the right setting for the moment, not more switches."
+                  "title": "Household language",
+                  "text": "Residents organized intentions by room, moment, and routine—not by protocol."
                 },
                 {
-                  "title": "Trust through feedback",
-                  "text": "Clear state and predictable behavior mattered more than feature count."
+                  "title": "Platform reality",
+                  "text": "Engineering identified where cross-vendor behavior could be consistent and where it could not."
                 },
                 {
-                  "title": "Flexible routines",
-                  "text": "Automations needed to adapt to people instead of forcing rigid scripts."
+                  "title": "Shared criteria",
+                  "text": "The team judged options by daily value, learnability, feasibility, and trustworthy feedback."
                 }
               ],
               "image": "ferqoProcess2",
@@ -240,9 +242,11 @@
               "label": "Design decision",
               "title": "Shift the primary navigation from devices to rooms and scenarios.",
               "body": [
-                "The new information architecture organized the system around Home → Rooms → Scenarios → Devices. Rooms became the primary entry point; devices remained available as supporting detail rather than the first decision.",
-                "I worked with engineering to separate the interaction model from vendor protocols. That let the MVP support a coherent experience while technical integrations could continue to expand underneath it."
+                "Co-design reviews compared device-first, room-first, and scenario-first models against the shared criteria. Product protected the long-term ecosystem vision, support highlighted recovery and setup problems, and engineering marked the boundaries of the current platform.",
+                "The resulting architecture organized the experience around Home → Rooms → Scenarios → Devices. Rooms provided the most understandable default, scenarios supported repeated intentions, and devices remained available as progressive detail.",
+                "Separating the interaction model from vendor protocols gave the MVP a coherent experience now, while leaving a clear path for deeper integrations later."
               ],
+              "quote": "Synthesis turned competing requests into a hierarchy: daily intent first, automation second, technical detail on demand.",
               "points": [
                 {
                   "title": "Room-first overview",
@@ -262,19 +266,19 @@
               "media": [
                 {
                   "asset": "assets/images/original/ferqoUserFlow.png",
-                  "layout": "wide",
+                  "layout": "portrait",
                   "caption": "The revised flow organizes entry points around home, rooms, scenes, and device detail.",
                   "alt": "The revised flow organizes entry points around home, rooms, scenes, and device detail."
                 },
                 {
                   "asset": "assets/images/original/ferqoStructure.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "The service architecture aligned software, SDK, cloud, and hardware dependencies.",
                   "alt": "The service architecture aligned software, SDK, cloud, and hardware dependencies."
                 },
                 {
                   "asset": "assets/images/original/ferqoCompare.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "Feasibility boundaries clarified what the MVP could support without custom API UIs or BLE auto-room switching.",
                   "alt": "Feasibility boundaries clarified what the MVP could support without custom API UIs or BLE auto-room switching."
                 }
@@ -307,13 +311,13 @@
               "media": [
                 {
                   "asset": "assets/images/original/ferqoExplain1.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "Room-based logic, habit-based ordering, and larger touch targets made whole-home control easier to understand.",
                   "alt": "Room-based logic, habit-based ordering, and larger touch targets made whole-home control easier to understand."
                 },
                 {
                   "asset": "assets/images/original/ferqoExplain2.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "All-in-one controls reduced page switching while allowing personalized remote layouts.",
                   "alt": "All-in-one controls reduced page switching while allowing personalized remote layouts."
                 },
@@ -325,19 +329,19 @@
                 },
                 {
                   "asset": "assets/images/original/ferqoRevamp.png",
-                  "layout": "wide",
+                  "layout": "portrait",
                   "caption": "The evolved product direction moved from a legacy control panel to a calmer consumer experience.",
                   "alt": "The evolved product direction moved from a legacy control panel to a calmer consumer experience."
                 },
                 {
                   "asset": "assets/images/original/ferqoScreenOverview.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "Screen overview covering setup, scenes, controls, and supporting states.",
                   "alt": "Screen overview covering setup, scenes, controls, and supporting states."
                 },
                 {
                   "asset": "assets/images/original/ferqoDesignSystem.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "Reusable controls and visual foundations kept a diverse device ecosystem consistent.",
                   "alt": "Reusable controls and visual foundations kept a diverse device ecosystem consistent."
                 }
@@ -420,13 +424,13 @@
                 },
                 {
                   "asset": "assets/images/original/insuranceProcess1.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "The architecture had to satisfy vendor visibility and consumer comprehension at the same time.",
                   "alt": "The architecture had to satisfy vendor visibility and consumer comprehension at the same time."
                 },
                 {
                   "asset": "assets/images/original/insuranceCompetitive.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "Competitive analysis separated required information, filling flow, and brand expectations.",
                   "alt": "Competitive analysis separated required information, filling flow, and brand expectations."
                 }
@@ -437,21 +441,23 @@
               "label": "Research & architecture",
               "title": "Model the policy lifecycle before designing individual pages.",
               "body": [
-                "Workshops with business and engineering turned disconnected requirements into a shared service blueprint. We mapped quote creation, data enrichment, risk review, referral, binding, issuance, endorsement, and renewal as one connected lifecycle.",
-                "That map exposed which decisions were universal and which should remain configurable. It became the foundation for both the product architecture and the team’s delivery plan."
+                "Workshops brought together brokers, insurers, operations, legal and compliance, cybersecurity partners, and engineering. Each group described a different definition of a complete journey: conversion, auditability, regulatory visibility, data quality, or implementation speed.",
+                "I mapped quote creation, enrichment, risk review, referral, binding, issuance, endorsement, and renewal as one shared lifecycle, then separated non-negotiable controls from market-specific variation.",
+                "This synthesis made disagreements explicit and gave the team a common decision surface. Universal states became the product core; brand, wording, evidence, and program rules became configurable edges."
               ],
+              "quote": "The lifecycle map became the agreement: one operational truth, translated for each role and market.",
               "points": [
                 {
-                  "title": "Canonical states",
-                  "text": "Every role saw the same underlying policy status, translated for its context."
+                  "title": "Non-negotiables",
+                  "text": "Legal, compliance, and underwriting controls remained visible and traceable."
                 },
                 {
-                  "title": "Configurable rules",
-                  "text": "Market and program differences were expressed as configuration, not duplicated flows."
+                  "title": "Shared core",
+                  "text": "Every role worked from the same policy states, ownership, and missing information."
                 },
                 {
-                  "title": "Clear handoffs",
-                  "text": "Ownership and missing information were visible at every transition."
+                  "title": "Configurable edges",
+                  "text": "Market, program, and partner differences changed configuration instead of duplicating flows."
                 }
               ],
               "image": "insuranceProcess2",
@@ -482,8 +488,9 @@
               "label": "Core strategy",
               "title": "Build reusable workflow primitives instead of one rigid insurance journey.",
               "body": [
-                "The product was structured around reusable forms, tasks, decision states, evidence requests, and approvals. These primitives could support different cyber-insurance programs while preserving one interaction language.",
-                "Customer-facing flows emphasized progressive disclosure; operational views emphasized exceptions, queue health, and traceability."
+                "The agreed lifecycle was translated into reusable forms, tasks, decision states, evidence requests, and approvals. Instead of averaging every stakeholder request into a crowded page, each surface emphasized the decision its role needed to make.",
+                "Customer flows used progressive disclosure and plain-language rationale. Operations views prioritized exceptions, ownership, queue health, and traceability. Shared primitives kept both views connected to the same source of truth.",
+                "This gave partners room to express their market and brand while protecting the interaction model, compliance controls, and delivery speed."
               ],
               "points": [
                 {
@@ -504,13 +511,13 @@
               "media": [
                 {
                   "asset": "assets/images/original/insuranceModular.png",
-                  "layout": "portrait",
+                  "layout": "half",
                   "caption": "Modular patterns separated reusable workflow behavior from program-specific content.",
                   "alt": "Modular patterns separated reusable workflow behavior from program-specific content."
                 },
                 {
                   "asset": "assets/images/original/insuranceProcess3.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "Reusable landing-page templates shortened communication and launch cycles.",
                   "alt": "Reusable landing-page templates shortened communication and launch cycles."
                 },
@@ -555,19 +562,19 @@
                 },
                 {
                   "asset": "assets/images/original/insuranceDesignSystem.png",
-                  "layout": "wide",
+                  "layout": "compact",
                   "caption": "The design system documented bilingual typography, components, validation, and loading states.",
                   "alt": "The design system documented bilingual typography, components, validation, and loading states."
                 },
                 {
                   "asset": "assets/images/original/insuranceMarsh.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "A Tesla motor-insurance journey demonstrated the reusable quote and plan architecture.",
                   "alt": "A Tesla motor-insurance journey demonstrated the reusable quote and plan architecture."
                 },
                 {
                   "asset": "assets/images/original/insuranceRichmond.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "A partner-branded insurance experience applied the same reusable foundation.",
                   "alt": "A partner-branded insurance experience applied the same reusable foundation."
                 },
@@ -579,19 +586,19 @@
                 },
                 {
                   "asset": "assets/images/original/insuranceResult1.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "Light-theme application flow.",
                   "alt": "Light-theme application flow."
                 },
                 {
                   "asset": "assets/images/original/insuranceResult2.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "Dark-theme application flow.",
                   "alt": "Dark-theme application flow."
                 },
                 {
                   "asset": "assets/images/original/insuranceResult3.png",
-                  "layout": "wide",
+                  "layout": "compact",
                   "caption": "Blue cyber-security application flow.",
                   "alt": "Blue cyber-security application flow."
                 }
@@ -674,7 +681,7 @@
                 },
                 {
                   "asset": "assets/images/original/onesleeveBrandColor.png",
-                  "layout": "wide",
+                  "layout": "compact",
                   "caption": "Shared structural roles began with a clear primitive brand palette.",
                   "alt": "Shared structural roles began with a clear primitive brand palette."
                 }
@@ -685,21 +692,23 @@
               "label": "Strategy",
               "title": "Choose programmatic progress over an idealized redesign.",
               "body": [
-                "A complete visual reset would have delayed adoption and increased resistance. Instead, I audited the live products, grouped patterns by behavior, and prioritized the components that created the most repeated design and engineering work.",
-                "This let the system improve production incrementally while still moving toward a coherent foundation."
+                "I interviewed designers, PMs, engineers, and managers before defining the system. PMs needed faster validation, engineers needed stable specifications and shared components, and managers needed a credible adoption path across product teams.",
+                "A complete visual reset satisfied none of those constraints. I audited the live products, grouped patterns by behavior, and ranked them by reuse, implementation cost, accessibility risk, and migration value.",
+                "The result was a program of adoption slices: each release solved a real product problem while moving both brands toward one coherent foundation."
               ],
+              "quote": "Adoption came from translating one system into a different value proposition for every team involved.",
               "points": [
                 {
-                  "title": "Behavior first",
-                  "text": "Components were defined by purpose, states, and interaction before visual theme."
+                  "title": "PM · delivery value",
+                  "text": "Reusable patterns shortened validation and reduced time-to-launch."
                 },
                 {
-                  "title": "Semantic tokens",
-                  "text": "Brand values mapped to shared roles such as surface, emphasis, warning, and success."
+                  "title": "RD · engineering value",
+                  "text": "Stable behavior, shared specifications, and one implementation reduced maintenance."
                 },
                 {
-                  "title": "Adoption slices",
-                  "text": "Each release replaced a meaningful cluster rather than waiting for total migration."
+                  "title": "Management · mandate",
+                  "text": "Measured pain points and migration outcomes supported cross-team endorsement."
                 }
               ],
               "image": "onesleeveProcess2",
@@ -707,13 +716,13 @@
               "media": [
                 {
                   "asset": "assets/images/original/onesleeveAdoption.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "Adoption connected product value, engineering value, and management sponsorship.",
                   "alt": "Adoption connected product value, engineering value, and management sponsorship."
                 },
                 {
                   "asset": "assets/images/original/onesleeveCooperation.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "One source of pattern change synchronized user-story flows and reduced missed updates.",
                   "alt": "One source of pattern change synchronized user-story flows and reduced missed updates."
                 }
@@ -724,8 +733,9 @@
               "label": "Foundation",
               "title": "One system, two brands: same structure, different palette.",
               "body": [
-                "Shared primitives controlled spacing, typography, hierarchy, state behavior, accessibility, and responsive rules. Brand themes supplied color, elevation, and density decisions through semantic tokens.",
-                "This separation meant a component could improve once and ship into both products without erasing their distinct personalities."
+                "Cross-product reviews separated what had to be shared from what each brand needed to preserve. Designers protected visual identity, engineers protected predictable behavior, and product teams protected the workflows their customers already understood.",
+                "Shared primitives controlled spacing, typography, hierarchy, state behavior, accessibility, and responsive rules. Brand themes supplied color, elevation, and density through semantic tokens.",
+                "This negotiated boundary became the final direction: one structural contract underneath, two distinct product expressions above it."
               ],
               "points": [
                 {
@@ -791,43 +801,43 @@
               "media": [
                 {
                   "asset": "assets/images/original/onesleeveCymetricsPanel.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "Cymetrics expressed the shared system through a light analytical interface.",
                   "alt": "Cymetrics expressed the shared system through a light analytical interface."
                 },
                 {
                   "asset": "assets/images/original/onesleeveVulcanPanel.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "Vulcan expressed the same structural rules through a dark operational interface.",
                   "alt": "Vulcan expressed the same structural rules through a dark operational interface."
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult1.png",
-                  "layout": "wide",
+                  "layout": "portrait",
                   "caption": "Token documentation for light product themes.",
                   "alt": "Token documentation for light product themes."
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult2.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "Token documentation for dark product themes.",
                   "alt": "Token documentation for dark product themes."
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult4.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "Profile and threat workspace patterns.",
                   "alt": "Profile and threat workspace patterns."
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult5.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "Policy workspace states and interaction coverage.",
                   "alt": "Policy workspace states and interaction coverage."
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult6.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "Production dashboard comparison across the two products.",
                   "alt": "Production dashboard comparison across the two products."
                 }
@@ -881,10 +891,11 @@
               "label": "Definition & exploration",
               "title": "Retention could not be solved by adding another isolated feature.",
               "body": [
-                "The initial question focused on post-course retention. Mixed-method research broadened it: learners were not simply deciding whether to use the platform again. They were evaluating whether it still belonged in the person they were becoming.",
-                "Interviews, workshops, behavioral evidence, and persona synthesis revealed different motivations beneath the same disengagement behavior."
+                "The initial question focused on post-course retention. I gathered perspectives from learners, instructors, community operators, product stakeholders, and behavioral evidence rather than treating disengagement as one homogeneous problem.",
+                "Learners wanted relevance and recognition, instructors saw gaps in continued practice, community teams saw weak reasons to participate, and the business needed a model that could scale beyond one more isolated feature.",
+                "Synthesizing those views revealed different motivations beneath the same drop-off behavior: people were deciding whether the platform still belonged in the person they were becoming."
               ],
-              "quote": "The missing value was not more content. It was a stronger bridge between past achievement, present identity, and the learner’s next chapter.",
+              "quote": "The shared opportunity was not more content. It was a bridge between past achievement, present identity, and the learner’s next chapter.",
               "points": [
                 {
                   "title": "Different jobs",
@@ -915,9 +926,11 @@
               "label": "Core insight",
               "title": "The “relationship” gap was a contextual problem, not a content shortage.",
               "body": [
-                "The research showed that retention depended on how the platform connected learning to real life. Functional delivery answered “What can I study?” but not “Who am I becoming?” or “Who is with me after the course ends?”",
-                "We reframed relationship value through behavioral dynamics: belonging, recognition, contribution, and visible momentum."
+                "Affinity mapping compared learner stories, teaching goals, community operations, and business constraints. Functional delivery answered “What can I study?” but not “Who am I becoming?” or “Who is with me after the course ends?”",
+                "Instead of selecting one group’s preferred feature, we reframed the opportunity around four shared behavioral dynamics: belonging, recognition, contribution, and visible momentum.",
+                "These principles gave the team a common way to evaluate concepts and prioritize a relationship model that could serve different learner journeys."
               ],
+              "quote": "The final direction unified different voices around one question: how can the platform make continued growth feel visible and socially meaningful?",
               "points": [
                 {
                   "title": "Belonging",
@@ -1216,7 +1229,7 @@
                 },
                 {
                   "asset": "assets/images/original/ferqoProcess3.png",
-                  "layout": "wide",
+                  "layout": "portrait",
                   "caption": "挑戰相關設計素材 2",
                   "alt": "挑戰相關設計素材 2"
                 }
@@ -1227,21 +1240,23 @@
               "label": "研究與關鍵洞察",
               "title": "最穩定的心智模型是「家」，不是家裡的技術。",
               "body": [
-                "情境訪談與任務演練先聚焦人們想完成什麼，再追問特定裝置的操作方式。九次訪談中，使用者自然談到房間、家庭成員、時間與日常習慣，而不是協定或產品分類。",
-                "因此核心問題被重新定義：介面不需要更好的裝置目錄，而需要把技術能力翻譯成日常生活的語言。"
+                "情境訪談與任務演練同時納入住戶、安裝人員、客服、產品與工程的觀點。住戶用房間、成員、時間與日常習慣描述需求；內部團隊則提出設定風險、廠商限制和例外維護成本。",
+                "這些聲音沒有指向單一答案：使用者要簡單，商務要生態系廣度，工程則需要能在裝置能力不一致的前提下落地 MVP。",
+                "我把證據統整成四項決策準則：使用頻率、認知負擔、技術可行性與回饋清晰度。各方最後的共同基礎是「家」——能吸收廠商複雜度、卻不把它暴露給使用者的穩定模型。"
               ],
+              "quote": null,
               "points": [
                 {
-                  "title": "情境優先於控制",
-                  "text": "使用者要的是當下正確的設定，而不是更多開關。"
+                  "title": "家庭語言",
+                  "text": "住戶以房間、時刻與例行活動組織意圖，而不是通訊協定。"
                 },
                 {
-                  "title": "以回饋建立信任",
-                  "text": "清楚狀態與可預測行為，比功能數量更重要。"
+                  "title": "平台現實",
+                  "text": "工程釐清跨廠商體驗哪些能一致、哪些必須保留差異。"
                 },
                 {
-                  "title": "彈性情境",
-                  "text": "自動化必須配合人的生活，而不是迫使人遵循僵化腳本。"
+                  "title": "共享準則",
+                  "text": "團隊以日常價值、易學性、可行性與可信回饋評估方案。"
                 }
               ],
               "image": "ferqoProcess2",
@@ -1253,17 +1268,18 @@
                   "caption": "研究與關鍵洞察相關設計素材 1",
                   "alt": "研究與關鍵洞察相關設計素材 1"
                 }
-              ],
-              "quote": null
+              ]
             },
             {
               "number": "03",
               "label": "設計決策",
               "title": "把主要導覽從裝置移到房間與情境。",
               "body": [
-                "新的資訊架構以 Home → Rooms → Scenarios → Devices 組織系統。房間成為主要入口；裝置仍可存取，但退到支援細節的位置。",
-                "我與工程團隊把互動模型和廠商協定分離，讓 MVP 先維持一致體驗，同時保留底層技術整合持續擴充的空間。"
+                "共創評審把裝置優先、房間優先與情境優先三種模型放回共享準則檢驗。產品守住長期生態系願景，客服指出設定與復原風險，工程標示當前平台的能力邊界。",
+                "最後的資訊架構以 Home → Rooms → Scenarios → Devices 組織體驗。房間提供最易懂的預設入口，情境支援重複意圖，裝置則保留為漸進揭露的細節。",
+                "互動模型與廠商協定分離後，MVP 能先提供一致體驗，也為後續深度整合留下清楚路徑。"
               ],
+              "quote": null,
               "points": [
                 {
                   "title": "房間優先總覽",
@@ -1283,24 +1299,23 @@
               "media": [
                 {
                   "asset": "assets/images/original/ferqoUserFlow.png",
-                  "layout": "wide",
+                  "layout": "portrait",
                   "caption": "設計決策相關設計素材 1",
                   "alt": "設計決策相關設計素材 1"
                 },
                 {
                   "asset": "assets/images/original/ferqoStructure.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "設計決策相關設計素材 2",
                   "alt": "設計決策相關設計素材 2"
                 },
                 {
                   "asset": "assets/images/original/ferqoCompare.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "設計決策相關設計素材 3",
                   "alt": "設計決策相關設計素材 3"
                 }
-              ],
-              "quote": null
+              ]
             },
             {
               "number": "04",
@@ -1329,13 +1344,13 @@
               "media": [
                 {
                   "asset": "assets/images/original/ferqoExplain1.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "執行相關設計素材 1",
                   "alt": "執行相關設計素材 1"
                 },
                 {
                   "asset": "assets/images/original/ferqoExplain2.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "執行相關設計素材 2",
                   "alt": "執行相關設計素材 2"
                 },
@@ -1347,19 +1362,19 @@
                 },
                 {
                   "asset": "assets/images/original/ferqoRevamp.png",
-                  "layout": "wide",
+                  "layout": "portrait",
                   "caption": "執行相關設計素材 4",
                   "alt": "執行相關設計素材 4"
                 },
                 {
                   "asset": "assets/images/original/ferqoScreenOverview.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "執行相關設計素材 5",
                   "alt": "執行相關設計素材 5"
                 },
                 {
                   "asset": "assets/images/original/ferqoDesignSystem.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "執行相關設計素材 6",
                   "alt": "執行相關設計素材 6"
                 }
@@ -1443,13 +1458,13 @@
                 },
                 {
                   "asset": "assets/images/original/insuranceProcess1.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "背景相關設計素材 2",
                   "alt": "背景相關設計素材 2"
                 },
                 {
                   "asset": "assets/images/original/insuranceCompetitive.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "背景相關設計素材 3",
                   "alt": "背景相關設計素材 3"
                 }
@@ -1460,21 +1475,23 @@
               "label": "研究與架構",
               "title": "先建立保單生命週期模型，再設計單一頁面。",
               "body": [
-                "與商務及工程的工作坊，把分散需求整理成共享服務藍圖。我們把報價、資料補強、風險審查、轉介、承保、出單、批改與續保視為同一條生命週期。",
-                "這張圖暴露哪些決策具有共通性、哪些應維持可設定，並成為產品架構與交付計畫的共同基礎。"
+                "工作坊納入經紀人、保險公司、營運、法務與法遵、資安合作夥伴及工程。每一方對完整旅程的定義不同：轉換率、稽核性、法規可見性、資料品質或實作速度。",
+                "我把報價、資料補強、風險審查、轉介、承保、出單、批改與續保整理為同一條生命週期，再把不可妥協的控制和市場差異分開。",
+                "這份統整讓衝突可見，也給團隊同一個決策介面：共通狀態成為產品核心；品牌、文案、證明文件與方案規則則成為可設定邊界。"
               ],
+              "quote": null,
               "points": [
                 {
-                  "title": "一致狀態",
-                  "text": "每個角色看到相同底層保單狀態，只依情境轉譯。"
+                  "title": "不可妥協",
+                  "text": "法務、法遵與核保控制維持可見、可追溯。"
                 },
                 {
-                  "title": "規則可設定",
-                  "text": "市場與方案差異透過設定表達，不複製整條流程。"
+                  "title": "共享核心",
+                  "text": "所有角色共用保單狀態、責任歸屬與缺少資訊。"
                 },
                 {
-                  "title": "交接清楚",
-                  "text": "每個轉換點都能看到責任歸屬和缺少資訊。"
+                  "title": "可設定邊界",
+                  "text": "市場、方案與合作夥伴差異透過設定處理，不複製流程。"
                 }
               ],
               "image": "insuranceProcess2",
@@ -1498,16 +1515,16 @@
                   "caption": "研究與架構相關設計素材 3",
                   "alt": "研究與架構相關設計素材 3"
                 }
-              ],
-              "quote": null
+              ]
             },
             {
               "number": "03",
               "label": "核心策略",
               "title": "建立可重用工作流程原件，而不是一條僵化的保險旅程。",
               "body": [
-                "產品由可重用表單、任務、決策狀態、證明要求與核准機制構成。這些原件能支援不同資安保險方案，同時維持一致互動語言。",
-                "客戶端流程採漸進揭露；營運端則強調例外、佇列健康度與可追溯性。"
+                "共識生命週期被轉譯成可重用表單、任務、決策狀態、證明要求與核准機制。介面沒有把所有人的要求平均塞進同一頁，而是強調每個角色當下需要做的決策。",
+                "客戶端採漸進揭露與白話理由；營運端優先呈現例外、責任、佇列健康度與可追溯性。共享原件讓兩端仍連到同一份事實。",
+                "因此合作夥伴能保留市場與品牌表達，同時守住互動模型、法遵控制和交付速度。"
               ],
               "points": [
                 {
@@ -1528,13 +1545,13 @@
               "media": [
                 {
                   "asset": "assets/images/original/insuranceModular.png",
-                  "layout": "portrait",
+                  "layout": "half",
                   "caption": "核心策略相關設計素材 1",
                   "alt": "核心策略相關設計素材 1"
                 },
                 {
                   "asset": "assets/images/original/insuranceProcess3.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "核心策略相關設計素材 2",
                   "alt": "核心策略相關設計素材 2"
                 },
@@ -1580,19 +1597,19 @@
                 },
                 {
                   "asset": "assets/images/original/insuranceDesignSystem.png",
-                  "layout": "wide",
+                  "layout": "compact",
                   "caption": "設計執行相關設計素材 2",
                   "alt": "設計執行相關設計素材 2"
                 },
                 {
                   "asset": "assets/images/original/insuranceMarsh.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "設計執行相關設計素材 3",
                   "alt": "設計執行相關設計素材 3"
                 },
                 {
                   "asset": "assets/images/original/insuranceRichmond.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "設計執行相關設計素材 4",
                   "alt": "設計執行相關設計素材 4"
                 },
@@ -1604,19 +1621,19 @@
                 },
                 {
                   "asset": "assets/images/original/insuranceResult1.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "設計執行相關設計素材 6",
                   "alt": "設計執行相關設計素材 6"
                 },
                 {
                   "asset": "assets/images/original/insuranceResult2.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "設計執行相關設計素材 7",
                   "alt": "設計執行相關設計素材 7"
                 },
                 {
                   "asset": "assets/images/original/insuranceResult3.png",
-                  "layout": "wide",
+                  "layout": "compact",
                   "caption": "設計執行相關設計素材 8",
                   "alt": "設計執行相關設計素材 8"
                 }
@@ -1700,7 +1717,7 @@
                 },
                 {
                   "asset": "assets/images/original/onesleeveBrandColor.png",
-                  "layout": "wide",
+                  "layout": "compact",
                   "caption": "挑戰相關設計素材 2",
                   "alt": "挑戰相關設計素材 2"
                 }
@@ -1711,21 +1728,23 @@
               "label": "策略",
               "title": "選擇可持續累積的進展，而不是理想化的大改版。",
               "body": [
-                "完整視覺重置會延後採用並增加阻力。因此我先盤點線上產品、依行為歸類模式，再優先處理最常造成重複設計與工程工作的元件。",
-                "這讓產品可以逐步改善，同時持續朝一致基礎前進。"
+                "定義系統前，我訪談設計師、PM、工程師與主管。PM 需要更快驗證，工程需要穩定規格與共享元件，主管則需要能跨產品推動的採用路徑。",
+                "全面視覺重置無法同時滿足這些限制。我先盤點線上產品、依行為歸類模式，再以重用度、實作成本、無障礙風險與遷移價值排序。",
+                "最後形成分段導入計畫：每次版本都先解決真實產品問題，同時讓兩個品牌持續朝同一基礎前進。"
               ],
+              "quote": null,
               "points": [
                 {
-                  "title": "行為優先",
-                  "text": "先依目的、狀態與互動定義元件，再套用視覺主題。"
+                  "title": "PM · 交付價值",
+                  "text": "可重用模式縮短驗證時間並加快產品上市。"
                 },
                 {
-                  "title": "語意 Token",
-                  "text": "品牌數值映射到表面、強調、警告與成功等共享角色。"
+                  "title": "RD · 工程價值",
+                  "text": "穩定行為、共享規格與單一實作降低維護成本。"
                 },
                 {
-                  "title": "分段導入",
-                  "text": "每次版本替換一組有意義的模式，不等待全面遷移。"
+                  "title": "主管 · 推動依據",
+                  "text": "量化痛點與遷移成效，建立跨團隊支持。"
                 }
               ],
               "image": "onesleeveProcess2",
@@ -1733,26 +1752,26 @@
               "media": [
                 {
                   "asset": "assets/images/original/onesleeveAdoption.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "策略相關設計素材 1",
                   "alt": "策略相關設計素材 1"
                 },
                 {
                   "asset": "assets/images/original/onesleeveCooperation.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "策略相關設計素材 2",
                   "alt": "策略相關設計素材 2"
                 }
-              ],
-              "quote": null
+              ]
             },
             {
               "number": "03",
               "label": "基礎",
               "title": "一套系統、兩個品牌：結構相同，色盤不同。",
               "body": [
-                "共享 primitive 控制間距、字體、層級、狀態行為、無障礙與響應式規則；品牌主題則透過語意 Token 提供顏色、層次和密度。",
-                "因此元件只需改善一次，就能進入兩個產品，同時不抹去各自個性。"
+                "跨產品評審先分清哪些必須共享、哪些需要保留。設計守住品牌識別，工程守住可預測行為，產品團隊則守住客戶已熟悉的工作方式。",
+                "共享 primitive 控制間距、字體、層級、狀態、無障礙與響應式；品牌主題透過語意 Token 提供顏色、層次和密度。",
+                "這條共同協商的邊界成為最後方向：底層是一份結構契約，上層保留兩個鮮明的產品表達。"
               ],
               "points": [
                 {
@@ -1819,43 +1838,43 @@
               "media": [
                 {
                   "asset": "assets/images/original/onesleeveCymetricsPanel.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "導入相關設計素材 1",
                   "alt": "導入相關設計素材 1"
                 },
                 {
                   "asset": "assets/images/original/onesleeveVulcanPanel.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "導入相關設計素材 2",
                   "alt": "導入相關設計素材 2"
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult1.png",
-                  "layout": "wide",
+                  "layout": "portrait",
                   "caption": "導入相關設計素材 3",
                   "alt": "導入相關設計素材 3"
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult2.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "導入相關設計素材 4",
                   "alt": "導入相關設計素材 4"
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult4.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "導入相關設計素材 5",
                   "alt": "導入相關設計素材 5"
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult5.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "導入相關設計素材 6",
                   "alt": "導入相關設計素材 6"
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult6.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "導入相關設計素材 7",
                   "alt": "導入相關設計素材 7"
                 }
@@ -1910,10 +1929,11 @@
               "label": "定義與探索",
               "title": "留存問題無法靠再增加一個孤立功能解決。",
               "body": [
-                "最初問題聚焦課後留存。混合研究把問題擴大：學習者不只是決定是否再次使用平台，也在判斷平台是否仍屬於自己正在成為的那個人。",
-                "訪談、工作坊、行為證據與 Persona 整合，揭露相同行為背後其實有不同動機。"
+                "最初問題聚焦課後留存。我沒有把離開視為單一問題，而是同時聽取學習者、講師、社群營運、產品利害關係人與行為資料。",
+                "學習者要的是相關性與被看見，講師看到持續練習的缺口，社群團隊缺少參與理由，商務則需要一個不只是再增加功能、且能規模化的模型。",
+                "統合這些觀點後，我們看見相同流失行為背後有不同動機：人們正在判斷平台是否仍屬於自己正在成為的那個人。"
               ],
-              "quote": "缺少的不是更多內容，而是一座連結過去成就、現在身份與下一階段的橋。",
+              "quote": "共同機會不是更多內容，而是一座連結過去成就、現在身份與下一階段的橋。",
               "points": [
                 {
                   "title": "不同任務",
@@ -1944,9 +1964,11 @@
               "label": "核心洞察",
               "title": "「關係」缺口是情境問題，不是內容不足。",
               "body": [
-                "研究顯示，留存取決於平台如何把學習連到真實生活。功能交付回答「我能學什麼？」，卻沒有回答「我正在成為誰？」或「課程結束後，誰還和我一起？」",
-                "我們以歸屬、被看見、貢獻與可見進展，重新定義關係價值。"
+                "親和圖把學習者故事、教學目標、社群營運與商務限制放在同一張圖比較。功能交付回答「我能學什麼？」，卻沒有回答「我正在成為誰？」或「課程結束後，誰還和我一起？」",
+                "我們沒有直接選擇任何一方偏好的功能，而是以四個共享行為動力重構機會：歸屬、被看見、貢獻與可見進展。",
+                "這些原則讓團隊能用同一套準則評估概念，並排序出可服務不同學習旅程的關係模型。"
               ],
+              "quote": null,
               "points": [
                 {
                   "title": "歸屬",
@@ -1970,8 +1992,7 @@
                   "caption": "核心洞察相關設計素材 1",
                   "alt": "核心洞察相關設計素材 1"
                 }
-              ],
-              "quote": null
+              ]
             },
             {
               "number": "03",
@@ -2248,7 +2269,7 @@
                 },
                 {
                   "asset": "assets/images/original/ferqoProcess3.png",
-                  "layout": "wide",
+                  "layout": "portrait",
                   "caption": "課題のデザイン資料 2",
                   "alt": "課題のデザイン資料 2"
                 }
@@ -2259,21 +2280,23 @@
               "label": "リサーチと洞察",
               "title": "安定したメンタルモデルは技術ではなく「家」だった。",
               "body": [
-                "文脈インタビューとシナリオ walkthrough では、特定デバイスの操作方法より先に、何を実現したいかを聞いた。9件のインタビューで自然に語られたのは、規格や製品分類ではなく、部屋、家族、時間、習慣だった。",
-                "課題はより良いデバイス一覧ではない。技術能力を日常生活の言葉へ翻訳することだった。"
+                "文脈インタビューとシナリオ検証では、住民、設置担当、サポート、プロダクト、開発の視点を集めた。住民は部屋、人、時間、習慣で語り、社内チームは設定リスク、ベンダー制約、例外対応のコストを示した。",
+                "利用者は簡潔さ、事業はエコシステムの広がり、開発は不均一なデバイス能力でも成立するMVPを求めており、答えは一つではなかった。",
+                "証拠を利用頻度、認知負荷、技術的実現性、フィードバックの明快さという四つの判断基準に統合した。全員の共通項は、ベンダーの複雑さを吸収できる安定したモデルとしての「家」だった。"
               ],
+              "quote": null,
               "points": [
                 {
-                  "title": "操作より文脈",
-                  "text": "求められていたのはスイッチの数ではなく、その場に合う設定。"
+                  "title": "暮らしの言葉",
+                  "text": "住民は規格ではなく、部屋、時間、ルーティンで意図を整理した。"
                 },
                 {
-                  "title": "フィードバックによる信頼",
-                  "text": "機能数より、明確な状態と予測可能な動作が重要。"
+                  "title": "プラットフォームの現実",
+                  "text": "開発は、ベンダー間で統一できる挙動とできない挙動を明確にした。"
                 },
                 {
-                  "title": "柔軟なルーティン",
-                  "text": "自動化は人を固定手順に合わせるのではなく、生活に適応する必要がある。"
+                  "title": "共有基準",
+                  "text": "日常価値、学習容易性、実現性、信頼できる反応で案を評価した。"
                 }
               ],
               "image": "ferqoProcess2",
@@ -2285,17 +2308,18 @@
                   "caption": "リサーチと洞察のデザイン資料 1",
                   "alt": "リサーチと洞察のデザイン資料 1"
                 }
-              ],
-              "quote": null
+              ]
             },
             {
               "number": "03",
               "label": "設計判断",
               "title": "主要ナビゲーションをデバイスから部屋とシーンへ移した。",
               "body": [
-                "新しい情報設計は Home → Rooms → Scenarios → Devices の順に構成した。部屋を主要入口とし、デバイスは詳細として残した。",
-                "エンジニアリングと協働し、操作モデルをベンダー規格から分離した。MVPの一貫性を保ちながら、基盤の統合範囲を拡張できるようにした。"
+                "共同レビューでデバイス起点、部屋起点、シーン起点を共有基準に照らして比較した。プロダクトは長期構想、サポートは復旧と設定、開発は現行基盤の境界を提示した。",
+                "最終構造は Home → Rooms → Scenarios → Devices。部屋を分かりやすい初期入口、シーンを反復意図、デバイスを段階的な詳細として配置した。",
+                "操作モデルをベンダー規格から分離することで、MVPの一貫性と将来の深い統合を両立した。"
               ],
+              "quote": null,
               "points": [
                 {
                   "title": "部屋起点の概要",
@@ -2315,24 +2339,23 @@
               "media": [
                 {
                   "asset": "assets/images/original/ferqoUserFlow.png",
-                  "layout": "wide",
+                  "layout": "portrait",
                   "caption": "設計判断のデザイン資料 1",
                   "alt": "設計判断のデザイン資料 1"
                 },
                 {
                   "asset": "assets/images/original/ferqoStructure.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "設計判断のデザイン資料 2",
                   "alt": "設計判断のデザイン資料 2"
                 },
                 {
                   "asset": "assets/images/original/ferqoCompare.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "設計判断のデザイン資料 3",
                   "alt": "設計判断のデザイン資料 3"
                 }
-              ],
-              "quote": null
+              ]
             },
             {
               "number": "04",
@@ -2361,13 +2384,13 @@
               "media": [
                 {
                   "asset": "assets/images/original/ferqoExplain1.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "実装のデザイン資料 1",
                   "alt": "実装のデザイン資料 1"
                 },
                 {
                   "asset": "assets/images/original/ferqoExplain2.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "実装のデザイン資料 2",
                   "alt": "実装のデザイン資料 2"
                 },
@@ -2379,19 +2402,19 @@
                 },
                 {
                   "asset": "assets/images/original/ferqoRevamp.png",
-                  "layout": "wide",
+                  "layout": "portrait",
                   "caption": "実装のデザイン資料 4",
                   "alt": "実装のデザイン資料 4"
                 },
                 {
                   "asset": "assets/images/original/ferqoScreenOverview.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "実装のデザイン資料 5",
                   "alt": "実装のデザイン資料 5"
                 },
                 {
                   "asset": "assets/images/original/ferqoDesignSystem.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "実装のデザイン資料 6",
                   "alt": "実装のデザイン資料 6"
                 }
@@ -2475,13 +2498,13 @@
                 },
                 {
                   "asset": "assets/images/original/insuranceProcess1.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "背景のデザイン資料 2",
                   "alt": "背景のデザイン資料 2"
                 },
                 {
                   "asset": "assets/images/original/insuranceCompetitive.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "背景のデザイン資料 3",
                   "alt": "背景のデザイン資料 3"
                 }
@@ -2492,21 +2515,23 @@
               "label": "リサーチと構造",
               "title": "個別画面の前に、保険契約のライフサイクルをモデル化した。",
               "body": [
-                "ビジネスと開発のワークショップで、分散した要件を共有サービスブループリントへ整理した。見積、データ補強、リスク審査、照会、引受、発行、変更、更新を一つの連続した流れとして扱った。",
-                "共通判断と設定可能な差分が明確になり、製品構造とデリバリープランの基盤になった。"
+                "ワークショップにはブローカー、保険会社、運用、法務・コンプライアンス、サイバーセキュリティパートナー、開発が参加した。各組織が重視するのは転換率、監査性、規制の可視性、データ品質、実装速度と異なっていた。",
+                "見積、データ補強、リスク審査、照会、引受、発行、変更、更新を一つのライフサイクルに整理し、変更できない統制と市場固有の差分を分離した。",
+                "共通状態を製品の核、ブランド、文言、証跡、商品ルールを設定可能な境界とすることで、意見の衝突を一つの判断面へ統合した。"
               ],
+              "quote": null,
               "points": [
                 {
-                  "title": "共通状態",
-                  "text": "全ロールが同じ契約状態を、文脈に応じた表現で共有。"
+                  "title": "変更できない統制",
+                  "text": "法務、コンプライアンス、引受の要件を可視化し追跡可能にした。"
                 },
                 {
-                  "title": "設定可能なルール",
-                  "text": "市場差をフロー複製ではなく設定で表現。"
+                  "title": "共有コア",
+                  "text": "すべての役割が同じ契約状態、担当、不足情報を参照した。"
                 },
                 {
-                  "title": "明確な引き継ぎ",
-                  "text": "責任と不足情報を各遷移で可視化。"
+                  "title": "設定可能な境界",
+                  "text": "市場、商品、パートナー差をフロー複製ではなく設定で表現した。"
                 }
               ],
               "image": "insuranceProcess2",
@@ -2530,16 +2555,16 @@
                   "caption": "リサーチと構造のデザイン資料 3",
                   "alt": "リサーチと構造のデザイン資料 3"
                 }
-              ],
-              "quote": null
+              ]
             },
             {
               "number": "03",
               "label": "中核戦略",
               "title": "固定された一つの旅程ではなく、再利用可能なワークフロー部品を作った。",
               "body": [
-                "再利用可能なフォーム、タスク、判断状態、証跡要求、承認を中心に製品を構成した。商品が変わっても一つの操作言語を維持できる。",
-                "顧客側は段階的開示、運用側は例外、キュー状態、追跡可能性を重視した。"
+                "合意したライフサイクルを、フォーム、タスク、判断状態、証跡要求、承認という再利用可能な部品へ変換した。全要望を一画面に平均化せず、各画面はその役割が行う判断を強調した。",
+                "顧客側は段階的開示と平易な理由説明、運用側は例外、担当、キュー状態、追跡性を優先し、両方を同じ事実へ接続した。",
+                "パートナーは市場とブランドを表現しながら、操作モデル、統制、デリバリー速度を共有できた。"
               ],
               "points": [
                 {
@@ -2560,13 +2585,13 @@
               "media": [
                 {
                   "asset": "assets/images/original/insuranceModular.png",
-                  "layout": "portrait",
+                  "layout": "half",
                   "caption": "中核戦略のデザイン資料 1",
                   "alt": "中核戦略のデザイン資料 1"
                 },
                 {
                   "asset": "assets/images/original/insuranceProcess3.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "中核戦略のデザイン資料 2",
                   "alt": "中核戦略のデザイン資料 2"
                 },
@@ -2612,19 +2637,19 @@
                 },
                 {
                   "asset": "assets/images/original/insuranceDesignSystem.png",
-                  "layout": "wide",
+                  "layout": "compact",
                   "caption": "設計実行のデザイン資料 2",
                   "alt": "設計実行のデザイン資料 2"
                 },
                 {
                   "asset": "assets/images/original/insuranceMarsh.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "設計実行のデザイン資料 3",
                   "alt": "設計実行のデザイン資料 3"
                 },
                 {
                   "asset": "assets/images/original/insuranceRichmond.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "設計実行のデザイン資料 4",
                   "alt": "設計実行のデザイン資料 4"
                 },
@@ -2636,19 +2661,19 @@
                 },
                 {
                   "asset": "assets/images/original/insuranceResult1.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "設計実行のデザイン資料 6",
                   "alt": "設計実行のデザイン資料 6"
                 },
                 {
                   "asset": "assets/images/original/insuranceResult2.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "設計実行のデザイン資料 7",
                   "alt": "設計実行のデザイン資料 7"
                 },
                 {
                   "asset": "assets/images/original/insuranceResult3.png",
-                  "layout": "wide",
+                  "layout": "compact",
                   "caption": "設計実行のデザイン資料 8",
                   "alt": "設計実行のデザイン資料 8"
                 }
@@ -2732,7 +2757,7 @@
                 },
                 {
                   "asset": "assets/images/original/onesleeveBrandColor.png",
-                  "layout": "wide",
+                  "layout": "compact",
                   "caption": "課題のデザイン資料 2",
                   "alt": "課題のデザイン資料 2"
                 }
@@ -2743,21 +2768,23 @@
               "label": "戦略",
               "title": "理想的な全面刷新より、プログラムとして継続できる進歩を選んだ。",
               "body": [
-                "全面リデザインは導入を遅らせ、抵抗を増やす。そこで稼働中の製品を監査し、振る舞いで分類し、設計と開発の重複が大きい部品から優先した。",
-                "製品を止めず、段階的に一貫した基盤へ近づけた。"
+                "システムを定義する前に、デザイナー、PM、開発、マネージャーへ聞き取りを行った。PMは検証速度、開発は安定した仕様と共有実装、マネージャーは製品横断の導入経路を必要としていた。",
+                "全面刷新はどの制約も満たさない。稼働中の製品を監査し、振る舞いで分類し、再利用度、実装コスト、アクセシビリティリスク、移行価値で優先順位をつけた。",
+                "各リリースが実際の製品課題を解きながら、二つのブランドを一つの基盤へ近づける導入スライスになった。"
               ],
+              "quote": null,
               "points": [
                 {
-                  "title": "振る舞いを先に",
-                  "text": "視覚テーマより先に目的、状態、操作で定義。"
+                  "title": "PM・デリバリー価値",
+                  "text": "再利用パターンで検証と市場投入を短縮。"
                 },
                 {
-                  "title": "セマンティックトークン",
-                  "text": "ブランド値を表面、強調、警告、成功など共通役割へ割り当て。"
+                  "title": "RD・開発価値",
+                  "text": "安定動作、共有仕様、単一実装で保守を削減。"
                 },
                 {
-                  "title": "導入単位",
-                  "text": "全面移行を待たず、意味のあるパターン群ごとに置換。"
+                  "title": "管理・推進根拠",
+                  "text": "課題と移行成果を可視化し、横断的な支持を形成。"
                 }
               ],
               "image": "onesleeveProcess2",
@@ -2765,26 +2792,26 @@
               "media": [
                 {
                   "asset": "assets/images/original/onesleeveAdoption.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "戦略のデザイン資料 1",
                   "alt": "戦略のデザイン資料 1"
                 },
                 {
                   "asset": "assets/images/original/onesleeveCooperation.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "戦略のデザイン資料 2",
                   "alt": "戦略のデザイン資料 2"
                 }
-              ],
-              "quote": null
+              ]
             },
             {
               "number": "03",
               "label": "基盤",
               "title": "一つのシステム、二つのブランド。同じ構造、異なるパレット。",
               "body": [
-                "共通プリミティブが余白、文字、階層、状態、アクセシビリティ、レスポンシブを制御し、ブランドテーマがセマンティックトークンで色、奥行き、密度を与えた。",
-                "部品を一度改善すれば、個性を消さず両製品へ展開できた。"
+                "製品横断レビューで、共有すべきものと残すべきものを分離した。デザインはブランド、開発は予測可能な挙動、製品チームは顧客が理解しているワークフローを守った。",
+                "共通プリミティブが余白、文字、階層、状態、アクセシビリティ、レスポンシブを制御し、ブランドテーマが色、奥行き、密度を与えた。",
+                "協議した境界が最終方針になった。下層は一つの構造契約、上層は二つの明確な製品表現である。"
               ],
               "points": [
                 {
@@ -2851,43 +2878,43 @@
               "media": [
                 {
                   "asset": "assets/images/original/onesleeveCymetricsPanel.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "導入のデザイン資料 1",
                   "alt": "導入のデザイン資料 1"
                 },
                 {
                   "asset": "assets/images/original/onesleeveVulcanPanel.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "導入のデザイン資料 2",
                   "alt": "導入のデザイン資料 2"
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult1.png",
-                  "layout": "wide",
+                  "layout": "portrait",
                   "caption": "導入のデザイン資料 3",
                   "alt": "導入のデザイン資料 3"
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult2.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "導入のデザイン資料 4",
                   "alt": "導入のデザイン資料 4"
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult4.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "導入のデザイン資料 5",
                   "alt": "導入のデザイン資料 5"
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult5.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "導入のデザイン資料 6",
                   "alt": "導入のデザイン資料 6"
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult6.png",
-                  "layout": "wide",
+                  "layout": "half",
                   "caption": "導入のデザイン資料 7",
                   "alt": "導入のデザイン資料 7"
                 }
@@ -2942,10 +2969,11 @@
               "label": "定義と探索",
               "title": "継続率は、孤立した機能を一つ追加しても解決できなかった。",
               "body": [
-                "最初の問いはコース後の継続だった。混合調査により、学習者は再利用の有無だけでなく、そのプラットフォームが「これからの自分」にまだ属するかを判断していると分かった。",
-                "インタビュー、ワークショップ、行動データ、ペルソナ統合により、同じ離脱行動の背後に異なる動機が見えた。"
+                "最初の問いはコース後の継続だった。離脱を一つの問題として扱わず、学習者、講師、コミュニティ運用、製品関係者、行動データの声を集めた。",
+                "学習者は関連性と承認、講師は継続練習、コミュニティは参加理由、事業は単発機能ではない拡張可能なモデルを求めていた。",
+                "これらを統合すると、同じ離脱行動の背後に異なる動機があり、利用者はプラットフォームが「これからの自分」にまだ属するか判断していると分かった。"
               ],
-              "quote": "不足していたのは追加コンテンツではなく、過去の成果、現在の自己像、次の章をつなぐ橋だった。",
+              "quote": "共通の機会は追加コンテンツではなく、過去の成果、現在の自己像、次の章をつなぐ橋だった。",
               "points": [
                 {
                   "title": "異なるジョブ",
@@ -2976,9 +3004,11 @@
               "label": "中核洞察",
               "title": "「関係」のギャップはコンテンツ量ではなく、文脈の問題だった。",
               "body": [
-                "継続は学びを実生活へどう結びつけるかに左右された。機能提供は「何を学べるか」には答えても、「誰になっているか」「終了後に誰とつながるか」には答えない。",
-                "帰属、承認、貢献、見える前進で関係価値を再定義した。"
+                "アフィニティマップで学習者の物語、教育目標、コミュニティ運用、事業制約を比較した。機能提供は「何を学べるか」には答えても、「誰になっているか」「終了後に誰とつながるか」には答えない。",
+                "一部門の好む機能を選ぶのではなく、帰属、承認、貢献、見える前進という四つの共通行動原則へ機会を再構成した。",
+                "この原則が、異なる学習旅程を支える関係モデルを評価し優先する共通基準になった。"
               ],
+              "quote": null,
               "points": [
                 {
                   "title": "帰属",
@@ -3002,8 +3032,7 @@
                   "caption": "中核洞察のデザイン資料 1",
                   "alt": "中核洞察のデザイン資料 1"
                 }
-              ],
-              "quote": null
+              ]
             },
             {
               "number": "03",
@@ -3102,5 +3131,5 @@
       }
     }
   },
-  "updatedAt": "2026-07-20T08:27:16.447Z"
+  "updatedAt": "2026-07-20T09:34:57.480Z"
 }
