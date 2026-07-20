@@ -223,7 +223,6 @@
       </div>
       <div class="asset-grid">
         ${assetCard("cover", "案例首圖", "同時用於首頁卡片與案例頁 Hero。", project.cover)}
-        ${assetCard("source", "原始專案總覽", "案例尾端可放大查看的完整 project board。", project.sourceBoard)}
       </div>
     </section>
     ${(project.sections || []).map(sectionMarkup).join("")}`;
@@ -330,7 +329,6 @@
       const project = state.data.content[locale].projects[item.projectSlug];
       if (!project) return;
       if (item.kind === "cover") project.cover = path;
-      else if (item.kind === "source") project.sourceBoard = path;
       else {
         const media = project.sections?.[Number(item.sectionIndex)]?.media?.[Number(item.mediaIndex)];
         if (media) media.asset = path;
