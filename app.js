@@ -227,6 +227,15 @@
       </figure>`).join("")}</div>`;
   }
 
+  function renderSubsections(subsections) {
+    if (!subsections?.length) return "";
+    return `<div class="case-subsections">${subsections.map(subsection => `
+      <section class="case-subsection reveal">
+        <h3>${escapeHtml(subsection.title || "")}</h3>
+        ${(subsection.body || []).map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+      </section>`).join("")}</div>`;
+  }
+
   function renderSection(section) {
     return `
       <section class="case-section" data-section-order="${escapeHtml(section.order)}">
@@ -235,10 +244,12 @@
           <div class="case-section__content">
             <div class="case-prose reveal">
               <h2>${escapeHtml(section.title)}</h2>
-              ${section.body.map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("")}
-              ${section.quote ? `<blockquote class="case-quote">${escapeHtml(section.quote)}</blockquote>` : ""}
+              ${(section.body || []).map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+              ${renderSubsections(section.subsections)}
             </div>
             ${section.points?.length ? `<div class="insight-grid">${section.points.map(point => `<article class="insight-card reveal"><h3>${escapeHtml(point.title)}</h3><p>${escapeHtml(point.text)}</p></article>`).join("")}</div>` : ""}
+            ${section.afterPoints?.length ? `<div class="case-closing reveal">${section.afterPoints.map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("")}</div>` : ""}
+            ${section.quote ? `<blockquote class="case-quote reveal">${escapeHtml(section.quote)}</blockquote>` : ""}
             ${renderMedia(section.media)}
           </div>
         </div>
