@@ -221,15 +221,15 @@
   function renderMedia(media) {
     if (!media || !media.length) return "";
     return `<div class="media-gallery">${media.map(item => `
-      <figure class="media-card reveal" data-layout="${escapeHtml(item.layout || "wide")}" data-zoom-src="${escapeHtml(item.asset)}" data-zoom-caption="${escapeHtml(item.caption)}" tabindex="0" role="button" aria-label="${escapeHtml(localeContent().ui.openImage)}">
-        <img src="${escapeHtml(item.asset)}" alt="${escapeHtml(item.alt || item.caption)}" loading="lazy">
+      <figure class="media-card reveal" data-layout="${escapeHtml(item.layout || "wide")}" data-frame-ratio="${escapeHtml(item.frameRatio || "auto")}" data-zoom-src="${escapeHtml(item.asset)}" data-zoom-caption="${escapeHtml(item.caption)}" tabindex="0" role="button" aria-label="${escapeHtml(localeContent().ui.openImage)}">
+        <div class="media-card__visual"><img src="${escapeHtml(item.asset)}" alt="${escapeHtml(item.alt || item.caption)}" loading="lazy"></div>
         <figcaption>${escapeHtml(item.caption)}</figcaption>
       </figure>`).join("")}</div>`;
   }
 
   function renderSection(section) {
     return `
-      <section class="case-section">
+      <section class="case-section" data-section-order="${escapeHtml(section.order)}">
         <div class="shell case-section__inner">
           <aside class="case-section__marker"><strong>${String(section.order).padStart(2, "0")}</strong><span>${escapeHtml(section.label)}</span></aside>
           <div class="case-section__content">
