@@ -670,7 +670,7 @@
                 },
                 {
                   "asset": "assets/images/original/onesleeveBrandColor.png",
-                  "layout": "compact",
+                  "layout": "wide",
                   "caption": "Shared structural roles began with a clear primitive brand palette.",
                   "alt": "Shared structural roles began with a clear primitive brand palette."
                 }
@@ -1685,7 +1685,7 @@
                 },
                 {
                   "asset": "assets/images/original/onesleeveBrandColor.png",
-                  "layout": "compact",
+                  "layout": "wide",
                   "caption": "挑戰相關設計素材 2",
                   "alt": "挑戰相關設計素材 2"
                 }
@@ -2700,7 +2700,7 @@
                 },
                 {
                   "asset": "assets/images/original/onesleeveBrandColor.png",
-                  "layout": "compact",
+                  "layout": "wide",
                   "caption": "課題のデザイン資料 2",
                   "alt": "課題のデザイン資料 2"
                 }
