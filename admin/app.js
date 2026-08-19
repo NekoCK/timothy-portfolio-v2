@@ -151,7 +151,7 @@
     </article>`;
   }
 
-  function mediaMarkup(item, sectionIndex, mediaIndex) {
+  function mediaMarkup(item, sectionIndex, mediaIndex, mediaCount) {
     const pending = pendingFor("media", sectionIndex, mediaIndex);
     const source = pending ? pending.objectUrl : previewUrl(item.asset);
     return `<article class="media-item" data-layout="${escapeHtml(item.layout || "wide")}">
@@ -164,6 +164,10 @@
         </div>
         <div class="media-actions">
           <label class="file-button">${pending ? "重新選擇" : "更換圖片"}<input type="file" accept="image/jpeg,image/png,image/webp" data-upload-kind="media" data-section-index="${sectionIndex}" data-media-index="${mediaIndex}"></label>
+          <div class="media-order" aria-label="調整圖片順序">
+            <button class="button button--secondary" type="button" data-move-media="-1" data-media-index="${mediaIndex}" data-section-index="${sectionIndex}"${mediaIndex === 0 ? " disabled" : ""} aria-label="圖片 ${mediaIndex + 1} 上移">↑ 上移</button>
+            <button class="button button--secondary" type="button" data-move-media="1" data-media-index="${mediaIndex}" data-section-index="${sectionIndex}"${mediaIndex === mediaCount - 1 ? " disabled" : ""} aria-label="圖片 ${mediaIndex + 1} 下移">↓ 下移</button>
+          </div>
           <button class="button button--danger" type="button" data-remove-media="${mediaIndex}" data-section-index="${sectionIndex}">刪除</button>
         </div>
         <div class="pending-file">${pending ? `${escapeHtml(pending.file.name)} · ${formatBytes(pending.file.size)}` : ""}</div>
@@ -192,7 +196,7 @@
         <div class="subheading"><h3>重點卡片</h3><button class="button button--secondary" type="button" data-add-point data-section-index="${sectionIndex}">＋ 新增重點</button></div>
         <div class="point-list">${points.map((point, index) => pointMarkup(point, sectionIndex, index)).join("")}</div>
         <div class="subheading"><div><h3>Section 圖片</h3><span>${media.length} 張；可用全寬、內縮、半寬成對或直式置中建立案例敘事節奏。</span></div><button class="button button--primary" type="button" data-add-media data-section-index="${sectionIndex}">＋ 新增圖片</button></div>
-        <div class="media-list">${media.length ? media.map((item, index) => mediaMarkup(item, sectionIndex, index)).join("") : `<div class="empty-media">這個 section 還沒有圖片，可以從右上方新增。</div>`}</div>
+        <div class="media-list">${media.length ? media.map((item, index) => mediaMarkup(item, sectionIndex, index, media.length)).join("") : `<div class="empty-media">這個 section 還沒有圖片，可以從右上方新增。</div>`}</div>
       </div>
     </section>`;
   }
@@ -275,6 +279,29 @@
       if (locale === state.locale) return;
       const media = state.data.content[locale].projects[state.projectSlug]?.sections?.[sectionIndex]?.media;
       if (media?.[mediaIndex]) media.splice(mediaIndex, 1);
+    });
+  }
+
+  function syncMediaMove(sectionIndex, fromIndex, toIndex) {
+    state.data.locales.forEach(locale => {
+      const media = state.data.content[locale].projects[state.projectSlug]?.sections?.[sectionIndex]?.media;
+      if (!media?.[fromIndex] || toIndex < 0 || toIndex >= media.length) return;
+      const [item] = media.splice(fromIndex, 1);
+      media.splice(toIndex, 0, item);
+    });
+  }
+
+  function reindexPendingAfterMediaMove(sectionIndex, fromIndex, toIndex) {
+    const entries = [...state.pending.values()];
+    state.pending.clear();
+    entries.forEach(item => {
+      if (item.projectSlug === state.projectSlug && item.kind === "media" && Number(item.sectionIndex) === sectionIndex) {
+        const index = Number(item.mediaIndex);
+        if (index === fromIndex) item.mediaIndex = String(toIndex);
+        else if (toIndex < fromIndex && index >= toIndex && index < fromIndex) item.mediaIndex = String(index + 1);
+        else if (toIndex > fromIndex && index > fromIndex && index <= toIndex) item.mediaIndex = String(index - 1);
+      }
+      state.pending.set(item.kind === "media" ? `${item.projectSlug}:media:${item.sectionIndex}:${item.mediaIndex}` : `${item.projectSlug}:${item.kind}::`, item);
     });
   }
 
@@ -429,6 +456,19 @@
   });
 
   editor.addEventListener("click", event => {
+    const moveMedia = event.target.closest("[data-move-media]");
+    if (moveMedia) {
+      const sectionIndex = Number(moveMedia.dataset.sectionIndex);
+      const mediaIndex = Number(moveMedia.dataset.mediaIndex);
+      const targetIndex = mediaIndex + Number(moveMedia.dataset.moveMedia);
+      const media = currentProject().sections[sectionIndex]?.media || [];
+      if (targetIndex < 0 || targetIndex >= media.length) return;
+      reindexPendingAfterMediaMove(sectionIndex, mediaIndex, targetIndex);
+      syncMediaMove(sectionIndex, mediaIndex, targetIndex);
+      markDirty();
+      renderEditor();
+      return;
+    }
     const addMedia = event.target.closest("[data-add-media]");
     if (addMedia) {
       const sectionIndex = Number(addMedia.dataset.sectionIndex);
