@@ -151,6 +151,14 @@
     </article>`;
   }
 
+  function subsectionMarkup(subsection, sectionIndex, subsectionIndex) {
+    return `<article class="subsection-item">
+      ${field("小節標題", `sections.${sectionIndex}.subsections.${subsectionIndex}.title`, subsection.title || "")}
+      ${field("小節內文", `sections.${sectionIndex}.subsections.${subsectionIndex}.body`, (subsection.body || []).join("\n\n"), { textarea: true, type: "paragraphs", help: "段落之間空一行。" })}
+      <div class="point-actions"><button class="button button--danger" type="button" data-remove-subsection="${subsectionIndex}" data-section-index="${sectionIndex}">移除小節</button></div>
+    </article>`;
+  }
+
   function mediaMarkup(item, sectionIndex, mediaIndex, mediaCount) {
     const pending = pendingFor("media", sectionIndex, mediaIndex);
     const source = pending ? pending.objectUrl : previewUrl(item.asset);
@@ -177,6 +185,8 @@
 
   function sectionMarkup(section, sectionIndex) {
     const paragraphs = (section.body || []).join("\n\n");
+    const afterPoints = (section.afterPoints || []).join("\n\n");
+    const subsections = section.subsections || [];
     const points = section.points || [];
     const media = section.media || [];
     return `<section class="case-section-editor panel">
@@ -191,8 +201,13 @@
             ${field("Section 主標題", `sections.${sectionIndex}.title`, section.title || "", { textarea: true })}
             ${field("內文段落", `sections.${sectionIndex}.body`, paragraphs, { textarea: true, type: "paragraphs", help: "段落之間空一行；前台會自動套用一致的閱讀寬度。" })}
           </div>
-          <div class="section-copy-side">${field("引言／Quote（可留空）", `sections.${sectionIndex}.quote`, section.quote || "", { textarea: true })}</div>
+          <div class="section-copy-side">
+            ${field("重點卡片後的補充段落", `sections.${sectionIndex}.afterPoints`, afterPoints, { textarea: true, type: "paragraphs", help: "適合放決策責任、導入結果等需要出現在卡片後方的內容。" })}
+            ${field("引言／Quote（可留空）", `sections.${sectionIndex}.quote`, section.quote || "", { textarea: true })}
+          </div>
         </div>
+        <div class="subheading"><div><h3>段落小節</h3><span>${subsections.length} 個；適合 Token、架構與流程等較長內容。</span></div><button class="button button--secondary" type="button" data-add-subsection data-section-index="${sectionIndex}">＋ 新增小節</button></div>
+        <div class="subsection-list">${subsections.map((subsection, index) => subsectionMarkup(subsection, sectionIndex, index)).join("")}</div>
         <div class="subheading"><h3>重點卡片</h3><button class="button button--secondary" type="button" data-add-point data-section-index="${sectionIndex}">＋ 新增重點</button></div>
         <div class="point-list">${points.map((point, index) => pointMarkup(point, sectionIndex, index)).join("")}</div>
         <div class="subheading"><div><h3>Section 圖片</h3><span>${media.length} 張；可用全寬、內縮、半寬成對或直式置中建立案例敘事節奏。</span></div><button class="button button--primary" type="button" data-add-media data-section-index="${sectionIndex}">＋ 新增圖片</button></div>
@@ -496,6 +511,22 @@
       const section = currentProject().sections[Number(addPoint.dataset.sectionIndex)];
       section.points ||= [];
       section.points.push({ title: "New insight", text: "" });
+      markDirty();
+      renderEditor();
+      return;
+    }
+    const addSubsection = event.target.closest("[data-add-subsection]");
+    if (addSubsection) {
+      const section = currentProject().sections[Number(addSubsection.dataset.sectionIndex)];
+      section.subsections ||= [];
+      section.subsections.push({ title: "New subsection", body: [] });
+      markDirty();
+      renderEditor();
+      return;
+    }
+    const removeSubsection = event.target.closest("[data-remove-subsection]");
+    if (removeSubsection) {
+      currentProject().sections[Number(removeSubsection.dataset.sectionIndex)].subsections.splice(Number(removeSubsection.dataset.removeSubsection), 1);
       markDirty();
       renderEditor();
       return;
