@@ -157,7 +157,7 @@
     return `<article class="media-item" data-layout="${escapeHtml(item.layout || "wide")}">
       <div class="media-item__preview"><img src="${escapeHtml(source)}" alt="${escapeHtml(item.alt || item.caption || "Section image")}"></div>
       <div class="media-item__body">
-        <div class="media-item__toolbar"><strong>圖片 ${mediaIndex + 1}</strong><select data-bind="sections.${sectionIndex}.media.${mediaIndex}.layout"><option value="wide"${(item.layout || "wide") === "wide" ? " selected" : ""}>全寬</option><option value="compact"${item.layout === "compact" ? " selected" : ""}>內縮寬</option><option value="half"${item.layout === "half" ? " selected" : ""}>半寬（連續兩張並排）</option><option value="portrait"${item.layout === "portrait" ? " selected" : ""}>直式置中</option></select></div>
+        <div class="media-item__toolbar"><strong>圖片 ${mediaIndex + 1}</strong><div class="media-item__settings"><label>版型<select data-bind="sections.${sectionIndex}.media.${mediaIndex}.layout"><option value="wide"${(item.layout || "wide") === "wide" ? " selected" : ""}>全寬</option><option value="compact"${item.layout === "compact" ? " selected" : ""}>內縮寬</option><option value="half"${item.layout === "half" ? " selected" : ""}>半寬（連續兩張並排）</option><option value="portrait"${item.layout === "portrait" ? " selected" : ""}>直式置中</option></select></label><label>同排圖片框比例<select data-bind="sections.${sectionIndex}.media.${mediaIndex}.frameRatio"><option value="auto"${(item.frameRatio || "auto") === "auto" ? " selected" : ""}>依圖片比例</option><option value="16:10"${item.frameRatio === "16:10" ? " selected" : ""}>橫式 16:10</option><option value="4:3"${item.frameRatio === "4:3" ? " selected" : ""}>標準 4:3</option><option value="3:4"${item.frameRatio === "3:4" ? " selected" : ""}>直式 3:4</option></select></label></div></div>
         <div class="media-fields">
           ${field("圖片說明", `sections.${sectionIndex}.media.${mediaIndex}.caption`, item.caption || "", { textarea: true })}
           ${field("替代文字（無障礙）", `sections.${sectionIndex}.media.${mediaIndex}.alt`, item.alt || "")}
@@ -265,7 +265,7 @@
       const section = state.data.content[locale].projects[state.projectSlug]?.sections?.[sectionIndex];
       if (section) {
         section.media ||= [];
-        section.media.push({ asset: media.asset, layout: media.layout, caption: media.caption, alt: media.alt });
+        section.media.push({ asset: media.asset, layout: media.layout, frameRatio: media.frameRatio || "auto", caption: media.caption, alt: media.alt });
       }
     });
   }
@@ -432,7 +432,7 @@
     const addMedia = event.target.closest("[data-add-media]");
     if (addMedia) {
       const sectionIndex = Number(addMedia.dataset.sectionIndex);
-      const media = { asset: "", layout: "wide", caption: "", alt: "" };
+      const media = { asset: "", layout: "wide", frameRatio: "auto", caption: "", alt: "" };
       currentProject().sections[sectionIndex].media ||= [];
       currentProject().sections[sectionIndex].media.push(media);
       syncMediaAddition(sectionIndex, media);
