@@ -218,9 +218,9 @@
       </div>`;
   }
 
-  function renderMedia(media) {
+  function renderMedia(media, location = "section") {
     if (!media || !media.length) return "";
-    return `<div class="media-gallery">${media.map(item => `
+    return `<div class="media-gallery" data-media-location="${escapeHtml(location)}">${media.map(item => `
       <figure class="media-card reveal" data-layout="${escapeHtml(item.layout || "wide")}" data-frame-ratio="${escapeHtml(item.frameRatio || "auto")}" data-zoom-src="${escapeHtml(item.asset)}" data-zoom-caption="${escapeHtml(item.caption)}" tabindex="0" role="button" aria-label="${escapeHtml(localeContent().ui.openImage)}">
         <div class="media-card__visual"><img src="${escapeHtml(item.asset)}" alt="${escapeHtml(item.alt || item.caption)}" loading="lazy"></div>
         <figcaption>${escapeHtml(item.caption)}</figcaption>
@@ -233,6 +233,7 @@
       <section class="case-subsection reveal">
         <h3>${escapeHtml(subsection.title || "")}</h3>
         ${(subsection.body || []).map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+        ${renderMedia(subsection.media, "subsection")}
       </section>`).join("")}</div>`;
   }
 
