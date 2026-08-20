@@ -722,6 +722,15 @@
                   "body": [
                     "Switching brands takes two steps. First, define the Primary, Secondary, Background, and supporting palette. Second, flow those values into token and component roles such as sidebar-surface, text-primary, and border-accent.",
                     "The brand palette is the only entry point that changes by brand. All interface roles follow the same structure, allowing Cymetrics and Vulcan to retain distinct identities without maintaining separate logic."
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/onesleeveBrandColor.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "Brand Color — the only entry point that changes when switching brands.",
+                      "alt": "Brand Color — the only entry point that changes when switching brands."
+                    }
                   ]
                 },
                 {
@@ -729,6 +738,15 @@
                   "body": [
                     "We deliberately combined Primitive and Semantic into one Foundation and Meaning layer, then mapped it into Component Tokens. Our team was one designer and two front-end engineers. At that scale, an extra layer meant one more interface where syncs could break, and a “which layer?” decision every time we added a token. We merged the two and used naming conventions to distinguish purpose instead.",
                     "The goal was not to maximize theoretical separation. It was to preserve semantic intent while reducing duplicate tokens, synchronization risk, and the decision cost of adding and maintaining tokens."
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/onesleeveProcess3.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "Token Flow — palette values become foundation, meaning, and component roles.",
+                      "alt": "Token Flow — palette values become foundation, meaning, and component roles."
+                    }
                   ]
                 },
                 {
@@ -737,47 +755,35 @@
                     "Highly reusable components use the Standard format: {Component}–{Property}–{State}.",
                     "Scope-specific and edge cases use the Contextual format: {Scope}–{Component}–{Property}–{State}.",
                     "Common defaults are omitted for brevity; scope is introduced only when a boundary needs to be explicit. The result remains searchable and predictable as complexity grows."
-                  ]
+                  ],
+                  "media": []
                 },
                 {
                   "title": "3-4. Same structure, different palette",
                   "body": [
                     "Applying the Cymetrics and Vulcan palettes to the same token structure produces consistent Theme Color, Sidebar, Text, and Surface roles. Design and engineering share one language while each product retains its visual identity."
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/onesleeveCymetricsPanel.png",
+                      "layout": "half",
+                      "frameRatio": "16:10",
+                      "caption": "Cymetrics Token Table — the shared structure expressed through a light product palette.",
+                      "alt": "Cymetrics Token Table — the shared structure expressed through a light product palette."
+                    },
+                    {
+                      "asset": "assets/images/original/onesleeveVulcanPanel.png",
+                      "layout": "half",
+                      "frameRatio": "16:10",
+                      "caption": "Vulcan Token Table — the same structure expressed through a dark product palette.",
+                      "alt": "Vulcan Token Table — the same structure expressed through a dark product palette."
+                    }
                   ]
                 }
               ],
               "points": [],
               "quote": null,
-              "media": [
-                {
-                  "asset": "assets/images/original/onesleeveBrandColor.png",
-                  "layout": "wide",
-                  "frameRatio": "auto",
-                  "caption": "Brand Color — the only entry point that changes when switching brands.",
-                  "alt": "Brand Color — the only entry point that changes when switching brands."
-                },
-                {
-                  "asset": "assets/images/original/onesleeveProcess3.png",
-                  "layout": "wide",
-                  "frameRatio": "auto",
-                  "caption": "Token Flow — palette values become foundation, meaning, and component roles.",
-                  "alt": "Token Flow — palette values become foundation, meaning, and component roles."
-                },
-                {
-                  "asset": "assets/images/original/onesleeveCymetricsPanel.png",
-                  "layout": "half",
-                  "frameRatio": "16:10",
-                  "caption": "Cymetrics Token Table — the shared structure expressed through a light product palette.",
-                  "alt": "Cymetrics Token Table — the shared structure expressed through a light product palette."
-                },
-                {
-                  "asset": "assets/images/original/onesleeveVulcanPanel.png",
-                  "layout": "half",
-                  "frameRatio": "16:10",
-                  "caption": "Vulcan Token Table — the same structure expressed through a dark product palette.",
-                  "alt": "Vulcan Token Table — the same structure expressed through a dark product palette."
-                }
-              ]
+              "media": []
             },
             {
               "order": 4,
@@ -791,6 +797,15 @@
                     "Different products need different components; one library cannot cover every case. Universal components live in a protected Master Library shared by all products, while product-specific components remain in their own Child Libraries.",
                     "For example, Vulcan Attack needed a dark-background scan-status card. Editing the Master Card directly would break Cymetrics' light-themed interface. In the Child Library, that customization affected only Vulcan Attack — the Master Card stayed untouched.",
                     "When a Child component proves reusable through real usage, it can be promoted back to the Master."
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/onesleeveProcess2.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "Master／Child — the boundary between shared rules and product-specific flexibility.",
+                      "alt": "Master／Child — the boundary between shared rules and product-specific flexibility."
+                    }
                   ]
                 },
                 {
@@ -799,6 +814,15 @@
                     "In real collaboration, designers are not the only people changing screens. PMs and engineers also make ad-hoc edits for demos and implementation. Without a single source, changes are easily applied to one screen and missed everywhere else.",
                     "We split each product page into two areas: Patterns assembled from Components on the left, and UI Flows organized by User Story on the right. Every screen is composed from the Patterns. Changes happen on the left; the related flows synchronize automatically.",
                     "The value was not simply faster editing — it structurally reduced the possibility of missed updates."
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/onesleeveCooperation.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "Pattern Sync — every UI Flow is assembled from a single Pattern source.",
+                      "alt": "Pattern Sync — every UI Flow is assembled from a single Pattern source."
+                    }
                   ]
                 },
                 {
@@ -806,27 +830,13 @@
                   "body": [
                     "Previously, RTL was treated as an afterthought. Designers manually rebuilt screens, while engineers relied on fragile LTR-to-RTL conversion logic.",
                     "The new core components embedded bidirectional behavior from the beginning and mapped it to CSS Logical Properties. Figma could switch reading direction quickly, while the front end no longer needed screen-by-screen overrides."
-                  ]
+                  ],
+                  "media": []
                 }
               ],
               "points": [],
               "quote": "Change once. Miss nothing.",
-              "media": [
-                {
-                  "asset": "assets/images/original/onesleeveProcess2.png",
-                  "layout": "wide",
-                  "frameRatio": "auto",
-                  "caption": "Master／Child — the boundary between shared rules and product-specific flexibility.",
-                  "alt": "Master／Child — the boundary between shared rules and product-specific flexibility."
-                },
-                {
-                  "asset": "assets/images/original/onesleeveCooperation.png",
-                  "layout": "wide",
-                  "frameRatio": "auto",
-                  "caption": "Pattern Sync — every UI Flow is assembled from a single Pattern source.",
-                  "alt": "Pattern Sync — every UI Flow is assembled from a single Pattern source."
-                }
-              ]
+              "media": []
             },
             {
               "order": 5,
@@ -1810,6 +1820,15 @@
                   "body": [
                     "切換品牌分成兩步。第一步只定義 Primary、Secondary、Background 等品牌色盤；第二步讓色彩流入 Token 與元件層，映射到 sidebar-surface、text-primary、border-accent 等介面用途。",
                     "品牌色盤是唯一需要因品牌而替換的入口。其餘介面角色沿用同一套結構，因此 Cymetrics 與 Vulcan 可以保有不同視覺個性，又不必維護兩套邏輯。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/onesleeveBrandColor.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "Brand Color — 切換品牌時唯一需要替換的入口。",
+                      "alt": "Brand Color — 切換品牌時唯一需要替換的入口。"
+                    }
                   ]
                 },
                 {
@@ -1817,6 +1836,15 @@
                   "body": [
                     "我們刻意把 Primitive 與 Semantic 合併成一個「基礎與意義層」，再映射到 Component Token。團隊是一名設計師加兩名前端工程師。在這個規模下，多一層架構就多一個同步可能失敗的介面，每新增一個 Token 都要先判斷「放哪一層」。我們選擇合併，用命名規則區分用途。",
                     "這不是追求最完整的理論分層，而是在保留語義用途的同時，降低重複 Token、同步風險，以及新增與修改 Token 時的決策成本。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/onesleeveProcess3.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "Token Flow — 色盤如何流入基礎／意義層，再映射到元件用途。",
+                      "alt": "Token Flow — 色盤如何流入基礎／意義層，再映射到元件用途。"
+                    }
                   ]
                 },
                 {
@@ -1825,47 +1853,35 @@
                     "高複用元件使用 Standard 格式：{Component}–{Property}–{State}。",
                     "範圍限定或邊界情境使用 Contextual 格式：{Scope}–{Component}–{Property}–{State}。",
                     "常見的 default 會被省略，需要指出情境邊界時才加入 Scope，讓命名在規模擴大後仍然可預測、可搜尋。"
-                  ]
+                  ],
+                  "media": []
                 },
                 {
                   "title": "3-4. 同一結構，不同色盤",
                   "body": [
                     "同一套 Token 結構套用 Cymetrics 與 Vulcan 的品牌色後，Theme Color、Sidebar、Text、Surface 等角色都沿用一致規則。設計與工程使用同一套語言，最終畫面仍能保持兩個品牌的差異。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/onesleeveCymetricsPanel.png",
+                      "layout": "half",
+                      "frameRatio": "16:10",
+                      "caption": "Cymetrics Token Table — 共用結構套用淺色產品色盤的結果。",
+                      "alt": "Cymetrics Token Table — 共用結構套用淺色產品色盤的結果。"
+                    },
+                    {
+                      "asset": "assets/images/original/onesleeveVulcanPanel.png",
+                      "layout": "half",
+                      "frameRatio": "16:10",
+                      "caption": "Vulcan Token Table — 同一結構套用深色產品色盤的結果。",
+                      "alt": "Vulcan Token Table — 同一結構套用深色產品色盤的結果。"
+                    }
                   ]
                 }
               ],
               "points": [],
               "quote": null,
-              "media": [
-                {
-                  "asset": "assets/images/original/onesleeveBrandColor.png",
-                  "layout": "wide",
-                  "frameRatio": "auto",
-                  "caption": "Brand Color — 切換品牌時唯一需要替換的入口。",
-                  "alt": "Brand Color — 切換品牌時唯一需要替換的入口。"
-                },
-                {
-                  "asset": "assets/images/original/onesleeveProcess3.png",
-                  "layout": "wide",
-                  "frameRatio": "auto",
-                  "caption": "Token Flow — 色盤如何流入基礎／意義層，再映射到元件用途。",
-                  "alt": "Token Flow — 色盤如何流入基礎／意義層，再映射到元件用途。"
-                },
-                {
-                  "asset": "assets/images/original/onesleeveCymetricsPanel.png",
-                  "layout": "half",
-                  "frameRatio": "16:10",
-                  "caption": "Cymetrics Token Table — 共用結構套用淺色產品色盤的結果。",
-                  "alt": "Cymetrics Token Table — 共用結構套用淺色產品色盤的結果。"
-                },
-                {
-                  "asset": "assets/images/original/onesleeveVulcanPanel.png",
-                  "layout": "half",
-                  "frameRatio": "16:10",
-                  "caption": "Vulcan Token Table — 同一結構套用深色產品色盤的結果。",
-                  "alt": "Vulcan Token Table — 同一結構套用深色產品色盤的結果。"
-                }
-              ]
+              "media": []
             },
             {
               "order": 4,
@@ -1879,6 +1895,15 @@
                     "不同產品需要不同元件，單一 Library 無法涵蓋所有情境。通用元件放在受保護的 Master Library，由所有產品共用；產品特有元件則留在各自的 Child Library。",
                     "例如 Vulcan Attack 需要深色背景的掃描狀態卡片。如果直接改 Master 的 Card，Cymetrics 的淺色介面就會壞掉。放在 Child Library，客製只影響 Vulcan Attack，Master Card 不動。",
                     "當 Child 元件經過實際使用、證明具有共用價值時，也可以再提升回 Master。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/onesleeveProcess2.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "Master／Child — 共用規則與產品客製之間的邊界。",
+                      "alt": "Master／Child — 共用規則與產品客製之間的邊界。"
+                    }
                   ]
                 },
                 {
@@ -1887,6 +1912,15 @@
                     "實際協作中，調整畫面的人不只有設計師，PM 與工程師也會因應 Demo 或開發需求進行臨時修改。若沒有單一來源，改動很容易只完成一半，其他畫面則逐漸失去一致性。",
                     "我們把產品頁面拆成兩個區域：左側是由 Component 組成的 Pattern，右側是依 User Story 排列的 UI Flow。所有畫面都由 Pattern 組裝，修改只發生在左側，右側同步更新。",
                     "這不只是加快修改，而是從結構上降低漏改的可能性。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/onesleeveCooperation.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "Pattern Sync — 所有 UI Flow 都由單一 Pattern 來源組成。",
+                      "alt": "Pattern Sync — 所有 UI Flow 都由單一 Pattern 來源組成。"
+                    }
                   ]
                 },
                 {
@@ -1894,27 +1928,13 @@
                   "body": [
                     "過去 RTL 是事後補丁，設計師需要手動重建畫面，工程師則依靠脆弱的 LTR／RTL 轉換邏輯。",
                     "新的核心元件從一開始就納入雙向邏輯，並對應 CSS Logical Properties。Figma 能快速切換閱讀方向，前端也不必再針對每個畫面重寫覆蓋規則。"
-                  ]
+                  ],
+                  "media": []
                 }
               ],
               "points": [],
               "quote": "Change once. Miss nothing.",
-              "media": [
-                {
-                  "asset": "assets/images/original/onesleeveProcess2.png",
-                  "layout": "wide",
-                  "frameRatio": "auto",
-                  "caption": "Master／Child — 共用規則與產品客製之間的邊界。",
-                  "alt": "Master／Child — 共用規則與產品客製之間的邊界。"
-                },
-                {
-                  "asset": "assets/images/original/onesleeveCooperation.png",
-                  "layout": "wide",
-                  "frameRatio": "auto",
-                  "caption": "Pattern Sync — 所有 UI Flow 都由單一 Pattern 來源組成。",
-                  "alt": "Pattern Sync — 所有 UI Flow 都由單一 Pattern 來源組成。"
-                }
-              ]
+              "media": []
             },
             {
               "order": 5,
@@ -2898,6 +2918,15 @@
                   "body": [
                     "まず Primary、Secondary、Background などのブランドパレットを定義し、その値を sidebar-surface、text-primary、border-accent などの Token とコンポーネントの役割へ流し込みます。",
                     "ブランドごとに変更する入口はパレットだけです。同じ構造によって、別々のロジックを保守せずに各ブランドの個性を維持できます。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/onesleeveBrandColor.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "Brand Color — ブランド切り替え時に変更する唯一の入口。",
+                      "alt": "Brand Color — ブランド切り替え時に変更する唯一の入口。"
+                    }
                   ]
                 },
                 {
@@ -2905,6 +2934,15 @@
                   "body": [
                     "Primitive と Semantic を「基盤と意味」の1つの層に統合し、そこから Component Token へマッピングしました。チーム構成はデザイナー1名とフロントエンド2名でした。この規模では、層が1つ増えるだけで同期が崩れるリスクが増え、Token を追加するたびに「どちらの層に入れるか」の判断コストが発生します。2層を統合し、用途の区別は命名規則で担保しました。",
                     "意味のある用途を維持しながら、重複 Token、同期リスク、追加・保守に伴う判断コストを抑えるための選択でした。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/onesleeveProcess3.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "Token Flow — パレットから基盤・意味・コンポーネントの役割へ流れる構造。",
+                      "alt": "Token Flow — パレットから基盤・意味・コンポーネントの役割へ流れる構造。"
+                    }
                   ]
                 },
                 {
@@ -2913,47 +2951,35 @@
                     "再利用性の高いコンポーネントは Standard：{Component}–{Property}–{State}。",
                     "スコープ固有・例外的なケースは Contextual：{Scope}–{Component}–{Property}–{State}。",
                     "一般的な default は省略し、境界が必要な場合だけ Scope を追加します。"
-                  ]
+                  ],
+                  "media": []
                 },
                 {
                   "title": "3-4. 同じ構造、異なるパレット",
                   "body": [
                     "同じ Token 構造に Cymetrics と Vulcan のブランドパレットを適用し、Theme Color、Sidebar、Text、Surface を共通ルールで管理。各製品のビジュアルアイデンティティも維持できます。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/onesleeveCymetricsPanel.png",
+                      "layout": "half",
+                      "frameRatio": "16:10",
+                      "caption": "Cymetrics Token Table — 共通構造をライトパレットで表現。",
+                      "alt": "Cymetrics Token Table — 共通構造をライトパレットで表現。"
+                    },
+                    {
+                      "asset": "assets/images/original/onesleeveVulcanPanel.png",
+                      "layout": "half",
+                      "frameRatio": "16:10",
+                      "caption": "Vulcan Token Table — 同じ構造をダークパレットで表現。",
+                      "alt": "Vulcan Token Table — 同じ構造をダークパレットで表現。"
+                    }
                   ]
                 }
               ],
               "points": [],
               "quote": null,
-              "media": [
-                {
-                  "asset": "assets/images/original/onesleeveBrandColor.png",
-                  "layout": "wide",
-                  "frameRatio": "auto",
-                  "caption": "Brand Color — ブランド切り替え時に変更する唯一の入口。",
-                  "alt": "Brand Color — ブランド切り替え時に変更する唯一の入口。"
-                },
-                {
-                  "asset": "assets/images/original/onesleeveProcess3.png",
-                  "layout": "wide",
-                  "frameRatio": "auto",
-                  "caption": "Token Flow — パレットから基盤・意味・コンポーネントの役割へ流れる構造。",
-                  "alt": "Token Flow — パレットから基盤・意味・コンポーネントの役割へ流れる構造。"
-                },
-                {
-                  "asset": "assets/images/original/onesleeveCymetricsPanel.png",
-                  "layout": "half",
-                  "frameRatio": "16:10",
-                  "caption": "Cymetrics Token Table — 共通構造をライトパレットで表現。",
-                  "alt": "Cymetrics Token Table — 共通構造をライトパレットで表現。"
-                },
-                {
-                  "asset": "assets/images/original/onesleeveVulcanPanel.png",
-                  "layout": "half",
-                  "frameRatio": "16:10",
-                  "caption": "Vulcan Token Table — 同じ構造をダークパレットで表現。",
-                  "alt": "Vulcan Token Table — 同じ構造をダークパレットで表現。"
-                }
-              ]
+              "media": []
             },
             {
               "order": 4,
@@ -2967,6 +2993,15 @@
                     "共通コンポーネントは保護された Master Library に配置し、製品固有のコンポーネントは各 Child Library に分離しました。",
                     "たとえば Vulcan Attack にはダークバックグラウンドのスキャンステータスカードが必要でした。Master の Card を直接編集すると Cymetrics のライトテーマが壊れます。Child Library に配置することで、カスタマイズは Vulcan Attack のみに影響し、Master Card は変更されません。",
                     "Child 側で再利用性が確認されたコンポーネントは、Master へ昇格できます。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/onesleeveProcess2.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "Master／Child — 共通ルールと製品固有の柔軟性を分ける境界。",
+                      "alt": "Master／Child — 共通ルールと製品固有の柔軟性を分ける境界。"
+                    }
                   ]
                 },
                 {
@@ -2975,6 +3010,15 @@
                     "画面を変更するのはデザイナーだけではなく、PM やエンジニアもデモや実装に合わせて変更します。単一のソースがなければ、他の画面が取り残されます。",
                     "各ページを左側の Pattern と右側の UI Flow に分け、すべての画面を Pattern から組み立てました。変更は左側で行い、関連する UI Flow は同期されます。",
                     "単に編集が速くなるだけでなく、更新漏れが起きにくい構造へ変えました。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/onesleeveCooperation.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "Pattern Sync — すべての UI Flow を単一の Pattern から構成。",
+                      "alt": "Pattern Sync — すべての UI Flow を単一の Pattern から構成。"
+                    }
                   ]
                 },
                 {
@@ -2982,27 +3026,13 @@
                   "body": [
                     "以前の RTL 対応は後付けで、デザイナーが画面を手作業で再構築し、エンジニアは不安定な LTR／RTL 変換ロジックに依存していました。",
                     "新しいコアコンポーネントには最初から双方向の振る舞いを組み込み、CSS Logical Properties に対応。Figma では読み方向を素早く切り替え、フロントエンドでも画面ごとの上書きを不要にしました。"
-                  ]
+                  ],
+                  "media": []
                 }
               ],
               "points": [],
               "quote": "Change once. Miss nothing.",
-              "media": [
-                {
-                  "asset": "assets/images/original/onesleeveProcess2.png",
-                  "layout": "wide",
-                  "frameRatio": "auto",
-                  "caption": "Master／Child — 共通ルールと製品固有の柔軟性を分ける境界。",
-                  "alt": "Master／Child — 共通ルールと製品固有の柔軟性を分ける境界。"
-                },
-                {
-                  "asset": "assets/images/original/onesleeveCooperation.png",
-                  "layout": "wide",
-                  "frameRatio": "auto",
-                  "caption": "Pattern Sync — すべての UI Flow を単一の Pattern から構成。",
-                  "alt": "Pattern Sync — すべての UI Flow を単一の Pattern から構成。"
-                }
-              ]
+              "media": []
             },
             {
               "order": 5,
@@ -3282,5 +3312,5 @@
       }
     }
   },
-  "updatedAt": "2026-08-19T19:54:04.441Z"
+  "updatedAt": "2026-08-20T10:17:07.932Z"
 }
