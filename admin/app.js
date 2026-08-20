@@ -117,12 +117,16 @@
     return bytes < 1024 * 1024 ? `${Math.round(bytes / 1024)} KB` : `${(bytes / 1024 / 1024).toFixed(1)} MB`;
   }
 
-  function uploadKey(kind, sectionIndex = "", mediaIndex = "") {
-    return `${state.projectSlug}:${kind}:${sectionIndex}:${mediaIndex}`;
+  function uploadKey(kind, sectionIndex = "", mediaIndex = "", subsectionIndex = "") {
+    return `${state.projectSlug}:${kind}:${sectionIndex}:${subsectionIndex}:${mediaIndex}`;
   }
 
-  function pendingFor(kind, sectionIndex = "", mediaIndex = "") {
-    return state.pending.get(uploadKey(kind, sectionIndex, mediaIndex));
+  function pendingFor(kind, sectionIndex = "", mediaIndex = "", subsectionIndex = "") {
+    return state.pending.get(uploadKey(kind, sectionIndex, mediaIndex, subsectionIndex));
+  }
+
+  function pendingKeyForItem(item) {
+    return `${item.projectSlug}:${item.kind}:${item.sectionIndex || ""}:${item.subsectionIndex || ""}:${item.mediaIndex || ""}`;
   }
 
   function assetCard(kind, title, help, source) {
@@ -152,31 +156,40 @@
   }
 
   function subsectionMarkup(subsection, sectionIndex, subsectionIndex) {
+    const media = subsection.media || [];
     return `<article class="subsection-item">
       ${field("小節標題", `sections.${sectionIndex}.subsections.${subsectionIndex}.title`, subsection.title || "")}
       ${field("小節內文", `sections.${sectionIndex}.subsections.${subsectionIndex}.body`, (subsection.body || []).join("\n\n"), { textarea: true, type: "paragraphs", help: "段落之間空一行。" })}
+      <div class="subsection-media-editor">
+        <div class="subsection-media-editor__head"><div><strong>小節圖片</strong><span>${media.length} 張；圖片會緊接在這段文字後方。</span></div><button class="button button--primary" type="button" data-add-media data-media-kind="submedia" data-section-index="${sectionIndex}" data-subsection-index="${subsectionIndex}">＋ 新增圖片</button></div>
+        <div class="media-list">${media.length ? media.map((item, index) => mediaMarkup(item, sectionIndex, index, media.length, subsectionIndex)).join("") : `<div class="empty-media">尚未加入小節圖片。</div>`}</div>
+      </div>
       <div class="point-actions"><button class="button button--danger" type="button" data-remove-subsection="${subsectionIndex}" data-section-index="${sectionIndex}">移除小節</button></div>
     </article>`;
   }
 
-  function mediaMarkup(item, sectionIndex, mediaIndex, mediaCount) {
-    const pending = pendingFor("media", sectionIndex, mediaIndex);
+  function mediaMarkup(item, sectionIndex, mediaIndex, mediaCount, subsectionIndex = null) {
+    const kind = subsectionIndex === null ? "media" : "submedia";
+    const subsectionPath = subsectionIndex === null ? "" : `.subsections.${subsectionIndex}`;
+    const bindPath = `sections.${sectionIndex}${subsectionPath}.media.${mediaIndex}`;
+    const subsectionData = subsectionIndex === null ? "" : ` data-subsection-index="${subsectionIndex}"`;
+    const pending = pendingFor(kind, sectionIndex, mediaIndex, subsectionIndex ?? "");
     const source = pending ? pending.objectUrl : previewUrl(item.asset);
     return `<article class="media-item" data-layout="${escapeHtml(item.layout || "wide")}">
       <div class="media-item__preview"><img src="${escapeHtml(source)}" alt="${escapeHtml(item.alt || item.caption || "Section image")}"></div>
       <div class="media-item__body">
-        <div class="media-item__toolbar"><strong>圖片 ${mediaIndex + 1}</strong><div class="media-item__settings"><label>版型<select data-bind="sections.${sectionIndex}.media.${mediaIndex}.layout"><option value="wide"${(item.layout || "wide") === "wide" ? " selected" : ""}>全寬</option><option value="compact"${item.layout === "compact" ? " selected" : ""}>內縮寬</option><option value="half"${item.layout === "half" ? " selected" : ""}>半寬（連續兩張並排）</option><option value="portrait"${item.layout === "portrait" ? " selected" : ""}>直式置中</option></select></label><label>同排圖片框比例<select data-bind="sections.${sectionIndex}.media.${mediaIndex}.frameRatio"><option value="auto"${(item.frameRatio || "auto") === "auto" ? " selected" : ""}>依圖片比例</option><option value="16:10"${item.frameRatio === "16:10" ? " selected" : ""}>橫式 16:10</option><option value="4:3"${item.frameRatio === "4:3" ? " selected" : ""}>標準 4:3</option><option value="3:4"${item.frameRatio === "3:4" ? " selected" : ""}>直式 3:4</option></select></label></div></div>
+        <div class="media-item__toolbar"><strong>${kind === "submedia" ? "小節圖片" : "圖片"} ${mediaIndex + 1}</strong><div class="media-item__settings"><label>版型<select data-bind="${bindPath}.layout"><option value="wide"${(item.layout || "wide") === "wide" ? " selected" : ""}>全寬</option><option value="compact"${item.layout === "compact" ? " selected" : ""}>內縮寬</option><option value="half"${item.layout === "half" ? " selected" : ""}>半寬（連續兩張並排）</option><option value="portrait"${item.layout === "portrait" ? " selected" : ""}>直式置中</option></select></label><label>同排圖片框比例<select data-bind="${bindPath}.frameRatio"><option value="auto"${(item.frameRatio || "auto") === "auto" ? " selected" : ""}>依圖片比例</option><option value="16:10"${item.frameRatio === "16:10" ? " selected" : ""}>橫式 16:10</option><option value="4:3"${item.frameRatio === "4:3" ? " selected" : ""}>標準 4:3</option><option value="3:4"${item.frameRatio === "3:4" ? " selected" : ""}>直式 3:4</option></select></label></div></div>
         <div class="media-fields">
-          ${field("圖片說明", `sections.${sectionIndex}.media.${mediaIndex}.caption`, item.caption || "", { textarea: true })}
-          ${field("替代文字（無障礙）", `sections.${sectionIndex}.media.${mediaIndex}.alt`, item.alt || "")}
+          ${field("圖片說明", `${bindPath}.caption`, item.caption || "", { textarea: true })}
+          ${field("替代文字（無障礙）", `${bindPath}.alt`, item.alt || "")}
         </div>
         <div class="media-actions">
-          <label class="file-button">${pending ? "重新選擇" : "更換圖片"}<input type="file" accept="image/jpeg,image/png,image/webp" data-upload-kind="media" data-section-index="${sectionIndex}" data-media-index="${mediaIndex}"></label>
+          <label class="file-button">${pending ? "重新選擇" : "更換圖片"}<input type="file" accept="image/jpeg,image/png,image/webp" data-upload-kind="${kind}" data-section-index="${sectionIndex}"${subsectionData} data-media-index="${mediaIndex}"></label>
           <div class="media-order" aria-label="調整圖片順序">
-            <button class="button button--secondary" type="button" data-move-media="-1" data-media-index="${mediaIndex}" data-section-index="${sectionIndex}"${mediaIndex === 0 ? " disabled" : ""} aria-label="圖片 ${mediaIndex + 1} 上移">↑ 上移</button>
-            <button class="button button--secondary" type="button" data-move-media="1" data-media-index="${mediaIndex}" data-section-index="${sectionIndex}"${mediaIndex === mediaCount - 1 ? " disabled" : ""} aria-label="圖片 ${mediaIndex + 1} 下移">↓ 下移</button>
+            <button class="button button--secondary" type="button" data-move-media="-1" data-media-kind="${kind}" data-media-index="${mediaIndex}" data-section-index="${sectionIndex}"${subsectionData}${mediaIndex === 0 ? " disabled" : ""} aria-label="圖片 ${mediaIndex + 1} 上移">↑ 上移</button>
+            <button class="button button--secondary" type="button" data-move-media="1" data-media-kind="${kind}" data-media-index="${mediaIndex}" data-section-index="${sectionIndex}"${subsectionData}${mediaIndex === mediaCount - 1 ? " disabled" : ""} aria-label="圖片 ${mediaIndex + 1} 下移">↓ 下移</button>
           </div>
-          <button class="button button--danger" type="button" data-remove-media="${mediaIndex}" data-section-index="${sectionIndex}">刪除</button>
+          <button class="button button--danger" type="button" data-remove-media="${mediaIndex}" data-media-kind="${kind}" data-section-index="${sectionIndex}"${subsectionData}>刪除</button>
         </div>
         <div class="pending-file">${pending ? `${escapeHtml(pending.file.name)} · ${formatBytes(pending.file.size)}` : ""}</div>
       </div>
@@ -210,7 +223,7 @@
         <div class="subsection-list">${subsections.map((subsection, index) => subsectionMarkup(subsection, sectionIndex, index)).join("")}</div>
         <div class="subheading"><h3>重點卡片</h3><button class="button button--secondary" type="button" data-add-point data-section-index="${sectionIndex}">＋ 新增重點</button></div>
         <div class="point-list">${points.map((point, index) => pointMarkup(point, sectionIndex, index)).join("")}</div>
-        <div class="subheading"><div><h3>Section 圖片</h3><span>${media.length} 張；可用全寬、內縮、半寬成對或直式置中建立案例敘事節奏。</span></div><button class="button button--primary" type="button" data-add-media data-section-index="${sectionIndex}">＋ 新增圖片</button></div>
+        <div class="subheading"><div><h3>Section 圖片</h3><span>${media.length} 張；適合整段開場或總結。若圖片只支撐一個小節，請改放在上方的小節圖片。</span></div><button class="button button--primary" type="button" data-add-media data-media-kind="media" data-section-index="${sectionIndex}">＋ 新增圖片</button></div>
         <div class="media-list">${media.length ? media.map((item, index) => mediaMarkup(item, sectionIndex, index, media.length)).join("") : `<div class="empty-media">這個 section 還沒有圖片，可以從右上方新增。</div>`}</div>
       </div>
     </section>`;
@@ -278,52 +291,63 @@
     publishButton.classList.toggle("is-busy", state.busy);
   }
 
-  function syncMediaAddition(sectionIndex, media) {
+  function mediaCollection(project, kind, sectionIndex, subsectionIndex = null, create = false) {
+    const section = project?.sections?.[sectionIndex];
+    if (!section) return null;
+    const owner = kind === "submedia" ? section.subsections?.[subsectionIndex] : section;
+    if (!owner) return null;
+    if (create) owner.media ||= [];
+    return owner.media || [];
+  }
+
+  function syncMediaAddition(kind, sectionIndex, subsectionIndex, media) {
     state.data.locales.forEach(locale => {
       if (locale === state.locale) return;
-      const section = state.data.content[locale].projects[state.projectSlug]?.sections?.[sectionIndex];
-      if (section) {
-        section.media ||= [];
-        section.media.push({ asset: media.asset, layout: media.layout, frameRatio: media.frameRatio || "auto", caption: media.caption, alt: media.alt });
-      }
+      const project = state.data.content[locale].projects[state.projectSlug];
+      const target = mediaCollection(project, kind, sectionIndex, subsectionIndex, true);
+      target?.push({ asset: media.asset, layout: media.layout, frameRatio: media.frameRatio || "auto", caption: media.caption, alt: media.alt });
     });
   }
 
-  function syncMediaRemoval(sectionIndex, mediaIndex) {
+  function syncMediaRemoval(kind, sectionIndex, subsectionIndex, mediaIndex) {
     state.data.locales.forEach(locale => {
       if (locale === state.locale) return;
-      const media = state.data.content[locale].projects[state.projectSlug]?.sections?.[sectionIndex]?.media;
+      const project = state.data.content[locale].projects[state.projectSlug];
+      const media = mediaCollection(project, kind, sectionIndex, subsectionIndex);
       if (media?.[mediaIndex]) media.splice(mediaIndex, 1);
     });
   }
 
-  function syncMediaMove(sectionIndex, fromIndex, toIndex) {
+  function syncMediaMove(kind, sectionIndex, subsectionIndex, fromIndex, toIndex) {
     state.data.locales.forEach(locale => {
-      const media = state.data.content[locale].projects[state.projectSlug]?.sections?.[sectionIndex]?.media;
+      const project = state.data.content[locale].projects[state.projectSlug];
+      const media = mediaCollection(project, kind, sectionIndex, subsectionIndex);
       if (!media?.[fromIndex] || toIndex < 0 || toIndex >= media.length) return;
       const [item] = media.splice(fromIndex, 1);
       media.splice(toIndex, 0, item);
     });
   }
 
-  function reindexPendingAfterMediaMove(sectionIndex, fromIndex, toIndex) {
+  function reindexPendingAfterMediaMove(kind, sectionIndex, subsectionIndex, fromIndex, toIndex) {
     const entries = [...state.pending.values()];
     state.pending.clear();
     entries.forEach(item => {
-      if (item.projectSlug === state.projectSlug && item.kind === "media" && Number(item.sectionIndex) === sectionIndex) {
+      const sameSubsection = kind !== "submedia" || Number(item.subsectionIndex) === subsectionIndex;
+      if (item.projectSlug === state.projectSlug && item.kind === kind && Number(item.sectionIndex) === sectionIndex && sameSubsection) {
         const index = Number(item.mediaIndex);
         if (index === fromIndex) item.mediaIndex = String(toIndex);
         else if (toIndex < fromIndex && index >= toIndex && index < fromIndex) item.mediaIndex = String(index + 1);
         else if (toIndex > fromIndex && index > fromIndex && index <= toIndex) item.mediaIndex = String(index - 1);
       }
-      state.pending.set(item.kind === "media" ? `${item.projectSlug}:media:${item.sectionIndex}:${item.mediaIndex}` : `${item.projectSlug}:${item.kind}::`, item);
+      state.pending.set(pendingKeyForItem(item), item);
     });
   }
 
-  function reindexPendingAfterMediaRemoval(sectionIndex, mediaIndex) {
+  function reindexPendingAfterMediaRemoval(kind, sectionIndex, subsectionIndex, mediaIndex) {
     const updates = [];
     for (const [key, item] of state.pending) {
-      if (item.projectSlug !== state.projectSlug || item.kind !== "media" || Number(item.sectionIndex) !== sectionIndex) continue;
+      const sameSubsection = kind !== "submedia" || Number(item.subsectionIndex) === subsectionIndex;
+      if (item.projectSlug !== state.projectSlug || item.kind !== kind || Number(item.sectionIndex) !== sectionIndex || !sameSubsection) continue;
       const index = Number(item.mediaIndex);
       if (index === mediaIndex) {
         URL.revokeObjectURL(item.objectUrl);
@@ -334,7 +358,42 @@
         updates.push(item);
       }
     }
-    updates.forEach(item => state.pending.set(`${item.projectSlug}:media:${item.sectionIndex}:${item.mediaIndex}`, item));
+    updates.forEach(item => state.pending.set(pendingKeyForItem(item), item));
+  }
+
+  function reindexPendingAfterSubsectionRemoval(sectionIndex, subsectionIndex) {
+    const updates = [];
+    for (const [key, item] of state.pending) {
+      if (item.projectSlug !== state.projectSlug || item.kind !== "submedia" || Number(item.sectionIndex) !== sectionIndex) continue;
+      const index = Number(item.subsectionIndex);
+      if (index === subsectionIndex) {
+        URL.revokeObjectURL(item.objectUrl);
+        state.pending.delete(key);
+      } else if (index > subsectionIndex) {
+        state.pending.delete(key);
+        item.subsectionIndex = String(index - 1);
+        updates.push(item);
+      }
+    }
+    updates.forEach(item => state.pending.set(pendingKeyForItem(item), item));
+  }
+
+  function syncSubsectionAddition(sectionIndex) {
+    state.data.locales.forEach(locale => {
+      if (locale === state.locale) return;
+      const section = state.data.content[locale].projects[state.projectSlug]?.sections?.[sectionIndex];
+      if (!section) return;
+      section.subsections ||= [];
+      section.subsections.push({ title: "New subsection", body: [], media: [] });
+    });
+  }
+
+  function syncSubsectionRemoval(sectionIndex, subsectionIndex) {
+    state.data.locales.forEach(locale => {
+      if (locale === state.locale) return;
+      const subsections = state.data.content[locale].projects[state.projectSlug]?.sections?.[sectionIndex]?.subsections;
+      if (subsections?.[subsectionIndex]) subsections.splice(subsectionIndex, 1);
+    });
   }
 
   async function handleUpload(input) {
@@ -344,11 +403,12 @@
     if (file.size > 20 * 1024 * 1024) return showNotice("單張圖片請控制在 20 MB 以內。", "error");
     const kind = input.dataset.uploadKind;
     const sectionIndex = input.dataset.sectionIndex ?? "";
+    const subsectionIndex = input.dataset.subsectionIndex ?? "";
     const mediaIndex = input.dataset.mediaIndex ?? "";
-    const key = uploadKey(kind, sectionIndex, mediaIndex);
+    const key = uploadKey(kind, sectionIndex, mediaIndex, subsectionIndex);
     const previous = state.pending.get(key);
     if (previous) URL.revokeObjectURL(previous.objectUrl);
-    state.pending.set(key, { file, objectUrl: URL.createObjectURL(file), kind, sectionIndex, mediaIndex, projectSlug: state.projectSlug });
+    state.pending.set(key, { file, objectUrl: URL.createObjectURL(file), kind, sectionIndex, subsectionIndex, mediaIndex, projectSlug: state.projectSlug });
     markDirty();
     renderEditor();
   }
@@ -362,7 +422,11 @@
   function uploadPath(item) {
     const stamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\.\d{3}Z$/, "Z").replace("T", "-");
     const nonce = Math.random().toString(36).slice(2, 7);
-    const location = item.kind === "media" ? `section-${Number(item.sectionIndex) + 1}-image-${Number(item.mediaIndex) + 1}` : item.kind;
+    const location = item.kind === "media"
+      ? `section-${Number(item.sectionIndex) + 1}-image-${Number(item.mediaIndex) + 1}`
+      : item.kind === "submedia"
+        ? `section-${Number(item.sectionIndex) + 1}-subsection-${Number(item.subsectionIndex) + 1}-image-${Number(item.mediaIndex) + 1}`
+        : item.kind;
     return `assets/uploads/${item.projectSlug}-${location}-${stamp}-${nonce}.${fileExtension(item.file)}`;
   }
 
@@ -371,8 +435,11 @@
       const project = state.data.content[locale].projects[item.projectSlug];
       if (!project) return;
       if (item.kind === "cover") project.cover = path;
-      else {
+      else if (item.kind === "media") {
         const media = project.sections?.[Number(item.sectionIndex)]?.media?.[Number(item.mediaIndex)];
+        if (media) media.asset = path;
+      } else if (item.kind === "submedia") {
+        const media = project.sections?.[Number(item.sectionIndex)]?.subsections?.[Number(item.subsectionIndex)]?.media?.[Number(item.mediaIndex)];
         if (media) media.asset = path;
       }
     });
@@ -473,35 +540,40 @@
   editor.addEventListener("click", event => {
     const moveMedia = event.target.closest("[data-move-media]");
     if (moveMedia) {
+      const kind = moveMedia.dataset.mediaKind || "media";
       const sectionIndex = Number(moveMedia.dataset.sectionIndex);
+      const subsectionIndex = moveMedia.dataset.subsectionIndex === undefined ? null : Number(moveMedia.dataset.subsectionIndex);
       const mediaIndex = Number(moveMedia.dataset.mediaIndex);
       const targetIndex = mediaIndex + Number(moveMedia.dataset.moveMedia);
-      const media = currentProject().sections[sectionIndex]?.media || [];
+      const media = mediaCollection(currentProject(), kind, sectionIndex, subsectionIndex) || [];
       if (targetIndex < 0 || targetIndex >= media.length) return;
-      reindexPendingAfterMediaMove(sectionIndex, mediaIndex, targetIndex);
-      syncMediaMove(sectionIndex, mediaIndex, targetIndex);
+      reindexPendingAfterMediaMove(kind, sectionIndex, subsectionIndex, mediaIndex, targetIndex);
+      syncMediaMove(kind, sectionIndex, subsectionIndex, mediaIndex, targetIndex);
       markDirty();
       renderEditor();
       return;
     }
     const addMedia = event.target.closest("[data-add-media]");
     if (addMedia) {
+      const kind = addMedia.dataset.mediaKind || "media";
       const sectionIndex = Number(addMedia.dataset.sectionIndex);
+      const subsectionIndex = addMedia.dataset.subsectionIndex === undefined ? null : Number(addMedia.dataset.subsectionIndex);
       const media = { asset: "", layout: "wide", frameRatio: "auto", caption: "", alt: "" };
-      currentProject().sections[sectionIndex].media ||= [];
-      currentProject().sections[sectionIndex].media.push(media);
-      syncMediaAddition(sectionIndex, media);
+      mediaCollection(currentProject(), kind, sectionIndex, subsectionIndex, true)?.push(media);
+      syncMediaAddition(kind, sectionIndex, subsectionIndex, media);
       markDirty();
       renderEditor();
       return;
     }
     const removeMedia = event.target.closest("[data-remove-media]");
     if (removeMedia) {
+      const kind = removeMedia.dataset.mediaKind || "media";
       const sectionIndex = Number(removeMedia.dataset.sectionIndex);
+      const subsectionIndex = removeMedia.dataset.subsectionIndex === undefined ? null : Number(removeMedia.dataset.subsectionIndex);
       const mediaIndex = Number(removeMedia.dataset.removeMedia);
-      reindexPendingAfterMediaRemoval(sectionIndex, mediaIndex);
-      currentProject().sections[sectionIndex].media.splice(mediaIndex, 1);
-      syncMediaRemoval(sectionIndex, mediaIndex);
+      reindexPendingAfterMediaRemoval(kind, sectionIndex, subsectionIndex, mediaIndex);
+      mediaCollection(currentProject(), kind, sectionIndex, subsectionIndex)?.splice(mediaIndex, 1);
+      syncMediaRemoval(kind, sectionIndex, subsectionIndex, mediaIndex);
       markDirty();
       renderEditor();
       return;
@@ -517,16 +589,22 @@
     }
     const addSubsection = event.target.closest("[data-add-subsection]");
     if (addSubsection) {
-      const section = currentProject().sections[Number(addSubsection.dataset.sectionIndex)];
+      const sectionIndex = Number(addSubsection.dataset.sectionIndex);
+      const section = currentProject().sections[sectionIndex];
       section.subsections ||= [];
-      section.subsections.push({ title: "New subsection", body: [] });
+      section.subsections.push({ title: "New subsection", body: [], media: [] });
+      syncSubsectionAddition(sectionIndex);
       markDirty();
       renderEditor();
       return;
     }
     const removeSubsection = event.target.closest("[data-remove-subsection]");
     if (removeSubsection) {
-      currentProject().sections[Number(removeSubsection.dataset.sectionIndex)].subsections.splice(Number(removeSubsection.dataset.removeSubsection), 1);
+      const sectionIndex = Number(removeSubsection.dataset.sectionIndex);
+      const subsectionIndex = Number(removeSubsection.dataset.removeSubsection);
+      reindexPendingAfterSubsectionRemoval(sectionIndex, subsectionIndex);
+      currentProject().sections[sectionIndex].subsections.splice(subsectionIndex, 1);
+      syncSubsectionRemoval(sectionIndex, subsectionIndex);
       markDirty();
       renderEditor();
       return;
