@@ -370,41 +370,41 @@
         "insurance": {
           "slug": "insurance",
           "index": "02",
-          "title": "Architecting a Scalable Insurance SaaS: From Custom Silos to a Modular Ecosystem",
-          "role": "Product Designer",
+          "title": "Modularizing Online Insurance Delivery",
+          "role": "Lead Product Designer",
           "timeline": "2024.11–2024.12 (1 month)",
-          "team": "Insurance, business development, sales, design, and engineering",
-          "scope": "User Interviews, User Flow, Mockup Handoff to Engineering, Lead Designer",
+          "team": "Sales, product, design, and engineering",
+          "scope": "Stakeholder Interviews, Information Architecture, User Flow, UI Design, Modular Template System, Design Tokens, Engineering Handoff",
           "accent": "#426f9d",
           "soft": "#dfeaf3",
           "dark": "#234867",
           "summary": {
-            "goal": "Turn a highly customized insurance platform into reusable modules that can support different products and distribution channels.",
-            "challenge": "Meet non-negotiable regulatory requirements while keeping long application flows clear, fast, and adaptable to different client brands.",
-            "outcome": "Doubled communication efficiency, reduced internal development costs by 50%, and shortened new-client design time from one week to two days."
+            "goal": "Restructure a hyper-customized insurance platform into a modular, reusable template framework.",
+            "challenge": "Every client engagement was a one-off custom build—with no shared templates and no reliably estimable scope.",
+            "outcome": "Sales-to-client alignment time and development costs were each reduced by an estimated 50%, and the framework was applied across 3+ active enterprise collaborations."
           },
           "sections": [
             {
               "order": 1,
               "label": "Background",
-              "title": "Reframing the Modular Architecture Around Scenarios and Business Goals",
+              "title": "From One-Off Custom Builds to a Reusable Platform",
               "body": [
-                "IXT is a digital insurance platform launched by AI.f(T), with the core goal of simplifying complex insurance processes and digitizing the entire journey from quotation to policy issuance so existing operations can be optimized and become more efficient.",
-                "Strategically, IXT is not only a full digital insurance solution, but can also be decomposed into modules to support different insurance products and distribution channels.",
-                "This project focused on one of these decomposed functional lines and optimized the experience so that insurance products can be launched faster and pushed into target markets more effectively."
+                "Every client engagement had become a one-off custom build, with no shared templates or standard flows. Sales moved through repeated alignment cycles before engineering could estimate scope, and little reusable structure accumulated between projects.",
+                "IXT is AIFT's digital insurance platform. It supports the journey from quotation to policy issuance and can be decomposed into modules for different insurance products and distribution channels.",
+                "This project focused on one of those module lines. I restructured the application flow and page architecture into a reusable template framework, shortening new-client design time from one week to two days."
               ],
               "points": [
                 {
-                  "title": "Excessive Customization",
-                  "text": "Every project became a heavily customized build with almost no shared standards, making the platform hard to scale and continuously optimize."
+                  "title": "Challenge",
+                  "text": "One-off builds made delivery effort difficult to estimate and prevented the platform from accumulating a reusable foundation."
                 },
                 {
-                  "title": "Unclear Project Cost",
-                  "text": "Sales repeatedly clarified requirements while design and engineering struggled to estimate effort, scope, and budget early."
+                  "title": "Objective",
+                  "text": "Create a modular insurance framework that preserved necessary flexibility while making scope, cost, and delivery more predictable."
                 },
                 {
-                  "title": "Limited Scalability",
-                  "text": "One-off client engagements prevented the platform from accumulating standard modules and limited overall capacity and margin."
+                  "title": "My Role",
+                  "text": "I led stakeholder research, information architecture, user flow, UI design, template definition, design tokens, and engineering handoff."
                 }
               ],
               "quote": null,
@@ -412,213 +412,335 @@
                 {
                   "asset": "assets/images/original/insuranceIxtIntro.png",
                   "layout": "wide",
-                  "caption": "The product sat between insurers, cybersecurity partners, and market-specific operations.",
-                  "alt": "The product sat between insurers, cybersecurity partners, and market-specific operations."
-                },
-                {
-                  "asset": "assets/images/original/insuranceProcess1.png",
-                  "layout": "half",
-                  "caption": "The architecture had to satisfy vendor visibility and consumer comprehension at the same time.",
-                  "alt": "The architecture had to satisfy vendor visibility and consumer comprehension at the same time."
-                },
-                {
-                  "asset": "assets/images/original/insuranceCompetitive.png",
-                  "layout": "half",
-                  "caption": "Competitive analysis separated required information, filling flow, and brand expectations.",
-                  "alt": "Competitive analysis separated required information, filling flow, and brand expectations."
+                  "caption": "IXT connected the insurance platform, cybersecurity capabilities, and partner delivery into one modular proposition.",
+                  "alt": "IXT, Cymetrics, and OneInfinity partnership presentation for a cyber-insurance platform."
                 }
               ]
             },
             {
               "order": 2,
-              "label": "Definition & Exploration",
-              "title": "Excessive Customization Drove Up Project Costs",
+              "label": "Research & Discovery",
+              "title": "Where Alignment and Application Flows Repeatedly Broke Down",
               "body": [
-                "The legacy system offered clients a high degree of freedom, similar to a ‘WordPress for insurance’, which meant every project became a heavily customized build with almost no shared standards.",
-                "Although end users had flexibility in page layout and flow, sales needed to repeatedly clarify requirements, and the development team struggled to estimate scope and cost, ultimately hurting project efficiency and profitability.",
-                "By combining interviews and data from sales, customer support, and B-side clients, several key issues affecting application experience and conversion were identified."
+                "Before designing, I conducted one-on-one interviews with 2–3 stakeholders from each of three functions—sales, product, and engineering. Three recurring internal problems emerged.",
+                "I then synthesized those interviews with existing client requirements and delivery feedback to trace downstream application friction back to insurer and delivery constraints."
               ],
               "points": [
                 {
-                  "title": "Complex Application Flow",
-                  "text": "Users need each page to focus on one type of information so they can clearly understand what to prepare and complete the application more smoothly."
+                  "title": "Alignment Cost Too High",
+                  "text": "Without standard flows or templates, every opportunity started from scratch and the team had to re-explain platform capabilities."
                 },
                 {
-                  "title": "Heavy Legal Text",
-                  "text": "Insurers must present a large amount of regulatory text, which often conflicts with the need to simplify the interface and structure."
+                  "title": "Engineering Couldn't Scope Early",
+                  "text": "Rough concepts could not be estimated until deep into an engagement, creating schedule and budget risk."
                 },
                 {
-                  "title": "Complex Customer Attributes",
-                  "text": "The system must serve different identities and needs, but the existing platform only supported a single shared layout."
+                  "title": "No Shared Reusable Framework",
+                  "text": "Treating each client as an independent project limited capacity, maintainability, and margin over time."
+                }
+              ],
+              "subsections": [
+                {
+                  "title": "2-1. Downstream User Friction from Insurer Requirements",
+                  "body": [
+                    "Application flows were too complex: users needed each page to focus on one type of information so they could understand what to prepare and what to do next.",
+                    "Legal text could not simply be removed: insurers had to present large amounts of locally required regulatory information without letting it overwhelm the primary task.",
+                    "Customer profiles varied widely: a single shared layout could not address different identities, products, and application scenarios at the same time."
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceProcess2.png",
+                      "layout": "wide",
+                      "caption": "The existing end-to-end journey exposed the number of decisions, reviews, exceptions, and completion states that had to be coordinated.",
+                      "alt": "Insurance user journey before and during application."
+                    }
+                  ]
+                },
+                {
+                  "title": "2-2. Competitive Research: Identifying Reusable Market Conventions",
+                  "body": [
+                    "Across different comparison rounds, I reviewed 3–5 representative digital insurance products, focusing on required information, application flow, and brand expression.",
+                    "I compared how products organized mandatory questions, divided long journeys, presented legal content, and expressed different brands without changing core interaction patterns.",
+                    "These findings confirmed that the work needed to move from isolated screen fixes to an end-to-end flow redesign built on reusable, regulation-aware modules."
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceCompetitive.png",
+                      "layout": "wide",
+                      "caption": "Competitive analysis separated three reusable dimensions: required information, application flow, and brand expression.",
+                      "alt": "Competitive insurance products compared across required information, filling flow, and user brand."
+                    }
+                  ]
                 }
               ],
               "quote": null,
-              "media": [
-                {
-                  "asset": "assets/images/original/insuranceProcess2.png",
-                  "layout": "wide",
-                  "caption": "The end-to-end journey exposed decisions, reviews, exceptions, and completion states.",
-                  "alt": "The end-to-end journey exposed decisions, reviews, exceptions, and completion states."
-                },
-                {
-                  "asset": "assets/images/original/insuranceTaskCentered.png",
-                  "layout": "portrait",
-                  "caption": "Task-centered structure simplified the application around the user’s next decision.",
-                  "alt": "Task-centered structure simplified the application around the user’s next decision."
-                },
-                {
-                  "asset": "assets/images/original/insuranceSplitFlow.png",
-                  "layout": "wide",
-                  "caption": "Long and text-heavy flows were divided without losing legal and operational context.",
-                  "alt": "Long and text-heavy flows were divided without losing legal and operational context."
-                }
-              ]
+              "media": []
             },
             {
               "order": 3,
-              "label": "Core Strategy",
-              "title": "The Tension Between Regulatory Compliance and User Experience",
+              "label": "Challenge & Core Strategy",
+              "title": "Compliance Defined the Floor; Experience Determined the Presentation",
               "body": [
-                "I faced a three-way conflict between key stakeholders: 2B vendors require high visibility for legal disclaimers, while business teams and end users demand simple, fast operation flows.",
-                "Considering the unique characteristics of the insurance industry, I identified regulatory compliance as the foundation of product development and adopted a strategy of prioritizing business compliance while optimizing the experience through visual architecture.",
-                "The strategy was to define a set of reusable insurance templates and flow logic, constraining customization within this framework so costs became estimable and future product scaling would be supported."
+                "I faced a three-way conflict: B2B insurance partners required high visibility for legal disclosures, while business teams and end users needed simple, fast application flows.",
+                "Compliance was the foundation—without it, the product could not launch. Experience optimization had to happen on top of that floor."
               ],
               "points": [
                 {
-                  "title": "Regulatory Module",
-                  "text": "Satisfy 2B vendors’ visibility requirements for legal disclaimers and avoid violations."
+                  "title": "Fixed Across Clients",
+                  "text": "Step structure, core modules, validation behavior, navigation, legal-content placement, review, and completion flow."
                 },
                 {
-                  "title": "Summary Module",
-                  "text": "Allow users to capture insurance protection key points within three seconds and move quickly into the application."
+                  "title": "Configurable Per Client",
+                  "text": "Brand colors, optional modules, plan content, imagery, copy, and regulation-dependent disclosures."
                 },
                 {
-                  "title": "Reusable Templates",
-                  "text": "Constrain customization within a reusable framework so costs can be estimated and future products can scale."
+                  "title": "Decision Principle",
+                  "text": "Preserve required information, redesign the complete flow, and make modularity the basis of every client adaptation."
                 }
               ],
-              "quote": null,
+              "subsections": [
+                {
+                  "title": "3-1. Constrain Customization into Estimable Templates",
+                  "body": [
+                    "I defined reusable insurance templates and flow logic, constraining customization within the framework so costs became estimable and future product scaling could be supported.",
+                    "The goal was not to eliminate customization. It was to define where customization was safe and where consistency created greater business and user value."
+                  ],
+                  "media": []
+                },
+                {
+                  "title": "3-2. Restructure Application IA to Shorten the Completion Path",
+                  "body": [
+                    "Under regulatory constraints, I reorganized required underwriting information and consolidated related content into the same step and screen to avoid frequent switching and backtracking.",
+                    "This shortened the mental path to completion and created a clearer, more predictable flow."
+                  ],
+                  "media": []
+                },
+                {
+                  "title": "3-3. Compliance First, Then Optimize through Visual Hierarchy",
+                  "body": [
+                    "The design separated information that users must read and act on from information that must be provided but can remain collapsed.",
+                    "Hierarchy, layout, and progressive disclosure kept legal detail accessible without letting it dominate the primary application flow."
+                  ],
+                  "media": []
+                }
+              ],
+              "quote": "Constrain the variable parts. Standardize the parts that make delivery predictable.",
               "media": [
                 {
-                  "asset": "assets/images/original/insuranceModular.png",
-                  "layout": "half",
-                  "caption": "Modular patterns separated reusable workflow behavior from program-specific content.",
-                  "alt": "Modular patterns separated reusable workflow behavior from program-specific content."
-                },
-                {
-                  "asset": "assets/images/original/insuranceProcess3.png",
-                  "layout": "half",
-                  "caption": "Reusable landing-page templates shortened communication and launch cycles.",
-                  "alt": "Reusable landing-page templates shortened communication and launch cycles."
-                },
-                {
-                  "asset": "assets/images/original/insuranceColorVariant.png",
+                  "asset": "assets/images/original/insuranceProcess1.png",
                   "layout": "wide",
-                  "caption": "One structure supported light, cyber-security, and cyber-assets visual variants.",
-                  "alt": "One structure supported light, cyber-security, and cyber-assets visual variants."
+                  "caption": "The core strategy combined partner disclosure requirements with the user's need to understand essential coverage quickly.",
+                  "alt": "Regulatory module and summary module balancing insurer and user needs."
                 }
               ]
             },
             {
               "order": 4,
               "label": "Design Execution",
-              "title": "Balancing Regulatory Compliance with Usability",
+              "title": "From Regulation-Aware Modules to Reusable Client Delivery",
               "body": [
-                "I adopted a progressive disclosure strategy. For mandatory 2B vendor compliance information, I used scrollable or expandable modules to contain details. The intent was to ensure legal compliance while prioritizing core coverage information for users—keeping their focus on key decisions rather than information overload.",
-                "The team also created color tokens and naming rules in Figma Variables so different brand themes could be applied to the same components with just a few clicks. This reduced design time from roughly one week to about two days.",
-                "The landing-page layout and flow were redefined into templates, modularizing the hero section, feature descriptions, plan comparison, FAQ, and documents. Sales could respond within a clear structure instead of starting from a blank page, while design and front-end adjusted brand visuals and copy within fixed constraints."
+                "The execution connected content hierarchy, reusable modules, multi-step flows, design tokens, and landing-page templates into one delivery system.",
+                "Each decision addressed a different layer of the problem: what information must remain visible, how users progress through it, and how the same foundation adapts to another brand."
+              ],
+              "subsections": [
+                {
+                  "title": "4-1. Balance Regulatory Compliance with Usability",
+                  "body": [
+                    "For mandatory compliance information, I used scrollable or expandable modules to contain detail while prioritizing core coverage information and key decisions.",
+                    "I translated recurring insurance content into reusable modules with consistent hierarchy and disclosure behavior. The modules could be recombined across products and client scenarios without rebuilding every page."
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceModular.png",
+                      "layout": "half",
+                      "caption": "Reusable coverage modules preserved detailed policy content while progressive disclosure kept the overview scannable.",
+                      "alt": "Modular insurance coverage cards and expandable FAQ content."
+                    },
+                    {
+                      "asset": "assets/images/original/insuranceTaskCentered.png",
+                      "layout": "half",
+                      "caption": "The application interface focused each screen on the user's current task and required information.",
+                      "alt": "Task-centered insurance application form."
+                    }
+                  ]
+                },
+                {
+                  "title": "4-2. Split Long Flows into Task-Centered Steps",
+                  "body": [
+                    "I divided the application journey into multiple steps, with each page focusing on one type of information so users did not need to handle too many tasks on a single screen.",
+                    "This lowered cognitive load while giving insurers enough space to present mandatory clauses and explanations without risking non-compliance."
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceSplitFlow.png",
+                      "layout": "wide",
+                      "caption": "A long application became a sequence of focused steps for questions, plans, documents, declarations, review, and payment.",
+                      "alt": "Multi-step insurance application flow."
+                    }
+                  ]
+                },
+                {
+                  "title": "4-3. Build a Base Style Library with Design Tokens",
+                  "body": [
+                    "I created color tokens and naming rules in Figma Variables so different brand themes could be applied to the same components with a few controlled changes.",
+                    "This reduced new-client design time from roughly one week to two days and lowered maintenance effort across multiple products and client brands."
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceColorVariant.png",
+                      "layout": "half",
+                      "caption": "One token structure mapped Cyber Insurance, Cyber Security, and Cyber Assets to distinct brand palettes.",
+                      "alt": "Design token color variants for three insurance product themes."
+                    },
+                    {
+                      "asset": "assets/images/original/insuranceDesignSystem.png",
+                      "layout": "half",
+                      "caption": "The shared library documented bilingual typography, form controls, validation, date selection, and loading states.",
+                      "alt": "Insurance product design system components and typography."
+                    }
+                  ]
+                },
+                {
+                  "title": "4-4. Turn Landing Pages into Reusable Communication Templates",
+                  "body": [
+                    "I modularized the hero section, feature descriptions, plan comparison, FAQ, and documents into a reusable landing-page structure.",
+                    "Sales could respond within a clear framework instead of starting from a blank page, while design and front-end adjusted brand visuals and copy within fixed constraints."
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceProcess3.png",
+                      "layout": "wide",
+                      "caption": "The same landing-page structure supported light, cyber-security, and cyber-assets themes without changing its content architecture.",
+                      "alt": "Three branded insurance landing-page templates."
+                    }
+                  ]
+                }
+              ],
+              "quote": null,
+              "media": []
+            },
+            {
+              "order": 5,
+              "label": "Real-World Adoption",
+              "title": "Rapidly Adapting the Framework to Different Client Scenarios",
+              "body": [
+                "In Marsh's online insurance project, I applied the modular flow and templates, adjusting brand colors, imagery, and parts of the copy to deliver an on-brand first proposal.",
+                "This reduced repeated alignment and redevelopment, allowing later iterations to focus on scenario-specific experience improvements instead of rebuilding the foundation.",
+                "The framework was also applied across active client collaborations for Shin Kong Vietnam and Richmond."
               ],
               "points": [
                 {
-                  "title": "Task-Centered Design",
-                  "text": "Users focus on individual tasks such as comparing plans and uploading documents without regulatory clutter."
+                  "title": "Marsh Taiwan",
+                  "text": "A motor-insurance quotation and application journey built from the shared plan, disclosure, and form patterns."
                 },
                 {
-                  "title": "Reusable Landing Pages",
-                  "text": "Hero, features, plans, FAQ, and documents became reusable modules that improved communication efficiency."
+                  "title": "Shin Kong Vietnam",
+                  "text": "A market-specific partner experience that retained local brand identity on the shared application model."
                 },
                 {
-                  "title": "Rapid Client Adaptation",
-                  "text": "For Marsh, Shin Kong Vietnam, Richmond, and other clients, the team adjusted brand colors, imagery, and copy instead of rebuilding the foundation."
+                  "title": "Richmond",
+                  "text": "A partner-branded insurance experience using the same reusable content and interaction foundation."
                 }
               ],
-              "quote": "Breaking down the original high-customization architecture allowed IXT to move from project-based SI work toward a scalable insurance SaaS product.",
+              "subsections": [
+                {
+                  "title": "5-1. One Framework, Multiple Product Themes",
+                  "body": [
+                    "The same application architecture supported light, dark, and cyber-security themes by changing controlled variables instead of redesigning the full experience.",
+                    "This made brand adaptation a repeatable product capability rather than another one-off project."
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceResult1.png",
+                      "layout": "half",
+                      "caption": "Cyber Insurance — light-theme application flow.",
+                      "alt": "Light-theme insurance application screens."
+                    },
+                    {
+                      "asset": "assets/images/original/insuranceResult2.png",
+                      "layout": "half",
+                      "caption": "Cyber Assets — dark-theme application flow.",
+                      "alt": "Dark-theme insurance application screens."
+                    },
+                    {
+                      "asset": "assets/images/original/insuranceResult3.png",
+                      "layout": "wide",
+                      "caption": "Cyber Security — blue-theme application flow.",
+                      "alt": "Blue-theme insurance application screens."
+                    }
+                  ]
+                }
+              ],
+              "quote": null,
               "media": [
                 {
                   "asset": "assets/images/original/insuranceCaseStudies.png",
                   "layout": "wide",
-                  "caption": "The system covered both customer-facing applications and operational insurance tools.",
-                  "alt": "The system covered both customer-facing applications and operational insurance tools."
-                },
-                {
-                  "asset": "assets/images/original/insuranceDesignSystem.png",
-                  "layout": "compact",
-                  "caption": "The design system documented bilingual typography, components, validation, and loading states.",
-                  "alt": "The design system documented bilingual typography, components, validation, and loading states."
+                  "caption": "The framework covered customer-facing applications, plan selection, disclosures, and operational insurance workflows.",
+                  "alt": "Marsh insurance landing page and application screens."
                 },
                 {
                   "asset": "assets/images/original/insuranceMarsh.png",
                   "layout": "half",
-                  "caption": "A Tesla motor-insurance journey demonstrated the reusable quote and plan architecture.",
-                  "alt": "A Tesla motor-insurance journey demonstrated the reusable quote and plan architecture."
+                  "caption": "Marsh Taiwan — Tesla motor-insurance quotation and plan selection.",
+                  "alt": "Marsh Taiwan Tesla motor-insurance landing page."
                 },
                 {
                   "asset": "assets/images/original/insuranceRichmond.png",
                   "layout": "half",
-                  "caption": "A partner-branded insurance experience applied the same reusable foundation.",
-                  "alt": "A partner-branded insurance experience applied the same reusable foundation."
+                  "caption": "Richmond — partner-branded digital insurance experience.",
+                  "alt": "Richmond branded digital insurance experience on a tablet."
                 },
                 {
                   "asset": "assets/images/original/insuranceShinKong.png",
                   "layout": "wide",
-                  "caption": "A market-specific delivery retained partner identity while sharing the application model.",
-                  "alt": "A market-specific delivery retained partner identity while sharing the application model."
-                },
-                {
-                  "asset": "assets/images/original/insuranceResult1.png",
-                  "layout": "half",
-                  "caption": "Light-theme application flow.",
-                  "alt": "Light-theme application flow."
-                },
-                {
-                  "asset": "assets/images/original/insuranceResult2.png",
-                  "layout": "half",
-                  "caption": "Dark-theme application flow.",
-                  "alt": "Dark-theme application flow."
-                },
-                {
-                  "asset": "assets/images/original/insuranceResult3.png",
-                  "layout": "compact",
-                  "caption": "Blue cyber-security application flow.",
-                  "alt": "Blue cyber-security application flow."
+                  "caption": "Shin Kong Vietnam — market-specific collaboration using the shared foundation.",
+                  "alt": "Shin Kong Vietnam client project presentation."
                 }
               ]
+            },
+            {
+              "order": 6,
+              "label": "Outcomes & Conclusion",
+              "title": "From One-Off Projects to a Scalable Product Model",
+              "body": [
+                "Within a one-month project window, I restructured the experience and design architecture of a highly customized ‘WordPress for insurance’ model into reusable flows and page templates. Sales could align with clients using concrete examples instead of abstract descriptions.",
+                "Combined with color tokens and Figma Variables, the framework was applied across active client collaborations for Marsh Taiwan, Shin Kong Vietnam, and Richmond.",
+                "The result established a practical foundation for IXT to move from one-off SI delivery toward a more scalable insurance product model."
+              ],
+              "points": [],
+              "quote": "Standardize the foundation so each new client starts with a system—not a blank page.",
+              "media": []
             }
           ],
           "outcomes": [
             {
-              "value": "2×",
-              "label": "communication efficiency between BD / sales and clients"
+              "value": "~50%",
+              "label": "estimated reduction in sales-to-client alignment time"
             },
             {
-              "value": "50%",
-              "label": "reduction in internal development costs"
+              "value": "~50%",
+              "label": "estimated reduction in development costs"
             },
             {
-              "value": "2 days",
-              "label": "new-client design time, down from one week"
+              "value": "1 wk → 2 days",
+              "label": "new-client design time"
+            },
+            {
+              "value": "3+",
+              "label": "active enterprise collaborations using the framework"
             }
           ],
-          "name": "Architecting a Scalable Insurance SaaS: From Custom Silos to a Modular Ecosystem",
-          "canonicalSubtitle": "Balancing rigorous regulatory compliance with frictionless UX through a design-token-driven architecture.",
-          "subtitle": "Balancing rigorous regulatory compliance with frictionless UX through a design-token-driven architecture.",
+          "name": "Modularizing Online Insurance Delivery",
+          "canonicalSubtitle": "From ‘Customization Hell’ to a Scalable Insurance Platform",
+          "subtitle": "From ‘Customization Hell’ to a Scalable Insurance Platform",
           "year": "2024",
-          "keyAchievement": "A reusable modular framework doubled communication efficiency and reduced internal development costs by 50%.",
+          "keyAchievement": "Estimated 50% reductions in alignment time and development costs, with the framework applied across 3+ active enterprise collaborations.",
           "cover": "assets/images/original/insuranceHero.png",
           "sourceBoard": "assets/images/original/insuranceArtifact.png",
-          "cardDescription": "A modular insurance SaaS architecture that balances regulatory compliance, usability, reusable templates, and brand scalability.",
+          "cardDescription": "A modular insurance platform that turned one-off client delivery into reusable, regulation-aware flows and brand-ready templates.",
           "category": "Insurtech · B2B SaaS",
-          "description": "IXT is a digital insurance platform launched by AI.f(T), with the core goal of simplifying complex insurance processes and digitizing the entire journey from quotation to policy issuance so existing operations can be optimized and become more efficient."
+          "description": "IXT is AIFT's digital insurance platform. I led the transformation of one module line from one-off custom delivery into a reusable framework for application flows, brand adaptation, and client communication."
         },
         "onesleeve": {
           "slug": "onesleeve",
@@ -1468,41 +1590,41 @@
         "insurance": {
           "slug": "insurance",
           "index": "02",
-          "title": "建構可擴展的保險 SaaS：從客製孤島走向模組化生態系",
-          "role": "產品設計師",
+          "title": "模組化線上保險交付",
+          "role": "主責產品設計師",
           "timeline": "2024.11–2024.12（1 個月）",
-          "team": "保險、商務開發、業務、設計與工程",
-          "scope": "使用者訪談、User Flow、Mockup 工程交付、Lead Designer",
+          "team": "業務、產品、設計與工程",
+          "scope": "利害關係人訪談、資訊架構、User Flow、UI 設計、模組化模板系統、Design Token、工程交付",
           "accent": "#426f9d",
           "soft": "#dfeaf3",
           "dark": "#234867",
           "summary": {
-            "goal": "把高度客製的保險平台轉成可重用模組，支援不同商品與通路。",
-            "challenge": "在不可妥協的法規要求下，仍讓長流程清楚、快速，並可適配不同品牌。",
-            "outcome": "溝通效率提升兩倍、內部開發成本降低 50%，新客戶設計時間從一週縮短至兩天。"
+            "goal": "把高度客製的保險平台重整為模組化、可重用的模板框架。",
+            "challenge": "每個客戶案都是一次性客製建置，缺少共用模板，也無法可靠估算範圍。",
+            "outcome": "依業務回饋與內部專案比較，客戶對齊時間與開發成本各降低約 50%，框架並應用於 3 個以上進行中的企業合作案。"
           },
           "sections": [
             {
               "order": 1,
               "label": "背景",
-              "title": "圍繞情境與商業目標，重新定義模組化架構",
+              "title": "從一次性客製建置，走向可重用平台",
               "body": [
-                "IXT 是 AI.f(T) 推出的數位保險平台，核心目標是簡化複雜流程，將報價到出單的完整旅程數位化。",
-                "在策略上，IXT 不只是完整數位保險方案，也能拆成模組以支援不同保險商品與通路。",
-                "本案聚焦其中一條拆解後的功能線，優化體驗，讓保險商品能更快推出並進入目標市場。"
+                "每個客戶案都成為一次性客製建置，沒有共用模板或標準流程。業務必須經過多輪需求對齊，工程才能估算範圍，而專案之間也幾乎沒有累積可重用的結構。",
+                "IXT 是 AIFT 的數位保險平台，涵蓋從報價到出單的流程，也能拆成模組以支援不同保險商品與銷售通路。",
+                "本案聚焦其中一條模組線。我把申請流程與頁面架構重整為可重用模板框架，讓新客戶設計時間從一週縮短至兩天。"
               ],
               "points": [
                 {
-                  "title": "過度客製",
-                  "text": "每個專案都變成缺少共通標準的高度客製案，難以擴展。"
+                  "title": "挑戰",
+                  "text": "一次性建置讓交付工時難以估算，也使平台無法累積可重用的產品基礎。"
                 },
                 {
-                  "title": "成本難估",
-                  "text": "業務反覆釐清需求，設計與工程也難以前期估算工時與成本。"
+                  "title": "目標",
+                  "text": "建立模組化保險框架，在保留必要彈性的同時，讓範圍、成本與交付變得更可預測。"
                 },
                 {
-                  "title": "無法規模化",
-                  "text": "一次性專案無法累積標準模組，限制產能與毛利。"
+                  "title": "我的角色",
+                  "text": "我主導利害關係人研究、資訊架構、User Flow、UI 設計、模板定義、Design Token 與工程交付。"
                 }
               ],
               "quote": null,
@@ -1510,213 +1632,335 @@
                 {
                   "asset": "assets/images/original/insuranceIxtIntro.png",
                   "layout": "wide",
-                  "caption": "背景相關設計素材 1",
-                  "alt": "背景相關設計素材 1"
-                },
-                {
-                  "asset": "assets/images/original/insuranceProcess1.png",
-                  "layout": "half",
-                  "caption": "背景相關設計素材 2",
-                  "alt": "背景相關設計素材 2"
-                },
-                {
-                  "asset": "assets/images/original/insuranceCompetitive.png",
-                  "layout": "half",
-                  "caption": "背景相關設計素材 3",
-                  "alt": "背景相關設計素材 3"
+                  "caption": "IXT 將保險平台、資安能力與合作夥伴交付整合成一套模組化提案。",
+                  "alt": "IXT、Cymetrics 與 OneInfinity 的網路保險平台合作提案。"
                 }
               ]
             },
             {
               "order": 2,
-              "label": "定義與探索",
-              "title": "過度客製推高專案成本",
+              "label": "研究與探索",
+              "title": "業務對齊與申請流程，反覆在哪裡中斷",
               "body": [
-                "舊系統給客戶極高自由度，近似『保險版 WordPress』，每案都成為高度客製建置，幾乎沒有共通標準。",
-                "終端使用者雖有版面與流程彈性，業務卻必須反覆釐清需求，開發團隊也難以估算範圍與成本，最終傷害效率與獲利。",
-                "結合業務、客服與 B 端客戶的訪談及資料後，我們找出影響申請體驗與轉換的核心問題。"
+                "設計前，我針對業務、產品與工程三個職能進行一對一訪談，每個職能訪談 2–3 位利害關係人，歸納出三個反覆出現的內部問題。",
+                "接著，我把訪談與既有客戶需求、交付回饋一起整理，從保險公司與交付限制回推申請體驗中的下游摩擦。"
               ],
               "points": [
                 {
-                  "title": "申請流程複雜",
-                  "text": "每頁應聚焦一類資訊，讓使用者知道要準備什麼並順利完成。"
+                  "title": "對齊成本過高",
+                  "text": "缺少標準流程與模板，每個機會都從零開始，團隊必須反覆說明平台能力。"
                 },
                 {
-                  "title": "法規文字繁重",
-                  "text": "大量必要揭露與簡化介面的需求彼此衝突。"
+                  "title": "工程無法提前估算",
+                  "text": "需求多以概念描述，直到專案深入後才能估算，增加時程與預算風險。"
                 },
                 {
-                  "title": "客戶屬性複雜",
-                  "text": "系統要同時服務不同身分與需求，但原平台只有單一共用版型。"
+                  "title": "缺少共用可重用框架",
+                  "text": "把每個客戶視為獨立專案，長期限制產能、維護性與毛利。"
+                }
+              ],
+              "subsections": [
+                {
+                  "title": "2-1. 從保險公司要求回推終端使用者摩擦",
+                  "body": [
+                    "申請流程過於複雜：每個頁面需要聚焦一類資訊，讓使用者清楚知道要準備什麼、下一步要做什麼。",
+                    "法規文字不能直接刪除：保險公司必須呈現當地法規要求的資訊，但不能讓這些內容淹沒主要任務。",
+                    "客戶輪廓差異很大：單一共用版型無法同時處理不同身分、商品與申請情境。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceProcess2.png",
+                      "layout": "wide",
+                      "caption": "既有端到端旅程顯示出需要協調的決策、審核、例外與完成狀態。",
+                      "alt": "保險申請前與申請中的使用者旅程。"
+                    }
+                  ]
+                },
+                {
+                  "title": "2-2. 競品研究：找出可重用的市場慣例",
+                  "body": [
+                    "我在不同輪次比較 3–5 個具代表性的數位保險產品，聚焦必要資訊、申請流程與品牌表現。",
+                    "我比較各產品如何安排必填問題、拆分長流程、呈現法規內容，以及在不改變核心互動的前提下表達不同品牌。",
+                    "研究確認本案不能只修補單一畫面，而需要重整完整流程，並以可重用、能因應法規的模組作為架構基礎。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceCompetitive.png",
+                      "layout": "wide",
+                      "caption": "競品分析拆出三個可重用維度：必要資訊、申請流程與品牌表現。",
+                      "alt": "以必要資訊、填寫流程與品牌表現比較數位保險競品。"
+                    }
+                  ]
                 }
               ],
               "quote": null,
-              "media": [
-                {
-                  "asset": "assets/images/original/insuranceProcess2.png",
-                  "layout": "wide",
-                  "caption": "研究與架構相關設計素材 1",
-                  "alt": "研究與架構相關設計素材 1"
-                },
-                {
-                  "asset": "assets/images/original/insuranceTaskCentered.png",
-                  "layout": "portrait",
-                  "caption": "研究與架構相關設計素材 2",
-                  "alt": "研究與架構相關設計素材 2"
-                },
-                {
-                  "asset": "assets/images/original/insuranceSplitFlow.png",
-                  "layout": "wide",
-                  "caption": "研究與架構相關設計素材 3",
-                  "alt": "研究與架構相關設計素材 3"
-                }
-              ]
+              "media": []
             },
             {
               "order": 3,
-              "label": "核心策略",
-              "title": "法規遵循與使用者體驗之間的拉扯",
+              "label": "挑戰與核心策略",
+              "title": "法規定義底線，體驗決定呈現方式",
               "body": [
-                "2B 廠商要求法律聲明高度可見，但商務與終端使用者需要簡單快速的流程，形成三方衝突。",
-                "考量保險產業特性，我把法規遵循視為產品開發基礎，採取『優先滿足商業合規，再以視覺架構優化體驗』的策略。",
-                "我們定義可重用的保險模板與流程邏輯，在框架內約束客製，使成本可估並支援後續產品擴展。"
+                "我面對三方衝突：B2B 保險合作夥伴要求法律揭露高度可見，商務團隊與終端使用者則需要簡單、快速的申請流程。",
+                "合規是產品能否推出的底線；體驗優化必須建立在這個底線之上。"
               ],
               "points": [
                 {
-                  "title": "法規模組",
-                  "text": "滿足 2B 廠商對法律聲明可見性的要求並避免違規。"
+                  "title": "所有客戶固定",
+                  "text": "步驟結構、核心模組、驗證行為、導覽、法規內容位置、審核與完成流程。"
                 },
                 {
-                  "title": "摘要模組",
-                  "text": "讓使用者三秒掌握保障重點並快速進入申請。"
+                  "title": "依客戶調整",
+                  "text": "品牌色、選用模組、方案內容、圖像、文案與因應當地法規的揭露。"
                 },
                 {
-                  "title": "可重用模板",
-                  "text": "在模板框架內限制客製，使成本可估並能擴展。"
+                  "title": "決策原則",
+                  "text": "保留必要資訊、重整完整流程，並讓模組化成為每次客戶適配的基礎。"
                 }
               ],
-              "quote": null,
+              "subsections": [
+                {
+                  "title": "3-1. 把客製限制在可估算的模板內",
+                  "body": [
+                    "我定義可重用的保險模板與流程邏輯，在框架內約束客製，讓成本可估並支援後續產品擴展。",
+                    "目標不是消除客製，而是明確定義哪些地方可以安全調整、哪些地方維持一致能創造更大的商業與使用者價值。"
+                  ],
+                  "media": []
+                },
+                {
+                  "title": "3-2. 重整申請資訊架構，縮短完成路徑",
+                  "body": [
+                    "在法規限制下，我重新整理核保所需資訊，把相關內容集中在同一步驟與畫面，避免頻繁切換與返回。",
+                    "這項結構調整縮短使用者理解完成流程的心理路徑，也讓流程更清楚、更可預期。"
+                  ],
+                  "media": []
+                },
+                {
+                  "title": "3-3. 合規優先，再以視覺階層優化體驗",
+                  "body": [
+                    "設計把「必須閱讀並採取行動」與「必須提供但可收合」的資訊分開。",
+                    "透過階層、版面與漸進式揭露，法規細節保持可取得，同時不支配主要申請流程。"
+                  ],
+                  "media": []
+                }
+              ],
+              "quote": "限制可變部分，標準化能讓交付變得可預測的部分。",
               "media": [
                 {
-                  "asset": "assets/images/original/insuranceModular.png",
-                  "layout": "half",
-                  "caption": "核心策略相關設計素材 1",
-                  "alt": "核心策略相關設計素材 1"
-                },
-                {
-                  "asset": "assets/images/original/insuranceProcess3.png",
-                  "layout": "half",
-                  "caption": "核心策略相關設計素材 2",
-                  "alt": "核心策略相關設計素材 2"
-                },
-                {
-                  "asset": "assets/images/original/insuranceColorVariant.png",
+                  "asset": "assets/images/original/insuranceProcess1.png",
                   "layout": "wide",
-                  "caption": "核心策略相關設計素材 3",
-                  "alt": "核心策略相關設計素材 3"
+                  "caption": "核心策略同時滿足合作夥伴的揭露要求，以及使用者快速理解保障重點的需求。",
+                  "alt": "平衡保險公司與使用者需求的法規模組與摘要模組。"
                 }
               ]
             },
             {
               "order": 4,
               "label": "設計執行",
-              "title": "在法規遵循與易用性之間取得平衡",
+              "title": "從法規導向模組，延伸到可重用的客戶交付",
               "body": [
-                "我採用漸進式揭露，把必要的 2B 合規資訊收進可捲動或展開模組，在確保法遵的同時讓核心保障資訊優先，避免資訊過載。",
-                "團隊也以 Figma Variables 建立 Color Token 與命名規則，讓同一套元件能快速套用不同品牌主題，設計時間從約一週縮短至兩天。",
-                "Landing Page 被拆成 Hero、特色、方案比較、FAQ 與文件等模板。業務不再從空白頁開始，設計與前端也能在固定限制內調整品牌視覺與文案。"
+                "執行階段把內容階層、可重用模組、多步驟流程、Design Token 與 Landing Page 模板串成同一套交付系統。",
+                "每個決策分別處理問題的不同層級：哪些資訊必須保持可見、使用者如何前進，以及同一基礎如何適配另一個品牌。"
+              ],
+              "subsections": [
+                {
+                  "title": "4-1. 在法規遵循與易用性之間取得平衡",
+                  "body": [
+                    "針對必要的合規資訊，我用可捲動或展開模組容納細節，同時讓核心保障資訊與關鍵決策優先。",
+                    "我把反覆出現的保險內容轉成具有一致階層與揭露行為的可重用模組，能在不同商品與客戶情境重新組合，不必重建每個頁面。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceModular.png",
+                      "layout": "half",
+                      "caption": "可重用保障模組保留完整條款，並以漸進式揭露維持總覽的可掃讀性。",
+                      "alt": "模組化保險保障卡片與可展開 FAQ。"
+                    },
+                    {
+                      "asset": "assets/images/original/insuranceTaskCentered.png",
+                      "layout": "half",
+                      "caption": "申請介面讓每個畫面聚焦使用者當下的任務與必要資訊。",
+                      "alt": "任務導向的保險申請表單。"
+                    }
+                  ]
+                },
+                {
+                  "title": "4-2. 把長流程拆成任務導向步驟",
+                  "body": [
+                    "我把申請旅程拆成多個步驟，每頁只聚焦一類資訊，避免使用者在單一畫面處理過多任務。",
+                    "這能降低認知負荷，也讓保險公司保有足夠空間呈現必要條款與說明，不會增加違規風險。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceSplitFlow.png",
+                      "layout": "wide",
+                      "caption": "長申請流程被拆成問題、方案、文件、聲明、審核與付款等聚焦步驟。",
+                      "alt": "多步驟保險申請流程。"
+                    }
+                  ]
+                },
+                {
+                  "title": "4-3. 用 Design Token 建立基礎樣式庫",
+                  "body": [
+                    "我以 Figma Variables 建立 Color Token 與命名規則，讓不同品牌主題能透過少量、受控的修改套用到同一套元件。",
+                    "這讓新客戶設計時間從約一週縮短至兩天，也降低多個商品與品牌之間的維護成本。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceColorVariant.png",
+                      "layout": "half",
+                      "caption": "同一套 Token 結構將 Cyber Insurance、Cyber Security 與 Cyber Assets 映射到不同品牌色盤。",
+                      "alt": "三套保險產品主題的 Design Token 色彩變體。"
+                    },
+                    {
+                      "asset": "assets/images/original/insuranceDesignSystem.png",
+                      "layout": "half",
+                      "caption": "共用樣式庫記錄中英文字體、表單元件、驗證、日期選擇與載入狀態。",
+                      "alt": "保險產品 Design System 元件與字體規範。"
+                    }
+                  ]
+                },
+                {
+                  "title": "4-4. 把 Landing Page 變成可重用溝通模板",
+                  "body": [
+                    "我把 Hero、特色說明、方案比較、FAQ 與文件模組化，形成可重用的 Landing Page 結構。",
+                    "業務能在清楚框架內回應客戶，而不是從空白頁開始；設計與前端也能在固定限制內調整品牌視覺與文案。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceProcess3.png",
+                      "layout": "wide",
+                      "caption": "相同 Landing Page 結構支援淺色、Cyber Security 與 Cyber Assets 主題，不必改變內容架構。",
+                      "alt": "三套不同品牌的保險 Landing Page 模板。"
+                    }
+                  ]
+                }
+              ],
+              "quote": null,
+              "media": []
+            },
+            {
+              "order": 5,
+              "label": "實際採用",
+              "title": "快速把框架適配到不同客戶情境",
+              "body": [
+                "在 Marsh 線上保險專案中，我直接套用模組化流程與模板，只調整品牌色、圖像與部分文案，就能交付符合品牌的第一版提案。",
+                "這減少反覆對齊與重新開發，讓後續迭代能專注情境特定的體驗改善，而不是重建基礎。",
+                "同一框架也應用於新光越南與 Richmond 等進行中的客戶合作案。"
               ],
               "points": [
                 {
-                  "title": "任務導向設計",
-                  "text": "使用者聚焦比較方案、上傳文件等單一任務，不受法規雜訊干擾。"
+                  "title": "Marsh Taiwan",
+                  "text": "以共用方案、揭露與表單 Pattern 建立汽車保險報價與申請旅程。"
                 },
                 {
-                  "title": "可重用 Landing Page",
-                  "text": "Hero、特色、方案、FAQ 與文件模組化，提高溝通效率。"
+                  "title": "新光越南",
+                  "text": "在共用申請模型上保留當地市場與合作夥伴的品牌識別。"
                 },
                 {
-                  "title": "快速適配客戶",
-                  "text": "Marsh、新光越南、Richmond 等專案只需調整品牌色、圖像與文案，不再重建基礎。"
+                  "title": "Richmond",
+                  "text": "以相同的可重用內容與互動基礎打造合作夥伴品牌體驗。"
                 }
               ],
-              "quote": "拆解原本的高客製架構，讓 IXT 從專案型 SI 工作走向可擴展的保險 SaaS 產品。",
+              "subsections": [
+                {
+                  "title": "5-1. 一套框架，多種產品主題",
+                  "body": [
+                    "相同申請架構能透過受控變數支援淺色、深色與 Cyber Security 主題，不必重新設計完整體驗。",
+                    "品牌適配因此從一次性專案，變成可重複使用的產品能力。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceResult1.png",
+                      "layout": "half",
+                      "caption": "Cyber Insurance — 淺色申請流程。",
+                      "alt": "淺色保險申請畫面。"
+                    },
+                    {
+                      "asset": "assets/images/original/insuranceResult2.png",
+                      "layout": "half",
+                      "caption": "Cyber Assets — 深色申請流程。",
+                      "alt": "深色保險申請畫面。"
+                    },
+                    {
+                      "asset": "assets/images/original/insuranceResult3.png",
+                      "layout": "wide",
+                      "caption": "Cyber Security — 藍色申請流程。",
+                      "alt": "藍色保險申請畫面。"
+                    }
+                  ]
+                }
+              ],
+              "quote": null,
               "media": [
                 {
                   "asset": "assets/images/original/insuranceCaseStudies.png",
                   "layout": "wide",
-                  "caption": "設計執行相關設計素材 1",
-                  "alt": "設計執行相關設計素材 1"
-                },
-                {
-                  "asset": "assets/images/original/insuranceDesignSystem.png",
-                  "layout": "compact",
-                  "caption": "設計執行相關設計素材 2",
-                  "alt": "設計執行相關設計素材 2"
+                  "caption": "框架涵蓋客戶端申請、方案選擇、法律揭露與保險營運流程。",
+                  "alt": "Marsh 保險 Landing Page 與申請畫面。"
                 },
                 {
                   "asset": "assets/images/original/insuranceMarsh.png",
                   "layout": "half",
-                  "caption": "設計執行相關設計素材 3",
-                  "alt": "設計執行相關設計素材 3"
+                  "caption": "Marsh Taiwan — Tesla 汽車保險報價與方案選擇。",
+                  "alt": "Marsh Taiwan Tesla 汽車保險 Landing Page。"
                 },
                 {
                   "asset": "assets/images/original/insuranceRichmond.png",
                   "layout": "half",
-                  "caption": "設計執行相關設計素材 4",
-                  "alt": "設計執行相關設計素材 4"
+                  "caption": "Richmond — 合作夥伴品牌的數位保險體驗。",
+                  "alt": "平板上的 Richmond 品牌數位保險體驗。"
                 },
                 {
                   "asset": "assets/images/original/insuranceShinKong.png",
                   "layout": "wide",
-                  "caption": "設計執行相關設計素材 5",
-                  "alt": "設計執行相關設計素材 5"
-                },
-                {
-                  "asset": "assets/images/original/insuranceResult1.png",
-                  "layout": "half",
-                  "caption": "設計執行相關設計素材 6",
-                  "alt": "設計執行相關設計素材 6"
-                },
-                {
-                  "asset": "assets/images/original/insuranceResult2.png",
-                  "layout": "half",
-                  "caption": "設計執行相關設計素材 7",
-                  "alt": "設計執行相關設計素材 7"
-                },
-                {
-                  "asset": "assets/images/original/insuranceResult3.png",
-                  "layout": "compact",
-                  "caption": "設計執行相關設計素材 8",
-                  "alt": "設計執行相關設計素材 8"
+                  "caption": "新光越南 — 使用共用基礎的市場特定合作案。",
+                  "alt": "新光越南客戶專案提案。"
                 }
               ]
+            },
+            {
+              "order": 6,
+              "label": "成果與結論",
+              "title": "從一次性專案，走向可擴展的產品模式",
+              "body": [
+                "在一個月的專案期間，我把高度客製的「保險版 WordPress」體驗與設計架構，重整為可重用流程與頁面模板。業務能用具體範例與客戶對齊，不再只依賴抽象描述。",
+                "結合 Color Token 與 Figma Variables，框架已應用於 Marsh Taiwan、新光越南與 Richmond 等進行中的客戶合作。",
+                "這項成果為 IXT 從一次性 SI 交付走向更可擴展的保險產品模式，建立了務實基礎。"
+              ],
+              "points": [],
+              "quote": "標準化基礎，讓每個新客戶從一套系統開始，而不是從空白頁開始。",
+              "media": []
             }
           ],
           "outcomes": [
             {
-              "value": "2×",
-              "label": "商務／業務與客戶溝通效率"
+              "value": "約 50%",
+              "label": "業務與客戶對齊時間估計降幅"
             },
             {
-              "value": "50%",
-              "label": "內部開發成本降低"
+              "value": "約 50%",
+              "label": "開發成本估計降幅"
             },
             {
-              "value": "2 天",
-              "label": "新客戶設計時間，原為一週"
+              "value": "1 週 → 2 天",
+              "label": "新客戶設計時間"
+            },
+            {
+              "value": "3+",
+              "label": "採用框架的進行中企業合作案"
             }
           ],
-          "name": "建構可擴展的保險 SaaS：從客製孤島走向模組化生態系",
-          "canonicalSubtitle": "以設計 Token 驅動的架構，在嚴謹法規遵循與低摩擦 UX 之間取得平衡。",
-          "subtitle": "以設計 Token 驅動的架構，在嚴謹法規遵循與低摩擦 UX 之間取得平衡。",
+          "name": "模組化線上保險交付",
+          "canonicalSubtitle": "從「客製地獄」走向可擴展的保險平台",
+          "subtitle": "從「客製地獄」走向可擴展的保險平台",
           "year": "2024",
-          "keyAchievement": "可重用模組化框架讓溝通效率提升兩倍，內部開發成本降低 50%。",
+          "keyAchievement": "業務對齊時間與開發成本估計各降低約 50%，框架並應用於 3 個以上進行中的企業合作案。",
           "cover": "assets/images/original/insuranceHero.png",
           "sourceBoard": "assets/images/original/insuranceArtifact.png",
-          "cardDescription": "平衡法規、易用性、可重用模板與品牌擴展的模組化保險 SaaS 架構。",
+          "cardDescription": "把一次性客戶交付轉成可重用、能因應法規並可快速換牌的模組化保險平台。",
           "category": "保險科技 · B2B SaaS",
-          "description": "IXT 是 AI.f(T) 推出的數位保險平台，核心目標是簡化複雜保險流程，將報價到出單的完整旅程數位化，優化既有作業並提升效率。"
+          "description": "IXT 是 AIFT 的數位保險平台。我主導其中一條模組線，將一次性客製交付轉成可重用的申請流程、品牌適配與客戶溝通框架。"
         },
         "onesleeve": {
           "slug": "onesleeve",
@@ -2566,41 +2810,41 @@
         "insurance": {
           "slug": "insurance",
           "index": "02",
-          "title": "拡張可能な保険SaaSの設計：個別最適のサイロからモジュール型エコシステムへ",
-          "role": "プロダクトデザイナー",
+          "title": "オンライン保険デリバリーのモジュール化",
+          "role": "リードプロダクトデザイナー",
           "timeline": "2024.11–2024.12（1か月）",
-          "team": "保険、事業開発、営業、デザイン、開発",
-          "scope": "ユーザーインタビュー、ユーザーフロー、開発へのモック引き渡し、リードデザイン",
+          "team": "営業、プロダクト、デザイン、開発",
+          "scope": "ステークホルダーインタビュー、情報設計、ユーザーフロー、UIデザイン、モジュール型テンプレート、デザイントークン、開発引き渡し",
           "accent": "#426f9d",
           "soft": "#dfeaf3",
           "dark": "#234867",
           "summary": {
-            "goal": "高い個別開発依存を再利用可能なモジュールに変え、複数の商品とチャネルを支える。",
-            "challenge": "厳格な規制要件を守りながら、長い申請フローを明快・迅速にし、複数ブランドへ適応する。",
-            "outcome": "コミュニケーション効率を2倍、社内開発コストを50%削減し、新規顧客向けデザインを1週間から2日に短縮。"
+            "goal": "高度にカスタマイズされた保険プラットフォームを、モジュール型の再利用可能なテンプレートへ再構築する。",
+            "challenge": "顧客案件がすべて個別開発となり、共通テンプレートも信頼できる工数見積もりもありませんでした。",
+            "outcome": "営業と顧客の調整時間および開発コストをそれぞれ推定約50%削減し、3件以上の進行中エンタープライズ案件へ適用しました。"
           },
           "sections": [
             {
               "order": 1,
               "label": "背景",
-              "title": "シナリオと事業目標を軸にモジュール構造を再設計",
+              "title": "単発の個別開発から再利用可能なプラットフォームへ",
               "body": [
-                "IXTは見積から契約発行までの複雑な保険プロセスをデジタル化し、業務を最適化するプラットフォームです。",
-                "完全なデジタル保険ソリューションであるだけでなく、異なる保険商品や販売チャネルを支えるモジュールにも分解できます。",
-                "本プロジェクトはその機能ラインの一つを最適化し、保険商品の立ち上げと市場投入を速めました。"
+                "顧客案件はすべて単発の個別開発となり、共通テンプレートや標準フローがありませんでした。営業は要件調整を何度も繰り返し、開発が範囲を見積もれるまで時間がかかり、案件間に再利用可能な構造もほとんど蓄積されませんでした。",
+                "IXTはAIFTのデジタル保険プラットフォームです。見積もりから契約発行までを支援し、異なる保険商品や販売チャネル向けのモジュールへ分解できます。",
+                "本プロジェクトでは、そのうち一つのモジュールラインを担当しました。申請フローとページ構造を再利用可能なテンプレートへ再構築し、新規顧客向けデザイン期間を1週間から2日に短縮しました。"
               ],
               "points": [
                 {
-                  "title": "過剰な個別対応",
-                  "text": "共通標準がなく、案件ごとに高度な個別開発が発生。"
+                  "title": "課題",
+                  "text": "単発の個別開発では工数を見積もりにくく、プラットフォームに再利用可能な基盤が蓄積されません。"
                 },
                 {
-                  "title": "見積もれないコスト",
-                  "text": "営業の要件確認が反復し、設計・開発も早期の工数見積が困難。"
+                  "title": "目的",
+                  "text": "必要な柔軟性を保ちながら、範囲・コスト・納期を予測可能にするモジュール型保険フレームワークを構築する。"
                 },
                 {
-                  "title": "拡張性不足",
-                  "text": "単発案件では標準モジュールが蓄積されない。"
+                  "title": "担当範囲",
+                  "text": "ステークホルダー調査、情報設計、ユーザーフロー、UI、テンプレート定義、デザイントークン、開発引き渡しを主導しました。"
                 }
               ],
               "quote": null,
@@ -2608,213 +2852,335 @@
                 {
                   "asset": "assets/images/original/insuranceIxtIntro.png",
                   "layout": "wide",
-                  "caption": "背景のデザイン資料 1",
-                  "alt": "背景のデザイン資料 1"
-                },
-                {
-                  "asset": "assets/images/original/insuranceProcess1.png",
-                  "layout": "half",
-                  "caption": "背景のデザイン資料 2",
-                  "alt": "背景のデザイン資料 2"
-                },
-                {
-                  "asset": "assets/images/original/insuranceCompetitive.png",
-                  "layout": "half",
-                  "caption": "背景のデザイン資料 3",
-                  "alt": "背景のデザイン資料 3"
+                  "caption": "IXTは保険プラットフォーム、サイバーセキュリティ機能、パートナー向けデリバリーを一つのモジュール型提案へ統合しました。",
+                  "alt": "IXT、Cymetrics、OneInfinityによるサイバー保険プラットフォームの提案。"
                 }
               ]
             },
             {
               "order": 2,
-              "label": "定義と探索",
-              "title": "過剰なカスタマイズがプロジェクトコストを押し上げる",
+              "label": "リサーチと探索",
+              "title": "営業調整と申請フローはどこで繰り返し停滞したのか",
               "body": [
-                "旧システムは「保険版WordPress」のように自由度が高く、ほぼ共通標準のない個別開発を生んでいました。",
-                "画面やフローの自由度と引き換えに、営業は要件確認を繰り返し、開発は範囲と費用を予測できず、効率と収益性が低下しました。",
-                "営業、サポート、B2B顧客への調査から、申請体験とコンバージョンを妨げる主要課題を特定しました。"
+                "設計前に、営業・プロダクト・開発の3職種を対象に、各職種2〜3名への一対一インタビューを実施しました。そこから、繰り返し発生する3つの社内課題を特定しました。",
+                "さらに、インタビューを既存の顧客要件やデリバリーフィードバックと統合し、保険会社とデリバリー上の制約から申請体験の摩擦を逆算しました。"
               ],
               "points": [
                 {
-                  "title": "複雑な申請",
-                  "text": "各ページを一種類の情報に集中させ、準備内容を明確にする必要。"
+                  "title": "調整コストが高い",
+                  "text": "標準フローとテンプレートがないため、商談ごとにゼロから始め、プラットフォームの説明を繰り返していました。"
                 },
                 {
-                  "title": "膨大な法的文書",
-                  "text": "必須の規制文言と画面簡素化が衝突。"
+                  "title": "開発が早期に見積もれない",
+                  "text": "曖昧なアイデアは案件後半まで工数化できず、スケジュールと予算のリスクを生んでいました。"
                 },
                 {
-                  "title": "多様な顧客属性",
-                  "text": "複数の身分・要望に単一レイアウトでは対応できない。"
+                  "title": "共通の再利用基盤がない",
+                  "text": "顧客ごとに独立した案件として扱うことで、長期的な生産性・保守性・利益率が制限されていました。"
+                }
+              ],
+              "subsections": [
+                {
+                  "title": "2-1. 保険会社の要件から下流のユーザー摩擦を捉える",
+                  "body": [
+                    "申請フローが複雑すぎる：各ページを一種類の情報へ集中させ、準備する内容と次の行動を明確にする必要がありました。",
+                    "法規文言は単純に削除できない：保険会社は各市場で求められる規制情報を提示しつつ、主要タスクを埋もれさせない必要がありました。",
+                    "顧客属性が多様：単一の共通レイアウトでは、異なる本人属性、商品、申請シナリオへ同時に対応できませんでした。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceProcess2.png",
+                      "layout": "wide",
+                      "caption": "既存のエンドツーエンドジャーニーは、調整が必要な判断、審査、例外、完了状態の多さを可視化しました。",
+                      "alt": "保険申請前と申請中のユーザージャーニー。"
+                    }
+                  ]
+                },
+                {
+                  "title": "2-2. 競合調査：再利用可能な市場慣行を抽出する",
+                  "body": [
+                    "複数回の比較で、代表的なデジタル保険商品3〜5件を調査し、必須情報、申請フロー、ブランド表現に注目しました。",
+                    "必須質問の整理、長いジャーニーの分割、法規情報の提示、コアインタラクションを変えずにブランドを表現する方法を比較しました。",
+                    "その結果、単一画面の修正ではなく、再利用可能で規制に対応したモジュールを基盤とするエンドツーエンドの再設計が必要だと確認できました。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceCompetitive.png",
+                      "layout": "wide",
+                      "caption": "競合分析では、必須情報、申請フロー、ブランド表現という3つの再利用可能な軸を抽出しました。",
+                      "alt": "必須情報、入力フロー、ブランド表現によるデジタル保険商品の比較。"
+                    }
+                  ]
                 }
               ],
               "quote": null,
-              "media": [
-                {
-                  "asset": "assets/images/original/insuranceProcess2.png",
-                  "layout": "wide",
-                  "caption": "リサーチと構造のデザイン資料 1",
-                  "alt": "リサーチと構造のデザイン資料 1"
-                },
-                {
-                  "asset": "assets/images/original/insuranceTaskCentered.png",
-                  "layout": "portrait",
-                  "caption": "リサーチと構造のデザイン資料 2",
-                  "alt": "リサーチと構造のデザイン資料 2"
-                },
-                {
-                  "asset": "assets/images/original/insuranceSplitFlow.png",
-                  "layout": "wide",
-                  "caption": "リサーチと構造のデザイン資料 3",
-                  "alt": "リサーチと構造のデザイン資料 3"
-                }
-              ]
+              "media": []
             },
             {
               "order": 3,
-              "label": "コア戦略",
-              "title": "規制対応とユーザー体験の緊張関係",
+              "label": "課題とコア戦略",
+              "title": "規制が最低条件を定め、体験が提示方法を決める",
               "body": [
-                "2Bベンダーは免責事項の高い視認性を求め、事業側とエンドユーザーは簡単で速いフローを求めます。",
-                "保険業界では規制遵守を製品開発の基礎と定め、事業上のコンプライアンスを優先しつつ、視覚構造で体験を最適化しました。",
-                "再利用可能な保険テンプレートとフローを定義し、その枠内でカスタマイズを制約することで、費用予測と将来拡張を可能にしました。"
+                "B2B保険パートナーは法的開示の高い視認性を求める一方、事業チームとエンドユーザーは簡単で速い申請フローを求めるという三者間の対立がありました。",
+                "コンプライアンスはプロダクトを市場へ出すための最低条件です。体験最適化は、その基盤の上で行う必要がありました。"
               ],
               "points": [
                 {
-                  "title": "規制モジュール",
-                  "text": "法的免責の視認性を確保し、違反を防ぐ。"
+                  "title": "全顧客で固定",
+                  "text": "ステップ構造、コアモジュール、検証、ナビゲーション、法規情報の配置、審査、完了フロー。"
                 },
                 {
-                  "title": "要約モジュール",
-                  "text": "3秒で保障の要点を把握し、素早く申請へ進める。"
+                  "title": "顧客ごとに変更可能",
+                  "text": "ブランドカラー、任意モジュール、プラン内容、画像、文言、市場別の法的開示。"
                 },
                 {
-                  "title": "再利用テンプレート",
-                  "text": "制約内で個別対応し、費用を予測可能にする。"
+                  "title": "意思決定原則",
+                  "text": "必須情報を守り、全体フローを再設計し、モジュール性をすべての顧客適応の基盤にする。"
                 }
               ],
-              "quote": null,
+              "subsections": [
+                {
+                  "title": "3-1. カスタマイズを見積もり可能なテンプレート内に制約する",
+                  "body": [
+                    "再利用可能な保険テンプレートとフローロジックを定義し、カスタマイズをその枠内に収めることで、コストを予測可能にし、将来の製品拡張を支えました。",
+                    "目的はカスタマイズをなくすことではありません。安全に変更できる場所と、一貫性が事業・ユーザー価値を高める場所を明確にすることでした。"
+                  ],
+                  "media": []
+                },
+                {
+                  "title": "3-2. 申請情報設計を再構築し、完了までの経路を短縮する",
+                  "body": [
+                    "規制上必要な引受情報を再整理し、関連内容を同じステップと画面へ統合して、頻繁な画面移動や後戻りを避けました。",
+                    "これにより完了までの心理的な経路が短くなり、フローがより明確で予測可能になりました。"
+                  ],
+                  "media": []
+                },
+                {
+                  "title": "3-3. コンプライアンスを優先し、視覚階層で体験を最適化する",
+                  "body": [
+                    "「必ず読み、操作が必要な情報」と「提示は必要だが折りたためる情報」を分離しました。",
+                    "情報階層、レイアウト、段階的開示により、法規情報へアクセスできる状態を保ちながら、主要な申請フローを支配しないようにしました。"
+                  ],
+                  "media": []
+                }
+              ],
+              "quote": "変動する部分を制約し、デリバリーを予測可能にする部分を標準化する。",
               "media": [
                 {
-                  "asset": "assets/images/original/insuranceModular.png",
-                  "layout": "half",
-                  "caption": "中核戦略のデザイン資料 1",
-                  "alt": "中核戦略のデザイン資料 1"
-                },
-                {
-                  "asset": "assets/images/original/insuranceProcess3.png",
-                  "layout": "half",
-                  "caption": "中核戦略のデザイン資料 2",
-                  "alt": "中核戦略のデザイン資料 2"
-                },
-                {
-                  "asset": "assets/images/original/insuranceColorVariant.png",
+                  "asset": "assets/images/original/insuranceProcess1.png",
                   "layout": "wide",
-                  "caption": "中核戦略のデザイン資料 3",
-                  "alt": "中核戦略のデザイン資料 3"
+                  "caption": "コア戦略は、パートナーの開示要件と、ユーザーが保障の要点を素早く理解するニーズを両立させました。",
+                  "alt": "保険会社とユーザーのニーズを両立する規制モジュールと要約モジュール。"
                 }
               ]
             },
             {
               "order": 4,
-              "label": "デザイン実装",
-              "title": "規制対応と使いやすさの両立",
+              "label": "デザイン実行",
+              "title": "規制対応モジュールから再利用可能な顧客デリバリーへ",
               "body": [
-                "必須のコンプライアンス情報をスクロール／展開モジュールへ収める段階的開示を採用。法令を守りながら、利用者は保障の重要情報と判断に集中できます。",
-                "Figma Variablesでカラートークンと命名規則を整備し、同じコンポーネントへ複数ブランドを数クリックで適用。デザイン期間を約1週間から2日に短縮しました。",
-                "ランディングページをHero、特徴、プラン比較、FAQ、資料のテンプレートへ分解。営業は白紙から始めず、デザインとフロントエンドは制約内でブランドと文言を調整できます。"
+                "コンテンツ階層、再利用モジュール、複数ステップのフロー、デザイントークン、ランディングページテンプレートを一つのデリバリーシステムへ接続しました。",
+                "各判断は、必ず見せる情報、ユーザーの進み方、同じ基盤を別ブランドへ適用する方法という異なるレイヤーの課題に対応しました。"
+              ],
+              "subsections": [
+                {
+                  "title": "4-1. 規制対応と使いやすさを両立する",
+                  "body": [
+                    "必須のコンプライアンス情報はスクロールまたは展開可能なモジュールへ収め、保障の要点と主要な判断を優先しました。",
+                    "繰り返し現れる保険コンテンツを、一貫した階層と開示動作を持つ再利用モジュールへ変換しました。各ページを作り直さず、商品や顧客シナリオに応じて再構成できます。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceModular.png",
+                      "layout": "half",
+                      "caption": "再利用可能な保障モジュールで詳細な約款を保持し、段階的開示によって概要を読み取りやすくしました。",
+                      "alt": "モジュール型保険保障カードと展開可能なFAQ。"
+                    },
+                    {
+                      "asset": "assets/images/original/insuranceTaskCentered.png",
+                      "layout": "half",
+                      "caption": "各画面は、ユーザーが現在行うタスクと必要な情報へ集中します。",
+                      "alt": "タスク中心の保険申請フォーム。"
+                    }
+                  ]
+                },
+                {
+                  "title": "4-2. 長いフローをタスク中心のステップへ分割する",
+                  "body": [
+                    "申請ジャーニーを複数ステップに分割し、各ページを一種類の情報へ集中させ、一画面で多くのタスクを処理しない構造にしました。",
+                    "これにより認知負荷を下げながら、保険会社は規制違反のリスクなく必須条項と説明を提示できます。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceSplitFlow.png",
+                      "layout": "wide",
+                      "caption": "長い申請を、質問、プラン、書類、申告、確認、支払いという集中したステップへ分割しました。",
+                      "alt": "複数ステップの保険申請フロー。"
+                    }
+                  ]
+                },
+                {
+                  "title": "4-3. デザイントークンでベーススタイルライブラリを構築する",
+                  "body": [
+                    "Figma Variablesでカラートークンと命名規則を作成し、少数の管理された変更で同じコンポーネントへ別ブランドを適用できるようにしました。",
+                    "新規顧客向けのデザイン期間を約1週間から2日に短縮し、複数商品・ブランド間の保守工数も削減しました。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceColorVariant.png",
+                      "layout": "half",
+                      "caption": "一つのトークン構造で、Cyber Insurance、Cyber Security、Cyber Assetsを異なるブランドパレットへ展開しました。",
+                      "alt": "3種類の保険商品テーマ向けデザイントークン配色。"
+                    },
+                    {
+                      "asset": "assets/images/original/insuranceDesignSystem.png",
+                      "layout": "half",
+                      "caption": "共通ライブラリには、日中英のタイポグラフィ、フォーム、検証、日付選択、読み込み状態を定義しました。",
+                      "alt": "保険プロダクトのデザインシステムとタイポグラフィ。"
+                    }
+                  ]
+                },
+                {
+                  "title": "4-4. ランディングページを再利用可能なコミュニケーションテンプレートにする",
+                  "body": [
+                    "Hero、特徴、プラン比較、FAQ、資料をモジュール化し、再利用可能なランディングページ構造を作りました。",
+                    "営業は白紙から始めず明確な枠組みで顧客へ対応でき、デザインとフロントエンドは固定された制約内でブランドと文言を調整できます。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceProcess3.png",
+                      "layout": "wide",
+                      "caption": "同じランディングページ構造で、ライト、Cyber Security、Cyber Assetsの各テーマを支援しました。",
+                      "alt": "3種類のブランドを適用した保険ランディングページ。"
+                    }
+                  ]
+                }
+              ],
+              "quote": null,
+              "media": []
+            },
+            {
+              "order": 5,
+              "label": "実案件への適用",
+              "title": "異なる顧客シナリオへフレームワークを素早く適用する",
+              "body": [
+                "Marshのオンライン保険案件では、モジュール型フローとテンプレートを適用し、ブランドカラー、画像、文言の一部だけを調整して、ブランドに合った初回提案を作成しました。",
+                "これにより調整の往復と再開発を減らし、以降のイテレーションを基盤の再構築ではなく、シナリオ固有の体験改善へ集中させました。",
+                "同じフレームワークを、新光ベトナムとRichmondの進行中顧客案件にも適用しました。"
               ],
               "points": [
                 {
-                  "title": "タスク中心設計",
-                  "text": "プラン比較や資料アップロードなど、一つの作業へ集中。"
+                  "title": "Marsh Taiwan",
+                  "text": "共通のプラン、開示、フォームパターンで構成した自動車保険の見積もり・申請ジャーニー。"
                 },
                 {
-                  "title": "再利用ランディングページ",
-                  "text": "主要セクションをモジュール化し、伝達効率を向上。"
+                  "title": "新光ベトナム",
+                  "text": "共通申請モデル上で、現地市場とパートナーのブランドアイデンティティを維持。"
                 },
                 {
-                  "title": "顧客への迅速適応",
-                  "text": "Marsh、新光ベトナム、Richmondなどで基盤を再構築せずブランドを適用。"
+                  "title": "Richmond",
+                  "text": "同じ再利用可能なコンテンツとインタラクション基盤を用いたパートナーブランド体験。"
                 }
               ],
-              "quote": "高カスタマイズ構造を分解し、IXTを案件型SIから拡張可能な保険SaaSへ移行させました。",
+              "subsections": [
+                {
+                  "title": "5-1. 一つのフレームワーク、複数のプロダクトテーマ",
+                  "body": [
+                    "同じ申請構造に管理された変数を適用し、ライト、ダーク、Cyber Securityテーマを、体験全体を作り直さず展開しました。",
+                    "ブランド適用は単発作業ではなく、繰り返し使えるプロダクト能力になりました。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceResult1.png",
+                      "layout": "half",
+                      "caption": "Cyber Insurance — ライトテーマの申請フロー。",
+                      "alt": "ライトテーマの保険申請画面。"
+                    },
+                    {
+                      "asset": "assets/images/original/insuranceResult2.png",
+                      "layout": "half",
+                      "caption": "Cyber Assets — ダークテーマの申請フロー。",
+                      "alt": "ダークテーマの保険申請画面。"
+                    },
+                    {
+                      "asset": "assets/images/original/insuranceResult3.png",
+                      "layout": "wide",
+                      "caption": "Cyber Security — ブルーテーマの申請フロー。",
+                      "alt": "ブルーテーマの保険申請画面。"
+                    }
+                  ]
+                }
+              ],
+              "quote": null,
               "media": [
                 {
                   "asset": "assets/images/original/insuranceCaseStudies.png",
                   "layout": "wide",
-                  "caption": "設計実行のデザイン資料 1",
-                  "alt": "設計実行のデザイン資料 1"
-                },
-                {
-                  "asset": "assets/images/original/insuranceDesignSystem.png",
-                  "layout": "compact",
-                  "caption": "設計実行のデザイン資料 2",
-                  "alt": "設計実行のデザイン資料 2"
+                  "caption": "フレームワークは顧客向け申請、プラン選択、法的開示、保険業務フローをカバーしました。",
+                  "alt": "Marshの保険ランディングページと申請画面。"
                 },
                 {
                   "asset": "assets/images/original/insuranceMarsh.png",
                   "layout": "half",
-                  "caption": "設計実行のデザイン資料 3",
-                  "alt": "設計実行のデザイン資料 3"
+                  "caption": "Marsh Taiwan — Tesla自動車保険の見積もりとプラン選択。",
+                  "alt": "Marsh TaiwanのTesla自動車保険ランディングページ。"
                 },
                 {
                   "asset": "assets/images/original/insuranceRichmond.png",
                   "layout": "half",
-                  "caption": "設計実行のデザイン資料 4",
-                  "alt": "設計実行のデザイン資料 4"
+                  "caption": "Richmond — パートナーブランドのデジタル保険体験。",
+                  "alt": "タブレット上のRichmondブランドのデジタル保険体験。"
                 },
                 {
                   "asset": "assets/images/original/insuranceShinKong.png",
                   "layout": "wide",
-                  "caption": "設計実行のデザイン資料 5",
-                  "alt": "設計実行のデザイン資料 5"
-                },
-                {
-                  "asset": "assets/images/original/insuranceResult1.png",
-                  "layout": "half",
-                  "caption": "設計実行のデザイン資料 6",
-                  "alt": "設計実行のデザイン資料 6"
-                },
-                {
-                  "asset": "assets/images/original/insuranceResult2.png",
-                  "layout": "half",
-                  "caption": "設計実行のデザイン資料 7",
-                  "alt": "設計実行のデザイン資料 7"
-                },
-                {
-                  "asset": "assets/images/original/insuranceResult3.png",
-                  "layout": "compact",
-                  "caption": "設計実行のデザイン資料 8",
-                  "alt": "設計実行のデザイン資料 8"
+                  "caption": "新光ベトナム — 共通基盤を使用した市場別の顧客案件。",
+                  "alt": "新光ベトナムの顧客プロジェクト資料。"
                 }
               ]
+            },
+            {
+              "order": 6,
+              "label": "成果と結論",
+              "title": "単発案件からスケーラブルなプロダクトモデルへ",
+              "body": [
+                "1か月のプロジェクト期間で、高度にカスタマイズされた「保険版WordPress」の体験とデザイン構造を、再利用可能なフローとページテンプレートへ再構築しました。営業は抽象的な説明ではなく、具体例を使って顧客と調整できるようになりました。",
+                "カラートークンとFigma Variablesを組み合わせたフレームワークは、Marsh Taiwan、新光ベトナム、Richmondの進行中顧客案件へ適用されました。",
+                "IXTが単発のSIデリバリーから、よりスケーラブルな保険プロダクトモデルへ移行するための実践的な基盤を作りました。"
+              ],
+              "points": [],
+              "quote": "基盤を標準化し、新規顧客を白紙ではなくシステムから始める。",
+              "media": []
             }
           ],
           "outcomes": [
             {
-              "value": "2×",
-              "label": "事業開発／営業と顧客のコミュニケーション効率"
+              "value": "約50%",
+              "label": "営業と顧客の調整時間の推定削減率"
             },
             {
-              "value": "50%",
-              "label": "社内開発コスト削減"
+              "value": "約50%",
+              "label": "開発コストの推定削減率"
             },
             {
-              "value": "2日",
-              "label": "1週間かかっていた新規顧客デザイン"
+              "value": "1週間 → 2日",
+              "label": "新規顧客向けデザイン期間"
+            },
+            {
+              "value": "3件以上",
+              "label": "フレームワークを適用した進行中の企業案件"
             }
           ],
-          "name": "拡張可能な保険SaaSの設計：個別最適のサイロからモジュール型エコシステムへ",
-          "canonicalSubtitle": "デザイントークン主導の構造で、厳格な規制対応と摩擦の少ないUXを両立。",
-          "subtitle": "デザイントークン主導の構造で、厳格な規制対応と摩擦の少ないUXを両立。",
+          "name": "オンライン保険デリバリーのモジュール化",
+          "canonicalSubtitle": "「カスタマイズ地獄」からスケーラブルな保険プラットフォームへ",
+          "subtitle": "「カスタマイズ地獄」からスケーラブルな保険プラットフォームへ",
           "year": "2024",
-          "keyAchievement": "再利用可能なモジュール構造により、コミュニケーション効率を2倍、社内開発コストを50%削減。",
+          "keyAchievement": "調整時間と開発コストをそれぞれ推定約50%削減し、3件以上の進行中エンタープライズ案件へ適用。",
           "cover": "assets/images/original/insuranceHero.png",
           "sourceBoard": "assets/images/original/insuranceArtifact.png",
-          "cardDescription": "規制対応、使いやすさ、再利用テンプレート、ブランド拡張を両立するモジュール型保険SaaS。",
+          "cardDescription": "単発の顧客デリバリーを、再利用可能で規制対応・ブランド展開に強いモジュール型保険プラットフォームへ変えました。",
           "category": "Insurtech · B2B SaaS",
-          "description": "IXTはAI.f(T)が提供するデジタル保険プラットフォームです。複雑な保険業務を簡素化し、見積から契約発行までをデジタル化することで、既存業務の最適化と効率向上を目指しました。"
+          "description": "IXTはAIFTのデジタル保険プラットフォームです。私は一つのモジュールラインを主導し、単発の個別対応を、申請フロー、ブランド適用、顧客コミュニケーションに再利用できる基盤へ変えました。"
         },
         "onesleeve": {
           "slug": "onesleeve",
@@ -3312,5 +3678,5 @@
       }
     }
   },
-  "updatedAt": "2026-08-20T10:17:07.932Z"
+  "updatedAt": "2026-08-21T12:00:00.000Z"
 }
