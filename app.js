@@ -227,17 +227,124 @@
       </figure>`).join("")}</div>`;
   }
 
+  function renderSystemVisualHeader(visual) {
+    return `
+      <figcaption class="system-visual__header">
+        ${visual.eyebrow ? `<span>${escapeHtml(visual.eyebrow)}</span>` : ""}
+        <strong>${escapeHtml(visual.title || "")}</strong>
+        ${visual.description ? `<p>${escapeHtml(visual.description)}</p>` : ""}
+      </figcaption>`;
+  }
+
+  function renderSystemVisual(visual) {
+    if (!visual?.type) return "";
+
+    if (visual.type === "research-synthesis") {
+      const icons = ["↗", "◇", "⌘"];
+      return `
+        <figure class="system-visual system-visual--research reveal" data-visual-type="research-synthesis">
+          ${renderSystemVisualHeader(visual)}
+          <div class="research-map">
+            <div class="research-map__sources">
+              ${(visual.sources || []).map((source, index) => `
+                <article class="research-source">
+                  <span class="research-source__icon" aria-hidden="true">${icons[index % icons.length]}</span>
+                  <strong>${escapeHtml(source.title)}</strong>
+                  <span>${escapeHtml(source.meta)}</span>
+                </article>`).join("")}
+            </div>
+            <div class="system-visual__connector"><span>${escapeHtml(visual.method || "")}</span><i aria-hidden="true">↓</i></div>
+            <article class="research-map__result">
+              <span>${escapeHtml(visual.resultLabel || "")}</span>
+              <strong>${escapeHtml(visual.resultTitle || "")}</strong>
+              <p>${escapeHtml(visual.resultText || "")}</p>
+            </article>
+          </div>
+          ${visual.note ? `<p class="system-visual__note">${escapeHtml(visual.note)}</p>` : ""}
+        </figure>`;
+    }
+
+    if (visual.type === "boundary-map") {
+      return `
+        <figure class="system-visual system-visual--boundary reveal" data-visual-type="boundary-map">
+          ${renderSystemVisualHeader(visual)}
+          <div class="boundary-map">
+            ${(visual.columns || []).map((column, index) => `
+              <article class="boundary-column" data-tone="${index === 0 ? "fixed" : "flexible"}">
+                <span>${escapeHtml(column.eyebrow || "")}</span>
+                <h4>${escapeHtml(column.title || "")}</h4>
+                <ul>${(column.items || []).map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+              </article>`).join("")}
+          </div>
+          <div class="system-visual__connector"><span>${escapeHtml(visual.connector || "")}</span><i aria-hidden="true">↓</i></div>
+          <article class="boundary-result">
+            <strong>${escapeHtml(visual.resultTitle || "")}</strong>
+            <span>${escapeHtml(visual.resultText || "")}</span>
+          </article>
+        </figure>`;
+    }
+
+    if (visual.type === "flow-comparison") {
+      const panels = [visual.before, visual.after].filter(Boolean);
+      return `
+        <figure class="system-visual system-visual--flow reveal" data-visual-type="flow-comparison">
+          ${renderSystemVisualHeader(visual)}
+          <div class="flow-comparison">
+            ${panels.map((panel, panelIndex) => `
+              ${panelIndex ? `<span class="flow-comparison__bridge" aria-hidden="true">→</span>` : ""}
+              <article class="flow-panel" data-state="${panelIndex ? "after" : "before"}">
+                <span>${escapeHtml(panel.label || "")}</span>
+                <h4>${escapeHtml(panel.title || "")}</h4>
+                <ol>${(panel.steps || []).map((step, index) => `<li><b>${String(index + 1).padStart(2, "0")}</b><span>${escapeHtml(step)}</span></li>`).join("")}</ol>
+              </article>`).join("")}
+          </div>
+          ${visual.note ? `<p class="system-visual__note">${escapeHtml(visual.note)}</p>` : ""}
+        </figure>`;
+    }
+
+    if (visual.type === "outcome-shift") {
+      return `
+        <figure class="system-visual system-visual--outcomes reveal" data-visual-type="outcome-shift">
+          ${renderSystemVisualHeader(visual)}
+          <div class="outcome-shift">
+            <div class="outcome-shift__labels"><span>${escapeHtml(visual.beforeLabel || "")}</span><span>${escapeHtml(visual.afterLabel || "")}</span></div>
+            ${(visual.rows || []).map(row => `
+              <article class="outcome-row">
+                <strong>${escapeHtml(row.label || "")}</strong>
+                <span>${escapeHtml(row.before || "")}</span>
+                <i aria-hidden="true">→</i>
+                <b>${escapeHtml(row.after || "")}</b>
+              </article>`).join("")}
+          </div>
+          ${visual.result ? `<div class="outcome-shift__result">${escapeHtml(visual.result)}</div>` : ""}
+          ${visual.note ? `<p class="system-visual__note">${escapeHtml(visual.note)}</p>` : ""}
+        </figure>`;
+    }
+
+    return "";
+  }
+
   function renderSubsections(subsections) {
     if (!subsections?.length) return "";
     return `<div class="case-subsections">${subsections.map(subsection => `
       <section class="case-subsection reveal">
         <h3>${escapeHtml(subsection.title || "")}</h3>
         ${(subsection.body || []).map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+        ${renderSystemVisual(subsection.visual)}
         ${renderMedia(subsection.media, "subsection")}
       </section>`).join("")}</div>`;
   }
 
   function renderSection(section) {
+    const pointsMarkup = section.points?.length ? `
+      <div class="case-points">
+        ${section.pointsEyebrow || section.pointsTitle ? `
+          <header class="case-points__intro reveal">
+            ${section.pointsEyebrow ? `<span>${escapeHtml(section.pointsEyebrow)}</span>` : ""}
+            ${section.pointsTitle ? `<h3>${escapeHtml(section.pointsTitle)}</h3>` : ""}
+          </header>` : ""}
+        <div class="insight-grid">${section.points.map(point => `<article class="insight-card reveal"><h3>${escapeHtml(point.title)}</h3><p>${escapeHtml(point.text)}</p></article>`).join("")}</div>
+      </div>` : "";
     return `
       <section class="case-section" data-section-order="${escapeHtml(section.order)}">
         <div class="shell case-section__inner">
@@ -246,9 +353,11 @@
             <div class="case-prose reveal">
               <h2>${escapeHtml(section.title)}</h2>
               ${(section.body || []).map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+              ${renderSystemVisual(section.visual)}
+              ${section.pointsFirst ? pointsMarkup : ""}
               ${renderSubsections(section.subsections)}
             </div>
-            ${section.points?.length ? `<div class="insight-grid">${section.points.map(point => `<article class="insight-card reveal"><h3>${escapeHtml(point.title)}</h3><p>${escapeHtml(point.text)}</p></article>`).join("")}</div>` : ""}
+            ${section.pointsFirst ? "" : pointsMarkup}
             ${section.afterPoints?.length ? `<div class="case-closing reveal">${section.afterPoints.map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("")}</div>` : ""}
             ${section.quote ? `<blockquote class="case-quote reveal">${escapeHtml(section.quote)}</blockquote>` : ""}
             ${renderMedia(section.media)}

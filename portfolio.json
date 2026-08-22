@@ -1,66 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Timothy Lau — Product Designer">
-  <meta name="theme-color" content="#f7f3ec">
-  <title>Timothy Lau — Product Designer</title>
-  <link rel="stylesheet" href="styles.css?v=20260822c">
-</head>
-<body>
-  <a class="skip-link" href="#app" data-header-skip>Skip to content</a>
-  <div class="reading-progress" data-reading-progress aria-hidden="true"></div>
-
-  <header class="site-header" data-site-header>
-    <div class="shell header-inner">
-      <a class="brand text-link" href="#home" aria-label="Timothy Lau home" data-brand-link>
-        <span class="brand-mark" aria-hidden="true">TL</span>
-        <span class="brand-name">Timothy Lau</span>
-      </a>
-
-      <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-button>
-        <span class="sr-only" data-menu-label>Menu</span><i></i><i></i><i></i>
-      </button>
-
-      <div class="header-actions" id="primary-nav" data-header-actions>
-        <nav class="primary-nav" aria-label="Primary navigation">
-          <a class="nav-link" href="#home" data-home-target="work" data-nav-work>Work</a>
-          <a class="nav-link" href="#home" data-home-target="about" data-nav-about>About</a>
-          <a class="nav-link" href="#home" data-home-target="strengths" data-nav-strengths>Strengths</a>
-        </nav>
-
-        <div class="locale-switcher" role="group" aria-label="Language" data-locale-switcher>
-          <button class="locale-button" type="button" data-locale="en">EN</button>
-          <button class="locale-button" type="button" data-locale="zh-Hant">中文</button>
-          <button class="locale-button" type="button" data-locale="ja">日本語</button>
-        </div>
-
-        <a class="button button-primary header-contact" href="mailto:hello@timothylau.design" data-nav-contact>Contact</a>
-      </div>
-    </div>
-  </header>
-
-  <main id="app" tabindex="-1" aria-live="polite"></main>
-
-  <template id="home-structure-contract">
-    <div data-section="hero"></div>
-    <div data-section="about"></div>
-    <div data-section="work"></div>
-    <div data-section="strengths"></div>
-    <div data-section="team-value"></div>
-    <div data-section="contact"></div>
-  </template>
-
-  <div class="image-modal" hidden role="dialog" aria-modal="true" aria-label="Image viewer" data-image-modal>
-    <button class="modal-close" type="button" data-modal-close aria-label="Close image viewer">×</button>
-    <figure class="modal-stage" tabindex="-1">
-      <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" data-modal-image>
-      <figcaption data-modal-caption></figcaption>
-    </figure>
-  </div>
-
-  <script type="application/json" data-portfolio-content>{
+{
   "version": 4,
   "defaultLocale": "en",
   "locales": [
@@ -4074,7 +4012,4 @@
     }
   },
   "updatedAt": "2026-08-22T02:00:00.000Z"
-}</script>
-  <script src="app.js?v=20260822c" data-portfolio-app></script>
-</body>
-</html>
+}
