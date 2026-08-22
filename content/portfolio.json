@@ -425,6 +425,34 @@
                 "Before designing, I conducted one-on-one interviews with 2–3 stakeholders from each of three functions—sales, product, and engineering. Three recurring internal problems emerged.",
                 "I then synthesized those interviews with existing client requirements and delivery feedback to trace downstream application friction back to insurer and delivery constraints."
               ],
+              "pointsFirst": true,
+              "pointsEyebrow": "Research findings",
+              "pointsTitle": "Three Recurring Delivery Problems",
+              "visual": {
+                "type": "research-synthesis",
+                "eyebrow": "Research inputs",
+                "title": "Three functions revealed one shared delivery problem",
+                "description": "The diagram separates who I interviewed from the existing evidence used during synthesis.",
+                "sources": [
+                  {
+                    "title": "Sales",
+                    "meta": "2–3 one-on-one interviews"
+                  },
+                  {
+                    "title": "Product",
+                    "meta": "2–3 one-on-one interviews"
+                  },
+                  {
+                    "title": "Engineering",
+                    "meta": "2–3 one-on-one interviews"
+                  }
+                ],
+                "method": "One-on-one interviews",
+                "resultLabel": "Synthesis",
+                "resultTitle": "Three recurring delivery problems",
+                "resultText": "Interview findings combined with existing client requirements and delivery feedback.",
+                "note": "This visual summarizes the confirmed research scope; it does not represent customer interviews."
+              },
               "points": [
                 {
                   "title": "Alignment Cost Too High",
@@ -462,19 +490,18 @@
                     "Across different comparison rounds, I reviewed 3–5 representative digital insurance products, focusing on required information, application flow, and brand expression.",
                     "I compared how products organized mandatory questions, divided long journeys, presented legal content, and expressed different brands without changing core interaction patterns.",
                     "These findings confirmed that the work needed to move from isolated screen fixes to an end-to-end flow redesign built on reusable, regulation-aware modules."
-                  ],
-                  "media": [
-                    {
-                      "asset": "assets/images/original/insuranceCompetitive.png",
-                      "layout": "wide",
-                      "caption": "Competitive analysis separated three reusable dimensions: required information, application flow, and brand expression.",
-                      "alt": "Competitive insurance products compared across required information, filling flow, and user brand."
-                    }
                   ]
                 }
               ],
               "quote": null,
-              "media": []
+              "media": [
+                {
+                  "asset": "assets/images/original/insuranceCompetitive.png",
+                  "layout": "wide",
+                  "caption": "Competitive analysis separated three reusable dimensions: required information, application flow, and brand expression.",
+                  "alt": "Competitive insurance products compared across required information, filling flow, and user brand."
+                }
+              ]
             },
             {
               "order": 3,
@@ -484,6 +511,7 @@
                 "I faced a three-way conflict: B2B insurance partners required high visibility for legal disclosures, while business teams and end users needed simple, fast application flows.",
                 "Compliance was the foundation—without it, the product could not launch. Experience optimization had to happen on top of that floor."
               ],
+              "pointsFirst": true,
               "points": [
                 {
                   "title": "Fixed Across Clients",
@@ -505,6 +533,39 @@
                     "I defined reusable insurance templates and flow logic, constraining customization within the framework so costs became estimable and future product scaling could be supported.",
                     "The goal was not to eliminate customization. It was to define where customization was safe and where consistency created greater business and user value."
                   ],
+                  "visual": {
+                    "type": "boundary-map",
+                    "eyebrow": "Template boundary",
+                    "title": "Standardize the delivery engine; configure the client layer",
+                    "columns": [
+                      {
+                        "eyebrow": "Shared foundation",
+                        "title": "Fixed across clients",
+                        "items": [
+                          "Step structure",
+                          "Core modules",
+                          "Validation",
+                          "Navigation",
+                          "Legal placement",
+                          "Review and completion"
+                        ]
+                      },
+                      {
+                        "eyebrow": "Controlled variation",
+                        "title": "Configurable per client",
+                        "items": [
+                          "Brand colors",
+                          "Optional modules",
+                          "Plan content",
+                          "Imagery and copy",
+                          "Local disclosures"
+                        ]
+                      }
+                    ],
+                    "connector": "Converge inside one governed framework",
+                    "resultTitle": "Reusable modular template",
+                    "resultText": "Predictable scope with controlled adaptation"
+                  },
                   "media": []
                 },
                 {
@@ -513,6 +574,30 @@
                     "Under regulatory constraints, I reorganized required underwriting information and consolidated related content into the same step and screen to avoid frequent switching and backtracking.",
                     "This shortened the mental path to completion and created a clearer, more predictable flow."
                   ],
+                  "visual": {
+                    "type": "flow-comparison",
+                    "eyebrow": "Information architecture",
+                    "title": "From scattered pages to a task-centered journey",
+                    "before": {
+                      "label": "Before",
+                      "title": "One-off application flow",
+                      "steps": [
+                        "Information scattered across pages",
+                        "Frequent switching and backtracking",
+                        "Repeated clarification before completion"
+                      ]
+                    },
+                    "after": {
+                      "label": "After",
+                      "title": "Reusable task flow",
+                      "steps": [
+                        "Related information grouped together",
+                        "One primary task per step",
+                        "Clear review and completion path"
+                      ]
+                    },
+                    "note": "The comparison summarizes the structural change; detailed screens appear in Design Execution."
+                  },
                   "media": []
                 },
                 {
@@ -521,18 +606,18 @@
                     "The design separated information that users must read and act on from information that must be provided but can remain collapsed.",
                     "Hierarchy, layout, and progressive disclosure kept legal detail accessible without letting it dominate the primary application flow."
                   ],
-                  "media": []
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceProcess1.png",
+                      "layout": "wide",
+                      "caption": "The core strategy combined partner disclosure requirements with the user's need to understand essential coverage quickly.",
+                      "alt": "Regulatory module and summary module balancing insurer and user needs."
+                    }
+                  ]
                 }
               ],
               "quote": "Constrain the variable parts. Standardize the parts that make delivery predictable.",
-              "media": [
-                {
-                  "asset": "assets/images/original/insuranceProcess1.png",
-                  "layout": "wide",
-                  "caption": "The core strategy combined partner disclosure requirements with the user's need to understand essential coverage quickly.",
-                  "alt": "Regulatory module and summary module balancing insurer and user needs."
-                }
-              ]
+              "media": []
             },
             {
               "order": 4,
@@ -708,6 +793,32 @@
                 "Combined with color tokens and Figma Variables, the framework was applied across active client collaborations for Marsh Taiwan, Shin Kong Vietnam, and Richmond.",
                 "The result established a practical foundation for IXT to move from one-off SI delivery toward a more scalable insurance product model."
               ],
+              "visual": {
+                "type": "outcome-shift",
+                "eyebrow": "Delivery transformation",
+                "title": "The framework changed how new client work started",
+                "beforeLabel": "Before the framework",
+                "afterLabel": "With the modular framework",
+                "rows": [
+                  {
+                    "label": "Client alignment",
+                    "before": "Repeated explanation cycles",
+                    "after": "~50% less alignment time"
+                  },
+                  {
+                    "label": "Development",
+                    "before": "One-off scope and build",
+                    "after": "~50% lower estimated cost"
+                  },
+                  {
+                    "label": "New-client design",
+                    "before": "About one week",
+                    "after": "About two days"
+                  }
+                ],
+                "result": "Applied across 3+ active enterprise collaborations.",
+                "note": "Alignment and development figures are estimates based on sales feedback and internal project comparisons."
+              },
               "points": [],
               "quote": "Standardize the foundation so each new client starts with a system—not a blank page.",
               "media": []
@@ -1645,6 +1756,34 @@
                 "設計前，我針對業務、產品與工程三個職能進行一對一訪談，每個職能訪談 2–3 位利害關係人，歸納出三個反覆出現的內部問題。",
                 "接著，我把訪談與既有客戶需求、交付回饋一起整理，從保險公司與交付限制回推申請體驗中的下游摩擦。"
               ],
+              "pointsFirst": true,
+              "pointsEyebrow": "研究發現",
+              "pointsTitle": "三個反覆出現的交付問題",
+              "visual": {
+                "type": "research-synthesis",
+                "eyebrow": "研究來源",
+                "title": "三個職能，指向同一個交付問題",
+                "description": "這張圖區分實際訪談對象，以及統整時採用的既有資料。",
+                "sources": [
+                  {
+                    "title": "業務",
+                    "meta": "2–3 位一對一訪談"
+                  },
+                  {
+                    "title": "產品",
+                    "meta": "2–3 位一對一訪談"
+                  },
+                  {
+                    "title": "工程",
+                    "meta": "2–3 位一對一訪談"
+                  }
+                ],
+                "method": "一對一訪談",
+                "resultLabel": "研究統整",
+                "resultTitle": "三個反覆出現的交付問題",
+                "resultText": "訪談發現結合既有客戶需求與交付回饋。",
+                "note": "此圖呈現已確認的研究範圍，不代表曾直接訪談終端客戶。"
+              },
               "points": [
                 {
                   "title": "對齊成本過高",
@@ -1682,19 +1821,18 @@
                     "我在不同輪次比較 3–5 個具代表性的數位保險產品，聚焦必要資訊、申請流程與品牌表現。",
                     "我比較各產品如何安排必填問題、拆分長流程、呈現法規內容，以及在不改變核心互動的前提下表達不同品牌。",
                     "研究確認本案不能只修補單一畫面，而需要重整完整流程，並以可重用、能因應法規的模組作為架構基礎。"
-                  ],
-                  "media": [
-                    {
-                      "asset": "assets/images/original/insuranceCompetitive.png",
-                      "layout": "wide",
-                      "caption": "競品分析拆出三個可重用維度：必要資訊、申請流程與品牌表現。",
-                      "alt": "以必要資訊、填寫流程與品牌表現比較數位保險競品。"
-                    }
                   ]
                 }
               ],
               "quote": null,
-              "media": []
+              "media": [
+                {
+                  "asset": "assets/images/original/insuranceCompetitive.png",
+                  "layout": "wide",
+                  "caption": "競品分析拆出三個可重用維度：必要資訊、申請流程與品牌表現。",
+                  "alt": "以必要資訊、填寫流程與品牌表現比較數位保險競品。"
+                }
+              ]
             },
             {
               "order": 3,
@@ -1704,6 +1842,7 @@
                 "我面對三方衝突：B2B 保險合作夥伴要求法律揭露高度可見，商務團隊與終端使用者則需要簡單、快速的申請流程。",
                 "合規是產品能否推出的底線；體驗優化必須建立在這個底線之上。"
               ],
+              "pointsFirst": true,
               "points": [
                 {
                   "title": "所有客戶固定",
@@ -1725,6 +1864,39 @@
                     "我定義可重用的保險模板與流程邏輯，在框架內約束客製，讓成本可估並支援後續產品擴展。",
                     "目標不是消除客製，而是明確定義哪些地方可以安全調整、哪些地方維持一致能創造更大的商業與使用者價值。"
                   ],
+                  "visual": {
+                    "type": "boundary-map",
+                    "eyebrow": "模板邊界",
+                    "title": "標準化交付引擎，依客戶調整表現層",
+                    "columns": [
+                      {
+                        "eyebrow": "共用基礎",
+                        "title": "所有客戶固定",
+                        "items": [
+                          "步驟結構",
+                          "核心模組",
+                          "驗證行為",
+                          "導覽",
+                          "法規內容位置",
+                          "審核與完成流程"
+                        ]
+                      },
+                      {
+                        "eyebrow": "受控變化",
+                        "title": "依客戶調整",
+                        "items": [
+                          "品牌色",
+                          "選用模組",
+                          "方案內容",
+                          "圖像與文案",
+                          "在地法規揭露"
+                        ]
+                      }
+                    ],
+                    "connector": "在同一套治理框架內收斂",
+                    "resultTitle": "可重用模組化模板",
+                    "resultText": "可預測的範圍，加上受控的客戶適配"
+                  },
                   "media": []
                 },
                 {
@@ -1733,6 +1905,30 @@
                     "在法規限制下，我重新整理核保所需資訊，把相關內容集中在同一步驟與畫面，避免頻繁切換與返回。",
                     "這項結構調整縮短使用者理解完成流程的心理路徑，也讓流程更清楚、更可預期。"
                   ],
+                  "visual": {
+                    "type": "flow-comparison",
+                    "eyebrow": "資訊架構",
+                    "title": "從分散頁面，重整為任務導向旅程",
+                    "before": {
+                      "label": "重整前",
+                      "title": "一次性申請流程",
+                      "steps": [
+                        "資訊分散在不同頁面",
+                        "頻繁切換與返回",
+                        "完成前需要反覆釐清"
+                      ]
+                    },
+                    "after": {
+                      "label": "重整後",
+                      "title": "可重用任務流程",
+                      "steps": [
+                        "相關資訊集中呈現",
+                        "每一步只處理一個主要任務",
+                        "清楚的審核與完成路徑"
+                      ]
+                    },
+                    "note": "此比較摘要呈現結構變化；詳細畫面請見「設計執行」。"
+                  },
                   "media": []
                 },
                 {
@@ -1741,18 +1937,18 @@
                     "設計把「必須閱讀並採取行動」與「必須提供但可收合」的資訊分開。",
                     "透過階層、版面與漸進式揭露，法規細節保持可取得，同時不支配主要申請流程。"
                   ],
-                  "media": []
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceProcess1.png",
+                      "layout": "wide",
+                      "caption": "核心策略同時滿足合作夥伴的揭露要求，以及使用者快速理解保障重點的需求。",
+                      "alt": "平衡保險公司與使用者需求的法規模組與摘要模組。"
+                    }
+                  ]
                 }
               ],
               "quote": "限制可變部分，標準化能讓交付變得可預測的部分。",
-              "media": [
-                {
-                  "asset": "assets/images/original/insuranceProcess1.png",
-                  "layout": "wide",
-                  "caption": "核心策略同時滿足合作夥伴的揭露要求，以及使用者快速理解保障重點的需求。",
-                  "alt": "平衡保險公司與使用者需求的法規模組與摘要模組。"
-                }
-              ]
+              "media": []
             },
             {
               "order": 4,
@@ -1928,6 +2124,32 @@
                 "結合 Color Token 與 Figma Variables，框架已應用於 Marsh Taiwan、新光越南與 Richmond 等進行中的客戶合作。",
                 "這項成果為 IXT 從一次性 SI 交付走向更可擴展的保險產品模式，建立了務實基礎。"
               ],
+              "visual": {
+                "type": "outcome-shift",
+                "eyebrow": "交付方式轉變",
+                "title": "框架改變了每個新客戶案的起點",
+                "beforeLabel": "導入框架前",
+                "afterLabel": "使用模組化框架後",
+                "rows": [
+                  {
+                    "label": "客戶對齊",
+                    "before": "反覆說明與需求確認",
+                    "after": "對齊時間估計減少約 50%"
+                  },
+                  {
+                    "label": "開發",
+                    "before": "一次性估算與建置",
+                    "after": "估計成本降低約 50%"
+                  },
+                  {
+                    "label": "新客戶設計",
+                    "before": "約一週",
+                    "after": "約兩天"
+                  }
+                ],
+                "result": "已應用於 3 個以上進行中的企業合作案。",
+                "note": "對齊與開發數字為依業務回饋與內部專案比較得出的估計值。"
+              },
               "points": [],
               "quote": "標準化基礎，讓每個新客戶從一套系統開始，而不是從空白頁開始。",
               "media": []
@@ -2865,6 +3087,34 @@
                 "設計前に、営業・プロダクト・開発の3職種を対象に、各職種2〜3名への一対一インタビューを実施しました。そこから、繰り返し発生する3つの社内課題を特定しました。",
                 "さらに、インタビューを既存の顧客要件やデリバリーフィードバックと統合し、保険会社とデリバリー上の制約から申請体験の摩擦を逆算しました。"
               ],
+              "pointsFirst": true,
+              "pointsEyebrow": "調査結果",
+              "pointsTitle": "繰り返し発生していた3つのデリバリー課題",
+              "visual": {
+                "type": "research-synthesis",
+                "eyebrow": "リサーチインプット",
+                "title": "3つの職能から、共通するデリバリー課題を特定",
+                "description": "実際のインタビュー対象と、統合時に参照した既存資料を分けて示しています。",
+                "sources": [
+                  {
+                    "title": "Sales",
+                    "meta": "2〜3名への1対1インタビュー"
+                  },
+                  {
+                    "title": "Product",
+                    "meta": "2〜3名への1対1インタビュー"
+                  },
+                  {
+                    "title": "Engineering",
+                    "meta": "2〜3名への1対1インタビュー"
+                  }
+                ],
+                "method": "1対1インタビュー",
+                "resultLabel": "統合",
+                "resultTitle": "繰り返し現れた3つのデリバリー課題",
+                "resultText": "インタビュー結果を既存の顧客要件とデリバリーフィードバックと統合。",
+                "note": "この図は確認済みのリサーチ範囲を示すもので、エンドユーザーへの直接インタビューを意味しません。"
+              },
               "points": [
                 {
                   "title": "調整コストが高い",
@@ -2902,19 +3152,18 @@
                     "複数回の比較で、代表的なデジタル保険商品3〜5件を調査し、必須情報、申請フロー、ブランド表現に注目しました。",
                     "必須質問の整理、長いジャーニーの分割、法規情報の提示、コアインタラクションを変えずにブランドを表現する方法を比較しました。",
                     "その結果、単一画面の修正ではなく、再利用可能で規制に対応したモジュールを基盤とするエンドツーエンドの再設計が必要だと確認できました。"
-                  ],
-                  "media": [
-                    {
-                      "asset": "assets/images/original/insuranceCompetitive.png",
-                      "layout": "wide",
-                      "caption": "競合分析では、必須情報、申請フロー、ブランド表現という3つの再利用可能な軸を抽出しました。",
-                      "alt": "必須情報、入力フロー、ブランド表現によるデジタル保険商品の比較。"
-                    }
                   ]
                 }
               ],
               "quote": null,
-              "media": []
+              "media": [
+                {
+                  "asset": "assets/images/original/insuranceCompetitive.png",
+                  "layout": "wide",
+                  "caption": "競合分析では、必須情報、申請フロー、ブランド表現という3つの再利用可能な軸を抽出しました。",
+                  "alt": "必須情報、入力フロー、ブランド表現によるデジタル保険商品の比較。"
+                }
+              ]
             },
             {
               "order": 3,
@@ -2924,6 +3173,7 @@
                 "B2B保険パートナーは法的開示の高い視認性を求める一方、事業チームとエンドユーザーは簡単で速い申請フローを求めるという三者間の対立がありました。",
                 "コンプライアンスはプロダクトを市場へ出すための最低条件です。体験最適化は、その基盤の上で行う必要がありました。"
               ],
+              "pointsFirst": true,
               "points": [
                 {
                   "title": "全顧客で固定",
@@ -2945,6 +3195,39 @@
                     "再利用可能な保険テンプレートとフローロジックを定義し、カスタマイズをその枠内に収めることで、コストを予測可能にし、将来の製品拡張を支えました。",
                     "目的はカスタマイズをなくすことではありません。安全に変更できる場所と、一貫性が事業・ユーザー価値を高める場所を明確にすることでした。"
                   ],
+                  "visual": {
+                    "type": "boundary-map",
+                    "eyebrow": "テンプレート境界",
+                    "title": "デリバリー基盤を標準化し、顧客レイヤーを調整",
+                    "columns": [
+                      {
+                        "eyebrow": "共通基盤",
+                        "title": "顧客共通で固定",
+                        "items": [
+                          "ステップ構造",
+                          "コアモジュール",
+                          "バリデーション",
+                          "ナビゲーション",
+                          "法規情報の配置",
+                          "レビューと完了フロー"
+                        ]
+                      },
+                      {
+                        "eyebrow": "制御された可変領域",
+                        "title": "顧客ごとに調整",
+                        "items": [
+                          "ブランドカラー",
+                          "オプションモジュール",
+                          "プラン内容",
+                          "画像とコピー",
+                          "地域別の開示"
+                        ]
+                      }
+                    ],
+                    "connector": "1つのガバナンスフレームワーク内で収束",
+                    "resultTitle": "再利用可能なモジュラーテンプレート",
+                    "resultText": "予測可能なスコープと、制御された適応"
+                  },
                   "media": []
                 },
                 {
@@ -2953,6 +3236,30 @@
                     "規制上必要な引受情報を再整理し、関連内容を同じステップと画面へ統合して、頻繁な画面移動や後戻りを避けました。",
                     "これにより完了までの心理的な経路が短くなり、フローがより明確で予測可能になりました。"
                   ],
+                  "visual": {
+                    "type": "flow-comparison",
+                    "eyebrow": "情報アーキテクチャ",
+                    "title": "分散したページからタスク中心のジャーニーへ",
+                    "before": {
+                      "label": "Before",
+                      "title": "個別最適の申請フロー",
+                      "steps": [
+                        "情報が複数ページに分散",
+                        "頻繁な画面移動と戻り",
+                        "完了前に繰り返し確認が必要"
+                      ]
+                    },
+                    "after": {
+                      "label": "After",
+                      "title": "再利用可能なタスクフロー",
+                      "steps": [
+                        "関連情報をまとめて提示",
+                        "1ステップにつき1つの主要タスク",
+                        "明確なレビューと完了経路"
+                      ]
+                    },
+                    "note": "この比較は構造変更の要約です。詳細画面は「デザイン実行」で示します。"
+                  },
                   "media": []
                 },
                 {
@@ -2961,18 +3268,18 @@
                     "「必ず読み、操作が必要な情報」と「提示は必要だが折りたためる情報」を分離しました。",
                     "情報階層、レイアウト、段階的開示により、法規情報へアクセスできる状態を保ちながら、主要な申請フローを支配しないようにしました。"
                   ],
-                  "media": []
+                  "media": [
+                    {
+                      "asset": "assets/images/original/insuranceProcess1.png",
+                      "layout": "wide",
+                      "caption": "コア戦略は、パートナーの開示要件と、ユーザーが保障の要点を素早く理解するニーズを両立させました。",
+                      "alt": "保険会社とユーザーのニーズを両立する規制モジュールと要約モジュール。"
+                    }
+                  ]
                 }
               ],
               "quote": "変動する部分を制約し、デリバリーを予測可能にする部分を標準化する。",
-              "media": [
-                {
-                  "asset": "assets/images/original/insuranceProcess1.png",
-                  "layout": "wide",
-                  "caption": "コア戦略は、パートナーの開示要件と、ユーザーが保障の要点を素早く理解するニーズを両立させました。",
-                  "alt": "保険会社とユーザーのニーズを両立する規制モジュールと要約モジュール。"
-                }
-              ]
+              "media": []
             },
             {
               "order": 4,
@@ -3148,6 +3455,32 @@
                 "カラートークンとFigma Variablesを組み合わせたフレームワークは、Marsh Taiwan、新光ベトナム、Richmondの進行中顧客案件へ適用されました。",
                 "IXTが単発のSIデリバリーから、よりスケーラブルな保険プロダクトモデルへ移行するための実践的な基盤を作りました。"
               ],
+              "visual": {
+                "type": "outcome-shift",
+                "eyebrow": "デリバリーの変化",
+                "title": "新規クライアント案件の始め方を変えた",
+                "beforeLabel": "導入前",
+                "afterLabel": "モジュラーフレームワーク導入後",
+                "rows": [
+                  {
+                    "label": "顧客との合意形成",
+                    "before": "説明と確認を繰り返す",
+                    "after": "調整時間を約50%削減（推定）"
+                  },
+                  {
+                    "label": "開発",
+                    "before": "案件ごとの見積もりと構築",
+                    "after": "開発コストを約50%削減（推定）"
+                  },
+                  {
+                    "label": "新規顧客のデザイン",
+                    "before": "約1週間",
+                    "after": "約2日"
+                  }
+                ],
+                "result": "3件以上の進行中のエンタープライズ案件で適用。",
+                "note": "合意形成と開発の数値は、営業フィードバックと社内プロジェクト比較に基づく推定値です。"
+              },
               "points": [],
               "quote": "基盤を標準化し、新規顧客を白紙ではなくシステムから始める。",
               "media": []
@@ -3678,5 +4011,5 @@
       }
     }
   },
-  "updatedAt": "2026-08-21T12:00:00.000Z"
+  "updatedAt": "2026-08-22T02:00:00.000Z"
 }
