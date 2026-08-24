@@ -271,6 +271,8 @@ p{color:var(--muted);text-wrap:pretty}
 .system-visual__header>p,.system-visual--research .case-points__intro>p{max-width:76ch;margin:8px 0 0;color:var(--ink-soft);font-size:.9rem;line-height:1.55}
 .system-visual__connector{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:13px 0;color:var(--project-dark);font-size:.72rem;font-weight:780;letter-spacing:.04em}
 .system-visual__connector i{font-size:1.25rem;font-style:normal;line-height:1}
+.system-visual--research .system-visual__connector{gap:8px;padding:18px 0;font-size:.9rem;font-weight:820}
+.system-visual--research .system-visual__connector i{font-size:1.8rem}
 .system-visual__note{max-width:none!important;margin:18px 0 0!important;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:.74rem!important;line-height:1.5!important}
 
 .research-map__sources{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
