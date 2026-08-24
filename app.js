@@ -343,6 +343,7 @@
           <header class="case-points__intro reveal">
             ${section.pointsEyebrow ? `<span>${escapeHtml(section.pointsEyebrow)}</span>` : ""}
             ${section.pointsTitle ? `<h3>${escapeHtml(section.pointsTitle)}</h3>` : ""}
+            ${section.pointsDescription ? `<p>${escapeHtml(section.pointsDescription)}</p>` : ""}
           </header>` : ""}
         <div class="insight-grid">${section.points.map(point => `<article class="insight-card reveal"><h3>${escapeHtml(point.title)}</h3><p>${escapeHtml(point.text)}</p></article>`).join("")}</div>
       </div>` : "";
