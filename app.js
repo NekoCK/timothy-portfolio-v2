@@ -236,7 +236,7 @@
       </figcaption>`;
   }
 
-  function renderSystemVisual(visual) {
+  function renderSystemVisual(visual, inlineMarkup = "") {
     if (!visual?.type) return "";
 
     if (visual.type === "research-synthesis") {
@@ -254,11 +254,12 @@
                 </article>`).join("")}
             </div>
             <div class="system-visual__connector"><span>${escapeHtml(visual.method || "")}</span><i aria-hidden="true">↓</i></div>
-            <article class="research-map__result">
-              <span>${escapeHtml(visual.resultLabel || "")}</span>
-              <strong>${escapeHtml(visual.resultTitle || "")}</strong>
-              <p>${escapeHtml(visual.resultText || "")}</p>
-            </article>
+            ${inlineMarkup ? `<div class="research-map__findings">${inlineMarkup}</div>` : `
+              <article class="research-map__result">
+                <span>${escapeHtml(visual.resultLabel || "")}</span>
+                <strong>${escapeHtml(visual.resultTitle || "")}</strong>
+                <p>${escapeHtml(visual.resultText || "")}</p>
+              </article>`}
           </div>
           ${visual.note ? `<p class="system-visual__note">${escapeHtml(visual.note)}</p>` : ""}
         </figure>`;
@@ -345,6 +346,11 @@
           </header>` : ""}
         <div class="insight-grid">${section.points.map(point => `<article class="insight-card reveal"><h3>${escapeHtml(point.title)}</h3><p>${escapeHtml(point.text)}</p></article>`).join("")}</div>
       </div>` : "";
+    const mergeResearchPoints = Boolean(
+      section.pointsFirst &&
+      section.points?.length &&
+      section.visual?.type === "research-synthesis"
+    );
     return `
       <section class="case-section" data-section-order="${escapeHtml(section.order)}">
         <div class="shell case-section__inner">
@@ -353,11 +359,11 @@
             <div class="case-prose reveal">
               <h2>${escapeHtml(section.title)}</h2>
               ${(section.body || []).map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("")}
-              ${renderSystemVisual(section.visual)}
-              ${section.pointsFirst ? pointsMarkup : ""}
+              ${renderSystemVisual(section.visual, mergeResearchPoints ? pointsMarkup : "")}
+              ${section.pointsFirst && !mergeResearchPoints ? pointsMarkup : ""}
               ${renderSubsections(section.subsections)}
             </div>
-            ${section.pointsFirst ? "" : pointsMarkup}
+            ${section.pointsFirst || mergeResearchPoints ? "" : pointsMarkup}
             ${section.afterPoints?.length ? `<div class="case-closing reveal">${section.afterPoints.map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("")}</div>` : ""}
             ${section.quote ? `<blockquote class="case-quote reveal">${escapeHtml(section.quote)}</blockquote>` : ""}
             ${renderMedia(section.media)}

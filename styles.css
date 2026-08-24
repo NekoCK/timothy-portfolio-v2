@@ -281,6 +281,12 @@ p{color:var(--muted);text-wrap:pretty}
 .research-map__result>span{display:block;margin-bottom:5px;color:rgba(255,255,255,.68);font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
 .research-map__result strong{display:block;font-size:1.05rem}
 .research-map__result p{max-width:none!important;margin:6px 0 0!important;color:rgba(255,255,255,.78);font-size:.82rem!important;line-height:1.5!important}
+.research-map__findings{margin-top:4px;padding-top:24px;border-top:1px solid var(--border)}
+.system-visual--research .case-points{margin-top:0}
+.system-visual--research .case-points__intro{max-width:none}
+.system-visual--research .case-points__intro h3{font-size:clamp(1.35rem,2vw,1.75rem)}
+.system-visual--research .insight-grid{margin-top:20px}
+.system-visual--research .insight-card{background:#fff}
 
 .boundary-map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .boundary-column{padding:22px;border:1px solid var(--border);border-radius:18px;background:rgba(255,255,255,.88)}
