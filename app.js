@@ -58,6 +58,10 @@
     })[character]);
   }
 
+  function formatHeading(value) {
+    return escapeHtml(value).replace(/\n/g, "<br>");
+  }
+
   function localeContent() {
     return DATA.content[state.locale] || DATA.content[DATA.defaultLocale];
   }
@@ -99,15 +103,16 @@
 
   function projectCard(project) {
     const ui = localeContent().ui;
+    const cardTitle = project.cardTitle || project.name;
     return `
       <a class="project-card reveal" style="--card-accent:${escapeHtml(project.accent)}" href="${projectHref(project.slug)}" data-project-link="${escapeHtml(project.slug)}">
         <div class="project-card__media">
-          <img src="${escapeHtml(project.cover)}" alt="${escapeHtml(`${project.name} — ${project.subtitle}`)}" loading="lazy">
+          <img src="${escapeHtml(project.cover)}" alt="${escapeHtml(`${cardTitle} — ${project.subtitle}`)}" loading="lazy">
           <span class="project-card__index">${escapeHtml(project.index)}</span>
         </div>
         <div class="project-card__body">
           <div class="project-card__meta"><span>${escapeHtml(project.category)}</span><span>${escapeHtml(project.year)}</span></div>
-          <h3 class="project-card__title">${escapeHtml(project.name)}</h3>
+          <h3 class="project-card__title">${escapeHtml(cardTitle)}</h3>
           <p class="project-card__subtitle">${escapeHtml(project.subtitle)}</p>
           <p class="project-card__description">${escapeHtml(project.cardDescription)}</p>
           <div class="project-card__achievement">
@@ -128,10 +133,10 @@
             <span class="eyebrow">${escapeHtml(home.contact.eyebrow)}</span>
             <h2>${escapeHtml(home.contact.title)}</h2>
             <p>${escapeHtml(home.contact.body)}</p>
-            <a class="button button-primary" href="mailto:hello@timothylau.design">${escapeHtml(home.contact.button)} ↗</a>
+            <a class="button button-primary" href="mailto:nekoking2010@gmail.com">${escapeHtml(home.contact.button)} ↗</a>
           </div>
           <div class="contact-details">
-            <a class="contact-detail text-link" href="mailto:hello@timothylau.design"><span aria-hidden="true">✉</span><span>hello@timothylau.design</span></a>
+            <a class="contact-detail text-link" href="mailto:nekoking2010@gmail.com"><span aria-hidden="true">✉</span><span>nekoking2010@gmail.com</span></a>
             <div class="contact-detail"><span aria-hidden="true">◎</span><span>${escapeHtml(home.contact.availability)}</span></div>
           </div>
         </div>
@@ -159,18 +164,13 @@
       <div data-page="home">
         <section class="hero-section" id="hero" data-section="hero">
           <div class="shell hero-shell">
-            <figure class="hero-media">
-              <img src="${escapeHtml(DATA.sharedAssets.portrait)}" alt="${escapeHtml(home.hero.imageAlt)}" width="1100" height="1227">
-            </figure>
             <div class="hero-copy">
               <span class="eyebrow reveal">${escapeHtml(home.hero.eyebrow)}</span>
-              <h1 class="reveal">${escapeHtml(home.hero.titleBefore)} <span class="accent">${escapeHtml(home.hero.titleAccent)}</span></h1>
+              <h1 class="reveal">${formatHeading(home.hero.titleBefore)} <span class="accent">${formatHeading(home.hero.titleAccent)}</span></h1>
               <p class="reveal">${escapeHtml(home.hero.body)}</p>
               <div class="hero-actions reveal">
                 <a class="button button-primary" href="#home" data-home-target="work">${escapeHtml(home.hero.primary)}</a>
-                <a class="button button-secondary" href="mailto:hello@timothylau.design">${escapeHtml(home.hero.secondary)}</a>
               </div>
-              <svg class="hero-thread" viewBox="0 0 900 190" aria-hidden="true"><path d="M0 135 C115 30 220 170 330 92 S530 160 625 70 S785 120 900 24"/><circle cx="116" cy="83" r="7"/><circle cx="330" cy="92" r="7"/><circle cx="625" cy="70" r="7"/><circle cx="817" cy="76" r="7"/></svg>
             </div>
           </div>
         </section>
@@ -180,26 +180,27 @@
             <figure class="about-media reveal"><img src="${escapeHtml(DATA.sharedAssets.workshop)}" alt="${escapeHtml(home.about.imageAlt)}" loading="lazy"></figure>
             <div class="about-copy">
               <span class="eyebrow reveal">${escapeHtml(home.about.eyebrow)}</span>
-              <h2 class="reveal">${escapeHtml(home.about.titleBefore)} <span class="accent">${escapeHtml(home.about.titleAccent)}</span></h2>
+              <h2 class="reveal">${formatHeading(home.about.titleBefore)} <span class="accent">${formatHeading(home.about.titleAccent)}</span></h2>
               <p class="reveal">${escapeHtml(home.about.body)}</p>
               <div class="principle-grid reveal">
                 ${home.about.principles.map((item, index) => `
                   <article class="principle-card"><span class="principle-icon">${["◉", "⇄", "⌘"][index]}</span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.body)}</p></article>`).join("")}
               </div>
+              ${home.about.backgroundFacts ? `<p class="reveal">${escapeHtml(home.about.backgroundFacts)}</p>` : ""}
             </div>
           </div>
         </section>
 
         <section class="section section-divider" id="work" data-section="work">
           <div class="shell">
-            <header class="section-header reveal"><div><span class="eyebrow">${escapeHtml(home.work.eyebrow)}</span><h2>${escapeHtml(home.work.title)}</h2></div><p>${escapeHtml(home.work.body)}</p></header>
+            <header class="section-header reveal"><div><span class="eyebrow">${escapeHtml(home.work.eyebrow)}</span><h2>${formatHeading(home.work.title)}</h2></div><p>${escapeHtml(home.work.body)}</p></header>
             <div class="project-grid">${projectOrder().map(slug => projectCard(projects[slug])).join("")}</div>
           </div>
         </section>
 
         <section class="section section-divider" id="strengths" data-section="strengths">
           <div class="shell">
-            <header class="section-header reveal"><div><span class="eyebrow">${escapeHtml(home.strengths.eyebrow)}</span><h2>${escapeHtml(home.strengths.title)}</h2></div><p>${escapeHtml(home.strengths.body)}</p></header>
+            <header class="section-header reveal"><div><span class="eyebrow">${escapeHtml(home.strengths.eyebrow)}</span><h2>${formatHeading(home.strengths.title)}</h2></div><p>${escapeHtml(home.strengths.body)}</p></header>
             <div class="strength-grid">
               ${home.strengths.items.map((item, index) => `<article class="strength-card reveal" style="--strength-color:${["#8fa08c", "#7d96ad", "#c96345"][index]}"><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.body)}</p></article>`).join("")}
             </div>
@@ -337,6 +338,7 @@
   }
 
   function renderSection(section) {
+    const sectionOrder = section.order ?? section.number ?? "";
     const pointsMarkup = section.points?.length ? `
       <div class="case-points">
         ${section.pointsEyebrow || section.pointsTitle ? `
@@ -353,9 +355,9 @@
       section.visual?.type === "research-synthesis"
     );
     return `
-      <section class="case-section" data-section-order="${escapeHtml(section.order)}">
+      <section class="case-section" data-section-order="${escapeHtml(sectionOrder)}">
         <div class="shell case-section__inner">
-          <aside class="case-section__marker"><strong>${String(section.order).padStart(2, "0")}</strong><span>${escapeHtml(section.label)}</span></aside>
+          <aside class="case-section__marker"><strong>${String(sectionOrder).padStart(2, "0")}</strong><span>${escapeHtml(section.label)}</span></aside>
           <div class="case-section__content">
             <div class="case-prose reveal">
               <h2>${escapeHtml(section.title)}</h2>
@@ -453,8 +455,8 @@
 
         <section class="section section-tight">
           <div class="shell contact-panel reveal">
-            <div><span class="eyebrow">${escapeHtml(ui.contactEyebrow)}</span><h2>${escapeHtml(ui.contactTitle)}</h2><p>${escapeHtml(ui.contactBody)}</p><a class="button button-primary" href="mailto:hello@timothylau.design">${escapeHtml(ui.contactButton)} ↗</a></div>
-            <div class="contact-details"><a class="contact-detail text-link" href="mailto:hello@timothylau.design"><span aria-hidden="true">✉</span><span>hello@timothylau.design</span></a><a class="contact-detail text-link" href="#home" data-home-target="work"><span aria-hidden="true">⌂</span><span>${escapeHtml(ui.returnHome)}</span></a></div>
+            <div><span class="eyebrow">${escapeHtml(ui.contactEyebrow)}</span><h2>${escapeHtml(ui.contactTitle)}</h2><p>${escapeHtml(ui.contactBody)}</p><a class="button button-primary" href="mailto:nekoking2010@gmail.com">${escapeHtml(ui.contactButton)} ↗</a></div>
+            <div class="contact-details"><a class="contact-detail text-link" href="mailto:nekoking2010@gmail.com"><span aria-hidden="true">✉</span><span>nekoking2010@gmail.com</span></a><a class="contact-detail text-link" href="#home" data-home-target="work"><span aria-hidden="true">⌂</span><span>${escapeHtml(ui.returnHome)}</span></a></div>
           </div>
         </section>
         ${footer()}

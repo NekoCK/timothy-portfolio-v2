@@ -14,7 +14,7 @@
   ],
   "sharedAssets": {
     "portrait": "assets/images/original/portrait.jpg",
-    "workshop": "assets/images/original/workshop.jpg"
+    "workshop": "assets/images/original/workshop-no-people.png"
   },
   "content": {
     "en": {
@@ -34,56 +34,57 @@
       },
       "home": {
         "hero": {
-          "eyebrow": "Product designer · Team connector",
-          "titleBefore": "I bring patience, clarity, and",
-          "titleAccent": "connection.",
-          "body": "I design complex products by listening deeply, making hidden systems visible, and helping people with different perspectives move toward one shared decision.",
-          "primary": "See selected work",
-          "secondary": "Start a conversation",
+          "eyebrow": "",
+          "titleBefore": "Identify the right problem to solve,\nthen turn the answer into a sustainable architecture.",
+          "titleAccent": "",
+          "body": "AI can generate answers. Deciding which problem to solve and making the answer last, that's the human's job.",
+          "primary": "View selected work",
+          "secondary": "Contact me",
           "imageAlt": "Product designer in a calm studio setting"
         },
         "about": {
-          "eyebrow": "About me",
-          "titleBefore": "I connect people and ideas to build",
-          "titleAccent": "better outcomes.",
-          "body": "I am at my best in the middle of a team: listening for what each discipline sees, translating constraints into a shared map, and giving difficult decisions enough time to become clear. I care about the interface, but I also care about the quality of the conversation that creates it.",
-          "imageAlt": "Designer facilitating a collaborative workshop",
+          "eyebrow": "How I work",
+          "titleBefore": "Start from the root of the problem, work through strategy, land on a system that sustains itself.",
+          "titleAccent": "",
+          "body": "No matter the product, my approach is the same: challenge existing assumptions and use research to find the real problem. Then structure the ambiguity into options with clear trade-offs, so stakeholders can make evidence-based decisions. Finally, build the solution into a scalable architecture that keeps producing consistent output after I've moved on.",
+          "imageAlt": "A Post-it-covered workshop wall",
           "principles": [
             {
-              "title": "Listen first",
-              "body": "Understand context, intent, and hidden constraints before deciding what to make."
+              "title": "Find the real problem first",
+              "body": "Don't accept surface-level requirements. Use research to surface the blind spots the team hasn't seen, and confirm the direction before opening any design tool."
             },
             {
-              "title": "Facilitate",
-              "body": "Turn conflicting perspectives into one model the team can test together."
+              "title": "Structure decisions, align stakeholders",
+              "body": "Break ambiguous problems into comparable options so people across roles can choose based on evidence, not preference."
             },
             {
-              "title": "Think in systems",
-              "body": "Connect individual screens to the product, operation, and long-term consequence."
+              "title": "Build systems, not just deliverables",
+              "body": "Design scalable architectures, governance rules, and naming conventions. Make the solution infrastructure the team can run on, not a one-time output."
             }
-          ]
+          ],
+          "backgroundFacts": "Nine years, four industries (IoT · Insurtech · Cybersecurity · AI Security), three markets (Taiwan · Japan · Hong Kong). Born in Japan, JLPT N1."
         },
         "work": {
           "eyebrow": "Selected work",
-          "title": "Complex systems, made understandable enough to move forward.",
-          "body": "Four projects across connected homes, insurance operations, cybersecurity systems, and education strategy."
+          "title": "Every project practices the same thing: find the core problem, turn it into a lasting architecture.",
+          "body": ""
         },
         "strengths": {
           "eyebrow": "How I work",
-          "title": "Calm enough to examine the problem. Practical enough to keep it moving.",
-          "body": "My value is often the connective work between research, product, design, engineering, and operations.",
+          "title": "Three things I do in every project.",
+          "body": "",
           "items": [
             {
-              "title": "Patience with ambiguity",
-              "body": "I resist premature certainty, ask the next useful question, and make room for evidence to change the direction."
+              "title": "Ask the right question",
+              "body": "Teams usually start building on unvalidated assumptions. My first step isn't opening Figma, it's making sure the problem we're solving is the right one. Wrong direction, well executed, is still waste."
             },
             {
-              "title": "Shared understanding",
-              "body": "I use flows, models, prototypes, and workshops to help a team see the same system before debating the solution."
+              "title": "Align the goals",
+              "body": "Good solutions stall when stakeholders aren't aligned on what's in it for them. I invest time helping PMs, engineers, and managers each see how adoption benefits their own goals."
             },
             {
-              "title": "Glue across disciplines",
-              "body": "I bridge language and incentives so good ideas can survive the handoff from insight to implementation."
+              "title": "Leave lasting value",
+              "body": "I tend to turn solutions into architecture rather than deliverables. Token systems, component governance, naming conventions, modular frameworks, infrastructure the team can run on after I've moved on."
             }
           ]
         },
@@ -106,10 +107,10 @@
           ]
         },
         "contact": {
-          "eyebrow": "Let’s connect",
-          "title": "Bring me the complicated part.",
-          "body": "I am interested in product and service problems where user needs, technical constraints, and organizational reality need to become one coherent direction.",
-          "button": "Say hello",
+          "eyebrow": "Get in touch",
+          "title": "If your team is still figuring out the right problem to solve, let's talk.",
+          "body": "If your team is dealing with unclear product direction and needs someone to converge the chaos into an executable system, let's talk.",
+          "button": "Send me a message",
           "availability": "Open to product design opportunities"
         }
       },
@@ -149,7 +150,7 @@
           "slug": "ferqo",
           "index": "01",
           "title": "Ferqo — Orchestrating a Zero-Friction Smart Home Ecosystem",
-          "role": "Product Designer / Product Manager",
+          "role": "Product Designer (Acting PM)",
           "timeline": "2018.11–2019.11",
           "team": "Cross-functional product and engineering team",
           "scope": "End-to-End Product Design, UX Research, Cross-Functional Team Leadership",
@@ -157,220 +158,400 @@
           "soft": "#f1ddd4",
           "dark": "#7f3827",
           "summary": {
-            "goal": "Launch a 0-to-1 hardware-agnostic B2C platform to break vendor lock-in.",
-            "challenge": "Unvalidated user assumptions and the complexity of unifying different IoT protocols into one coherent experience.",
-            "outcome": "Reduced scenario operation time by about 50%, improved the SUS score by 30 points, and established a modular framework for cross-brand compatibility."
+            "goal": "Create a hardware-agnostic smart-home experience that makes cross-brand daily scenarios feel as simple as a physical switch.",
+            "challenge": "Protocol silos, device-first mental models, and high technical uncertainty made both the business and the user experience difficult to scale.",
+            "outcome": "In a separate task-comparison test sample—not the interview participants—the new direction reduced daily scenario completion time by about 50%. SUS usability scores improved from approximately 40 to approximately 80, indicating a substantial improvement in perceived usability. Given the limited sample size and the fact that the product did not launch, these figures represent directional usability improvements, not market adoption outcomes."
           },
           "sections": [
             {
-              "order": 1,
-              "label": "The Business Challenge",
-              "title": "The Challenge: Breaking Vendor Lock-in & Redefining True B2C UX",
+              "number": "01",
+              "label": "Business Challenge",
+              "title": "Protocol lock-in constrained the business—and exposed a user-experience gap",
               "body": [
-                "Legacy smart home systems locked users into single protocols and manufacturer roadmaps, restricting cross-brand automation and business scalability.",
-                "Existing apps functioned like engineering dashboards. They forced users to hunt for individual devices and exposed technical categories, creating severe cognitive friction for simple daily tasks.",
-                "Our ultimate insight was straightforward: if opening an app takes longer than pressing a wall switch, the digital product fails. The goal was to create zero-friction digital orchestration that could outperform physical remotes."
+                "The company had been distributing a closed smart-home system tied to a single protocol and a vendor-controlled roadmap. That dependency limited cross-brand scenarios and left every expansion decision dependent on external technology.",
+                "Our first instinct was to build a universal app—similar to Google Home or Xiaomi Home. But competing head-on with established platforms would not create a defensible position. I proposed a different path: use user pain points and research to identify a distinctive direction Ferqo could own.",
+                "The consumer experience exposed the same structural problem. The existing app behaved like an engineering console: users had to find a device, understand technical categories, and move through multiple layers before completing a simple action. We set a strict benchmark: if opening the app was slower than pressing a wall switch, the digital product had failed."
               ],
               "points": [
                 {
-                  "title": "Protocol Silos",
-                  "text": "Legacy setups restricted users to a single protocol, suffocating cross-brand automation possibilities."
+                  "title": "Protocol dependency",
+                  "text": "A single-protocol ecosystem constrained partnerships, roadmap control, and cross-brand automation."
                 },
                 {
-                  "title": "The ‘Fake B2C’ Device-Centric UI",
-                  "text": "Existing apps functioned like engineering dashboards and forced users to hunt for individual devices."
+                  "title": "Consumer experience gap",
+                  "text": "A device-first interface forced people to translate everyday needs into technical categories."
                 },
                 {
-                  "title": "The ‘Physical Switch’ Rivalry",
-                  "text": "The digital experience had to complete everyday scenarios faster than a physical switch."
+                  "title": "Physical-switch benchmark",
+                  "text": "Daily control had to become faster and clearer than the physical remotes it aimed to replace."
                 }
               ],
-              "quote": null,
               "media": [
                 {
                   "asset": "assets/images/original/ferqoProcess1.png",
                   "layout": "wide",
-                  "caption": "The legacy device-first interface exposed technical categories before household intent.",
-                  "alt": "The legacy device-first interface exposed technical categories before household intent."
-                },
-                {
-                  "asset": "assets/images/original/ferqoProcess3.png",
-                  "layout": "portrait",
-                  "caption": "Legacy and redesigned structures: device categories become room and scenario entry points.",
-                  "alt": "Legacy and redesigned structures: device categories become room and scenario entry points."
+                  "caption": "Legacy smart-home interfaces exposed the same device-first and deep-navigation problems.",
+                  "alt": "Comparison of legacy smart-home interfaces"
                 }
               ]
             },
             {
-              "order": 2,
-              "label": "Research & Key Insight",
-              "title": "Validating the ‘One-Tap’ Value",
+              "number": "02",
+              "label": "Research Pivot",
+              "title": "The Problem Was Not More Features — It Was the User’s Mental Model",
               "body": [
-                "Initially, we aimed to compete in the DIY smart home market with fine-grained controls, similar to Xiaomi or Nest. However, our user research (9 depth interviews) revealed a fundamental mismatch: users don’t want to ‘play with IoT’—they rarely open the app proactively.",
-                "Instead, they seek a ‘Premium Solution’ that prioritizes ‘one-tap comfort.’ This validated our pivot from a volume-based feature war toward a value-based strategy, where we prioritize minimal interaction steps to achieve a comfortable state."
+                "We first framed the problem as protocol coverage and market competition. Nine different participants took part in depth interviews, revealing a deeper bottleneck: users did not want to “play with IoT,” and they rarely opened the app simply to manage individual devices.",
+                "Based on these findings, I proposed a strategic pivot to the executive team: abandon the DIY feature war and reposition as a Premium Total-Solution—selling one-tap comfort as a complete experience, not piecemeal device control. After winning executive alignment, this positioning became the foundation for every design decision that followed.",
+                "People remembered their homes through rooms and routines, not hardware lists. What they valued was one-tap comfort: leave home, return home, watch a movie, or go to bed without coordinating each device manually.",
+                "That insight shifted the product strategy from a feature war to a value-based model focused on the fewest possible steps to reach a desired state."
               ],
               "points": [
                 {
-                  "title": "Cognitive Overload",
-                  "text": "Legacy apps force users to translate simple needs into complex technical steps, such as finding the device, checking the protocol, then toggling."
+                  "title": "Cognitive overload",
+                  "text": "Simple intentions became long technical sequences: find the device, check the category, then control it."
                 },
                 {
-                  "title": "Mental Model Mismatch",
-                  "text": "Interfaces organized by devices clash with human intuition. Users think in terms of rooms and scenarios, not hardware lists."
+                  "title": "Mental-model mismatch",
+                  "text": "Users oriented by rooms and scenarios, while the legacy interface was organized by devices."
                 },
                 {
-                  "title": "Broken Ecosystems",
-                  "text": "Daily routines like Movie Mode require multi-brand coordination, which was previously blocked by single-protocol limitations."
+                  "title": "Fragmented daily scenarios",
+                  "text": "Common routines required several brands and devices to cooperate, which the old system could not support."
                 }
               ],
-              "quote": null,
               "media": [
                 {
                   "asset": "assets/images/original/ferqoProcess2.png",
                   "layout": "wide",
-                  "caption": "A day-in-the-life journey mapped expectations, emotional friction, and automation opportunities.",
-                  "alt": "A day-in-the-life journey mapped expectations, emotional friction, and automation opportunities."
+                  "caption": "Research reframed the opportunity around daily routines and one-tap comfort.",
+                  "alt": "User journey showing needs and opportunities across daily smart-home routines"
                 }
               ]
             },
             {
-              "order": 3,
-              "label": "Feasibility Assessment",
-              "title": "Collaborating with Engineering to Clarify MVP Scope and Technical Complexity",
+              "number": "03",
+              "label": "Strategy & Scope",
+              "title": "Prioritize One-Tap Value, Then Cut the MVP to What Could Ship",
               "body": [
-                "To ensure design feasibility, I led the technical scoping process. I collaborated with engineers through workshops to map resources and confirm vendor API capabilities, successfully breaking scenario control into implementable MVP modules.",
-                "I developed system architecture and flowcharts to define front-end and back-end responsibilities, which helped reprioritize the roadmap and align design with implementation.",
-                "Three principles guided the flow restructuring: navigation was reorganized around rooms rather than device lists; the three most frequently used devices were pinned to the top of each room page; and advanced configuration was pushed deeper into the hierarchy."
+                "The research pointed toward a universal control layer and a scenario execution engine. But an open ecosystem could easily become a technically impressive project that never shipped, so the product direction had to be scoped with engineering from the beginning.",
+                "Through working sessions, we mapped platform dependencies, API feasibility, ownership boundaries, and the minimum modules required to validate the core experience."
               ],
-              "points": [
+              "subsections": [
                 {
-                  "title": "Room-Based Navigation",
-                  "text": "People orient by space. Mapping navigation to this mental model eliminated the device-hunting problem identified in research."
+                  "title": "3-1. Decide What Not to Build",
+                  "body": [
+                    "The impact-versus-effort review kept the universal control panel and scenario execution engine in the MVP. A DIY scenario builder moved to a later phase, while custom API interfaces and BLE auto-room switching were removed because their cost and risk outweighed the value they could validate."
+                  ],
+                  "visual": {
+                    "type": "impact-effort",
+                    "eyebrow": "Scope decision",
+                    "title": "Impact vs. effort — complete decision matrix",
+                    "description": "All four quadrants remain visible so an empty quadrant reads as an explicit decision, not missing information.",
+                    "yLabel": "Business & experience impact",
+                    "yHighLabel": "High impact",
+                    "yLowLabel": "Lower impact",
+                    "xLabel": "Development cost & technical risk (effort)",
+                    "xLowLabel": "Lower effort",
+                    "xHighLabel": "Higher effort",
+                    "quadrants": [
+                      {
+                        "position": "high-low",
+                        "tone": "core",
+                        "kicker": "High impact · Lower effort",
+                        "title": "MVP Core",
+                        "items": [
+                          {
+                            "title": "Universal Control Panel",
+                            "text": "Cross-brand device control in one interface."
+                          },
+                          {
+                            "title": "Scenario Execution Engine",
+                            "text": "One-tap triggering of preset multi-device scenarios."
+                          }
+                        ]
+                      },
+                      {
+                        "position": "high-high",
+                        "tone": "deferred",
+                        "kicker": "High impact · Higher effort",
+                        "title": "Phase 2 Vision",
+                        "items": [
+                          {
+                            "title": "DIY Scenario Builder",
+                            "text": "High potential value, but too costly for the first validation cycle."
+                          }
+                        ]
+                      },
+                      {
+                        "position": "low-low",
+                        "tone": "empty",
+                        "kicker": "Lower impact · Lower effort",
+                        "title": "No item prioritized",
+                        "text": "No standalone low-impact task was added to this MVP."
+                      },
+                      {
+                        "position": "low-high",
+                        "tone": "dropped",
+                        "kicker": "Lower validated value · Higher effort",
+                        "title": "Explicitly Dropped",
+                        "items": [
+                          {
+                            "title": "Custom API UIs",
+                            "text": "Per-vendor interfaces would recreate maintenance debt."
+                          },
+                          {
+                            "title": "BLE Auto-Room Switching",
+                            "text": "Positioning instability made the risk outweigh the validation value."
+                          }
+                        ]
+                      }
+                    ],
+                    "note": "The lower-left quadrant is intentionally empty: the team did not fill the MVP with easy but low-impact work."
+                  }
                 },
                 {
-                  "title": "Most-Used Devices First",
-                  "text": "The three most frequently used devices were pinned to the top so common actions required zero scrolling."
+                  "title": "3-2. Clarify the Four-Layer System Boundary",
+                  "body": [
+                    "I translated the internal architecture into four product-facing layers. The simplified view clarified where user experience decisions met protocol constraints, without exposing team names, internal endpoints, or implementation details."
+                  ],
+                  "visual": {
+                    "type": "architecture-map",
+                    "eyebrow": "Simplified system boundary",
+                    "title": "One experience across four technical layers",
+                    "description": "The design work concentrated on the boundary where user intent becomes an executable, hardware-independent action.",
+                    "layers": [
+                      {
+                        "eyebrow": "01",
+                        "title": "Software",
+                        "description": "Rooms, scenarios, controls, and feedback visible to the user.",
+                        "items": [
+                          "Navigation",
+                          "Scenario setup",
+                          "Device control"
+                        ]
+                      },
+                      {
+                        "eyebrow": "02",
+                        "title": "SDK",
+                        "description": "A common contract translates product actions into supported capabilities.",
+                        "items": [
+                          "Capability mapping",
+                          "Command abstraction"
+                        ]
+                      },
+                      {
+                        "eyebrow": "03",
+                        "title": "Hardware",
+                        "description": "Different hubs, sensors, and devices retain their own protocols.",
+                        "items": [
+                          "Hubs",
+                          "Sensors",
+                          "Devices"
+                        ]
+                      },
+                      {
+                        "eyebrow": "04",
+                        "title": "Cloud",
+                        "description": "Shared services coordinate accounts, state, and notifications.",
+                        "items": [
+                          "Accounts",
+                          "State",
+                          "Notifications"
+                        ]
+                      }
+                    ],
+                    "focus": {
+                      "label": "Design focus",
+                      "title": "The experience boundary",
+                      "text": "Make the same user intention behave consistently even when the protocol and device underneath change."
+                    },
+                    "note": "Internal names and endpoints were intentionally removed for portfolio clarity."
+                  }
                 },
                 {
-                  "title": "Progressive Complexity",
-                  "text": "Daily operation screens show only what users need to execute a scenario; protocol-level settings remain accessible but out of the way."
-                }
-              ],
-              "quote": null,
-              "media": [
-                {
-                  "asset": "assets/images/original/ferqoUserFlow.png",
-                  "layout": "portrait",
-                  "caption": "The revised flow organizes entry points around home, rooms, scenes, and device detail.",
-                  "alt": "The revised flow organizes entry points around home, rooms, scenes, and device detail."
-                },
-                {
-                  "asset": "assets/images/original/ferqoStructure.png",
-                  "layout": "half",
-                  "caption": "The service architecture aligned software, SDK, cloud, and hardware dependencies.",
-                  "alt": "The service architecture aligned software, SDK, cloud, and hardware dependencies."
-                },
-                {
-                  "asset": "assets/images/original/ferqoCompare.png",
-                  "layout": "half",
-                  "caption": "Feasibility boundaries clarified what the MVP could support without custom API UIs or BLE auto-room switching.",
-                  "alt": "Feasibility boundaries clarified what the MVP could support without custom API UIs or BLE auto-room switching."
+                  "title": "3-3. Reduce the Daily Path to Three Steps",
+                  "body": [
+                    "The key flow was reduced to opening the app, choosing a room or scenario, and executing the action. Advanced configuration remained available deeper in the hierarchy, but no longer interrupted frequent control tasks."
+                  ],
+                  "visual": {
+                    "type": "flow-comparison",
+                    "eyebrow": "Key-path simplification",
+                    "title": "From device hunting to scenario execution",
+                    "description": "The portfolio view shows the frequent path rather than the complete internal flowchart.",
+                    "before": {
+                      "label": "Device-first",
+                      "title": "Legacy path",
+                      "steps": [
+                        "Open app",
+                        "Find device category",
+                        "Locate device",
+                        "Open control",
+                        "Execute"
+                      ]
+                    },
+                    "after": {
+                      "label": "Scenario-first",
+                      "title": "Ferqo path",
+                      "steps": [
+                        "Open app",
+                        "Select room or scenario",
+                        "Execute"
+                      ]
+                    },
+                    "note": "Advanced settings remain accessible, but outside the high-frequency path."
+                  }
                 }
               ]
             },
             {
-              "order": 4,
-              "label": "Design Execution & Outcomes",
-              "title": "Control the Whole House with One Finger",
+              "number": "04",
+              "label": "Design Decisions",
+              "title": "Connect Every Interface Decision Back to the Research",
               "body": [
-                "Based on observation, users are accustomed to remembering devices by room. We incorporated this logic into the app, allowing users to switch between rooms and view device content by swiping left and right. Frequently used devices are placed at the top based on user habits, with larger device buttons and touch areas for easy identification.",
-                "All device operations are completed on one page, so users don’t need to switch pages to change the remote control. Remote-control content can also be arranged according to user preferences, while widgets let users control scenes without entering the app.",
-                "A/B testing between the existing Fibaro app and the new Ferqo app showed that the steps and time needed to complete a daily routine were roughly cut in half. The new version’s SUS score also increased by about 30 points on average."
+                "The interface was not reorganized as a visual refresh alone. Each structural decision directly answered a behavior identified in research: how people remember their homes, what they use most often, and how much complexity belongs in a daily task."
               ],
-              "points": [
+              "subsections": [
                 {
-                  "title": "Room-Based Logic",
-                  "text": "Users can switch between rooms and view device content by swiping left and right."
+                  "title": "4-1. Rooms Became the Primary Navigation Unit",
+                  "body": [
+                    "Interviews confirmed that people remember devices by space rather than by technical category. Ferqo therefore made rooms and scenarios the primary wayfinding structure, with individual devices placed inside that familiar context."
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/ferqoProcess3.png",
+                      "layout": "wide",
+                      "caption": "The redesign moves from a device catalogue to room- and scenario-based navigation.",
+                      "alt": "Before and after comparison of Fibaro and Ferqo navigation"
+                    }
+                  ]
                 },
                 {
-                  "title": "All-in-One Device Control",
-                  "text": "All device operations are completed on one page without switching pages to change the remote control."
+                  "title": "4-2. Frequent Actions Came First — and Stayed Easy to Identify",
+                  "body": [
+                    "The most frequently used actions were placed first so common tasks required no scrolling. Larger labels and touch targets made controls easy to identify, while secondary devices remained available without competing for attention."
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/ferqoExplain2.png",
+                      "layout": "wide",
+                      "caption": "All-in-one control and configurable remote layouts reduce page switching.",
+                      "alt": "Ferqo all-in-one device controls"
+                    }
+                  ]
                 },
                 {
-                  "title": "Control Scenes without Entering the App",
-                  "text": "Users can set up widgets themselves for more convenient use."
-                }
-              ],
-              "quote": "Although Ferqo did not ultimately launch on the client side, the room-based, scenario-centric direction validated a substantial reduction in operation cost and improved perceived usability.",
-              "media": [
-                {
-                  "asset": "assets/images/original/ferqoExplain1.png",
-                  "layout": "half",
-                  "caption": "Room-based logic, habit-based ordering, and larger touch targets made whole-home control easier to understand.",
-                  "alt": "Room-based logic, habit-based ordering, and larger touch targets made whole-home control easier to understand."
-                },
-                {
-                  "asset": "assets/images/original/ferqoExplain2.png",
-                  "layout": "half",
-                  "caption": "All-in-one controls reduced page switching while allowing personalized remote layouts.",
-                  "alt": "All-in-one controls reduced page switching while allowing personalized remote layouts."
-                },
-                {
-                  "asset": "assets/images/original/ferqoExplain3.png",
-                  "layout": "wide",
-                  "caption": "Widgets let people trigger familiar scenes without opening the app.",
-                  "alt": "Widgets let people trigger familiar scenes without opening the app."
-                },
-                {
-                  "asset": "assets/images/original/ferqoRevamp.png",
-                  "layout": "portrait",
-                  "caption": "The evolved product direction moved from a legacy control panel to a calmer consumer experience.",
-                  "alt": "The evolved product direction moved from a legacy control panel to a calmer consumer experience."
-                },
-                {
-                  "asset": "assets/images/original/ferqoScreenOverview.png",
-                  "layout": "half",
-                  "caption": "Screen overview covering setup, scenes, controls, and supporting states.",
-                  "alt": "Screen overview covering setup, scenes, controls, and supporting states."
-                },
-                {
-                  "asset": "assets/images/original/ferqoDesignSystem.png",
-                  "layout": "half",
-                  "caption": "Reusable controls and visual foundations kept a diverse device ecosystem consistent.",
-                  "alt": "Reusable controls and visual foundations kept a diverse device ecosystem consistent."
+                  "title": "4-3. Daily Control Stayed Simple; Complexity Moved Deeper",
+                  "body": [
+                    "Research showed that daily control should not require users to manage protocol-level complexity. We therefore kept high-frequency controls in the primary flow and moved advanced configuration deeper in the hierarchy, while preserving access when needed."
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/ferqoExplain3.png",
+                      "layout": "half",
+                      "caption": "Widgets bring frequent scenarios to the lock screen.",
+                      "alt": "Ferqo scenario widgets"
+                    },
+                    {
+                      "asset": "assets/images/original/ferqoRevamp.png",
+                      "layout": "wide",
+                      "caption": "Portfolio note: the core interaction model was originally designed in 2018. The visual treatment shown here was lightly refreshed for presentation, while the researched structure and core interaction patterns were kept intact.",
+                      "alt": "Refreshed visual presentation of Ferqo"
+                    }
+                  ]
                 }
               ]
+            },
+            {
+              "number": "05",
+              "label": "Validation & Limits",
+              "title": "The Direction Tested Better — but the Product Did Not Launch",
+              "body": [
+                "In a separate task-comparison test sample—not the interview participants—the new direction reduced daily scenario completion time by about 50%. SUS usability scores improved from approximately 40 to approximately 80, indicating a substantial improvement in perceived usability.",
+                "Given the limited sample size and the fact that the product did not launch, these figures represent directional usability improvements, not market adoption outcomes.",
+                "What the project did validate was a durable product direction: organize the home around rooms and scenarios, abstract protocol complexity, and treat one-tap comfort as the core value. That model became a reference for later IoT explorations."
+              ],
+              "visual": {
+                "type": "outcome-shift",
+                "eyebrow": "Directional validation",
+                "title": "A clearer interaction model, with explicit evidence limits",
+                "description": "The comparison summarizes what changed and separates usability evidence from launch status.",
+                "beforeLabel": "Existing model",
+                "afterLabel": "Ferqo direction",
+                "rows": [
+                  {
+                    "label": "Interaction model",
+                    "before": "Device lists",
+                    "after": "Rooms and scenarios"
+                  },
+                  {
+                    "label": "Daily scenario time",
+                    "before": "Baseline",
+                    "after": "About 50% lower"
+                  },
+                  {
+                    "label": "SUS",
+                    "before": "Original version",
+                    "after": "Approximately 40→80"
+                  },
+                  {
+                    "label": "Status",
+                    "before": "Concept validation",
+                    "after": "Direction validated; not launched"
+                  }
+                ],
+                "result": "Directional validation, not a production-market result.",
+                "note": "Based on the available comparison sample; no adoption or retention data is claimed."
+              },
+              "subsections": [
+                {
+                  "title": "Supporting System Evidence",
+                  "body": [
+                    "The component inventory shows how the interaction direction was translated into reusable controls. It is included as supporting evidence rather than a separate design-system story."
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/ferqoDesignSystem.png",
+                      "layout": "wide",
+                      "caption": "Reusable controls supported consistency across rooms, devices, and scenario states.",
+                      "alt": "Ferqo component and visual system inventory"
+                    }
+                  ]
+                }
+              ],
+              "quote": "A product can fail to launch and still produce a durable design decision — when the evidence is stated with its limits."
             }
           ],
           "outcomes": [
             {
-              "value": "50%",
-              "label": "reduction in scenario operation time"
+              "value": "~50%",
+              "label": "Directional task-time reduction in the available comparative test"
             },
             {
-              "value": "+30",
-              "label": "points in the SUS usability score"
+              "value": "40→80",
+              "label": "SUS score in a separate comparison-test sample"
             },
             {
-              "value": "Modular",
-              "label": "framework supporting cross-brand compatibility"
+              "value": "Validated",
+              "label": "Room- and scenario-centric direction; product did not launch"
             }
           ],
           "name": "Ferqo — Orchestrating a Zero-Friction Smart Home Ecosystem",
           "canonicalSubtitle": "Breaking vendor lock-in by abstracting fragmented IoT protocols into a true, scenario-driven B2C experience.",
           "subtitle": "Breaking vendor lock-in by abstracting fragmented IoT protocols into a true, scenario-driven B2C experience.",
           "year": "2019",
-          "keyAchievement": "Reduced scenario operation time by about 50% and improved the SUS usability score by 30 points.",
+          "keyAchievement": "Separate task-comparison testing reduced daily scenario time by about 50% and improved SUS from approximately 40 to approximately 80; the room- and scenario-centric direction was validated, though the product did not launch.",
           "cover": "assets/images/original/ferqoHero.png",
           "sourceBoard": "assets/images/original/ferqoArtifact.png",
-          "cardDescription": "A 0-to-1, hardware-agnostic smart home platform that broke vendor lock-in and turned fragmented IoT protocols into a scenario-driven B2C experience.",
+          "cardDescription": "Nine depth interviews overturned the team's product thesis. Won executive alignment for a strategic pivot and built \"one-tap comfort\" into a scalable platform architecture.",
           "category": "IoT · Smart Home",
-          "description": "As a former distributor for closed smart home systems, our business scalability was severely restricted by single-protocol limitations (like Z-Wave) and the manufacturer’s rigid product roadmap. To achieve strategic independence, we initiated the Ferqo 0-to-1 project. I led the end-to-end product design, translating the vision of an open, multi-protocol platform into an intuitive ecosystem that truly prioritizes everyday consumers over system integrators."
+          "description": "As a former distributor for closed smart home systems, our business scalability was severely restricted by single-protocol limitations (like Z-Wave) and the manufacturer’s rigid product roadmap. To achieve strategic independence, we initiated the Ferqo 0-to-1 project. I led the end-to-end product design, translating the vision of an open, multi-protocol platform into an intuitive ecosystem that truly prioritizes everyday consumers over system integrators.",
+          "cardTitle": "Ferqo: Orchestrating a Zero-Friction Smart Home Ecosystem"
         },
         "insurance": {
           "slug": "insurance",
           "index": "02",
           "title": "Modularizing Online Insurance Delivery",
+          "cardTitle": "Building Scalable Insurance SaaS: From Custom Silos to a Modular Ecosystem",
           "role": "Lead Product Designer",
           "timeline": "2024.11–2024.12 (1 month)",
           "team": "Sales, product, design, and engineering",
@@ -850,7 +1031,7 @@
           "keyAchievement": "Estimated 50% reductions in alignment time and development costs, with the framework applied across 3+ active enterprise collaborations.",
           "cover": "assets/images/original/insuranceHero.png",
           "sourceBoard": "assets/images/original/insuranceArtifact.png",
-          "cardDescription": "A modular insurance platform that turned one-off client delivery into reusable, regulation-aware flows and brand-ready templates.",
+          "cardDescription": "Identified the structural problem behind customization that couldn't scale. Built a token-driven modular architecture enabling cross-market replication.",
           "category": "Insurtech · B2B SaaS",
           "description": "IXT is AIFT's digital insurance platform. I led the transformation of one module line from one-off custom delivery into a reusable framework for application flows, brand adaptation, and client communication."
         },
@@ -872,7 +1053,7 @@
           "timeline": "Dec 2025 – Mar 2026",
           "team": "Product, Design & Engineering",
           "scope": "Design system architecture, cross-functional collaboration, component governance",
-          "cardDescription": "A shared token and component architecture that converged Cymetrics and Vulcan without slowing market validation.",
+          "cardDescription": "Brand unification was the surface ask. Uncovered the design debt underneath and built a four-layer token architecture with governance, letting a small team move like a big one.",
           "description": "Converging Cymetrics and Vulcan into one product family inside a resource-constrained startup — shortening iteration cycles, accelerating delivery, and building a foundation for new markets.",
           "keyAchievement": "One system cut the PM–Design iteration cycle in half and reduced per-screen build time from three days to two.",
           "summary": {
@@ -1176,6 +1357,7 @@
           "slug": "alphacamp",
           "index": "04",
           "title": "Retention Strategy for Coding Education Platforms: Shifting from Functional Delivery to Deep User Connection",
+          "cardTitle": "Coding Education Retention Strategy: From Feature Delivery to Deep User Connection",
           "role": "UX Researcher",
           "timeline": "2020.11–2021.01 (3 months)",
           "team": "Ricky, Kim, Evy",
@@ -1343,7 +1525,7 @@
           "keyAchievement": "Defined eight or more targeted service proposals and brought the research insights into the company’s annual product roadmap.",
           "cover": "assets/images/original/alphacampHero.jpg",
           "sourceBoard": "assets/images/original/alphacampArtifact.png",
-          "cardDescription": "A three-month UX research and service-design initiative that reframed post-course retention around connection, progress, and long-term brand loyalty.",
+          "cardDescription": "UXR revealed that learner isolation was the core driver of churn. Mapped a strategic roadmap from transactional to partnership-based relationships.",
           "category": "EdTech · Service Strategy",
           "description": "At ALPHAcamp, Taiwan’s leading programming education platform, we faced a critical business challenge: a sharp decline in student engagement and a lack of continued retention once they completed their courses. To address this, I partnered with a colleague on a three-month user research and service design initiative."
         }
@@ -1366,56 +1548,57 @@
       },
       "home": {
         "hero": {
-          "eyebrow": "產品設計師 · 團隊連結者",
-          "titleBefore": "我用耐心釐清複雜，讓人與想法真正",
-          "titleAccent": "連結。",
-          "body": "我透過深入傾聽、讓隱藏系統變得可見，協助不同觀點的人走向同一個可執行的決定。",
+          "eyebrow": "",
+          "titleBefore": "判斷產品該解什麼問題，\n把答案做成可持續的架構。",
+          "titleAccent": "",
+          "body": "AI 能產出答案，但判斷該解什麼問題、讓答案持續運作，這是人的工作。",
           "primary": "查看精選作品",
-          "secondary": "開始對話",
+          "secondary": "聯絡我",
           "imageAlt": "在工作室中的產品設計師"
         },
         "about": {
-          "eyebrow": "關於我",
-          "titleBefore": "我連結人與想法，創造",
-          "titleAccent": "更好的結果。",
-          "body": "我最能發揮價值的地方，通常是團隊中間：聽見不同專業看到的事、把限制翻譯成共享地圖，並給困難決策足夠時間變得清楚。我在意介面，也在意產生介面的那場對話是否有品質。",
-          "imageAlt": "設計師在工作坊中協作",
+          "eyebrow": "關於我的方法",
+          "titleBefore": "從問題的本質出發，\n經過策略推導，\n最後落地成持續運作的系統。",
+          "titleAccent": "",
+          "body": "不管面對什麼產品，我的做法都一樣：先質疑現有假設，用研究找到真正該解的問題。再把模糊的方向整理成有明確取捨的選項，讓利害關係人能做出有根據的決策。最後把解法建構成可擴展的架構，讓團隊在我不在的時候也能一致地產出。",
+          "imageAlt": "貼滿便利貼的工作坊白板",
           "principles": [
             {
-              "title": "先聽懂",
-              "body": "在決定做什麼前，先理解情境、意圖與隱藏限制。"
+              "title": "質疑假設，找到真正的問題",
+              "body": "不接受表面需求。用研究挖出團隊沒看到的盲點，在動手設計之前先確認方向是對的。"
             },
             {
-              "title": "促進共識",
-              "body": "把衝突觀點整理成團隊可以一起驗證的模型。"
+              "title": "結構化決策，對齊利害關係人",
+              "body": "把模糊的問題拆成可比較的選項，讓不同角色的人能基於事實做選擇，而不是基於偏好。"
             },
             {
-              "title": "系統思考",
-              "body": "把單一畫面連回產品、營運與長期影響。"
+              "title": "建造系統，不只交付畫面",
+              "body": "設計能擴展的架構、治理規則和命名體系。讓解法不只是一次性的產出，而是團隊能持續運作的基礎設施。"
             }
-          ]
+          ],
+          "backgroundFacts": "九年、四個產業（IoT · 保險科技 · 資安 · AI 安全）、三個市場（台灣 · 日本 · 香港）。日本出生、在日八年、日文 N1。"
         },
         "work": {
           "eyebrow": "精選作品",
-          "title": "讓複雜系統清楚到足以推動下一步。",
-          "body": "四個專案涵蓋智慧家庭、保險營運、資安系統與教育策略。"
+          "title": "每個專案都在實踐同一件事：找到核心問題，做成可持續的架構。",
+          "body": ""
         },
         "strengths": {
           "eyebrow": "我的工作方式",
-          "title": "足夠冷靜地理解問題，也足夠務實地推動進展。",
-          "body": "我的價值經常存在於研究、產品、設計、工程與營運之間的連結工作。",
+          "title": "三件我在每個專案裡都會做的事。",
+          "body": "",
           "items": [
             {
-              "title": "面對模糊的耐心",
-              "body": "不急著確定答案，先問下一個有用問題，也讓證據有機會改變方向。"
+              "title": "問對問題",
+              "body": "團隊通常帶著未驗證的假設開始做產品。我的第一步不是打開 Figma，是確認我們要解的問題本身是不是對的。方向錯了，執行再好也是浪費。"
             },
             {
-              "title": "建立共同理解",
-              "body": "用流程、模型、原型與工作坊，讓團隊先看見同一個系統再討論方案。"
+              "title": "對齊目標",
+              "body": "好的方案推不動，通常不是方案的問題，是沒有對齊利害關係人各自在意的事。我花時間讓 PM、工程、管理層各自看到採用之後對自己的好處。"
             },
             {
-              "title": "跨專業的黏著力",
-              "body": "橋接語言與誘因，讓好想法能從洞察走到實作。"
+              "title": "留下價值",
+              "body": "我傾向把解法建成架構，而不是做完就結束的設計稿。Token 系統、元件治理、命名規則、模組化框架，讓團隊在我離開之後依然能一致地運作。"
             }
           ]
         },
@@ -1424,23 +1607,23 @@
           "title": "讓可見成果更強的那些隱形工作。",
           "items": [
             {
-              "title": "清楚，但不過度簡化",
-              "body": "讓複雜變得可討論，同時保留真正重要的限制。"
+              "title": "更少的方向修正",
+              "body": "在動手之前先確認方向，減少做完才發現走錯的成本。"
             },
             {
-              "title": "前進，但不倉促",
-              "body": "協助團隊分辨可逆實驗與值得更審慎決定的事情。"
+              "title": "更快的決策速度",
+              "body": "把模糊的討論整理成有明確取捨的選項，讓決策不再卡在會議裡。"
             },
             {
-              "title": "超越設計的共同責任",
-              "body": "讓合作夥伴足夠早參與，使最終方向屬於整個團隊。"
+              "title": "能持續運作的交付",
+              "body": "把 Token 系統、元件治理、命名規則和模組化框架留下來，讓團隊在我離開之後依然能一致地運作。"
             }
           ]
         },
         "contact": {
-          "eyebrow": "保持聯絡",
-          "title": "把最複雜的部分帶來。",
-          "body": "我對需要整合使用者需求、技術限制與組織現實的產品與服務問題特別有興趣。",
+          "eyebrow": "聯繫我",
+          "title": "如果你的團隊還在釐清該解什麼問題，歡迎聊聊。",
+          "body": "如果你的團隊正在處理方向不明確的產品問題、需要有人把混亂收斂成可執行的系統，我們可以聊聊。",
           "button": "寫信給我",
           "availability": "開放產品設計合作機會"
         }
@@ -1481,7 +1664,7 @@
           "slug": "ferqo",
           "index": "01",
           "title": "Ferqo——打造零摩擦智慧家庭生態系",
-          "role": "產品設計師／產品經理",
+          "role": "產品設計師（兼任產品經理）",
           "timeline": "2018.11–2019.11",
           "team": "跨職能產品與工程團隊",
           "scope": "端到端產品設計、UX 研究、跨職能團隊協作",
@@ -1489,220 +1672,400 @@
           "soft": "#f1ddd4",
           "dark": "#7f3827",
           "summary": {
-            "goal": "推出硬體無關的 0 到 1 B2C 平台，打破供應商綁定。",
-            "challenge": "尚未驗證的使用者假設，以及把不同 IoT 協定整合成一致體驗的技術複雜度。",
-            "outcome": "情境操作時間約減少 50%，SUS 提升 30 分，並建立支援跨品牌相容性的模組化框架。"
+            "goal": "打造不受硬體品牌限制的智慧家庭體驗，讓跨品牌日常情境像按下實體開關一樣簡單。",
+            "challenge": "協定孤島、以裝置為中心的心智模型與高度技術不確定性，讓商業模式與使用體驗都難以擴展。",
+            "outcome": "在另一批不同於訪談對象的任務式比較樣本中，日常情境操作時間約降低 50%，SUS 易用性分數從約 40 提升至約 80。產品最終未上線，因此這些數字代表方向性的可用性改善，不代表市場採用成效。"
           },
           "sections": [
             {
-              "order": 1,
+              "number": "01",
               "label": "商業挑戰",
-              "title": "打破供應商綁定，重新定義真正的 B2C UX",
+              "title": "單一協定限制了商業模式，也暴露了體驗問題",
               "body": [
-                "傳統智慧家庭系統把使用者鎖在單一協定與原廠路線圖中，限制跨品牌自動化與商業擴展。",
-                "既有 App 像工程儀表板，迫使使用者尋找個別裝置並理解技術分類，讓簡單日常任務產生高度認知摩擦。",
-                "最後的洞察很直接：如果打開 App 比按牆上開關更久，數位產品就失敗了。目標是打造比實體遙控器更快的零摩擦數位操作。"
+                "公司原本代理封閉式智慧家庭系統，產品綁在單一協定與供應商路線圖上。這種依賴限制了跨品牌情境，也讓每一次擴張決策都必須等待外部技術。",
+                "一開始，我們曾考慮打造一個像 Google Home 或 Xiaomi Home 的通用 App；但若直接與成熟平台競爭，就很難建立 Ferqo 自己的差異化。我提出另一條路：先從使用者痛點與研究結果出發，找出能形成獨有價值的方向。",
+                "消費端體驗也暴露了同一個結構問題。既有 App 像工程控制台：使用者要先找裝置、理解技術分類，再穿過多層導覽才能完成一個簡單動作。我們設定了一個嚴格基準：如果打開 App 比按牆上開關更慢，數位產品就失敗了。"
               ],
               "points": [
                 {
-                  "title": "協定孤島",
-                  "text": "單一協定限制跨品牌自動化。"
+                  "title": "協定依賴",
+                  "text": "單一協定限制合作對象、產品路線控制與跨品牌自動化。"
                 },
                 {
-                  "title": "假 B2C 的裝置導向介面",
-                  "text": "工程式儀表板迫使使用者逐一尋找裝置。"
+                  "title": "消費體驗落差",
+                  "text": "以裝置為中心的介面，迫使使用者把日常需求翻譯成技術分類。"
                 },
                 {
-                  "title": "與實體開關競爭",
-                  "text": "數位操作必須比實體開關更快完成日常情境。"
+                  "title": "實體開關基準",
+                  "text": "日常控制必須比它要取代的實體遙控器更快、更清楚。"
                 }
               ],
-              "quote": null,
               "media": [
                 {
                   "asset": "assets/images/original/ferqoProcess1.png",
                   "layout": "wide",
-                  "caption": "挑戰相關設計素材 1",
-                  "alt": "挑戰相關設計素材 1"
-                },
-                {
-                  "asset": "assets/images/original/ferqoProcess3.png",
-                  "layout": "portrait",
-                  "caption": "挑戰相關設計素材 2",
-                  "alt": "挑戰相關設計素材 2"
+                  "caption": "既有智慧家庭介面同時暴露了裝置導向與導覽過深的問題。",
+                  "alt": "既有智慧家庭介面比較"
                 }
               ]
             },
             {
-              "order": 2,
-              "label": "研究與關鍵洞察",
-              "title": "驗證「一鍵完成」的價值",
+              "number": "02",
+              "label": "研究轉折",
+              "title": "問題不在功能不夠，而在使用者的心智模型",
               "body": [
-                "我們原本想以細緻控制切入 DIY 智慧家庭市場，但 9 場深度訪談顯示根本落差：使用者不想『玩 IoT』，也很少主動打開 App。",
-                "他們真正要的是以『一鍵舒適』為核心的高品質解決方案。這讓策略從功能數量競賽，轉向以最少互動步驟達到舒適狀態。"
+                "我們一開始把問題定義為協定覆蓋與市場競爭，但 9 位不同參與者的深度訪談顯示，更深的瓶頸其實在認知：使用者不想「玩 IoT」，也很少為了管理單一裝置而主動打開 App。",
+                "基於研究結果，我向管理層提出策略轉向：放棄 DIY 功能戰，改走 Premium Total-Solution 路線——不賣零散的裝置控制，賣一鍵到位的舒適體驗。取得管理層支持後，這個定位成為後續所有設計決策的基礎。",
+                "人們透過房間與日常情境記住自己的家，而不是硬體清單。他們真正重視的是一鍵舒適：出門、回家、看電影或睡覺，不必逐一協調每個裝置。",
+                "這個洞察把產品策略從功能競賽轉向價值導向，以最少步驟讓使用者到達想要的狀態。"
               ],
               "points": [
                 {
-                  "title": "認知負荷",
-                  "text": "舊 App 迫使使用者把簡單需求翻譯成尋找裝置、確認協定、再切換狀態等技術步驟。"
+                  "title": "認知負荷過高",
+                  "text": "簡單意圖被拆成長串技術步驟：找裝置、確認分類，再操作。"
                 },
                 {
                   "title": "心智模型不符",
-                  "text": "使用者以房間與情境思考，而不是硬體清單。"
+                  "text": "使用者以房間與情境理解空間，舊介面卻用裝置分類。"
                 },
                 {
-                  "title": "破碎的生態系",
-                  "text": "電影模式等日常例行需要跨品牌協作，卻被單一協定阻擋。"
+                  "title": "日常情境破碎",
+                  "text": "常見生活流程需要多品牌、多裝置合作，舊系統無法支援。"
                 }
               ],
-              "quote": null,
               "media": [
                 {
                   "asset": "assets/images/original/ferqoProcess2.png",
                   "layout": "wide",
-                  "caption": "研究與關鍵洞察相關設計素材 1",
-                  "alt": "研究與關鍵洞察相關設計素材 1"
+                  "caption": "研究把機會重新聚焦到日常流程與一鍵舒適。",
+                  "alt": "智慧家庭日常需求與機會的使用者旅程"
                 }
               ]
             },
             {
-              "order": 3,
-              "label": "可行性評估",
-              "title": "與工程協作，釐清 MVP 範圍與技術複雜度",
+              "number": "03",
+              "label": "策略與範圍",
+              "title": "先確立一鍵價值，再把 MVP 收斂到可交付範圍",
               "body": [
-                "為確保可行性，我主導技術範圍界定，透過工作坊與工程師盤點資源和供應商 API 能力，把情境控制拆成可落地的 MVP 模組。",
-                "我建立系統架構與流程圖，定義前後端責任，協助重新排序路線圖並讓設計與開發對齊。",
-                "流程重整遵循三項原則：以房間取代裝置清單、把最常用的三個裝置置頂，以及把進階設定放到更深層級。"
+                "研究指向通用控制層與情境執行引擎，但開放生態很容易變成技術上精彩、實際上無法交付的專案，因此產品方向從一開始就必須和工程一起收斂。",
+                "我們透過工作會議釐清平台依賴、API 可行性、責任邊界，以及驗證核心體驗真正需要的最小模組。"
               ],
-              "points": [
+              "subsections": [
                 {
-                  "title": "房間導向導航",
-                  "text": "以空間對應人的心智模型，移除研究發現的『找裝置』問題。"
+                  "title": "3-1. 先決定不做什麼",
+                  "body": [
+                    "影響力與成本評估把通用控制面板、情境執行引擎保留在 MVP；DIY 情境編輯器延後，自訂 API UI 與 BLE 自動切換房間則因成本與風險高於可驗證價值而移除。"
+                  ],
+                  "visual": {
+                    "type": "impact-effort",
+                    "eyebrow": "範圍決策",
+                    "title": "影響力 × 投入成本：完整決策矩陣",
+                    "description": "保留四個象限，讓空白也被理解為明確決策，而不是遺失資訊。",
+                    "yLabel": "商業與體驗影響",
+                    "yHighLabel": "高影響",
+                    "yLowLabel": "較低影響",
+                    "xLabel": "開發成本與技術風險（投入）",
+                    "xLowLabel": "較低投入",
+                    "xHighLabel": "較高投入",
+                    "quadrants": [
+                      {
+                        "position": "high-low",
+                        "tone": "core",
+                        "kicker": "高影響 · 較低投入",
+                        "title": "MVP 核心",
+                        "items": [
+                          {
+                            "title": "通用控制面板",
+                            "text": "在同一介面控制跨品牌裝置。"
+                          },
+                          {
+                            "title": "情境執行引擎",
+                            "text": "一鍵觸發預設的多裝置情境。"
+                          }
+                        ]
+                      },
+                      {
+                        "position": "high-high",
+                        "tone": "deferred",
+                        "kicker": "高影響 · 較高投入",
+                        "title": "Phase 2 願景",
+                        "items": [
+                          {
+                            "title": "DIY 情境建立器",
+                            "text": "潛在價值高，但不適合第一輪驗證的成本範圍。"
+                          }
+                        ]
+                      },
+                      {
+                        "position": "low-low",
+                        "tone": "empty",
+                        "kicker": "較低影響 · 較低投入",
+                        "title": "本輪沒有優先項目",
+                        "text": "本輪沒有把任何獨立的低影響任務加入 MVP。"
+                      },
+                      {
+                        "position": "low-high",
+                        "tone": "dropped",
+                        "kicker": "較低已驗證價值 · 較高投入",
+                        "title": "明確放棄",
+                        "items": [
+                          {
+                            "title": "客製 API 介面",
+                            "text": "逐供應商客製會再次製造維護債。"
+                          },
+                          {
+                            "title": "BLE 自動切換房間",
+                            "text": "定位不穩定，使風險高於可驗證價值。"
+                          }
+                        ]
+                      }
+                    ],
+                    "note": "左下象限刻意留空：團隊沒有為了填滿 MVP 而加入容易做、但影響低的工作。"
+                  }
                 },
                 {
-                  "title": "常用裝置優先",
-                  "text": "前三個常用裝置置頂，常見操作不需捲動。"
+                  "title": "3-2. 釐清四層系統邊界",
+                  "body": [
+                    "我把內部架構轉譯成四個產品層級，讓讀者看見使用體驗決策如何碰到協定限制，同時移除人名、內部端點與不適合作品集的實作細節。"
+                  ],
+                  "visual": {
+                    "type": "architecture-map",
+                    "eyebrow": "簡化系統邊界",
+                    "title": "用一套體驗串起四個技術層",
+                    "description": "設計工作的重點，是讓使用者意圖跨越不同協定後仍成為一致、可執行的動作。",
+                    "layers": [
+                      {
+                        "eyebrow": "01",
+                        "title": "軟體層",
+                        "description": "使用者看見的房間、情境、控制與回饋。",
+                        "items": [
+                          "導覽",
+                          "情境設定",
+                          "裝置控制"
+                        ]
+                      },
+                      {
+                        "eyebrow": "02",
+                        "title": "SDK 層",
+                        "description": "用共同契約把產品動作轉成支援的能力。",
+                        "items": [
+                          "能力對應",
+                          "指令抽象化"
+                        ]
+                      },
+                      {
+                        "eyebrow": "03",
+                        "title": "硬體層",
+                        "description": "不同 Hub、感測器與裝置保留各自協定。",
+                        "items": [
+                          "Hub",
+                          "感測器",
+                          "裝置"
+                        ]
+                      },
+                      {
+                        "eyebrow": "04",
+                        "title": "雲端層",
+                        "description": "共用服務協調帳號、狀態與通知。",
+                        "items": [
+                          "帳號",
+                          "狀態",
+                          "通知"
+                        ]
+                      }
+                    ],
+                    "focus": {
+                      "label": "設計焦點",
+                      "title": "體驗邊界",
+                      "text": "即使底層協定與裝置不同，也讓同一個使用者意圖表現一致。"
+                    },
+                    "note": "為作品集清晰度，刻意移除內部人名與端點。"
+                  }
                 },
                 {
-                  "title": "漸進式複雜度",
-                  "text": "日常畫面只呈現執行情境所需內容，協定設定仍可存取但不干擾。"
-                }
-              ],
-              "quote": null,
-              "media": [
-                {
-                  "asset": "assets/images/original/ferqoUserFlow.png",
-                  "layout": "portrait",
-                  "caption": "設計決策相關設計素材 1",
-                  "alt": "設計決策相關設計素材 1"
-                },
-                {
-                  "asset": "assets/images/original/ferqoStructure.png",
-                  "layout": "half",
-                  "caption": "設計決策相關設計素材 2",
-                  "alt": "設計決策相關設計素材 2"
-                },
-                {
-                  "asset": "assets/images/original/ferqoCompare.png",
-                  "layout": "half",
-                  "caption": "設計決策相關設計素材 3",
-                  "alt": "設計決策相關設計素材 3"
+                  "title": "3-3. 把日常操作縮成三步",
+                  "body": [
+                    "關鍵路徑縮成打開 App、選擇房間或情境、執行動作。進階設定仍可在更深層找到，但不再打斷高頻控制任務。"
+                  ],
+                  "visual": {
+                    "type": "flow-comparison",
+                    "eyebrow": "關鍵路徑簡化",
+                    "title": "從尋找裝置，改為執行情境",
+                    "description": "作品集只呈現高頻路徑，不再放完整而難以閱讀的內部流程圖。",
+                    "before": {
+                      "label": "裝置導向",
+                      "title": "舊流程",
+                      "steps": [
+                        "打開 App",
+                        "找裝置分類",
+                        "找特定裝置",
+                        "打開控制",
+                        "執行"
+                      ]
+                    },
+                    "after": {
+                      "label": "情境導向",
+                      "title": "Ferqo 流程",
+                      "steps": [
+                        "打開 App",
+                        "選房間或情境",
+                        "執行"
+                      ]
+                    },
+                    "note": "進階設定仍可使用，但移出高頻路徑。"
+                  }
                 }
               ]
             },
             {
-              "order": 4,
-              "label": "設計執行與成果",
-              "title": "一指控制整個家",
+              "number": "04",
+              "label": "設計決策",
+              "title": "讓每個介面決策都能回扣研究洞察",
               "body": [
-                "觀察顯示，使用者習慣以房間記憶裝置，因此 App 允許左右滑動切換房間，並依使用習慣把常用裝置置頂，以更大的按鈕與觸控區提高辨識。",
-                "所有裝置操作集中在同一頁，遙控器內容也能依偏好排列；Widget 則讓使用者不進 App 就能控制情境。",
-                "與既有 Fibaro App 的 A/B 測試顯示，完成日常情境的步驟與時間約減半；新版 SUS 平均提升約 30 分。"
+                "這次重整不只是視覺更新。每個結構決策都直接回應研究裡的行為：人們如何記住自己的家、什麼動作最常使用，以及日常任務裡應該容納多少複雜度。"
               ],
-              "points": [
+              "subsections": [
                 {
-                  "title": "以房間為核心",
-                  "text": "左右滑動切換房間與裝置內容。"
+                  "title": "4-1. 以房間作為主要導覽單位",
+                  "body": [
+                    "訪談確認使用者以空間而非技術分類記住設備位置，因此 Ferqo 以房間與情境作為主要導覽，個別裝置則放進這個熟悉的脈絡中。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/ferqoProcess3.png",
+                      "layout": "wide",
+                      "caption": "設計從裝置目錄，轉向房間與情境導覽。",
+                      "alt": "Fibaro 與 Ferqo 導覽前後比較"
+                    }
+                  ]
                 },
                 {
-                  "title": "單頁裝置控制",
-                  "text": "不需切換頁面即可完成遙控操作。"
+                  "title": "4-2. 高頻操作優先，並維持容易辨識",
+                  "body": [
+                    "最常使用的操作被放在前面，讓常見任務不必捲動。更大的標籤與觸控範圍讓控制更容易辨識，次要裝置仍然可用，但不搶走注意力。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/ferqoExplain2.png",
+                      "layout": "wide",
+                      "caption": "整合控制與可調整的遙控版面，減少頁面切換。",
+                      "alt": "Ferqo 整合式裝置控制"
+                    }
+                  ]
                 },
                 {
-                  "title": "不進 App 控制情境",
-                  "text": "使用者可自行設定 Widget。"
-                }
-              ],
-              "quote": "雖然 Ferqo 最終未在客戶端上線，但以房間與情境為核心的方向，驗證了降低操作成本與提升易用性的可能。",
-              "media": [
-                {
-                  "asset": "assets/images/original/ferqoExplain1.png",
-                  "layout": "half",
-                  "caption": "執行相關設計素材 1",
-                  "alt": "執行相關設計素材 1"
-                },
-                {
-                  "asset": "assets/images/original/ferqoExplain2.png",
-                  "layout": "half",
-                  "caption": "執行相關設計素材 2",
-                  "alt": "執行相關設計素材 2"
-                },
-                {
-                  "asset": "assets/images/original/ferqoExplain3.png",
-                  "layout": "wide",
-                  "caption": "執行相關設計素材 3",
-                  "alt": "執行相關設計素材 3"
-                },
-                {
-                  "asset": "assets/images/original/ferqoRevamp.png",
-                  "layout": "portrait",
-                  "caption": "執行相關設計素材 4",
-                  "alt": "執行相關設計素材 4"
-                },
-                {
-                  "asset": "assets/images/original/ferqoScreenOverview.png",
-                  "layout": "half",
-                  "caption": "執行相關設計素材 5",
-                  "alt": "執行相關設計素材 5"
-                },
-                {
-                  "asset": "assets/images/original/ferqoDesignSystem.png",
-                  "layout": "half",
-                  "caption": "執行相關設計素材 6",
-                  "alt": "執行相關設計素材 6"
+                  "title": "4-3. 日常控制保持簡單，複雜設定下沉",
+                  "body": [
+                    "研究顯示，日常控制不應要求使用者處理協定層級的複雜度。因此，我把高頻控制保留在主要流程，將進階設定移往較深層級，同時維持需要時的可達性。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/ferqoExplain3.png",
+                      "layout": "half",
+                      "caption": "Widget 把高頻情境帶到鎖定畫面。",
+                      "alt": "Ferqo 情境 Widget"
+                    },
+                    {
+                      "asset": "assets/images/original/ferqoRevamp.png",
+                      "layout": "wide",
+                      "caption": "作品集註記：核心互動模型最初設計於 2018 年。此處展示的視覺經過輕度更新，以利作品集呈現；研究所支持的架構與核心互動模式則維持不變。",
+                      "alt": "Ferqo 視覺更新版"
+                    }
+                  ]
                 }
               ]
+            },
+            {
+              "number": "05",
+              "label": "驗證與限制",
+              "title": "方向在測試中更好，但產品最終未上線",
+              "body": [
+                "在另一批不同於訪談對象的任務式比較樣本中，日常情境操作時間約降低 50%，SUS 易用性分數從約 40 提升至約 80，顯示感知可用性有大幅改善。",
+                "由於樣本數有限且產品最終未上線，這些數字代表方向性的可用性改善，不代表市場採用成效。",
+                "專案真正驗證的是一個可延續的產品方向：用房間與情境組織家庭、抽象化協定複雜度，並把一鍵舒適當成核心價值。這個模型後來成為其他 IoT 探索的參考。"
+              ],
+              "visual": {
+                "type": "outcome-shift",
+                "eyebrow": "方向性驗證",
+                "title": "更清楚的互動模型，也清楚標示證據邊界",
+                "description": "比較整理了改變內容，並把可用性證據與上線狀態分開。",
+                "beforeLabel": "既有模式",
+                "afterLabel": "Ferqo 方向",
+                "rows": [
+                  {
+                    "label": "互動模型",
+                    "before": "裝置清單",
+                    "after": "房間與情境"
+                  },
+                  {
+                    "label": "日常情境時間",
+                    "before": "基準",
+                    "after": "約降低 50%"
+                  },
+                  {
+                    "label": "SUS",
+                    "before": "原始版本",
+                    "after": "約 40→約 80"
+                  },
+                  {
+                    "label": "狀態",
+                    "before": "概念驗證",
+                    "after": "方向獲驗證；未上線"
+                  }
+                ],
+                "result": "方向性驗證，不是正式市場成果。",
+                "note": "根據可用比較樣本；不宣稱採用率或留存結果。"
+              },
+              "subsections": [
+                {
+                  "title": "補充系統證據",
+                  "body": [
+                    "元件盤點顯示互動方向如何轉成可重用控制。它在此作為一致性的補充證據，而不是另一篇設計系統故事。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/ferqoDesignSystem.png",
+                      "layout": "wide",
+                      "caption": "可重用控制維持房間、裝置與情境狀態的一致性。",
+                      "alt": "Ferqo 元件與視覺系統盤點"
+                    }
+                  ]
+                }
+              ],
+              "quote": "即使產品沒有上線，只要誠實說明證據限制，仍能產生可延續的設計決策。"
             }
           ],
           "outcomes": [
             {
-              "value": "50%",
-              "label": "情境操作時間減少"
+              "value": "約 50%",
+              "label": "可用比較測試中的方向性任務時間下降"
             },
             {
-              "value": "+30",
-              "label": "SUS 易用性分數"
+              "value": "40→80",
+              "label": "另一批比較測試樣本的 SUS 易用性分數"
             },
             {
-              "value": "模組化",
-              "label": "支援跨品牌相容性"
+              "value": "已驗證",
+              "label": "房間與情境導向方向；產品未上線"
             }
           ],
           "name": "Ferqo——打造零摩擦智慧家庭生態系",
           "canonicalSubtitle": "抽象化破碎的 IoT 協定、打破供應商綁定，打造真正以情境驅動的 B2C 體驗。",
           "subtitle": "抽象化破碎的 IoT 協定、打破供應商綁定，打造真正以情境驅動的 B2C 體驗。",
           "year": "2019",
-          "keyAchievement": "情境操作時間約減少 50%，SUS 易用性分數提升 30 分。",
+          "keyAchievement": "另一批任務式比較測試顯示日常情境時間約降低 50%，SUS 從約 40 提升至約 80；房間與情境導向獲得驗證，但產品最終未上線。",
           "cover": "assets/images/original/ferqoHero.png",
           "sourceBoard": "assets/images/original/ferqoArtifact.png",
-          "cardDescription": "以情境為核心、支援多協定的 0 到 1 智慧家庭平台。",
+          "cardDescription": "用九次深度訪談推翻團隊的產品假設，說服管理層轉向，把「一鍵舒適」建構成可擴展的平台架構。",
           "category": "IoT · 智慧家庭",
-          "description": "過去作為封閉式智慧家庭系統的代理商，我們的商業擴展受到單一協定（如 Z-Wave）與原廠僵化產品路線圖的嚴重限制。為了取得策略自主性，我們啟動 Ferqo 0 到 1 專案。我負責端到端產品設計，把開放、多協定平台的願景轉化為真正優先服務一般消費者、而非系統整合商的直覺生態系。"
+          "description": "過去作為封閉式智慧家庭系統的代理商，我們的商業擴展受到單一協定（如 Z-Wave）與原廠僵化產品路線圖的嚴重限制。為了取得策略自主性，我們啟動 Ferqo 0 到 1 專案。我負責端到端產品設計，把開放、多協定平台的願景轉化為真正優先服務一般消費者、而非系統整合商的直覺生態系。",
+          "cardTitle": "Ferqo：打造零摩擦智慧家庭生態系"
         },
         "insurance": {
           "slug": "insurance",
           "index": "02",
           "title": "模組化線上保險交付",
+          "cardTitle": "建構可擴展的保險 SaaS：從客製孤島走向模組化生態系",
           "role": "主責產品設計師",
           "timeline": "2024.11–2024.12（1 個月）",
           "team": "業務、產品、設計與工程",
@@ -2182,13 +2545,14 @@
           "keyAchievement": "業務對齊時間與開發成本估計各降低約 50%，框架並應用於 3 個以上進行中的企業合作案。",
           "cover": "assets/images/original/insuranceHero.png",
           "sourceBoard": "assets/images/original/insuranceArtifact.png",
-          "cardDescription": "把一次性客戶交付轉成可重用、能因應法規並可快速換牌的模組化保險平台。",
+          "cardDescription": "找到客製化無法擴展的結構性問題，用 Token 驅動的模組化架構讓平台能跨市場複製。",
           "category": "保險科技 · B2B SaaS",
           "description": "IXT 是 AIFT 的數位保險平台。我主導其中一條模組線，將一次性客製交付轉成可重用的申請流程、品牌適配與客戶溝通框架。"
         },
         "onesleeve": {
           "slug": "onesleeve",
           "index": "03",
+          "cardTitle": "OneSleeve：一套設計系統，支撐兩個資安品牌",
           "accent": "#d8a72d",
           "soft": "#f5e9bd",
           "dark": "#6d5313",
@@ -2204,7 +2568,7 @@
           "timeline": "2025.12–2026.03",
           "team": "產品、設計與工程",
           "scope": "設計系統架構、跨職能協作、元件治理",
-          "cardDescription": "用共用 Token 與元件架構收斂 Cymetrics 與 Vulcan，同時維持市場驗證速度。",
+          "cardDescription": "品牌統一只是表面需求。挖出底層設計債，建造了一套四層 Token 架構和治理體系，讓小團隊跑出大團隊的速度。",
           "description": "在資源有限、仍需快速驗證市場的新創環境中，將 Cymetrics 與 Vulcan 收斂為同一產品家族，縮短迭代、加快交付，並建立多市場擴展的基礎。",
           "keyAchievement": "一套系統讓 PM—設計迭代減半，單畫面建置時間由三天降為兩天。",
           "summary": {
@@ -2508,6 +2872,7 @@
           "slug": "alphacamp",
           "index": "04",
           "title": "程式教育平台留存策略：從功能交付走向深度使用者連結",
+          "cardTitle": "程式教育平台留存策略：從功能交付走向深度使用者連結",
           "role": "UX 研究員",
           "timeline": "2020.11–2021.01（3 個月）",
           "team": "Ricky、Kim、Evy",
@@ -2675,7 +3040,7 @@
           "keyAchievement": "定義 8 項以上服務提案，並把研究洞察納入公司年度產品路線圖。",
           "cover": "assets/images/original/alphacampHero.jpg",
           "sourceBoard": "assets/images/original/alphacampArtifact.png",
-          "cardDescription": "以三個月 UX 研究與服務設計，重新定義課後留存、進展與長期品牌忠誠。",
+          "cardDescription": "透過 UXR 找到學習的「孤立感」是流失的核心原因，從交易關係轉向夥伴關係的策略路線圖。",
           "category": "教育科技 · 服務策略",
           "description": "在台灣領先的程式教育平台 ALPHAcamp，我們面臨關鍵商業挑戰：學生完成課程後，互動與持續留存明顯下降。為此，我與一位夥伴進行三個月的使用者研究與服務設計。"
         }
@@ -2698,56 +3063,57 @@
       },
       "home": {
         "hero": {
-          "eyebrow": "プロダクトデザイナー · チームコネクター",
-          "titleBefore": "忍耐と明快さで、人とアイデアを",
-          "titleAccent": "つなぎます。",
-          "body": "丁寧に聞き、見えない仕組みを可視化し、異なる視点を一つの意思決定へつなぐことで複雑な製品を設計します。",
-          "primary": "選定プロジェクトを見る",
-          "secondary": "話を始める",
+          "eyebrow": "",
+          "titleBefore": "プロダクトが本当に解くべき問題を見極め、\n答えを持続可能なアーキテクチャにする。",
+          "titleAccent": "",
+          "body": "AI は答えを出せる。しかし、解くべき問題を判断し、答えを持続させること。それは人の仕事です。",
+          "primary": "作品を見る",
+          "secondary": "お問い合わせ",
           "imageAlt": "落ち着いたスタジオにいるプロダクトデザイナー"
         },
         "about": {
-          "eyebrow": "About me",
-          "titleBefore": "人とアイデアをつなぎ、",
-          "titleAccent": "より良い結果をつくる。",
-          "body": "チームの真ん中にいるとき、最も価値を発揮できます。各専門分野が見ているものを聞き、制約を共有地図へ翻訳し、難しい判断が明確になるまで必要な時間を確保します。画面だけでなく、それを生む対話の質も大切にします。",
-          "imageAlt": "共同ワークショップを進行するデザイナー",
+          "eyebrow": "私の設計手法",
+          "titleBefore": "問題の本質から出発し、戦略を経て、持続的に機能するシステムに着地させる。",
+          "titleAccent": "",
+          "body": "どんなプロダクトでもアプローチは同じです。まず既存の前提を疑い、リサーチで本当に解くべき問題を特定する。次に曖昧な方向性を明確なトレードオフのある選択肢に構造化し、ステークホルダーが根拠に基づいて判断できるようにする。最後に解決策をスケーラブルなアーキテクチャとして構築し、私がいなくなった後もチームが一貫したアウトプットを出せるようにする。",
+          "imageAlt": "付箋で埋められたワークショップのホワイトボード",
           "principles": [
             {
-              "title": "まず聞く",
-              "body": "作るものを決める前に、文脈、意図、見えない制約を理解する。"
+              "title": "まず本当の問題を見つける",
+              "body": "表面的な要件をそのまま受け入れない。リサーチでチームが見落としている盲点を掘り起こし、デザインツールを開く前に方向が正しいかを確認する。"
             },
             {
-              "title": "対話を進める",
-              "body": "対立する視点を、チームで検証できる一つのモデルへ変える。"
+              "title": "意思決定を構造化し、ステークホルダーを整合させる",
+              "body": "曖昧な問題を比較可能な選択肢に分解し、異なる役割の人が好みではなく事実に基づいて判断できるようにする。"
             },
             {
-              "title": "システムで考える",
-              "body": "個別画面を製品、運用、長期的な影響へつなぐ。"
+              "title": "納品物ではなく、システムを作る",
+              "body": "スケーラブルなアーキテクチャ、ガバナンスルール、命名規則を設計する。解決策を一度きりのアウトプットではなく、チームが継続的に運用できるインフラにする。"
             }
-          ]
+          ],
+          "backgroundFacts": "9年、4業界（IoT · 保険テック · サイバーセキュリティ · AIセキュリティ）、3市場（台湾 · 日本 · 香港）。日本生まれ、JLPT N1。"
         },
         "work": {
-          "eyebrow": "Selected work",
-          "title": "複雑なシステムを、前へ進めるほど理解可能に。",
-          "body": "スマートホーム、保険運用、セキュリティシステム、教育戦略の4プロジェクト。"
+          "eyebrow": "主な実績",
+          "title": "すべてのプロジェクトで同じことを実践しています。核心の問題を見つけ、持続するアーキテクチャにする。",
+          "body": ""
         },
         "strengths": {
-          "eyebrow": "How I work",
-          "title": "問題を見る落ち着きと、前へ進める実務性。",
-          "body": "リサーチ、プロダクト、デザイン、開発、運用の間をつなぐ仕事に価値を出します。",
+          "eyebrow": "仕事の進め方",
+          "title": "すべてのプロジェクトで実践している3つのこと。",
+          "body": "",
           "items": [
             {
-              "title": "曖昧さへの忍耐",
-              "body": "早すぎる確信を避け、次に役立つ問いを立て、証拠が方向を変える余地を残す。"
+              "title": "正しい問いを立てる",
+              "body": "チームは多くの場合、検証されていない前提のまま開発を始めます。最初のアクションは Figma を開くことではなく、解こうとしている問題が正しいかを確認すること。方向が間違っていれば、どんなに上手く実行しても無駄です。"
             },
             {
-              "title": "共通理解",
-              "body": "フロー、モデル、プロトタイプ、ワークショップで同じシステムを見えるようにする。"
+              "title": "目標を揃える",
+              "body": "良い解決策が進まないのは、多くの場合、ステークホルダーが自分にとっての利点を理解していないから。PM、エンジニア、マネージャーそれぞれが、採用後に自分の目標にどう貢献するかを見えるようにします。"
             },
             {
-              "title": "専門分野をつなぐ",
-              "body": "言葉と動機を橋渡しし、良いアイデアを洞察から実装まで生き残らせる。"
+              "title": "価値を残す",
+              "body": "解決策を納品物ではなくアーキテクチャにする。Token システム、コンポーネントガバナンス、命名規則、モジュラーフレームワーク。私がいなくなった後もチームが運用できるインフラを設計します。"
             }
           ]
         },
@@ -2770,10 +3136,10 @@
           ]
         },
         "contact": {
-          "eyebrow": "Let’s connect",
-          "title": "複雑な部分を持ってきてください。",
-          "body": "利用者ニーズ、技術制約、組織の現実を一つの方向へまとめる製品・サービス課題に関心があります。",
-          "button": "連絡する",
+          "eyebrow": "お問い合わせ",
+          "title": "チームがまだ解くべき問題を整理している段階なら、ぜひお話ししましょう。",
+          "body": "プロダクトの方向性が不明確で、混沌を実行可能なシステムに収束させる人が必要なら、お話ししましょう。",
+          "button": "メッセージを送る",
           "availability": "プロダクトデザインの機会を検討中"
         }
       },
@@ -2813,7 +3179,7 @@
           "slug": "ferqo",
           "index": "01",
           "title": "Ferqo — 摩擦のないスマートホーム・エコシステムの構築",
-          "role": "プロダクトデザイナー／プロダクトマネージャー",
+          "role": "プロダクトデザイナー（PM 兼任）",
           "timeline": "2018.11–2019.11",
           "team": "プロダクト・エンジニアリング横断チーム",
           "scope": "エンドツーエンド製品設計、UXリサーチ、部門横断リード",
@@ -2821,220 +3187,400 @@
           "soft": "#f1ddd4",
           "dark": "#7f3827",
           "summary": {
-            "goal": "ハードウェアに依存しない0→1のB2C基盤を立ち上げ、ベンダーロックインを解消する。",
-            "challenge": "未検証のユーザー仮説と、異なるIoTプロトコルを一貫した体験へ統合する複雑さ。",
-            "outcome": "シナリオ操作時間を約50%削減し、SUSを30ポイント改善。ブランド横断のモジュール基盤も構築した。"
+            "goal": "ハードウェアブランドに依存せず、複数ブランドの日常シナリオを物理スイッチのように簡単に扱える体験をつくる。",
+            "challenge": "プロトコルの分断、デバイス中心のメンタルモデル、高い技術的不確実性が、事業とUXの双方の拡張を阻んでいました。",
+            "outcome": "インタビュー参加者とは別のタスク比較テストサンプルで、日常シナリオの操作時間が約50％短縮し、SUS ユーザビリティスコアは約40から約80に向上しました。製品は未ローンチのため、これらは市場採用ではなく方向性としてのユーザビリティ改善を示します。"
           },
           "sections": [
             {
-              "order": 1,
+              "number": "01",
               "label": "事業課題",
-              "title": "ベンダーロックインを解消し、真のB2C UXを再定義する",
+              "title": "単一プロトコルが事業モデルと体験を制約していた",
               "body": [
-                "従来のスマートホームは単一プロトコルとメーカーのロードマップに利用者を縛り、ブランド横断の自動化と事業拡張を妨げていました。",
-                "既存アプリはエンジニア向けダッシュボードのようで、利用者は個々の機器を探し、技術カテゴリを理解しなければならず、日常の簡単な操作に大きな認知負荷が生じていました。",
-                "最終的な洞察は明快でした。アプリを開く方が壁のスイッチを押すより遅ければ、デジタル製品は失敗です。"
+                "当時、同社は単一プロトコルとメーカー主導のロードマップに依存した、クローズドなスマートホームシステムを販売していました。その依存がブランド横断のシナリオを制限し、拡張のたびに外部技術の判断を待つ状態を生んでいました。",
+                "当初は Google Home や Xiaomi Home のような汎用アプリを作る案もありました。しかし成熟したプラットフォームと正面から競合しても、Ferqo 独自の価値は築けません。そこで私は、ユーザーの痛点と調査結果から、Ferqo が独自に持てる方向性を見つけることを提案しました。",
+                "消費者向けの体験にも、同じ構造的な問題が表れていました。既存アプリはエンジニアリングコンソールのようで、ユーザーはまずデバイスを探し、技術的な分類を理解し、何層ものナビゲーションを通らなければ、簡単な操作すら完了できませんでした。アプリを開く方が壁のスイッチを押すより遅いなら、そのデジタル製品は失敗です。"
               ],
               "points": [
                 {
-                  "title": "プロトコルのサイロ",
-                  "text": "単一プロトコルがブランド横断の自動化を制限。"
+                  "title": "プロトコル依存",
+                  "text": "単一プロトコルが提携、ロードマップ管理、ブランド横断自動化を制限。"
                 },
                 {
-                  "title": "機器中心の“偽B2C” UI",
-                  "text": "技術的な画面が利用者に機器探しを強いる。"
+                  "title": "消費者体験のギャップ",
+                  "text": "デバイス中心UIが、日常の意図を技術カテゴリへ翻訳させていました。"
                 },
                 {
-                  "title": "物理スイッチとの競争",
-                  "text": "日常シナリオは物理操作より速く完了する必要がある。"
+                  "title": "物理スイッチ基準",
+                  "text": "日常操作は、置き換える物理リモコンより速く明確である必要がありました。"
                 }
               ],
-              "quote": null,
               "media": [
                 {
                   "asset": "assets/images/original/ferqoProcess1.png",
                   "layout": "wide",
-                  "caption": "課題のデザイン資料 1",
-                  "alt": "課題のデザイン資料 1"
-                },
-                {
-                  "asset": "assets/images/original/ferqoProcess3.png",
-                  "layout": "portrait",
-                  "caption": "課題のデザイン資料 2",
-                  "alt": "課題のデザイン資料 2"
+                  "caption": "既存UIは、デバイス中心かつ深いナビゲーションという共通課題を示していました。",
+                  "alt": "既存スマートホームUIの比較"
                 }
               ]
             },
             {
-              "order": 2,
-              "label": "リサーチと主要な洞察",
-              "title": "「ワンタップ」の価値を検証",
+              "number": "02",
+              "label": "リサーチによる転換",
+              "title": "問題は機能不足ではなく、ユーザーのメンタルモデルだった",
               "body": [
-                "当初は細かな制御でDIY市場に参入する想定でしたが、9件のデプスインタビューから根本的なずれが判明しました。利用者はIoTで遊びたいわけではなく、アプリを積極的に開くこともありません。",
-                "求められていたのは「ワンタップで快適」を実現するプレミアムな解決策でした。これにより、機能量の競争から、最少の操作で快適な状態をつくる価値戦略へ転換しました。"
+                "当初はプロトコル対応と市場競争を問題として捉えていました。しかし9名の異なる参加者へのデプスインタビューから、より深いボトルネックは認知にあると分かりました。ユーザーは「IoTで遊びたい」のではなく、個別機器の管理のために積極的にAppを開くこともほとんどありません。",
+                "リサーチの結果に基づき、経営層に戦略転換を提案しました。DIY の機能競争から撤退し、Premium Total-Solution として再ポジショニング——個別のデバイス制御ではなく、ワンタップで完結する快適な体験を価値として提供する方針です。経営層の合意を得た後、このポジショニングがすべてのデザイン判断の基盤となりました。",
+                "人はハードウェアリストではなく、部屋と日常シナリオで家を覚えています。求めていたのは、外出、帰宅、映画、就寝を機器ごとに調整せずに実行できる「ワンタップの快適さ」でした。",
+                "この発見により、戦略は機能競争から価値ベースへ転換し、望む状態までの操作を最小化することを優先しました。"
               ],
               "points": [
                 {
                   "title": "認知負荷",
-                  "text": "単純な要望を、機器・プロトコル・操作へ翻訳させていた。"
+                  "text": "単純な意図が、デバイス探索・分類確認・操作という長い技術手順になっていました。"
                 },
                 {
                   "title": "メンタルモデルの不一致",
-                  "text": "利用者は機器一覧ではなく、部屋とシナリオで考える。"
+                  "text": "ユーザーは部屋とシナリオで考える一方、旧UIはデバイスで整理されていました。"
                 },
                 {
-                  "title": "分断されたエコシステム",
-                  "text": "映画モードなどの日常ルーティンにはブランド横断の連携が必要。"
+                  "title": "分断された日常シナリオ",
+                  "text": "一般的な生活ルーティンには複数ブランドの連携が必要でしたが、旧システムは対応できませんでした。"
                 }
               ],
-              "quote": null,
               "media": [
                 {
                   "asset": "assets/images/original/ferqoProcess2.png",
                   "layout": "wide",
-                  "caption": "リサーチと洞察のデザイン資料 1",
-                  "alt": "リサーチと洞察のデザイン資料 1"
+                  "caption": "リサーチは、日常のルーティンとワンタップの快適さへ機会を再定義しました。",
+                  "alt": "スマートホームの日常ニーズと機会を示すユーザージャーニー"
                 }
               ]
             },
             {
-              "order": 3,
-              "label": "実現可能性",
-              "title": "エンジニアとMVP範囲・技術的複雑さを明確化",
+              "number": "03",
+              "label": "戦略とスコープ",
+              "title": "ワンタップ価値を優先し、MVPを実装可能な範囲へ絞る",
               "body": [
-                "実現可能性を担保するため、技術スコープの整理を主導しました。ワークショップでリソースと各社API能力を確認し、シナリオ制御を実装可能なMVPモジュールへ分解しました。",
-                "システム構成図とフローでフロント／バックエンドの責任を定義し、ロードマップを再優先付け。設計と実装の合意をつくりました。",
-                "フローは、機器一覧ではなく部屋で整理する、頻用する3機器を各部屋の先頭に置く、高度な設定を深い階層へ移す、という3原則で再構成しました。"
+                "リサーチから、共通コントロール層とシナリオ実行エンジンが必要だと分かりました。一方でオープンエコシステムは、技術的に魅力的でも完成しない製品になりやすいため、最初からエンジニアリングと範囲を絞りました。",
+                "ワークセッションで依存関係、API実現性、責任境界、コア体験を検証する最小モジュールを整理しました。"
               ],
-              "points": [
+              "subsections": [
                 {
-                  "title": "部屋中心のナビゲーション",
-                  "text": "空間で考えるメンタルモデルに合わせ、機器探しをなくす。"
+                  "title": "3-1. まず『作らないもの』を決める",
+                  "body": [
+                    "Impact/Effort評価により、共通コントロールパネルとシナリオ実行をMVPに残し、DIYシナリオビルダーは後続へ。カスタムAPI UIとBLE自動ルーム切替は、検証価値よりコストとリスクが大きいため除外しました。"
+                  ],
+                  "visual": {
+                    "type": "impact-effort",
+                    "eyebrow": "スコープ判断",
+                    "title": "インパクト × 工数：完全な意思決定マトリクス",
+                    "description": "4象限をすべて残し、空白も情報欠落ではなく明確な判断として示します。",
+                    "yLabel": "ビジネスと体験へのインパクト",
+                    "yHighLabel": "高インパクト",
+                    "yLowLabel": "低インパクト",
+                    "xLabel": "開発コストと技術リスク（工数）",
+                    "xLowLabel": "低工数",
+                    "xHighLabel": "高工数",
+                    "quadrants": [
+                      {
+                        "position": "high-low",
+                        "tone": "core",
+                        "kicker": "高インパクト・低工数",
+                        "title": "MVP コア",
+                        "items": [
+                          {
+                            "title": "ユニバーサルコントロールパネル",
+                            "text": "1つの画面で複数ブランドのデバイスを操作。"
+                          },
+                          {
+                            "title": "シナリオ実行エンジン",
+                            "text": "複数デバイスのプリセットをワンタップで実行。"
+                          }
+                        ]
+                      },
+                      {
+                        "position": "high-high",
+                        "tone": "deferred",
+                        "kicker": "高インパクト・高工数",
+                        "title": "Phase 2 構想",
+                        "items": [
+                          {
+                            "title": "DIY シナリオビルダー",
+                            "text": "潜在価値は高いものの、初回検証にはコストが大きすぎました。"
+                          }
+                        ]
+                      },
+                      {
+                        "position": "low-low",
+                        "tone": "empty",
+                        "kicker": "低インパクト・低工数",
+                        "title": "今回は優先項目なし",
+                        "text": "独立した低インパクト施策は、この MVP に追加しませんでした。"
+                      },
+                      {
+                        "position": "low-high",
+                        "tone": "dropped",
+                        "kicker": "検証済み価値が低い・高工数",
+                        "title": "明確に除外",
+                        "items": [
+                          {
+                            "title": "カスタム API UI",
+                            "text": "ベンダーごとの個別 UI は保守負債を再び生みます。"
+                          },
+                          {
+                            "title": "BLE 自動ルーム切り替え",
+                            "text": "測位の不安定さにより、リスクが検証価値を上回りました。"
+                          }
+                        ]
+                      }
+                    ],
+                    "note": "左下象限は意図的に空白です。簡単でもインパクトの低い作業で MVP を埋めませんでした。"
+                  }
                 },
                 {
-                  "title": "頻用機器を先頭へ",
-                  "text": "主要操作をスクロールなしで実行。"
+                  "title": "3-2. 4層のシステム境界を明確化",
+                  "body": [
+                    "社内アーキテクチャを4つの製品層へ翻訳し、UX判断とプロトコル制約の接点を示しました。人物名、内部エンドポイント、実装詳細はポートフォリオ向けに除外しています。"
+                  ],
+                  "visual": {
+                    "type": "architecture-map",
+                    "eyebrow": "簡略化したシステム境界",
+                    "title": "4つの技術層を一つの体験でつなぐ",
+                    "description": "設計の焦点は、ユーザーの意図を異なるプロトコルでも一貫した実行可能なアクションへ変えることでした。",
+                    "layers": [
+                      {
+                        "eyebrow": "01",
+                        "title": "Software",
+                        "description": "ユーザーが見る部屋、シナリオ、操作、フィードバック。",
+                        "items": [
+                          "ナビゲーション",
+                          "シナリオ設定",
+                          "機器操作"
+                        ]
+                      },
+                      {
+                        "eyebrow": "02",
+                        "title": "SDK",
+                        "description": "共通契約で製品アクションを対応能力へ変換。",
+                        "items": [
+                          "能力マッピング",
+                          "コマンド抽象化"
+                        ]
+                      },
+                      {
+                        "eyebrow": "03",
+                        "title": "Hardware",
+                        "description": "Hub、センサー、機器は各自のプロトコルを保持。",
+                        "items": [
+                          "Hub",
+                          "センサー",
+                          "デバイス"
+                        ]
+                      },
+                      {
+                        "eyebrow": "04",
+                        "title": "Cloud",
+                        "description": "共通サービスがアカウント、状態、通知を調整。",
+                        "items": [
+                          "アカウント",
+                          "状態",
+                          "通知"
+                        ]
+                      }
+                    ],
+                    "focus": {
+                      "label": "設計フォーカス",
+                      "title": "体験の境界",
+                      "text": "下層のプロトコルや機器が違っても、同じユーザー意図を一貫して動かす。"
+                    },
+                    "note": "ポートフォリオの明確さのため、社内名とエンドポイントは除外しました。"
+                  }
                 },
                 {
-                  "title": "複雑さを段階表示",
-                  "text": "日常画面では必要な内容だけを見せ、プロトコル設定は奥に保持。"
-                }
-              ],
-              "quote": null,
-              "media": [
-                {
-                  "asset": "assets/images/original/ferqoUserFlow.png",
-                  "layout": "portrait",
-                  "caption": "設計判断のデザイン資料 1",
-                  "alt": "設計判断のデザイン資料 1"
-                },
-                {
-                  "asset": "assets/images/original/ferqoStructure.png",
-                  "layout": "half",
-                  "caption": "設計判断のデザイン資料 2",
-                  "alt": "設計判断のデザイン資料 2"
-                },
-                {
-                  "asset": "assets/images/original/ferqoCompare.png",
-                  "layout": "half",
-                  "caption": "設計判断のデザイン資料 3",
-                  "alt": "設計判断のデザイン資料 3"
+                  "title": "3-3. 日常操作を3ステップへ短縮",
+                  "body": [
+                    "主要フローは、Appを開く、部屋またはシナリオを選ぶ、実行する、の3段階へ。高度な設定は深い階層に残し、頻繁な操作を妨げないようにしました。"
+                  ],
+                  "visual": {
+                    "type": "flow-comparison",
+                    "eyebrow": "主要フローの簡素化",
+                    "title": "デバイス探索からシナリオ実行へ",
+                    "description": "完全な社内フローチャートではなく、頻繁に使う経路だけを示します。",
+                    "before": {
+                      "label": "デバイス中心",
+                      "title": "旧フロー",
+                      "steps": [
+                        "Appを開く",
+                        "カテゴリを探す",
+                        "デバイスを探す",
+                        "操作画面を開く",
+                        "実行"
+                      ]
+                    },
+                    "after": {
+                      "label": "シナリオ中心",
+                      "title": "Ferqoフロー",
+                      "steps": [
+                        "Appを開く",
+                        "部屋／シナリオを選ぶ",
+                        "実行"
+                      ]
+                    },
+                    "note": "高度な設定は利用できますが、高頻度フローの外へ移しました。"
+                  }
                 }
               ]
             },
             {
-              "order": 4,
-              "label": "設計と成果",
-              "title": "指一本で家全体を操作する",
+              "number": "04",
+              "label": "設計判断",
+              "title": "すべてのUI判断をリサーチインサイトにつなげる",
               "body": [
-                "利用者は部屋で機器を記憶するという観察を基に、左右スワイプで部屋を切り替え、利用頻度の高い機器を先頭に配置しました。ボタンとタッチ領域も大きくして識別しやすくしました。",
-                "機器操作を1ページに集約し、リモコン内容は好みに合わせて並べ替え可能。ウィジェットを使えばアプリを開かずにシーンを実行できます。",
-                "既存FibaroアプリとのA/Bテストでは、日常ルーティンの手順と時間がほぼ半減し、新版SUSは平均約30ポイント向上しました。"
+                "今回の再設計は視覚刷新だけではありません。家をどう記憶するか、何を最も使うか、日常タスクにどれだけの複雑さを置くべきかという行動インサイトに、各構造判断を対応させました。"
               ],
-              "points": [
+              "subsections": [
                 {
-                  "title": "部屋中心ロジック",
-                  "text": "左右スワイプで部屋と機器を切り替える。"
+                  "title": "4-1. 部屋を主要なナビゲーション単位にする",
+                  "body": [
+                    "インタビューでは、ユーザーが技術カテゴリではなく空間で機器を記憶していました。そこで部屋とシナリオを主要構造とし、個別機器をその文脈の中に配置しました。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/ferqoProcess3.png",
+                      "layout": "wide",
+                      "caption": "デバイスカタログから、部屋・シナリオ中心のナビゲーションへ。",
+                      "alt": "FibaroとFerqoのナビゲーション比較"
+                    }
+                  ]
                 },
                 {
-                  "title": "オールインワン操作",
-                  "text": "ページ移動なしで機器を操作。"
+                  "title": "4-2. 頻繁な操作を優先し、識別しやすくする",
+                  "body": [
+                    "よく使う操作を先に配置し、スクロールせず実行できるようにしました。大きなラベルとタッチ領域で識別しやすくし、低頻度の機器は利用可能なまま注意の競合を抑えました。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/ferqoExplain2.png",
+                      "layout": "wide",
+                      "caption": "一体型操作とカスタマイズ可能なリモコンで画面遷移を削減。",
+                      "alt": "Ferqoの一体型デバイス操作"
+                    }
+                  ]
                 },
                 {
-                  "title": "アプリ外のシーン操作",
-                  "text": "利用者自身でウィジェットを設定。"
-                }
-              ],
-              "quote": "Ferqoは最終的に顧客側で公開されませんでしたが、部屋中心・シナリオ中心の方向性は、操作コスト削減と体感ユーザビリティ向上を検証しました。",
-              "media": [
-                {
-                  "asset": "assets/images/original/ferqoExplain1.png",
-                  "layout": "half",
-                  "caption": "実装のデザイン資料 1",
-                  "alt": "実装のデザイン資料 1"
-                },
-                {
-                  "asset": "assets/images/original/ferqoExplain2.png",
-                  "layout": "half",
-                  "caption": "実装のデザイン資料 2",
-                  "alt": "実装のデザイン資料 2"
-                },
-                {
-                  "asset": "assets/images/original/ferqoExplain3.png",
-                  "layout": "wide",
-                  "caption": "実装のデザイン資料 3",
-                  "alt": "実装のデザイン資料 3"
-                },
-                {
-                  "asset": "assets/images/original/ferqoRevamp.png",
-                  "layout": "portrait",
-                  "caption": "実装のデザイン資料 4",
-                  "alt": "実装のデザイン資料 4"
-                },
-                {
-                  "asset": "assets/images/original/ferqoScreenOverview.png",
-                  "layout": "half",
-                  "caption": "実装のデザイン資料 5",
-                  "alt": "実装のデザイン資料 5"
-                },
-                {
-                  "asset": "assets/images/original/ferqoDesignSystem.png",
-                  "layout": "half",
-                  "caption": "実装のデザイン資料 6",
-                  "alt": "実装のデザイン資料 6"
+                  "title": "4-3. 日常操作はシンプルにし、複雑な設定は奥へ移す",
+                  "body": [
+                    "調査から、日常的な操作でユーザーにプロトコルレベルの複雑さを意識させるべきではないと分かりました。そこで、高頻度の操作は主要フローに残し、必要時のアクセスを保ちながら、詳細設定を階層の奥へ移しました。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/ferqoExplain3.png",
+                      "layout": "half",
+                      "caption": "頻繁なシナリオをロック画面のWidgetへ。",
+                      "alt": "FerqoのシナリオWidget"
+                    },
+                    {
+                      "asset": "assets/images/original/ferqoRevamp.png",
+                      "layout": "wide",
+                      "caption": "ポートフォリオ注記：コアのインタラクションモデルは2018年に設計されました。ここで示すビジュアルはプレゼンテーション用に軽く更新していますが、調査に基づく構造とコアの操作パターンは維持しています。",
+                      "alt": "Ferqoの視覚リフレッシュ"
+                    }
+                  ]
                 }
               ]
+            },
+            {
+              "number": "05",
+              "label": "検証と制約",
+              "title": "方向性はテストで改善したが、製品はローンチしなかった",
+              "body": [
+                "インタビュー参加者とは別のサンプルによるタスク比較テストでは、新しい方向性で日常シナリオの完了時間が約50％短縮しました。SUS ユーザビリティスコアは約40から約80に向上し、知覚されたユーザビリティの大幅な改善を示しました。",
+                "サンプル数が限られており、プロダクトも正式ローンチに至らなかったため、これらは方向性としてのユーザビリティ改善を示すものであり、市場での採用成果を意味しません。",
+                "検証できたのは持続可能な製品方向です。部屋とシナリオで家を整理し、プロトコルの複雑さを抽象化し、ワンタップの快適さを中核価値にする。このモデルは後続のIoT検討の参照点になりました。"
+              ],
+              "visual": {
+                "type": "outcome-shift",
+                "eyebrow": "方向性の検証",
+                "title": "明確なインタラクションモデルと、明確な証拠の限界",
+                "description": "何が変わったかを整理し、ユーザビリティの証拠とローンチ状況を分けて示します。",
+                "beforeLabel": "既存モデル",
+                "afterLabel": "Ferqoの方向性",
+                "rows": [
+                  {
+                    "label": "操作モデル",
+                    "before": "デバイスリスト",
+                    "after": "部屋とシナリオ"
+                  },
+                  {
+                    "label": "日常シナリオ時間",
+                    "before": "ベースライン",
+                    "after": "約50％短縮"
+                  },
+                  {
+                    "label": "SUS",
+                    "before": "旧バージョン",
+                    "after": "約40→約80"
+                  },
+                  {
+                    "label": "状態",
+                    "before": "コンセプト検証",
+                    "after": "方向性を検証・未ローンチ"
+                  }
+                ],
+                "result": "方向性の検証であり、市場での本番成果ではありません。",
+                "note": "利用可能な比較サンプルに基づく結果で、採用率や継続率は主張しません。"
+              },
+              "subsections": [
+                {
+                  "title": "補足となるシステム証拠",
+                  "body": [
+                    "コンポーネント一覧は、インタラクション方針を再利用可能な操作へ落とし込んだ証拠です。独立したデザインシステム事例ではなく、一貫性の補足として掲載します。"
+                  ],
+                  "media": [
+                    {
+                      "asset": "assets/images/original/ferqoDesignSystem.png",
+                      "layout": "wide",
+                      "caption": "再利用可能な操作が、部屋・デバイス・シナリオ状態の一貫性を支えました。",
+                      "alt": "Ferqoのコンポーネントとビジュアルシステム"
+                    }
+                  ]
+                }
+              ],
+              "quote": "製品がローンチしなくても、証拠の限界を明示すれば、長く使える設計判断を残せます。"
             }
           ],
           "outcomes": [
             {
-              "value": "50%",
-              "label": "シナリオ操作時間を削減"
+              "value": "約50%",
+              "label": "利用可能な比較テストでの方向性としてのタスク時間短縮"
             },
             {
-              "value": "+30",
-              "label": "SUSユーザビリティスコア"
+              "value": "40→80",
+              "label": "別サンプルによる比較テストのSUS"
             },
             {
-              "value": "モジュール型",
-              "label": "ブランド横断の互換性を支援"
+              "value": "検証済み",
+              "label": "部屋・シナリオ中心の方向性。製品は未ローンチ"
             }
           ],
           "name": "Ferqo — 摩擦のないスマートホーム・エコシステムの構築",
           "canonicalSubtitle": "断片化したIoTプロトコルを抽象化し、ベンダーロックインを解消。シナリオ主導の真のB2C体験へ。",
           "subtitle": "断片化したIoTプロトコルを抽象化し、ベンダーロックインを解消。シナリオ主導の真のB2C体験へ。",
           "year": "2019",
-          "keyAchievement": "シナリオ操作時間を約50%削減し、SUSを30ポイント改善。",
+          "keyAchievement": "別サンプルによるタスク比較テストで日常シナリオ時間が約50％短縮し、SUSは約40から約80に向上。部屋・シナリオ中心の方向性は検証されましたが、製品は未ローンチです。",
           "cover": "assets/images/original/ferqoHero.png",
           "sourceBoard": "assets/images/original/ferqoArtifact.png",
-          "cardDescription": "ベンダーロックインを解消し、断片化したIoTをシナリオ中心のB2C体験に変えた0→1プラットフォーム。",
+          "cardDescription": "9回のデプスインタビューでチームのプロダクト仮説を覆し、経営層の合意を得て戦略転換を実現。「ワンタップの快適さ」をスケーラブルなプラットフォームアーキテクチャに落とし込みました。",
           "category": "IoT · スマートホーム",
-          "description": "閉鎖型スマートホーム製品の販売代理を行っていた当時、単一プロトコルとメーカーの固定ロードマップが事業拡張を強く制限していました。そこで戦略的な自立を目指し、Ferqoの0→1プロジェクトを開始。私はエンドツーエンドの製品設計を主導し、オープンなマルチプロトコル基盤を、システムインテグレーターではなく生活者を優先する直感的な体験へ翻訳しました。"
+          "description": "閉鎖型スマートホーム製品の販売代理を行っていた当時、単一プロトコルとメーカーの固定ロードマップが事業拡張を強く制限していました。そこで戦略的な自立を目指し、Ferqoの0→1プロジェクトを開始。私はエンドツーエンドの製品設計を主導し、オープンなマルチプロトコル基盤を、システムインテグレーターではなく生活者を優先する直感的な体験へ翻訳しました。",
+          "cardTitle": "Ferqo：ゼロフリクションのスマートホームエコシステム"
         },
         "insurance": {
           "slug": "insurance",
           "index": "02",
           "title": "オンライン保険デリバリーのモジュール化",
+          "cardTitle": "スケーラブルな保険 SaaS の構築：カスタムサイロからモジュラーエコシステムへ",
           "role": "リードプロダクトデザイナー",
           "timeline": "2024.11–2024.12（1か月）",
           "team": "営業、プロダクト、デザイン、開発",
@@ -3514,7 +4060,7 @@
           "keyAchievement": "調整時間と開発コストをそれぞれ推定約50%削減し、3件以上の進行中エンタープライズ案件へ適用。",
           "cover": "assets/images/original/insuranceHero.png",
           "sourceBoard": "assets/images/original/insuranceArtifact.png",
-          "cardDescription": "単発の顧客デリバリーを、再利用可能で規制対応・ブランド展開に強いモジュール型保険プラットフォームへ変えました。",
+          "cardDescription": "カスタマイズがスケールできない構造的問題を特定。Token 駆動のモジュラーアーキテクチャで、クロスマーケット展開を可能にしました。",
           "category": "Insurtech · B2B SaaS",
           "description": "IXTはAIFTのデジタル保険プラットフォームです。私は一つのモジュールラインを主導し、単発の個別対応を、申請フロー、ブランド適用、顧客コミュニケーションに再利用できる基盤へ変えました。"
         },
@@ -3536,7 +4082,7 @@
           "timeline": "2025年12月〜2026年3月",
           "team": "プロダクト・デザイン・エンジニアリング",
           "scope": "デザインシステム設計、クロスファンクショナル連携、コンポーネントガバナンス",
-          "cardDescription": "共通 Token とコンポーネント設計で Cymetrics と Vulcan を統合し、市場検証の速度を維持。",
+          "cardDescription": "ブランド統一は表面的な課題。その下にあるデザイン負債を掘り出し、4層の Token アーキテクチャとガバナンス体制を構築。小さなチームが大きなチームのように動けるようにしました。",
           "description": "限られたリソースの中でも市場検証の速度を落とさず、Cymetrics と Vulcan を1つのプロダクトファミリーへ収束。イテレーション短縮、デリバリー加速、新市場展開の基盤構築を実現しました。",
           "keyAchievement": "PM–デザインのイテレーションを半減し、1画面あたりの構築を3日から2日へ短縮。",
           "summary": {
@@ -3840,6 +4386,7 @@
           "slug": "alphacamp",
           "index": "04",
           "title": "プログラミング教育プラットフォームの継続戦略：機能提供から深いユーザー接点へ",
+          "cardTitle": "プログラミング教育プラットフォームのリテンション戦略",
           "role": "UXリサーチャー",
           "timeline": "2020.11–2021.01（3か月）",
           "team": "Ricky、Kim、Evy",
@@ -4007,12 +4554,12 @@
           "keyAchievement": "8件以上のサービス提案を定義し、調査知見を年間製品ロードマップへ反映。",
           "cover": "assets/images/original/alphacampHero.jpg",
           "sourceBoard": "assets/images/original/alphacampArtifact.png",
-          "cardDescription": "受講後の継続を、つながり・成長・長期ブランド関係から再定義した3か月のUXリサーチ。",
+          "cardDescription": "UXR で学習者の「孤立感」がチャーンの核心要因であることを発見。取引的な関係からパートナーシップへの転換を戦略ロードマップとして策定しました。",
           "category": "EdTech · サービス戦略",
           "description": "台湾のプログラミング教育プラットフォームALPHAcampでは、受講修了後に学生の関与と継続率が急落する課題がありました。そこで同僚と3か月間のユーザーリサーチ／サービスデザインを実施しました。"
         }
       }
     }
   },
-  "updatedAt": "2026-08-22T02:00:00.000Z"
+  "updatedAt": "2026-09-04T20:40:00.000Z"
 }
