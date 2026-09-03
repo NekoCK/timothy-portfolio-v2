@@ -1,6 +1,6 @@
 # Clean Release Clone — AI / CLI / Desktop Handoff
 
-Last updated: 2026-09-04 06:50 +08:00
+Last updated: 2026-09-04 07:10 +08:00
 
 Read this file before editing, synchronizing, committing, or publishing the portfolio.
 
@@ -280,6 +280,16 @@ The two handoff files are intentionally the first local additions. Keep them ava
 - Created a non-destructive image edit from `assets/images/original/workshop.jpg` using the built-in image generation edit flow. The new `assets/images/original/workshop-no-people.png` preserves the warm workshop, Post-it wall, and organic image frame while removing the person, arms, hands, and clothing.
 - Updated the shared About image reference and the English, Traditional Chinese, and Japanese About image alternative text in both `content/portfolio.json` and the embedded `index.html` fallback. The original `workshop.jpg` is preserved unchanged. Both content timestamps are `2026-09-04T20:40:00.000Z`.
 - Validation and visual review remain required before committing or publishing.
+
+## 2026-09-04 Traditional Chinese About opening refinement
+
+- Removed the opening clause `不管面對什麼產品，我的做法都一樣：` from the Traditional Chinese About body, so the paragraph begins directly with the research-led approach. English and Japanese copy are unchanged.
+- Synchronized `content/portfolio.json` and the embedded fallback in `index.html`; both content timestamps are `2026-09-04T21:00:00.000Z`. Validation and visual review remain required before committing or publishing.
+
+## 2026-09-04 Ferqo decision and architecture visual restoration
+
+- Restored the `impact-effort` and `architecture-map` visual renderers and their responsive styles from the user-designated canonical `../publish-repo` source. The Ferqo 3-1 MVP decision matrix and 3-2 four-layer system-boundary diagram were present in content but invisible because this clean repo renderer had no support for their visual types.
+- Kept the current clean repo’s homepage, contact email, and Ferqo copy intact; only missing renderer support and matching styles were ported. Updated stylesheet and application cache versions to `20260904ad` and `20260904q`.
 
 ## State of the old working copy
 

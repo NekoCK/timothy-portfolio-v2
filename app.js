@@ -286,6 +286,63 @@
         </figure>`;
     }
 
+    if (visual.type === "architecture-map") {
+      return `
+        <figure class="system-visual system-visual--architecture reveal" data-visual-type="architecture-map">
+          ${renderSystemVisualHeader(visual)}
+          <div class="architecture-map">
+            ${(visual.layers || []).map((layer, index) => `
+              ${index ? `<span class="architecture-map__arrow" aria-hidden="true">→</span>` : ""}
+              <article class="architecture-layer">
+                <span>${escapeHtml(layer.eyebrow || String(index + 1).padStart(2, "0"))}</span>
+                <h4>${escapeHtml(layer.title || "")}</h4>
+                ${layer.description ? `<p>${escapeHtml(layer.description)}</p>` : ""}
+                <ul>${(layer.items || []).map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+              </article>`).join("")}
+          </div>
+          ${visual.focus ? `
+            <article class="architecture-focus">
+              <span>${escapeHtml(visual.focus.label || "")}</span>
+              <strong>${escapeHtml(visual.focus.title || "")}</strong>
+              <p>${escapeHtml(visual.focus.text || "")}</p>
+            </article>` : ""}
+          ${visual.note ? `<p class="system-visual__note">${escapeHtml(visual.note)}</p>` : ""}
+        </figure>`;
+    }
+
+    if (visual.type === "impact-effort") {
+      return `
+        <figure class="system-visual system-visual--impact reveal" data-visual-type="impact-effort">
+          ${renderSystemVisualHeader(visual)}
+          <div class="impact-effort">
+            <div class="impact-effort__y-axis" aria-hidden="true">
+              <span>${escapeHtml(visual.yHighLabel || "")}</span>
+              <strong>${escapeHtml(visual.yLabel || "")}</strong>
+              <span>${escapeHtml(visual.yLowLabel || "")}</span>
+            </div>
+            <div class="impact-effort__grid">
+              ${(visual.quadrants || []).map(quadrant => `
+                <article class="impact-quadrant" data-position="${escapeHtml(quadrant.position || "")}" data-tone="${escapeHtml(quadrant.tone || "neutral")}">
+                  <span>${escapeHtml(quadrant.kicker || "")}</span>
+                  <h4>${escapeHtml(quadrant.title || "")}</h4>
+                  ${quadrant.text ? `<p>${escapeHtml(quadrant.text)}</p>` : ""}
+                  ${(quadrant.items || []).length ? `<ul>${quadrant.items.map(item => `
+                    <li>
+                      <strong>${escapeHtml(item.title || "")}</strong>
+                      ${item.text ? `<span>${escapeHtml(item.text)}</span>` : ""}
+                    </li>`).join("")}</ul>` : ""}
+                </article>`).join("")}
+            </div>
+            <div class="impact-effort__x-axis">
+              <span>${escapeHtml(visual.xLowLabel || "")}</span>
+              <strong>${escapeHtml(visual.xLabel || "")}</strong>
+              <span>${escapeHtml(visual.xHighLabel || "")}</span>
+            </div>
+          </div>
+          ${visual.note ? `<p class="system-visual__note">${escapeHtml(visual.note)}</p>` : ""}
+        </figure>`;
+    }
+
     if (visual.type === "flow-comparison") {
       const panels = [visual.before, visual.after].filter(Boolean);
       return `
