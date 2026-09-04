@@ -291,6 +291,22 @@ The two handoff files are intentionally the first local additions. Keep them ava
 - Restored the `impact-effort` and `architecture-map` visual renderers and their responsive styles from the user-designated canonical `../publish-repo` source. The Ferqo 3-1 MVP decision matrix and 3-2 four-layer system-boundary diagram were present in content but invisible because this clean repo renderer had no support for their visual types.
 - Kept the current clean repo’s homepage, contact email, and Ferqo copy intact; only missing renderer support and matching styles were ported. Updated stylesheet and application cache versions to `20260904ad` and `20260904q`.
 
+## 2026-09-05 Traditional Chinese homepage v3 integration
+
+- Reframed the homepage sequence as Method → Selected work → What teams get → Contact. Removed the duplicate Strengths section from the rendered homepage, primary navigation, and homepage structure contract; legacy Strengths copy remains in data only and is not rendered.
+- Updated Traditional Chinese Hero, Method, Selected Work, team-value, and CTA copy. The Method conclusion now credits the team’s ongoing ability to progress, maintain, and evolve the work without implying the designer’s absence. Preserved the Hero’s existing two-line headline.
+- Reordered homepage work chronologically from newest to oldest: OneSleeve, Insurance SaaS, EdTech, Ferqo. Synchronized the visible 01–04 project indexes across English, Traditional Chinese, and Japanese; English and Japanese copy itself was not rewritten.
+- Updated Traditional Chinese project-card copy for the approved editorial direction, while retaining evidence boundaries: Insurance outcomes remain qualified as business feedback and internal comparisons; Ferqo remains clearly described as directional usability evidence rather than market performance.
+- Synchronized `content/portfolio.json` and the embedded `index.html` fallback. Updated both content timestamps to `2026-09-05T00:00:00.000Z` and the application cache version to `20260905a`.
+- Validation passed: `git diff --check`, `node --check app.js`, `node --check admin/app.js`, `jq empty content/portfolio.json`, exact served/fallback JSON comparison, and project-order/index assertions for every locale. Visual desktop and mobile review remains the next safe action before commit or publication.
+
+## 2026-09-05 Homepage copy v3 locale alignment
+
+- Recorded the user-approved Traditional Chinese homepage copy as `docs/homepage-copy-v3-zh-Hant.md`. It is the editorial source of truth for the current homepage direction.
+- Rewrote the English and Japanese Homepage Hero, Method, Selected Work, team-value, and CTA content from that source, maintaining the same Method → Work → Team value → Contact structure. The translations are editorial rather than literal, while retaining the same claims and tone.
+- Aligned English and Japanese homepage card summaries and key achievements with the revised Traditional Chinese wording. Insurance remains qualified as sales feedback and internal project comparison; Ferqo remains directional usability evidence rather than market performance. Corrected the Traditional Chinese Ferqo card to retain the source-qualified approximately 40-to-80 SUS range.
+- Synchronized `content/portfolio.json` and the embedded fallback; both timestamps are `2026-09-05T01:00:00.000Z`. Validation passed: `git diff --check`, `node --check app.js`, `node --check admin/app.js`, `jq empty content/portfolio.json`, and exact served/fallback JSON comparison. Desktop and mobile visual review remains required before committing or publishing.
+
 ## State of the old working copy
 
 At backup time, the old working copy was on `codex/insurance-heading-unification` at `25817e8d6c0419c0c6f964a5bcd6bc05c78a98ec`. Relative to the locally recorded `origin/main`, it was ahead 4 and behind 8.

@@ -90,7 +90,6 @@
     document.querySelector("[data-header-skip]").textContent = site.skip;
     document.querySelector("[data-nav-work]").textContent = site.nav.work;
     document.querySelector("[data-nav-about]").textContent = site.nav.about;
-    document.querySelector("[data-nav-strengths]").textContent = site.nav.strengths;
     document.querySelector("[data-nav-contact]").textContent = site.nav.contact;
     document.querySelector("[data-menu-label]").textContent = site.nav.menu;
     document.querySelector("[data-locale-switcher]").setAttribute("aria-label", site.localeLabel);
@@ -195,15 +194,6 @@
           <div class="shell">
             <header class="section-header reveal"><div><span class="eyebrow">${escapeHtml(home.work.eyebrow)}</span><h2>${formatHeading(home.work.title)}</h2></div><p>${escapeHtml(home.work.body)}</p></header>
             <div class="project-grid">${projectOrder().map(slug => projectCard(projects[slug])).join("")}</div>
-          </div>
-        </section>
-
-        <section class="section section-divider" id="strengths" data-section="strengths">
-          <div class="shell">
-            <header class="section-header reveal"><div><span class="eyebrow">${escapeHtml(home.strengths.eyebrow)}</span><h2>${formatHeading(home.strengths.title)}</h2></div><p>${escapeHtml(home.strengths.body)}</p></header>
-            <div class="strength-grid">
-              ${home.strengths.items.map((item, index) => `<article class="strength-card reveal" style="--strength-color:${["#8fa08c", "#7d96ad", "#c96345"][index]}"><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.body)}</p></article>`).join("")}
-            </div>
           </div>
         </section>
 
