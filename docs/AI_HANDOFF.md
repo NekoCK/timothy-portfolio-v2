@@ -307,6 +307,18 @@ The two handoff files are intentionally the first local additions. Keep them ava
 - Aligned English and Japanese homepage card summaries and key achievements with the revised Traditional Chinese wording. Insurance remains qualified as sales feedback and internal project comparison; Ferqo remains directional usability evidence rather than market performance. Corrected the Traditional Chinese Ferqo card to retain the source-qualified approximately 40-to-80 SUS range.
 - Synchronized `content/portfolio.json` and the embedded fallback; both timestamps are `2026-09-05T01:00:00.000Z`. Validation passed: `git diff --check`, `node --check app.js`, `node --check admin/app.js`, `jq empty content/portfolio.json`, and exact served/fallback JSON comparison. Desktop and mobile visual review remains required before committing or publishing.
 
+## 2026-09-06 Traditional Chinese homepage v4 refinements
+
+- Applied the approved Traditional Chinese v4 editorial refinements only: clarified OneSleeve’s specific PM-and-design iteration outcome, changed the EdTech card to the supplied UXR wording and `8+` notation, and adjusted the team-value decision-speed sentence. The revised Chinese copy contains no em dash.
+- Kept the Insurance outcome’s sales-feedback and internal-comparison qualifier, and Ferqo’s directional-usability rather than market-performance qualifier. English and Japanese copy remain unchanged in this pass.
+- Synchronized `content/portfolio.json`, the embedded fallback, and the Traditional Chinese copy reference. Both content timestamps are `2026-09-06T00:00:00.000Z`. Run standard validation and visual review before committing or publishing.
+
+## 2026-09-07 English and Japanese homepage v4 integration
+
+- Applied the approved English v4 homepage copy: My Process label, revised Method and team-value language, updated CTA, and precise OneSleeve iteration wording. Insurance retains its sales-feedback and internal-project-comparison qualifier; Ferqo retains approximate figures and its directional-usability evidence boundary.
+- Applied the approved Japanese v4 homepage copy across Hero, Method, Work, team value, CTA, and project cards. Japanese case-card narration uses a consistent plain style; CTA remains politely phrased. Refined the Ferqo boundary to state that its evidence does not establish market results.
+- Synchronized `content/portfolio.json` and the embedded fallback. Both content timestamps are `2026-09-07T00:00:00.000Z`. Run standard validation and visual review before committing or publishing.
+
 ## State of the old working copy
 
 At backup time, the old working copy was on `codex/insurance-heading-unification` at `25817e8d6c0419c0c6f964a5bcd6bc05c78a98ec`. Relative to the locally recorded `origin/main`, it was ahead 4 and behind 8.
