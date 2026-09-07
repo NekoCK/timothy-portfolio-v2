@@ -447,7 +447,7 @@
                   "media": [
                     {
                       "asset": "assets/images/original/ferqoExplain3.png",
-                      "layout": "compact",
+                      "layout": "wide",
                       "caption": "Widgets bring frequent scenarios to the lock screen.",
                       "alt": "Ferqo scenario widgets"
                     },
@@ -1995,7 +1995,7 @@
                   "media": [
                     {
                       "asset": "assets/images/original/ferqoExplain3.png",
-                      "layout": "compact",
+                      "layout": "wide",
                       "caption": "Widget 把高頻情境帶到鎖定畫面。",
                       "alt": "Ferqo 情境 Widget"
                     },
@@ -3556,7 +3556,7 @@
                   "media": [
                     {
                       "asset": "assets/images/original/ferqoExplain3.png",
-                      "layout": "compact",
+                      "layout": "wide",
                       "caption": "頻繁なシナリオをロック画面のWidgetへ。",
                       "alt": "FerqoのシナリオWidget"
                     },
@@ -4663,5 +4663,5 @@
       }
     }
   },
-  "updatedAt": "2026-09-08T06:00:00.000Z"
+  "updatedAt": "2026-09-08T07:00:00.000Z"
 }

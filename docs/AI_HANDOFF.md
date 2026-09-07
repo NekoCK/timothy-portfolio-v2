@@ -388,6 +388,11 @@ The two handoff files are intentionally the first local additions. Keep them ava
 - Changed the Ferqo Widget visual in subsection 4-3 from a half-column layout to the centered compact layout in all three locales. Its 16:10 source had no paired image, which left a misleading empty half-column and made the lock-screen UI too small to inspect.
 - The source image, caption, and all copy are unchanged. Synchronized `content/portfolio.json` and the embedded fallback at `2026-09-08T06:00:00.000Z`; review the compact image size on desktop and mobile before release.
 
+## 2026-09-08 Ferqo 4-3 media width alignment
+
+- Changed the Ferqo Widget visual from centered compact to full-width so both visuals in subsection 4-3 now use the same width. The asset, captions, and copy remain unchanged in all three locales.
+- Synchronized `content/portfolio.json` and the embedded fallback at `2026-09-08T07:00:00.000Z`; verify the two full-width visuals' vertical rhythm before release.
+
 ## State of the old working copy
 
 At backup time, the old working copy was on `codex/insurance-heading-unification` at `25817e8d6c0419c0c6f964a5bcd6bc05c78a98ec`. Relative to the locally recorded `origin/main`, it was ahead 4 and behind 8.
