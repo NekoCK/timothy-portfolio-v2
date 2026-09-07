@@ -319,6 +319,16 @@ The two handoff files are intentionally the first local additions. Keep them ava
 - Applied the approved Japanese v4 homepage copy across Hero, Method, Work, team value, CTA, and project cards. Japanese case-card narration uses a consistent plain style; CTA remains politely phrased. Refined the Ferqo boundary to state that its evidence does not establish market results.
 - Synchronized `content/portfolio.json` and the embedded fallback. Both content timestamps are `2026-09-07T00:00:00.000Z`. Run standard validation and visual review before committing or publishing.
 
+## 2026-09-07 OneSleeve outcome wording
+
+- Replaced the opaque OneSleeve outcome value `替換變數` with the user-approved benefit `不用從零開始`. Its accompanying label explains the mechanism: new product lines can swap brand variables and build directly on the existing system. English and Japanese outcome copy was aligned to the same meaning.
+- Synchronized `content/portfolio.json` and the embedded fallback; both timestamps are `2026-09-07T02:00:00.000Z`. Run standard validation and visual review before committing or publishing.
+
+## 2026-09-07 Ferqo outcome wording
+
+- Replaced the ambiguous Ferqo outcome value `已驗證` with `方向性驗證`. The label now clearly states that the room- and scenario-centric experience direction was validated, while the product did not launch. English and Japanese outcome wording was aligned to the same evidence boundary.
+- Synchronized `content/portfolio.json` and the embedded fallback; both timestamps are `2026-09-07T03:00:00.000Z`. Run standard validation and visual review before committing or publishing.
+
 ## State of the old working copy
 
 At backup time, the old working copy was on `codex/insurance-heading-unification` at `25817e8d6c0419c0c6f964a5bcd6bc05c78a98ec`. Relative to the locally recorded `origin/main`, it was ahead 4 and behind 8.

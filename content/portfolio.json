@@ -531,8 +531,8 @@
               "label": "SUS score in a separate comparison-test sample"
             },
             {
-              "value": "Validated",
-              "label": "Room- and scenario-centric direction; product did not launch"
+              "value": "Directional validation",
+              "label": "Room- and scenario-centric experience direction was validated; the product did not launch"
             }
           ],
           "name": "Ferqo — Orchestrating a Zero-Friction Smart Home Ecosystem",
@@ -1348,8 +1348,8 @@
               "label": "per-screen build time"
             },
             {
-              "value": "Swap variables",
-              "label": "start a new product line without rebuilding"
+              "value": "Start without rebuilding",
+              "label": "new product lines can swap brand variables and build directly on the existing system"
             }
           ]
         },
@@ -2045,8 +2045,8 @@
               "label": "另一批比較測試樣本的 SUS 易用性分數"
             },
             {
-              "value": "已驗證",
-              "label": "房間與情境導向方向；產品未上線"
+              "value": "方向性驗證",
+              "label": "房間與情境導向的體驗方向獲得驗證；產品未上線。"
             }
           ],
           "name": "Ferqo——打造零摩擦智慧家庭生態系",
@@ -2863,8 +2863,8 @@
               "label": "單畫面建置時間"
             },
             {
-              "value": "替換變數",
-              "label": "新產品線不必從零重建"
+              "value": "不用從零開始",
+              "label": "新產品線可替換品牌變數，直接建立在既有系統上。"
             }
           ]
         },
@@ -3560,8 +3560,8 @@
               "label": "別サンプルによる比較テストのSUS"
             },
             {
-              "value": "検証済み",
-              "label": "部屋・シナリオ中心の方向性。製品は未ローンチ"
+              "value": "方向性を検証",
+              "label": "部屋・シナリオ中心の体験方針を検証。製品は未ローンチ。"
             }
           ],
           "name": "Ferqo — 摩擦のないスマートホーム・エコシステムの構築",
@@ -4377,8 +4377,8 @@
               "label": "1画面あたりの構築時間"
             },
             {
-              "value": "変数を差し替え",
-              "label": "新製品をゼロから再構築しない"
+              "value": "ゼロから始めない",
+              "label": "新製品ラインはブランド変数を差し替え、既存システムを土台に直接立ち上げられる"
             }
           ]
         },
@@ -4561,5 +4561,5 @@
       }
     }
   },
-  "updatedAt": "2026-09-07T00:00:00.000Z"
+  "updatedAt": "2026-09-07T03:00:00.000Z"
 }
