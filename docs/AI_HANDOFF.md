@@ -383,6 +383,11 @@ The two handoff files are intentionally the first local additions. Keep them ava
 - Replaced the inline middle-dot separator between every case-study project name and subtitle in the snapshot heading with two deliberate type levels. This fixes the awkward Insurance SaaS title/subtitle punctuation and prevents the browser from balancing both phrases as one line.
 - Snapshot headings now use `text-wrap: pretty`; project names remain intact while subtitles wrap naturally only when the viewport requires it. Updated the stylesheet and application cache versions to `20260908d` and `20260908b`.
 
+## 2026-09-08 Ferqo Widget visual scale
+
+- Changed the Ferqo Widget visual in subsection 4-3 from a half-column layout to the centered compact layout in all three locales. Its 16:10 source had no paired image, which left a misleading empty half-column and made the lock-screen UI too small to inspect.
+- The source image, caption, and all copy are unchanged. Synchronized `content/portfolio.json` and the embedded fallback at `2026-09-08T06:00:00.000Z`; review the compact image size on desktop and mobile before release.
+
 ## State of the old working copy
 
 At backup time, the old working copy was on `codex/insurance-heading-unification` at `25817e8d6c0419c0c6f964a5bcd6bc05c78a98ec`. Relative to the locally recorded `origin/main`, it was ahead 4 and behind 8.
