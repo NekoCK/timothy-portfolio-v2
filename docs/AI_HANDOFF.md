@@ -393,6 +393,11 @@ The two handoff files are intentionally the first local additions. Keep them ava
 - Changed the Ferqo Widget visual from centered compact to full-width so both visuals in subsection 4-3 now use the same width. The asset, captions, and copy remain unchanged in all three locales.
 - Synchronized `content/portfolio.json` and the embedded fallback at `2026-09-08T07:00:00.000Z`; verify the two full-width visuals' vertical rhythm before release.
 
+## 2026-09-08 Homepage Hero subtitle wrapping
+
+- Changed only the homepage Hero subtitle from the global `pretty` wrapping behavior to `balance`, so desktop subtitle lines distribute more evenly across Traditional Chinese, English, and Japanese. Copy, size, and responsive width remain unchanged; mobile can still wrap naturally.
+- Updated the stylesheet cache version to `20260908e`. Review all three homepage Hero subtitles at desktop and mobile widths before release.
+
 ## State of the old working copy
 
 At backup time, the old working copy was on `codex/insurance-heading-unification` at `25817e8d6c0419c0c6f964a5bcd6bc05c78a98ec`. Relative to the locally recorded `origin/main`, it was ahead 4 and behind 8.
