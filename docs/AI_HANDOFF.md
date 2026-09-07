@@ -403,6 +403,12 @@ The two handoff files are intentionally the first local additions. Keep them ava
 - Added one explicit desktop-only line break after `問題，` in the Traditional Chinese Hero subtitle, keeping the punctuation at the end of the first semantic line rather than leaving following text on that line. The mobile breakpoint suppresses this forced break and preserves natural responsive wrapping.
 - Added the narrowly scoped `formatHeroBody` renderer for safe line-break handling, synchronized `content/portfolio.json` with the embedded fallback at `2026-09-08T08:00:00.000Z`, and updated stylesheet/application cache versions to `20260908f` and `20260908c`.
 
+## 2026-09-08 Case-page transition trial
+
+- Added an intentionally restrained View Transitions API treatment for selected project cards and case pages. The selected card cover and matching case cover share a per-project transition name, while the route root uses a 220–360ms soft fade. The same path applies when a related case is selected or when returning to the work section.
+- Case routes now use `history.pushState` plus the existing renderer when a supported browser initiates the navigation, preserving URLs and browser history. Hash navigation, unsupported browsers, and reduced-motion preferences retain the existing immediate behavior.
+- Updated stylesheet/application cache versions to `20260908g` and `20260908d`. Visual QA remains required in a View Transitions-capable desktop browser, including all project links, back-to-work, and browser back/forward behavior.
+
 ## State of the old working copy
 
 At backup time, the old working copy was on `codex/insurance-heading-unification` at `25817e8d6c0419c0c6f964a5bcd6bc05c78a98ec`. Relative to the locally recorded `origin/main`, it was ahead 4 and behind 8.

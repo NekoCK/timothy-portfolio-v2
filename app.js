@@ -87,6 +87,25 @@
     return `#case/${slug}`;
   }
 
+  function projectCoverTransitionName(slug) {
+    return `project-cover-${slug}`;
+  }
+
+  function canUsePageTransition() {
+    return typeof document.startViewTransition === "function"
+      && !matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+
+  function navigateWithTransition(hash, homeTarget = null) {
+    const update = () => {
+      if (homeTarget) state.pendingHomeTarget = homeTarget;
+      history.pushState(null, "", hash);
+      render();
+    };
+    if (canUsePageTransition()) document.startViewTransition(update);
+    else update();
+  }
+
   function updateHeader() {
     const { site } = localeContent();
     document.documentElement.lang = state.locale;
@@ -110,7 +129,7 @@
     return `
       <a class="project-card reveal" style="--card-accent:${escapeHtml(project.accent)}" href="${projectHref(project.slug)}" data-project-link="${escapeHtml(project.slug)}">
         <div class="project-card__media">
-          <img src="${escapeHtml(project.cover)}" alt="${escapeHtml(`${cardTitle} — ${project.subtitle}`)}" loading="lazy">
+          <img src="${escapeHtml(project.cover)}" alt="${escapeHtml(`${cardTitle} — ${project.subtitle}`)}" loading="lazy" style="view-transition-name:${escapeHtml(projectCoverTransitionName(project.slug))}">
           <span class="project-card__index">${escapeHtml(project.index)}</span>
         </div>
         <div class="project-card__body">
@@ -440,7 +459,7 @@
           <div class="related-grid">
             ${projectOrder().filter(slug => slug !== currentSlug).map(slug => {
               const project = projects[slug];
-              return `<a class="related-card reveal" href="${projectHref(slug)}" data-project-link="${escapeHtml(slug)}"><img src="${escapeHtml(project.cover)}" alt="${escapeHtml(`${project.name} — ${project.subtitle}`)}" loading="lazy"><div class="related-card__body"><span>${escapeHtml(project.category)} · ${escapeHtml(project.year)}</span><h3>${escapeHtml(project.name)}</h3><p>${escapeHtml(project.subtitle)}</p></div></a>`;
+              return `<a class="related-card reveal" href="${projectHref(slug)}" data-project-link="${escapeHtml(slug)}"><img src="${escapeHtml(project.cover)}" alt="${escapeHtml(`${project.name} — ${project.subtitle}`)}" loading="lazy" style="view-transition-name:${escapeHtml(projectCoverTransitionName(project.slug))}"><div class="related-card__body"><span>${escapeHtml(project.category)} · ${escapeHtml(project.year)}</span><h3>${escapeHtml(project.name)}</h3><p>${escapeHtml(project.subtitle)}</p></div></a>`;
             }).join("")}
           </div>
         </div>
@@ -484,7 +503,7 @@
                 <div class="case-meta">${meta.map(([label, value]) => `<div class="case-meta__item"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`).join("")}</div>
               </div>
               <figure class="case-cover" data-zoom-src="${escapeHtml(project.cover)}" data-zoom-caption="${escapeHtml(`${project.name} — ${project.subtitle}`)}" tabindex="0" role="button" aria-label="${escapeHtml(ui.openImage)}">
-                <img src="${escapeHtml(project.cover)}" alt="${escapeHtml(`${project.name} — ${project.subtitle}`)}">
+                <img src="${escapeHtml(project.cover)}" alt="${escapeHtml(`${project.name} — ${project.subtitle}`)}" style="view-transition-name:${escapeHtml(projectCoverTransitionName(project.slug))}">
                 <span class="case-cover__index">${escapeHtml(project.index)}</span>
               </figure>
             </div>
@@ -617,10 +636,16 @@
       const target = homeLink.dataset.homeTarget;
       if (currentRoute().type === "home") scrollToHomeTarget(target);
       else {
-        state.pendingHomeTarget = target;
-        location.hash = "#home";
+        navigateWithTransition("#home", target);
       }
       closeMenu();
+      return;
+    }
+
+    const projectLink = event.target.closest("[data-project-link]");
+    if (projectLink) {
+      event.preventDefault();
+      navigateWithTransition(projectHref(projectLink.dataset.projectLink));
       return;
     }
 
