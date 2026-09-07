@@ -350,6 +350,28 @@ The two handoff files are intentionally the first local additions. Keep them ava
 - Preserved the dual Standard/Contextual naming rule, kept stakeholder claims aligned with the evidence-qualified English version, and moved the shared Workspace image into the Pattern Sync subsection. The third outcome is now the approximately 80% existing-screen-needs coverage result.
 - Removed em dashes from the updated Japanese OneSleeve content. Synchronized `content/portfolio.json` and the embedded fallback at `2026-09-08T02:00:00.000Z`; three locale narratives now share the same section and outcome structure.
 
+## 2026-09-08 OneSleeve heading-wrap refinement
+
+- Disabled balanced heading wrapping only inside the OneSleeve case page. Its longer Chinese, English, and Japanese section, subsection, and option-card headings now follow natural reading order with `text-wrap: pretty`, preventing semantically awkward balanced fragments.
+- Updated the stylesheet cache version to `20260908b`. A visual review across desktop and mobile widths remains the next safe action before publishing this CSS-only refinement.
+
+## 2026-09-08 Strategy-card tag alignment
+
+- Made insight cards flex columns and anchored their tag groups to the bottom edge. The three OneSleeve strategy options now keep equal tag placement and spacing even when their titles and explanations have different lengths.
+- Updated the stylesheet cache version to `20260908c`. Run a desktop and mobile visual review before publishing this CSS-only refinement.
+
+## 2026-09-08 OneSleeve comparison visual
+
+- Added the user-supplied `assets/images/original/Compare.png` as the wide, zoomable example visual in OneSleeve subsection 4-3 for all three locales. It documents how shared components and Token mappings connect the dark and light product interfaces.
+- Preserved the original 6320×1528 asset without generative editing, so interface text and component mappings remain accurate. The asset is intentionally wide and should be visually reviewed at desktop and mobile widths before release.
+- Synchronized `content/portfolio.json` and the embedded fallback at `2026-09-08T03:00:00.000Z`.
+
+## 2026-09-08 OneSleeve RTL visual and subsection numbering
+
+- Corrected the component-workflow subsection titles from 4-1 through 4-3 to 5-1 through 5-3 in all three OneSleeve locales.
+- Added the user-supplied `assets/images/original/RTL.png` as the wide, zoomable visual under 5-3 in each locale, documenting bidirectional behavior within the shared component structure.
+- Synchronized `content/portfolio.json` and the embedded fallback at `2026-09-08T04:00:00.000Z`. The new user-supplied asset remains untracked until an explicitly requested release commit.
+
 ## State of the old working copy
 
 At backup time, the old working copy was on `codex/insurance-heading-unification` at `25817e8d6c0419c0c6f964a5bcd6bc05c78a98ec`. Relative to the locally recorded `origin/main`, it was ahead 4 and behind 8.

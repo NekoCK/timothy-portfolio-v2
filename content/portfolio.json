@@ -1200,7 +1200,15 @@
                     "Scope-specific and edge cases use the Contextual format: {Scope}–{Component}–{Property}–{State}.",
                     "Common defaults are omitted for brevity; scope is introduced only when a boundary needs to be explicit. The result remains searchable and predictable as complexity grows."
                   ],
-                  "media": []
+                  "media": [
+                    {
+                      "asset": "assets/images/original/Compare.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "Compare: a shared structure mapped across dark and light product interfaces.",
+                      "alt": "A comparison of dark and light product interfaces connected through shared component and token mappings."
+                    }
+                  ]
                 },
                 {
                   "title": "4-4. Same structure, different palette",
@@ -1238,7 +1246,7 @@
               ],
               "subsections": [
                 {
-                  "title": "4-1. A clean Master, flexible Children",
+                  "title": "5-1. A clean Master, flexible Children",
                   "body": [
                     "Different products need different components; one library cannot cover every case. Universal components live in a protected Master Library shared by all products, while product-specific components remain in their own Child Libraries.",
                     "For example, Vulcan Attack needed a dark-background scan-status card. Editing the Master Card directly would break Cymetrics' light-themed interface. In the Child Library, that customization affected only Vulcan Attack; the Master Card stayed untouched.",
@@ -1255,7 +1263,7 @@
                   ]
                 },
                 {
-                  "title": "4-2. Change once, miss nothing",
+                  "title": "5-2. Change once, miss nothing",
                   "body": [
                     "In real collaboration, designers are not the only people changing screens. PMs and engineers also make ad-hoc edits for demos and implementation. Without a single source, changes are easily applied to one screen and missed everywhere else.",
                     "We split each product page into two areas: Patterns assembled from Components on the left, and UI Flows organized by User Story on the right. Every screen is composed from the Patterns. Changes happen on the left; the related flows synchronize automatically.",
@@ -1279,12 +1287,20 @@
                   ]
                 },
                 {
-                  "title": "4-3. RTL built in from day one",
+                  "title": "5-3. RTL built in from day one",
                   "body": [
                     "Previously, RTL was treated as an afterthought. Designers manually rebuilt screens, while engineers relied on fragile LTR-to-RTL conversion logic.",
                     "The new core components embedded bidirectional behavior from the beginning and mapped it to CSS Logical Properties. Figma could switch reading direction quickly, while the front end no longer needed screen-by-screen overrides."
                   ],
-                  "media": []
+                  "media": [
+                    {
+                      "asset": "assets/images/original/RTL.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "RTL: bidirectional behavior is built into the shared component structure from the start.",
+                      "alt": "A comparison showing shared components in left-to-right and right-to-left layouts."
+                    }
+                  ]
                 }
               ],
               "points": [],
@@ -2745,7 +2761,15 @@
                     "範圍限定或邊界情境使用 Contextual 格式：{Scope}–{Component}–{Property}–{State}。",
                     "常見的 default 會被省略，需要指出情境邊界時才加入 Scope，讓命名在規模擴大後仍然可預測、可搜尋。"
                   ],
-                  "media": []
+                  "media": [
+                    {
+                      "asset": "assets/images/original/Compare.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "Compare：同一套共用結構在深淺產品介面中的對照。",
+                      "alt": "深色與淺色產品介面透過共用元件與 Token 對照連結的示意圖。"
+                    }
+                  ]
                 },
                 {
                   "title": "4-4. 同一結構，不同色盤",
@@ -2783,7 +2807,7 @@
               ],
               "subsections": [
                 {
-                  "title": "4-1. 乾淨的 Master，彈性的 Children",
+                  "title": "5-1. 乾淨的 Master，彈性的 Children",
                   "body": [
                     "不同產品需要不同元件，單一 Library 無法涵蓋所有情境。通用元件放在受保護的 Master Library，由所有產品共用；產品特有元件則留在各自的 Child Library。",
                     "例如 Vulcan Attack 需要深色背景的掃描狀態卡片。如果直接改 Master 的 Card，Cymetrics 的淺色介面就會壞掉。放在 Child Library，客製只影響 Vulcan Attack，Master Card 不動。",
@@ -2800,7 +2824,7 @@
                   ]
                 },
                 {
-                  "title": "4-2. 改一次，不漏任何畫面",
+                  "title": "5-2. 改一次，不漏任何畫面",
                   "body": [
                     "實際協作中，調整畫面的人不只有設計師，PM 與工程師也會因應 Demo 或開發需求進行臨時修改。若沒有單一來源，改動很容易只完成一半，其他畫面則逐漸失去一致性。",
                     "我們把產品頁面拆成兩個區域：左側是由 Component 組成的 Pattern，右側是依 User Story 排列的 UI Flow。所有畫面都由 Pattern 組裝，修改只發生在左側，右側同步更新。",
@@ -2824,12 +2848,20 @@
                   ]
                 },
                 {
-                  "title": "4-3. 從第一天就納入 RTL",
+                  "title": "5-3. 從第一天就納入 RTL",
                   "body": [
                     "過去 RTL 是事後補丁，設計師需要手動重建畫面，工程師則依靠脆弱的 LTR／RTL 轉換邏輯。",
                     "新的核心元件從一開始就納入雙向邏輯，並對應 CSS Logical Properties。Figma 能快速切換閱讀方向，前端也不必再針對每個畫面重寫覆蓋規則。"
                   ],
-                  "media": []
+                  "media": [
+                    {
+                      "asset": "assets/images/original/RTL.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "RTL：從一開始就將雙向邏輯納入共用元件架構。",
+                      "alt": "展示共用元件在左至右與右至左版面中的對照圖。"
+                    }
+                  ]
                 }
               ],
               "points": [],
@@ -4265,7 +4297,15 @@
                     "スコープ固有・例外的なケースは Contextual：{Scope}–{Component}–{Property}–{State}。",
                     "一般的な default は省略し、境界が必要な場合だけ Scope を追加します。"
                   ],
-                  "media": []
+                  "media": [
+                    {
+                      "asset": "assets/images/original/Compare.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "Compare：共用構造をダークとライトのプロダクト画面へ対応付けた比較。",
+                      "alt": "共用コンポーネントと Token の対応でつながるダークとライトのプロダクト画面の比較図。"
+                    }
+                  ]
                 },
                 {
                   "title": "4-4. 同じ構造、異なるパレット",
@@ -4303,7 +4343,7 @@
               ],
               "subsections": [
                 {
-                  "title": "4-1. クリーンな Master、柔軟な Children",
+                  "title": "5-1. クリーンな Master、柔軟な Children",
                   "body": [
                     "共通コンポーネントは保護された Master Library に配置し、製品固有のコンポーネントは各 Child Library に分離しました。",
                     "たとえば Vulcan Attack にはダークバックグラウンドのスキャンステータスカードが必要でした。Master の Card を直接編集すると Cymetrics のライトテーマが壊れます。Child Library に配置することで、カスタマイズは Vulcan Attack のみに影響し、Master Card は変更されません。",
@@ -4320,7 +4360,7 @@
                   ]
                 },
                 {
-                  "title": "4-2. 一度変更し、更新漏れをなくす",
+                  "title": "5-2. 一度変更し、更新漏れをなくす",
                   "body": [
                     "画面を変更するのはデザイナーだけではなく、PM やエンジニアもデモや実装に合わせて変更します。単一のソースがなければ、他の画面が取り残されます。",
                     "各ページを左側の Pattern と右側の UI Flow に分け、すべての画面を Pattern から組み立てました。変更は左側で行い、関連する UI Flow は同期されます。",
@@ -4344,12 +4384,20 @@
                   ]
                 },
                 {
-                  "title": "4-3. RTL を最初から組み込む",
+                  "title": "5-3. RTL を最初から組み込む",
                   "body": [
                     "以前の RTL 対応は後付けで、デザイナーが画面を手作業で再構築し、エンジニアは不安定な LTR／RTL 変換ロジックに依存していました。",
                     "新しいコアコンポーネントには最初から双方向の振る舞いを組み込み、CSS Logical Properties に対応。Figma では読み方向を素早く切り替え、フロントエンドでも画面ごとの上書きを不要にしました。"
                   ],
-                  "media": []
+                  "media": [
+                    {
+                      "asset": "assets/images/original/RTL.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "RTL：共有コンポーネント構造に双方向の振る舞いを最初から組み込む。",
+                      "alt": "共用コンポーネントを左から右と右から左のレイアウトで比較した図。"
+                    }
+                  ]
                 }
               ],
               "points": [],
@@ -4615,5 +4663,5 @@
       }
     }
   },
-  "updatedAt": "2026-09-08T02:00:00.000Z"
+  "updatedAt": "2026-09-08T04:00:00.000Z"
 }
