@@ -1,6 +1,6 @@
 # Clean Release Clone — AI / CLI / Desktop Handoff
 
-Last updated: 2026-09-04 07:10 +08:00
+Last updated: 2026-09-08 00:00 +08:00
 
 Read this file before editing, synchronizing, committing, or publishing the portfolio.
 
@@ -328,6 +328,27 @@ The two handoff files are intentionally the first local additions. Keep them ava
 
 - Replaced the ambiguous Ferqo outcome value `已驗證` with `方向性驗證`. The label now clearly states that the room- and scenario-centric experience direction was validated, while the product did not launch. English and Japanese outcome wording was aligned to the same evidence boundary.
 - Synchronized `content/portfolio.json` and the embedded fallback; both timestamps are `2026-09-07T03:00:00.000Z`. Run standard validation and visual review before committing or publishing.
+
+## 2026-09-08 Traditional Chinese OneSleeve case-study restructuring
+
+- Reworked the Traditional Chinese OneSleeve case narrative around problem reframing, team needs, option-based strategy selection, architecture, production workflow, adoption, and results. Added a four-criterion decision frame and restrained rejected/selected states with trade-off tags for the three strategy options.
+- Moved `onesleeveResult1.png` from the final result gallery to the Pattern Sync subsection, immediately after `onesleeveCooperation.png`, where it documents the shared Workspace, components, states, and Patterns.
+- Replaced the third Traditional Chinese OneSleeve outcome with the user-supplied approximately 80% shared component-and-Pattern coverage result. The section now records that iteration and build-time figures are internal measurements and coverage is a post-system inventory result.
+- Added generic, data-driven case-point status and tag rendering in `app.js` plus restrained matching styles. The Traditional Chinese content and embedded fallback are synchronized at `2026-09-08T00:00:00.000Z`; stylesheet and application cache versions are both `20260908a`.
+- Validation passed: `git diff --check`, `node --check app.js`, `node --check admin/app.js`, `jq empty content/portfolio.json`, exact served/fallback JSON comparison, option-status assertions, and Workspace-placement assertions. English and Japanese OneSleeve narrative copy intentionally remains pending translation and editorial review; do not publish this as a fully aligned three-locale release until that work is complete.
+
+## 2026-09-08 English OneSleeve case-study integration
+
+- Applied the English OneSleeve narrative to match the new Chinese case-study structure: problem reframing, team needs, four decision criteria, three marked strategy options, architecture, production workflow, adoption, and results.
+- Kept the dual Standard/Contextual naming logic in the technical subsections. Reworded the PM adoption claim to supported selected screen adjustments rather than unsupported full prototyping autonomy, and softened the naming-system result into a shared implementation and maintenance basis.
+- Replaced the English third outcome with approximately 80% of existing screen needs supported by shared components and Patterns. Removed em dashes from the English OneSleeve content updated in this pass.
+- Synchronized `content/portfolio.json` and the embedded fallback at `2026-09-08T01:00:00.000Z`. Japanese OneSleeve content remains pending translation and editorial review; do not publish as a fully aligned three-locale release until it is updated.
+
+## 2026-09-08 Japanese OneSleeve case-study integration
+
+- Applied the Japanese OneSleeve narrative to the same seven-section structure now used by Traditional Chinese and English. Replaced direct-translation phrasing with natural product-design Japanese, including `プロダクトをつくり、届ける仕組み`, `開発・提供の効率`, and `統合と整理`.
+- Preserved the dual Standard/Contextual naming rule, kept stakeholder claims aligned with the evidence-qualified English version, and moved the shared Workspace image into the Pattern Sync subsection. The third outcome is now the approximately 80% existing-screen-needs coverage result.
+- Removed em dashes from the updated Japanese OneSleeve content. Synchronized `content/portfolio.json` and the embedded fallback at `2026-09-08T02:00:00.000Z`; three locale narratives now share the same section and outcome structure.
 
 ## State of the old working copy
 

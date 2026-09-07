@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260904ad">
+  <link rel="stylesheet" href="styles.css?v=20260908a">
 </head>
 <body>
   <a class="skip-link" href="#app" data-header-skip>Skip to content</a>
@@ -1118,37 +1118,25 @@
           "team": "Product, Design & Engineering",
           "scope": "Design system architecture, cross-functional collaboration, component governance",
           "cardDescription": "Brand unification was the surface ask. Uncovered the design debt underneath and built a four-layer token architecture with governance, letting a small team move like a big one.",
-          "description": "Converging Cymetrics and Vulcan into one product family inside a resource-constrained startup — shortening iteration cycles, accelerating delivery, and building a foundation for new markets.",
+          "description": "Converging Cymetrics and Vulcan into one product family inside a resource-constrained startup, shortening iteration cycles, accelerating delivery, and building a foundation for new markets.",
           "keyAchievement": "One system cut the iteration cycle between PM and design in half and reduced per-screen build time from three days to two.",
           "summary": {
-            "goal": "Build one shared design system for two cybersecurity products — accelerating delivery and enabling scale without slowing market validation.",
-            "challenge": "Brand fragmentation, design and engineering debt, and multi-market requirements — all inside a resource-constrained startup expected to remain demo-ready.",
-            "outcome": "PM–Design iteration dropped from two weeks to one; per-screen build time dropped from three days to two; and new product lines could start by swapping brand variables instead of rebuilding from scratch."
+            "goal": "Build one shared design system for two cybersecurity products, accelerating delivery and enabling scale without slowing market validation.",
+            "challenge": "Brand fragmentation, design and engineering debt, and multi-market requirements inside a resource-constrained startup expected to remain demo-ready.",
+            "outcome": "PM and Design iteration dropped from two weeks to one; per-screen build time dropped from three days to two; and shared components and Patterns supported approximately 80% of existing screen needs."
           },
           "sections": [
             {
               "order": 1,
               "label": "The Challenge",
-              "title": "A Branding Problem That Exposed a Systemic One",
+              "title": "The Goal Was Not Only to Unify the Brand. It Was to Unify How the Team Shipped.",
               "body": [
-                "Cymetrics and Vulcan looked like products from two different companies. What began as a brand-unification effort revealed a deeper issue: visual inconsistency was only the surface of accumulated design and engineering debt.",
-                "Two products, two design languages, one confused brand.",
-                "All three problems converged under the same tension: the startup was still searching for product-market fit, resources were limited, and the team still had to ship MVPs quickly and stay demo-ready. This could not be solved by a visual rebrand alone; it required a system-level response."
+                "Cymetrics and Vulcan looked like products from two different companies. The original brief was brand unification, but we quickly discovered that visual inconsistency was only the surface. Underneath sat accumulated design and engineering debt.",
+                "Two products, two design languages, and the same feature had to be designed and maintained twice. The brand felt fragmented, and the team was paying the cost of duplication on every release.",
+                "At the same time, the team was still searching for Product-Market Fit with limited resources, yet needed to ship MVPs fast and stay demo-ready at all times. A one-time reskin would not solve this.",
+                "The real question was: with limited development resources, how do you restructure the system and workflow to lower iteration costs so the team can validate direction faster?"
               ],
-              "points": [
-                {
-                  "title": "Brand",
-                  "text": "Product lines evolved independently, diluting recognition and weakening the company's market positioning."
-                },
-                {
-                  "title": "Design & Engineering Debt",
-                  "text": "There was no shared language. Each inconsistency fix could cost one to two days, while Storybook became increasingly difficult to maintain."
-                },
-                {
-                  "title": "Scaling Bottleneck",
-                  "text": "New markets required locale-by-locale adaptation; RTL added design rework and front-end overrides."
-                }
-              ],
+              "points": [],
               "quote": null,
               "media": [
                 {
@@ -1162,42 +1150,71 @@
             },
             {
               "order": 2,
-              "label": "Strategy & Decision",
-              "title": "Pragmatism over Perfection",
+              "label": "Clarify Team Needs",
+              "title": "Unifying the Design System Was Never the Goal. Helping the Team Deliver Faster Was.",
               "body": [
-                "Urgent demos repeatedly disrupted the roadmap. Pausing all product work to build a “perfect” system was not realistic. We needed a path that would protect time to market while ending the cycle of rebuilding the same patterns.",
-                "I structured three options so the team could compare upfront cost, long-term maintenance, and brand consistency."
+                "Through internal interviews, we validated the problem and each role's expectations. Unifying the design system turned out to be the means, not the end. The real objective was to reduce duplicated work, speed up delivery, and preserve room to adjust direction while maintaining the differences each product needed.",
+                "PMs needed to prepare demos and validate hypotheses quickly. Design needed to stop rebuilding the same features twice. Engineering needed predictable component and style rules. Management needed an approach where maintenance costs would not scale linearly with every new product.",
+                "Every design decision that followed was evaluated against four criteria."
               ],
               "points": [
-                {
-                  "title": "Option 1 · Keep As-Is",
-                  "text": "Maximum flexibility and no upfront investment — but mounting duplication and continued brand fragmentation."
-                },
-                {
-                  "title": "Option 2 · Rebuild from Scratch",
-                  "text": "The cleanest outcome, but rebuilding the system and both products would double cost and complexity."
-                },
-                {
-                  "title": "Option 3 · Unify & Converge",
-                  "text": "Selected: extract shared structures, align differences, and accept a one-time convergence cost for lower maintenance, faster delivery, and a coherent brand."
-                }
+                {"title": "Protect validation speed", "text": "Do not slow down MVP and demo cadence."},
+                {"title": "Reduce duplicate cost", "text": "Reduce duplicated design and development across both products."},
+                {"title": "Maintain consistency", "text": "Give brand and interaction patterns a shared foundation."},
+                {"title": "Preserve flexibility", "text": "Allow the system to adapt as PMF evolves."}
               ],
-              "afterPoints": [
-                "The options analysis was mine. The final call was the PM Lead's. Once the direction was set, I owned the architecture and execution."
-              ],
-              "quote": "Not a rebuild — a convergence of existing products into one shared system.",
+              "quote": null,
               "media": []
             },
             {
               "order": 3,
-              "label": "Token Foundation",
-              "title": "One Structure, Two Brands",
+              "label": "Strategy & Decision",
+              "title": "Don't Chase Perfection. Choose a Path the Team Can Sustain.",
               "body": [
-                "From brand color to the screen-production workflow, every layer addressed the same question: how can the system preserve consistency without removing the flexibility each product needs?"
+                "Urgent demos repeatedly disrupted the roadmap. Pausing all product work to build a perfect system was not realistic. We needed a path that would end the cycle of rebuilding the same patterns without slowing time to market.",
+                "I organized the possible directions into three options so the team could compare upfront cost, long-term maintenance, brand consistency, and flexibility trade-offs."
+              ],
+              "points": [
+                {
+                  "title": "Option 1 | Keep the Status Quo",
+                  "status": "✕ Not adopted",
+                  "statusTone": "rejected",
+                  "text": "Keep two independent design systems. Maximum short-term flexibility, but duplicated maintenance keeps growing and the brand stays fragmented. As the products grow, component maintenance costs multiply while the two brands drift further apart.",
+                  "tags": ["High long-term maintenance", "Duplicated development", "Fragmented brand"]
+                },
+                {
+                  "title": "Option 2 | Full Rebuild",
+                  "status": "✕ Not adopted",
+                  "statusTone": "rejected",
+                  "text": "Rebuild the system and both products from scratch. The cleanest outcome, but the highest cost, complexity, and time investment. At a stage where direction could still shift, it would slow product validation and time to market.",
+                  "tags": ["Highest time cost", "High development cost", "Large rebuild scope"]
+                },
+                {
+                  "title": "Option 3 | Unify and Consolidate",
+                  "status": "✓ Adopted",
+                  "statusTone": "selected",
+                  "text": "Both products are cybersecurity SaaS with significant overlap in features and usage scenarios. We extracted the shared structure, aligned the necessary differences, and traded a one-time consolidation cost for lower long-term maintenance, faster delivery, and a consistent brand experience.",
+                  "tags": ["Upfront consolidation cost", "Partial component refactoring", "Lower long-term maintenance"]
+                }
+              ],
+              "afterPoints": [
+                "This option required more upfront consolidation and alignment than the status quo, but avoided a full rebuild and preserved the flexibility needed when direction could change. It was the best fit for a team in active PMF exploration.",
+                "I organized the options and trade-offs. After confirming the direction with the PM Lead, I led the architecture design and execution."
+              ],
+              "quote": null,
+              "media": []
+            },
+            {
+              "order": 4,
+              "label": "Architecture",
+              "title": "One Principle: Centralize What Is Shared, Handle Differences Through Variables.",
+              "body": [
+                "We implemented this through a four-layer token architecture. Shared structure, components, and interaction logic are managed centrally. Brand colors and product-specific contexts are handled through swappable variables. This means shared functionality does not need to be built twice, and neither product loses its identity.",
+                "Beyond design rules, PM, Design, and Engineering needed a shared language for communicating component states. We defined a unified naming convention with the team so every token, component, and state has clear semantics and traceability."
               ],
               "subsections": [
                 {
-                  "title": "3-1. Brand switching starts with the palette",
+                  "title": "4-1. Put brand differences into swappable variables",
                   "body": [
                     "Switching brands takes two steps. First, define the Primary, Secondary, Background, and supporting palette. Second, flow those values into token and component roles such as sidebar-surface, text-primary, and border-accent.",
                     "The brand palette is the only entry point that changes by brand. All interface roles follow the same structure, allowing Cymetrics and Vulcan to retain distinct identities without maintaining separate logic."
@@ -1207,13 +1224,13 @@
                       "asset": "assets/images/original/onesleeveBrandColor.png",
                       "layout": "wide",
                       "frameRatio": "auto",
-                      "caption": "Brand Color — the only entry point that changes when switching brands.",
-                      "alt": "Brand Color — the only entry point that changes when switching brands."
+                      "caption": "Brand Color: the only entry point that changes when switching brands.",
+                      "alt": "Brand Color: the only entry point that changes when switching brands."
                     }
                   ]
                 },
                 {
-                  "title": "3-2. A pragmatic Primitive–Semantic trade-off",
+                  "title": "4-2. Give components, states, and patterns a common language",
                   "body": [
                     "We deliberately combined Primitive and Semantic into one Foundation and Meaning layer, then mapped it into Component Tokens. Our team was one designer and two front-end engineers. At that scale, an extra layer meant one more interface where syncs could break, and a “which layer?” decision every time we added a token. We merged the two and used naming conventions to distinguish purpose instead.",
                     "The goal was not to maximize theoretical separation. It was to preserve semantic intent while reducing duplicate tokens, synchronization risk, and the decision cost of adding and maintaining tokens."
@@ -1223,13 +1240,13 @@
                       "asset": "assets/images/original/onesleeveProcess3.png",
                       "layout": "wide",
                       "frameRatio": "auto",
-                      "caption": "Token Flow — palette values become foundation, meaning, and component roles.",
-                      "alt": "Token Flow — palette values become foundation, meaning, and component roles."
+                      "caption": "Token Flow: palette values become foundation, meaning, and component roles.",
+                      "alt": "Token Flow: palette values become foundation, meaning, and component roles."
                     }
                   ]
                 },
                 {
-                  "title": "3-3. A predictable dual-track naming system",
+                  "title": "4-3. Define clearly which differences need to stay",
                   "body": [
                     "Highly reusable components use the Standard format: {Component}–{Property}–{State}.",
                     "Scope-specific and edge cases use the Contextual format: {Scope}–{Component}–{Property}–{State}.",
@@ -1238,7 +1255,7 @@
                   "media": []
                 },
                 {
-                  "title": "3-4. Same structure, different palette",
+                  "title": "4-4. Same structure, different palette",
                   "body": [
                     "Applying the Cymetrics and Vulcan palettes to the same token structure produces consistent Theme Color, Sidebar, Text, and Surface roles. Design and engineering share one language while each product retains its visual identity."
                   ],
@@ -1247,15 +1264,15 @@
                       "asset": "assets/images/original/onesleeveCymetricsPanel.png",
                       "layout": "half",
                       "frameRatio": "16:10",
-                      "caption": "Cymetrics Token Table — the shared structure expressed through a light product palette.",
-                      "alt": "Cymetrics Token Table — the shared structure expressed through a light product palette."
+                      "caption": "Cymetrics Token Table: the shared structure expressed through a light product palette.",
+                      "alt": "Cymetrics Token Table: the shared structure expressed through a light product palette."
                     },
                     {
                       "asset": "assets/images/original/onesleeveVulcanPanel.png",
                       "layout": "half",
                       "frameRatio": "16:10",
-                      "caption": "Vulcan Token Table — the same structure expressed through a dark product palette.",
-                      "alt": "Vulcan Token Table — the same structure expressed through a dark product palette."
+                      "caption": "Vulcan Token Table: the same structure expressed through a dark product palette.",
+                      "alt": "Vulcan Token Table: the same structure expressed through a dark product palette."
                     }
                   ]
                 }
@@ -1265,16 +1282,18 @@
               "media": []
             },
             {
-              "order": 4,
-              "label": "Component Architecture & Global Readiness",
-              "title": "Change Once, Synchronize Everywhere, Preserve Product Flexibility",
-              "body": [],
+              "order": 5,
+              "label": "Production Workflow",
+              "title": "Shared Components and Patterns Give Every Change a Single Source.",
+              "body": [
+                "The system does not pursue surface-level uniformity. Once shared structure is unified, the remaining differences are explicitly marked and managed through variables instead of verbal agreements or individual judgment."
+              ],
               "subsections": [
                 {
                   "title": "4-1. A clean Master, flexible Children",
                   "body": [
                     "Different products need different components; one library cannot cover every case. Universal components live in a protected Master Library shared by all products, while product-specific components remain in their own Child Libraries.",
-                    "For example, Vulcan Attack needed a dark-background scan-status card. Editing the Master Card directly would break Cymetrics' light-themed interface. In the Child Library, that customization affected only Vulcan Attack — the Master Card stayed untouched.",
+                    "For example, Vulcan Attack needed a dark-background scan-status card. Editing the Master Card directly would break Cymetrics' light-themed interface. In the Child Library, that customization affected only Vulcan Attack; the Master Card stayed untouched.",
                     "When a Child component proves reusable through real usage, it can be promoted back to the Master."
                   ],
                   "media": [
@@ -1282,8 +1301,8 @@
                       "asset": "assets/images/original/onesleeveProcess2.png",
                       "layout": "wide",
                       "frameRatio": "auto",
-                      "caption": "Master／Child — the boundary between shared rules and product-specific flexibility.",
-                      "alt": "Master／Child — the boundary between shared rules and product-specific flexibility."
+                      "caption": "Master／Child: the boundary between shared rules and product-specific flexibility.",
+                      "alt": "Master／Child: the boundary between shared rules and product-specific flexibility."
                     }
                   ]
                 },
@@ -1292,15 +1311,22 @@
                   "body": [
                     "In real collaboration, designers are not the only people changing screens. PMs and engineers also make ad-hoc edits for demos and implementation. Without a single source, changes are easily applied to one screen and missed everywhere else.",
                     "We split each product page into two areas: Patterns assembled from Components on the left, and UI Flows organized by User Story on the right. Every screen is composed from the Patterns. Changes happen on the left; the related flows synchronize automatically.",
-                    "The value was not simply faster editing — it structurally reduced the possibility of missed updates."
+                    "The value was not simply faster editing. It structurally reduced the possibility of missed updates."
                   ],
                   "media": [
                     {
                       "asset": "assets/images/original/onesleeveCooperation.png",
                       "layout": "wide",
                       "frameRatio": "auto",
-                      "caption": "Pattern Sync — every UI Flow is assembled from a single Pattern source.",
-                      "alt": "Pattern Sync — every UI Flow is assembled from a single Pattern source."
+                      "caption": "Pattern Sync: every UI Flow is assembled from a single Pattern source.",
+                      "alt": "Pattern Sync: every UI Flow is assembled from a single Pattern source."
+                    },
+                    {
+                      "asset": "assets/images/original/onesleeveResult1.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "Workspace: the real scale of shared components, states, and Patterns.",
+                      "alt": "Workspace: the real scale of shared components, states, and Patterns."
                     }
                   ]
                 },
@@ -1318,30 +1344,17 @@
               "media": []
             },
             {
-              "order": 5,
-              "label": "Governance & Adoption",
-              "title": "Building It Was Half the Battle — Getting It Adopted Was the Other Half",
+              "order": 6,
+              "label": "Team Adoption",
+              "title": "A System Only Matters When the Team Can Use It to Move Faster.",
               "body": [
-                "Design systems rarely fail because of component quality. They fail because teams do not adopt them. The real challenge was getting previously siloed groups to share one set of rules.",
-                "We did not rely on authority alone. We first made the value visible to each stakeholder:"
+                "PMs needed to prepare demos and validate hypotheses quickly. Shared components and Patterns gave them a starting point for selected screen adjustments, instead of requiring every change to begin from scratch.",
+                "Engineers needed stable standards to speed up development while reducing maintenance costs. The naming convention and token structure made each component's behavior more predictable, giving Design and Engineering a shared basis for implementation and maintenance.",
+                "Design needed a maintainable system for fast production and iteration. The centralized Workspace made it easier to see which components already existed and which needed to be created, helping avoid duplicate work.",
+                "This made the system more than a brand-unification deliverable. It became a shared foundation for continuous product iteration."
               ],
-              "points": [
-                {
-                  "title": "PM — Business Value",
-                  "text": "Shorter time to market and faster hypothesis validation."
-                },
-                {
-                  "title": "Engineering — Engineering Value",
-                  "text": "Consistent specifications, edit-once behavior, and shared components that reduced daily maintenance."
-                },
-                {
-                  "title": "Management — Organizational Support",
-                  "text": "Pain points became a shared organizational problem and a product-and-engineering direction."
-                }
-              ],
-              "afterPoints": [
-                "Once engineers saw the maintenance benefit, adoption shifted from compliance to ownership. Duplicate components stopped being maintained separately, Storybook became the single source of truth, and PMs could use OneSleeve Patterns in Figma to handle selected minor screen adjustments themselves."
-              ],
+              "points": [],
+              "afterPoints": [],
               "quote": null,
               "media": [
                 {
@@ -1354,23 +1367,16 @@
               ]
             },
             {
-              "order": 6,
+              "order": 7,
               "label": "Results",
-              "title": "One System That Helped a Small Team Move Faster",
+              "title": "One Architecture That Improved Both Delivery Speed and Maintenance.",
               "body": [
-                "Engineers no longer maintained duplicate components separately. Storybook became a shared specification source, while PM and Design could align and iterate on the same Patterns.",
-                "OneSleeve's most important result was not the component library itself. It converged fragmented brand, design, and engineering decisions into a shared language. It also reinforced a lesson: the hardest part of a design system is not drawing components — it is helping an organization let go of separate practices and commit to maintaining one shared approach."
+                "With shared structure and brand variables, both products no longer needed duplicate design and development for the same features. The team could maintain product differences while iterating faster on a single system.",
+                "Iteration cycle and build-time figures came from internal measurement; shared coverage came from a post-completion audit."
               ],
               "points": [],
               "quote": null,
               "media": [
-                {
-                  "asset": "assets/images/original/onesleeveResult1.png",
-                  "layout": "wide",
-                  "frameRatio": "auto",
-                  "caption": "Workspace — the real scale of shared components, states, and Patterns.",
-                  "alt": "Workspace — the real scale of shared components, states, and Patterns."
-                },
                 {
                   "asset": "assets/images/original/onesleeveResult2.png",
                   "layout": "half",
@@ -1405,15 +1411,15 @@
           "outcomes": [
             {
               "value": "2 → 1 week",
-              "label": "PM–Design iteration cycle"
+              "label": "PM and Design iteration cycle"
             },
             {
               "value": "3 → 2 days",
               "label": "per-screen build time"
             },
             {
-              "value": "Start without rebuilding",
-              "label": "new product lines can swap brand variables and build directly on the existing system"
+              "value": "~80%",
+              "label": "of existing screen needs supported by shared components and Patterns"
             }
           ]
         },
@@ -2638,32 +2644,20 @@
           "summary": {
             "goal": "建立一套共用設計系統，統一兩個資安產品，在不拖慢市場驗證的前提下加快交付並支援擴展。",
             "challenge": "品牌分裂、設計與工程債、多市場與 RTL 需求，同時發生在資源有限且必須隨時 Demo-ready 的新創環境。",
-            "outcome": "PM—設計迭代由 2 週縮短為 1 週；單畫面建置由 3 天降為 2 天；新產品線可從替換品牌變數開始，而不必從零重建。"
+            "outcome": "PM 與設計迭代由 2 週縮短為 1 週；單畫面建置由 3 天降為 2 天；約 80% 的既有畫面需求可由共用元件與 Pattern 支援。"
           },
           "sections": [
             {
               "order": 1,
               "label": "挑戰",
-              "title": "品牌問題，揭露出系統性問題",
+              "title": "要統一的不只是品牌，而是交付方式",
               "body": [
                 "Cymetrics 與 Vulcan 看起來像兩家不同公司的產品。我們原本要統一品牌，卻在過程中發現，視覺不一致只是表象，底下還有長期累積的設計與工程債。",
-                "兩個產品、兩套設計語言，一個令人困惑的品牌。",
-                "所有問題最後匯聚成同一個張力：團隊仍在尋找 Product-Market Fit，資源有限，卻必須快速推出 MVP，並隨時保持可 Demo 的狀態。這不能只做一次換皮，而必須從系統層解決。"
+                "兩個產品、兩套設計語言，同一個功能需要設計與維護兩次。品牌因此顯得分裂，團隊也持續承擔重複製作的成本。",
+                "同時，團隊仍在尋找 Product-Market Fit，資源有限，卻必須快速推出 MVP，並隨時保持可 Demo 的狀態。這不是換皮能解決的問題。",
+                "真正要回答的是：在有限的開發資源下，如何透過系統與流程重構，降低迭代成本，讓團隊能更快驗證方向？"
               ],
-              "points": [
-                {
-                  "title": "品牌",
-                  "text": "各產品線各自發展，公司在市場上缺乏一致辨識度，品牌定位也被稀釋。"
-                },
-                {
-                  "title": "設計與工程債",
-                  "text": "沒有共用設計語言。每次修正不一致都可能花上一到兩天，Storybook 也逐漸難以維護。"
-                },
-                {
-                  "title": "擴展瓶頸",
-                  "text": "進入新市場時必須逐一適配語系，RTL 尤其容易造成設計重工與前端覆寫。"
-                }
-              ],
+              "points": [],
               "quote": null,
               "media": [
                 {
@@ -2677,42 +2671,83 @@
             },
             {
               "order": 2,
-              "label": "策略與決策",
-              "title": "務實優先，不追求完美",
+              "label": "釐清需求",
+              "title": "統一設計系統不是目的，提升交付效能才是",
               "body": [
-                "緊急 Demo 不斷打亂排程，停下所有產品工作去建立一套「完美」系統並不現實。我們需要一條不拖慢上市時間，又能結束重複造輪子的路徑。",
-                "我將可能方向整理成三個選項，讓團隊能比較前期成本、長期維護與品牌一致性的取捨。"
+                "我們透過內部訪談快速確認問題與各角色的期待，發現「統一設計系統」只是手段。真正的目標，是讓團隊在維持產品差異的前提下，減少重複工作、加快交付，並保留方向調整的彈性。",
+                "PM 需要能快速準備 Demo 與驗證假設的產品。設計需要減少重複畫相同功能的時間。工程需要更清楚、可預期的元件與樣式規則。管理端則需要一套不會因為產品增加而等比例放大維護成本的做法。",
+                "因此，後續的設計決策以四個標準判斷。"
               ],
               "points": [
                 {
-                  "title": "Option 1 · 維持現況",
-                  "text": "彈性最高、沒有前期投入，但重複維護會持續增加，品牌也繼續分裂。"
+                  "title": "不拖慢驗證",
+                  "text": "維持 MVP 與 Demo 的節奏。"
                 },
                 {
-                  "title": "Option 2 · 全面重建",
-                  "text": "結果最乾淨一致，但同時重建系統與兩個產品，成本與複雜度都翻倍。"
+                  "title": "降低重複成本",
+                  "text": "減少兩個產品的重複設計與開發。"
                 },
                 {
-                  "title": "Option 3 · 統一與收斂",
-                  "text": "最終選擇：提取共用結構並對齊差異，以一次性的收斂成本換取更低維護、更快交付與一致品牌。"
+                  "title": "維持一致體驗",
+                  "text": "讓品牌與操作邏輯有共同基礎。"
+                },
+                {
+                  "title": "保留調整彈性",
+                  "text": "因應 PMF 變化，不把團隊鎖進僵硬架構。"
                 }
               ],
-              "afterPoints": [
-                "選項分析是我做的，最終拍板是 PM Lead。方向確定後，架構設計與執行由我主導。"
-              ],
-              "quote": "不是全面重建，而是把既有產品收斂成一套統一系統。",
+              "quote": null,
               "media": []
             },
             {
               "order": 3,
-              "label": "Token 基礎",
-              "title": "一套架構，兩個品牌",
+              "label": "策略與決策",
+              "title": "不追求完美，選擇能持續前進的路徑",
               "body": [
-                "從品牌色彩到畫面生產流程，每一層都在解決同一件事：如何在維持一致性的同時，保留不同產品需要的彈性。"
+                "緊急 Demo 不斷打亂排程，停下所有產品工作去建立一套「完美」系統並不現實。我們需要一條不拖慢上市時間，又能結束重複造輪子的路徑。",
+                "我將可能方向整理成三個選項，讓團隊能比較前期成本、長期維護、品牌一致性與調整彈性的取捨。"
+              ],
+              "points": [
+                {
+                  "title": "Option 1｜維持現況",
+                  "status": "✕ 不採用",
+                  "statusTone": "rejected",
+                  "text": "維持兩個獨立的設計系統，短期彈性最高，但重複維護會持續增加，品牌也會繼續分裂。短期看似影響不大，但同一套功能需要在設計與工程端各維護一次。",
+                  "tags": ["長期維護成本高", "重複開發", "品牌識別度低"]
+                },
+                {
+                  "title": "Option 2｜全面重建",
+                  "status": "✕ 不採用",
+                  "statusTone": "rejected",
+                  "text": "同時重建系統與兩個產品，成果最乾淨一致，但成本、複雜度與時間投入都最高。在方向仍可能變動的階段，它會拖慢產品驗證與上市節奏。",
+                  "tags": ["時間成本最高", "開發成本高", "重建範圍大"]
+                },
+                {
+                  "title": "Option 3｜統一與收斂",
+                  "status": "✓ 最終採用",
+                  "statusTone": "selected",
+                  "text": "兩個產品同屬資安 SaaS，部分功能與使用情境高度重疊。我們提取共用結構、對齊必要差異，以一次性的收斂成本，換取更低的長期維護成本、更快的交付速度與更一致的品牌體驗。",
+                  "tags": ["前期收斂成本", "部分元件重構", "降低長期維護成本"]
+                }
+              ],
+              "afterPoints": [
+                "這個選項比維持現況需要更多前期收斂與溝通，但不必全面重建，能保留產品變動時需要的彈性，更適合當時快速驗證方向的狀態。",
+                "我整理選項與取捨，並與 PM Lead 確定方向後，由我主導架構設計與執行。"
+              ],
+              "quote": null,
+              "media": []
+            },
+            {
+              "order": 4,
+              "label": "架構設計",
+              "title": "核心原則只有一條：共用的部分集中管理，需要差異的部分用變數處理",
+              "body": [
+                "我們以四層 Token 架構實現這件事。共用的結構、元件與互動邏輯統一管理；品牌色彩與產品特有的情境，則透過可替換的變數處理。這讓新功能不需要從兩套系統各做一次，也不會抹去兩個產品各自的定位。",
+                "除了設計規則，也要讓 PM、設計與工程能用同一套語言溝通元件狀態。因此，我們與團隊定義了統一的命名規則，讓每個 Token、元件與狀態都有清楚的語意與可追溯性。"
               ],
               "subsections": [
                 {
-                  "title": "3-1. 品牌切換從色盤開始",
+                  "title": "4-1. 將品牌差異放進可替換的變數",
                   "body": [
                     "切換品牌分成兩步。第一步只定義 Primary、Secondary、Background 等品牌色盤；第二步讓色彩流入 Token 與元件層，映射到 sidebar-surface、text-primary、border-accent 等介面用途。",
                     "品牌色盤是唯一需要因品牌而替換的入口。其餘介面角色沿用同一套結構，因此 Cymetrics 與 Vulcan 可以保有不同視覺個性，又不必維護兩套邏輯。"
@@ -2722,13 +2757,13 @@
                       "asset": "assets/images/original/onesleeveBrandColor.png",
                       "layout": "wide",
                       "frameRatio": "auto",
-                      "caption": "Brand Color — 切換品牌時唯一需要替換的入口。",
-                      "alt": "Brand Color — 切換品牌時唯一需要替換的入口。"
+                      "caption": "Brand Color：切換品牌時唯一需要替換的入口。",
+                      "alt": "Brand Color：切換品牌時唯一需要替換的入口。"
                     }
                   ]
                 },
                 {
-                  "title": "3-2. Primitive 與 Semantic 的務實取捨",
+                  "title": "4-2. 讓元件、狀態與 Pattern 有共同語言",
                   "body": [
                     "我們刻意把 Primitive 與 Semantic 合併成一個「基礎與意義層」，再映射到 Component Token。團隊是一名設計師加兩名前端工程師。在這個規模下，多一層架構就多一個同步可能失敗的介面，每新增一個 Token 都要先判斷「放哪一層」。我們選擇合併，用命名規則區分用途。",
                     "這不是追求最完整的理論分層，而是在保留語義用途的同時，降低重複 Token、同步風險，以及新增與修改 Token 時的決策成本。"
@@ -2738,13 +2773,13 @@
                       "asset": "assets/images/original/onesleeveProcess3.png",
                       "layout": "wide",
                       "frameRatio": "auto",
-                      "caption": "Token Flow — 色盤如何流入基礎／意義層，再映射到元件用途。",
-                      "alt": "Token Flow — 色盤如何流入基礎／意義層，再映射到元件用途。"
+                      "caption": "Token Flow：色盤如何流入基礎／意義層，再映射到元件用途。",
+                      "alt": "Token Flow：色盤如何流入基礎／意義層，再映射到元件用途。"
                     }
                   ]
                 },
                 {
-                  "title": "3-3. 可預測的雙軌命名",
+                  "title": "4-3. 清楚定義哪些差異需要被保留",
                   "body": [
                     "高複用元件使用 Standard 格式：{Component}–{Property}–{State}。",
                     "範圍限定或邊界情境使用 Contextual 格式：{Scope}–{Component}–{Property}–{State}。",
@@ -2753,7 +2788,7 @@
                   "media": []
                 },
                 {
-                  "title": "3-4. 同一結構，不同色盤",
+                  "title": "4-4. 同一結構，不同色盤",
                   "body": [
                     "同一套 Token 結構套用 Cymetrics 與 Vulcan 的品牌色後，Theme Color、Sidebar、Text、Surface 等角色都沿用一致規則。設計與工程使用同一套語言，最終畫面仍能保持兩個品牌的差異。"
                   ],
@@ -2762,15 +2797,15 @@
                       "asset": "assets/images/original/onesleeveCymetricsPanel.png",
                       "layout": "half",
                       "frameRatio": "16:10",
-                      "caption": "Cymetrics Token Table — 共用結構套用淺色產品色盤的結果。",
-                      "alt": "Cymetrics Token Table — 共用結構套用淺色產品色盤的結果。"
+                      "caption": "Cymetrics Token Table：共用結構套用淺色產品色盤的結果。",
+                      "alt": "Cymetrics Token Table：共用結構套用淺色產品色盤的結果。"
                     },
                     {
                       "asset": "assets/images/original/onesleeveVulcanPanel.png",
                       "layout": "half",
                       "frameRatio": "16:10",
-                      "caption": "Vulcan Token Table — 同一結構套用深色產品色盤的結果。",
-                      "alt": "Vulcan Token Table — 同一結構套用深色產品色盤的結果。"
+                      "caption": "Vulcan Token Table：同一結構套用深色產品色盤的結果。",
+                      "alt": "Vulcan Token Table：同一結構套用深色產品色盤的結果。"
                     }
                   ]
                 }
@@ -2780,10 +2815,12 @@
               "media": []
             },
             {
-              "order": 4,
-              "label": "元件架構與全球化",
-              "title": "改一次、全面同步，同時保留產品彈性",
-              "body": [],
+              "order": 5,
+              "label": "畫面生產流程",
+              "title": "共用元件與 Pattern，讓修改有單一來源",
+              "body": [
+                "系統不追求表面的完全一致。統一可共用的結構後，剩下的差異被明確標記並用變數管理，而不是靠口頭約定或個別判斷。"
+              ],
               "subsections": [
                 {
                   "title": "4-1. 乾淨的 Master，彈性的 Children",
@@ -2797,8 +2834,8 @@
                       "asset": "assets/images/original/onesleeveProcess2.png",
                       "layout": "wide",
                       "frameRatio": "auto",
-                      "caption": "Master／Child — 共用規則與產品客製之間的邊界。",
-                      "alt": "Master／Child — 共用規則與產品客製之間的邊界。"
+                      "caption": "Master／Child：共用規則與產品客製之間的邊界。",
+                      "alt": "Master／Child：共用規則與產品客製之間的邊界。"
                     }
                   ]
                 },
@@ -2814,8 +2851,15 @@
                       "asset": "assets/images/original/onesleeveCooperation.png",
                       "layout": "wide",
                       "frameRatio": "auto",
-                      "caption": "Pattern Sync — 所有 UI Flow 都由單一 Pattern 來源組成。",
-                      "alt": "Pattern Sync — 所有 UI Flow 都由單一 Pattern 來源組成。"
+                      "caption": "Pattern Sync：所有 UI Flow 都由單一 Pattern 來源組成。",
+                      "alt": "Pattern Sync：所有 UI Flow 都由單一 Pattern 來源組成。"
+                    },
+                    {
+                      "asset": "assets/images/original/onesleeveResult1.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "Workspace：共用元件、狀態與 Pattern 的實際規模。",
+                      "alt": "Workspace：共用元件、狀態與 Pattern 的實際規模。"
                     }
                   ]
                 },
@@ -2833,30 +2877,17 @@
               "media": []
             },
             {
-              "order": 5,
-              "label": "治理與導入",
-              "title": "做出來只完成一半，讓團隊願意使用才是另一半",
+              "order": 6,
+              "label": "團隊採用",
+              "title": "系統的價值，不只在於做出來，也在於團隊能否用它加速自己的工作",
               "body": [
-                "設計系統很少因為設計品質不足而失敗，更常見的原因是沒有人真正採用。真正的挑戰，是讓原本各自運作的團隊願意共享同一套規則。",
-                "我們沒有只依靠管理權限推動，而是先讓每個角色看到與自己直接相關的價值："
+                "PM 需要根據商業模式不斷快速做畫面 Demo 給客戶驗證商業價值。有了共用元件庫，PM 可以直接在現有元件上組裝原型，不需要等設計從零開始。",
+                "工程師需要穩定的規範加速開發，同時減少維護成本。統一的命名規則與 Token 結構讓工程端能預期每個元件的行為，減少來回確認的時間。",
+                "設計師需要一套好維護的系統來快速產出與迭代。集中管理的 Workspace 讓設計師能看見哪些元件已經存在、哪些需要新增，避免重複製作。",
+                "這讓系統不只是統一品牌的成果，而成為產品持續迭代時可依循的共同基礎。"
               ],
-              "points": [
-                {
-                  "title": "PM — 商業價值",
-                  "text": "縮短上市時間，讓假設能更快被驗證。"
-                },
-                {
-                  "title": "RD — 工程價值",
-                  "text": "規格一致、修改一次，共用元件降低日常維護成本。"
-                },
-                {
-                  "title": "Manager — 組織支持",
-                  "text": "把不同團隊的痛點整合成共同問題，形成產品與工程共同支持的方向。"
-                }
-              ],
-              "afterPoints": [
-                "當工程團隊看見維護效益後，採用從「被要求配合」轉變為「現場主動推進」。重複元件不再分別維護，Storybook 成為 Single Source of Truth，PM 也能在 Figma 使用 OneSleeve Patterns，處理部分小幅畫面調整。"
-              ],
+              "points": [],
+              "afterPoints": [],
               "quote": null,
               "media": [
                 {
@@ -2869,50 +2900,43 @@
               ]
             },
             {
-              "order": 6,
+              "order": 7,
               "label": "成果",
-              "title": "一套系統，讓小團隊跑出更大的交付速度",
+              "title": "一套架構，同時改善交付速度與維護方式",
               "body": [
-                "工程師不再分別維護重複元件，Storybook 成為共用規格來源，PM 與設計也能在同一套 Pattern 上更快完成討論與調整。",
-                "OneSleeve 最重要的成果，不只是一套元件庫，而是把原本分散的品牌、設計與工程決策收斂成共同語言。它也讓我確認：設計系統真正困難的部分不是畫出元件，而是讓組織願意放下各自的做法，共同維護同一套方法。"
+                "透過共用結構與品牌變數，兩個產品不再需要為相同功能重複設計與開發。團隊能在維持產品差異的同時，以同一套系統加快產品迭代。",
+                "迭代週期與建置時間來自內部實測；共用覆蓋率為系統完成後的盤點結果。"
               ],
               "points": [],
               "quote": null,
               "media": [
                 {
-                  "asset": "assets/images/original/onesleeveResult1.png",
-                  "layout": "wide",
-                  "frameRatio": "auto",
-                  "caption": "Workspace — 共用元件、狀態與 Pattern 的實際規模。",
-                  "alt": "Workspace — 共用元件、狀態與 Pattern 的實際規模。"
-                },
-                {
                   "asset": "assets/images/original/onesleeveResult2.png",
                   "layout": "half",
                   "frameRatio": "16:10",
-                  "caption": "Vulcan Profile — 共用架構在深色產品中的應用。",
-                  "alt": "Vulcan Profile — 共用架構在深色產品中的應用。"
+                  "caption": "Vulcan Profile：共用架構在深色產品中的應用。",
+                  "alt": "Vulcan Profile：共用架構在深色產品中的應用。"
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult4.png",
                   "layout": "half",
                   "frameRatio": "16:10",
-                  "caption": "Vulcan Threat Detail — 保留產品特有複雜度的 Child Pattern。",
-                  "alt": "Vulcan Threat Detail — 保留產品特有複雜度的 Child Pattern。"
+                  "caption": "Vulcan Threat Detail：保留產品特有複雜度的 Child Pattern。",
+                  "alt": "Vulcan Threat Detail：保留產品特有複雜度的 Child Pattern。"
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult5.png",
                   "layout": "half",
                   "frameRatio": "16:10",
-                  "caption": "Cymetrics Dashboard — 共用架構套用淺色品牌色盤的結果。",
-                  "alt": "Cymetrics Dashboard — 共用架構套用淺色品牌色盤的結果。"
+                  "caption": "Cymetrics Dashboard：共用架構套用淺色品牌色盤的結果。",
+                  "alt": "Cymetrics Dashboard：共用架構套用淺色品牌色盤的結果。"
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult6.png",
                   "layout": "half",
                   "frameRatio": "16:10",
-                  "caption": "Cymetrics Operations — 同一套元件邏輯延伸至營運畫面。",
-                  "alt": "Cymetrics Operations — 同一套元件邏輯延伸至營運畫面。"
+                  "caption": "Cymetrics Operations：同一套元件邏輯延伸至營運畫面。",
+                  "alt": "Cymetrics Operations：同一套元件邏輯延伸至營運畫面。"
                 }
               ]
             }
@@ -2927,8 +2951,8 @@
               "label": "單畫面建置時間"
             },
             {
-              "value": "不用從零開始",
-              "label": "新產品線可替換品牌變數，直接建立在既有系統上。"
+              "value": "約 80%",
+              "label": "既有畫面需求可由共用元件與 Pattern 支援"
             }
           ]
         },
@@ -4147,37 +4171,25 @@
           "team": "プロダクト・デザイン・エンジニアリング",
           "scope": "デザインシステム設計、クロスファンクショナル連携、コンポーネントガバナンス",
           "cardDescription": "ブランド統一は表面的な課題。その下にあるデザイン負債を掘り出し、4層の Token アーキテクチャとガバナンス体制を構築。小さなチームが大きなチームのように動けるようにしました。",
-          "description": "限られたリソースの中でも市場検証の速度を落とさず、Cymetrics と Vulcan を1つのプロダクトファミリーへ収束。イテレーション短縮、デリバリー加速、新市場展開の基盤構築を実現しました。",
-          "keyAchievement": "PM–デザインのイテレーションを半減し、1画面あたりの構築を3日から2日へ短縮。",
+          "description": "限られたリソースの中でも市場検証の速度を落とさず、Cymetrics と Vulcan を1つのプロダクトファミリーへ統合。イテレーション短縮、デリバリー加速、新市場展開の基盤構築を進めました。",
+          "keyAchievement": "PM とデザインのイテレーションを半減し、1画面あたりの構築を3日から2日へ短縮。",
           "summary": {
             "goal": "2つのセキュリティ製品を支える共通デザインシステムを構築し、市場検証を止めずにデリバリー速度と拡張性を高める。",
             "challenge": "ブランドの分断、デザイン・開発負債、多市場と RTL への対応を、常にデモ可能な状態が求められる限られた体制の中で同時に解決する。",
-            "outcome": "PM–デザインのイテレーションを2週間から1週間へ、1画面あたりの構築を3日から2日へ短縮。新しいプロダクトラインはブランド変数の差し替えから始められるようになりました。"
+            "outcome": "PM とデザインのイテレーションを2週間から1週間へ、1画面あたりの構築を3日から2日へ短縮。共用コンポーネントと Pattern が既存画面ニーズの約80%を支援。"
           },
           "sections": [
             {
               "order": 1,
               "label": "課題",
-              "title": "ブランドの問題が、構造的な問題を明らかにした",
+              "title": "統一すべきだったのは、ブランドだけではない。プロダクトをつくり、届ける仕組みだった。",
               "body": [
-                "Cymetrics と Vulcan は、まるで別会社の製品のように見えていました。ブランド統一から始まった取り組みでしたが、ビジュアルの不整合は表面的な症状にすぎず、その下には長年蓄積したデザイン・開発負債がありました。",
-                "2つの製品、2つのデザイン言語、1つの混乱したブランド。",
-                "PMF を模索中でリソースは限られている一方、MVP を素早く出し、常にデモ可能な状態を保つ必要がある。見た目を統一するだけでは足りず、システムレベルの解決が必要でした。"
+                "Cymetrics と Vulcan は、まるで別会社の製品のように見えていました。当初のミッションはブランド統一でしたが、進めるうちに、ビジュアルの不統一は表層に過ぎず、その下には積み重なったデザインとエンジニアリングの負債があることが分かりました。",
+                "2つのプロダクト、2つのデザイン言語。同じ機能の設計・保守に二重の工数がかかっていました。ブランドは分裂して見え、チームは重複作業のコストを払い続けていました。",
+                "同時に、チームはまだ Product-Market Fit を模索中で、リソースは限られているのに、MVP を素早くリリースし、いつでもデモできる状態を保つ必要がありました。見た目を揃えるだけでは解決になりません。",
+                "本当に答えるべき問いは、限られた開発リソースの中で、システムとワークフローをどう再構築すれば、イテレーションコストを下げ、チームがより速く方向性を検証できるか、ということでした。"
               ],
-              "points": [
-                {
-                  "title": "ブランド",
-                  "text": "各プロダクトラインが個別に進化し、ブランド認知と市場でのポジショニングが希薄化していました。"
-                },
-                {
-                  "title": "デザイン・開発負債",
-                  "text": "共通言語がなく、不整合の修正に毎回1〜2日を要し、Storybook の保守も難しくなっていました。"
-                },
-                {
-                  "title": "スケーリングのボトルネック",
-                  "text": "新市場ごとに再適応が必要で、特に RTL はデザインの作り直しとフロントエンドの上書きを増やしていました。"
-                }
-              ],
+              "points": [],
               "quote": null,
               "media": [
                 {
@@ -4191,42 +4203,71 @@
             },
             {
               "order": 2,
-              "label": "戦略と意思決定",
-              "title": "完璧さより実用性",
+              "label": "ニーズの整理",
+              "title": "デザインシステムの統一は目的ではない。プロダクト開発・提供の効率を上げることが目的だった。",
               "body": [
-                "緊急デモによってロードマップが何度も中断される中、すべての開発を止めて「完璧な」システムを構築することは現実的ではありませんでした。市場投入の速度を守りながら、同じパターンを作り直す状況を終わらせる必要がありました。",
-                "そこで、初期コスト・長期保守・ブランド一貫性の観点から3つの選択肢を整理しました。"
+                "社内インタビューを通じて、課題と各職種の期待を確認しました。デザインシステムを統一すること自体は手段に過ぎません。本当の目標は、プロダクトごとの差異を維持しながら、重複作業を減らし、開発・提供を速め、方向転換の余地を残すことでした。",
+                "PM はデモの準備と仮説検証を素早く進める必要がありました。デザイナーは同じ機能を二度作る時間をなくしたかった。エンジニアは予測可能なコンポーネントとスタイルのルールを求めていました。マネジメントはプロダクトが増えても保守コストが比例して増えない仕組みを必要としていました。",
+                "以降のすべての設計判断は、この4つの基準で評価しました。"
               ],
               "points": [
-                {
-                  "title": "Option 1 · 現状維持",
-                  "text": "柔軟性が高く初期投資も不要ですが、重複保守とブランド分断が続きます。"
-                },
-                {
-                  "title": "Option 2 · ゼロから全面再構築",
-                  "text": "最もクリーンですが、システムと2製品の同時再構築でコストと複雑性が倍増します。"
-                },
-                {
-                  "title": "Option 3 · 統合・収束",
-                  "text": "最終選択：既存製品から共通構造を抽出し、一度の収束コストで保守性・速度・一貫性を高めます。"
-                }
+                {"title": "検証スピードを守る", "text": "MVP とデモのリズムを遅らせない。"},
+                {"title": "重複コストを下げる", "text": "2つのプロダクト間の重複設計・開発を減らす。"},
+                {"title": "一貫性を保つ", "text": "ブランドと操作パターンに共通の土台を持たせる。"},
+                {"title": "柔軟性を残す", "text": "PMF の変化に合わせてシステムを調整できるようにする。"}
               ],
-              "afterPoints": [
-                "選択肢の分析とフレーミングは私が担当し、最終判断は PM Lead が行いました。方針決定後、アーキテクチャ設計と実行は私がオーナーシップを持って推進しました。"
-              ],
-              "quote": "全面刷新ではなく、既存製品を1つの共通システムへ収束させる。",
+              "quote": null,
               "media": []
             },
             {
               "order": 3,
-              "label": "Token 基盤",
-              "title": "1つの構造、2つのブランド",
+              "label": "戦略と意思決定",
+              "title": "完璧を追わない。チームが進み続けられる道を選ぶ。",
               "body": [
-                "ブランドカラーから画面制作フローまで、すべての層が同じ問いに向き合っています。製品ごとの柔軟性を保ちながら、どう一貫性を維持するか。"
+                "急なデモ対応がスケジュールを繰り返し乱していました。すべてのプロダクト作業を止めて完璧なシステムを作るのは現実的ではありません。リリースを遅らせず、車輪の再発明を終わらせる道が必要でした。",
+                "考えうる方向性を3つの選択肢に整理し、初期コスト、長期保守、ブランド一貫性、柔軟性のトレードオフをチームが比較できるようにしました。"
+              ],
+              "points": [
+                {
+                  "title": "Option 1｜現状維持",
+                  "status": "✕ 不採用",
+                  "statusTone": "rejected",
+                  "text": "2つの独立したデザインシステムを維持する。短期的な柔軟性は最も高いが、重複保守は増え続け、ブランドも分裂したままになる。プロダクトが成長するにつれ、コンポーネント保守コストは増え、2つのブランドはさらに離れていく。",
+                  "tags": ["長期保守コスト高", "重複開発", "ブランド分断"]
+                },
+                {
+                  "title": "Option 2｜全面再構築",
+                  "status": "✕ 不採用",
+                  "statusTone": "rejected",
+                  "text": "システムと2つのプロダクトを同時にゼロから再構築する。最もクリーンな結果が得られるが、コスト、複雑さ、時間投資のすべてが最大になる。方向性がまだ変わりうる段階では、検証とリリースのスピードを落としてしまう。",
+                  "tags": ["時間コスト最大", "開発コスト高", "再構築範囲大"]
+                },
+                {
+                  "title": "Option 3｜統合と整理",
+                  "status": "✓ 最終採用",
+                  "statusTone": "selected",
+                  "text": "2つのプロダクトはどちらもサイバーセキュリティ SaaS であり、機能やユースケースの重複度が高い。共用構造を抽出し、必要な差異を整理することで、一度の統合コストと引き換えに、長期保守コストの削減、提供スピードの向上、一貫したブランド体験を目指した。",
+                  "tags": ["初期の統合・調整コスト", "一部コンポーネント再構築", "長期保守コスト削減"]
+                }
+              ],
+              "afterPoints": [
+                "この選択肢は現状維持よりも初期の統合とすり合わせに工数がかかりますが、全面再構築は不要で、方向性が変わった際の柔軟性も残せます。PMF を素早く検証する当時の状況に最も適した選択でした。",
+                "選択肢とトレードオフを整理し、PM Lead と方向を確定した後、アーキテクチャ設計と実行は私が主導しました。"
+              ],
+              "quote": null,
+              "media": []
+            },
+            {
+              "order": 4,
+              "label": "アーキテクチャ設計",
+              "title": "原則は一つ。共用部分は集中管理し、差異は変数で処理する。",
+              "body": [
+                "4層の Token アーキテクチャでこれを実現しました。共用の構造、コンポーネント、インタラクションロジックは一元管理し、ブランドカラーやプロダクト固有のコンテキストは差し替え可能な変数で処理します。これにより、共用できる機能を2つのシステムで個別に作る必要がなくなり、各プロダクトの独自性も失われません。",
+                "デザインルールだけでなく、PM、デザイナー、エンジニアがコンポーネントの状態を同じ言葉で伝えられるようにする必要もありました。チームと統一の命名規則を定義し、すべての Token、コンポーネント、ステートに明確な意味と追跡可能性を持たせました。"
               ],
               "subsections": [
                 {
-                  "title": "3-1. ブランド切り替えはパレットから始まる",
+                  "title": "4-1. ブランドの差異を差し替え可能な変数として管理する",
                   "body": [
                     "まず Primary、Secondary、Background などのブランドパレットを定義し、その値を sidebar-surface、text-primary、border-accent などの Token とコンポーネントの役割へ流し込みます。",
                     "ブランドごとに変更する入口はパレットだけです。同じ構造によって、別々のロジックを保守せずに各ブランドの個性を維持できます。"
@@ -4236,13 +4277,13 @@
                       "asset": "assets/images/original/onesleeveBrandColor.png",
                       "layout": "wide",
                       "frameRatio": "auto",
-                      "caption": "Brand Color — ブランド切り替え時に変更する唯一の入口。",
-                      "alt": "Brand Color — ブランド切り替え時に変更する唯一の入口。"
+                      "caption": "Brand Color：ブランド切り替え時に変更する唯一の入口。",
+                      "alt": "Brand Color：ブランド切り替え時に変更する唯一の入口。"
                     }
                   ]
                 },
                 {
-                  "title": "3-2. Primitive と Semantic の実用的な統合",
+                  "title": "4-2. コンポーネント、ステート、パターンに共通言語を持たせる",
                   "body": [
                     "Primitive と Semantic を「基盤と意味」の1つの層に統合し、そこから Component Token へマッピングしました。チーム構成はデザイナー1名とフロントエンド2名でした。この規模では、層が1つ増えるだけで同期が崩れるリスクが増え、Token を追加するたびに「どちらの層に入れるか」の判断コストが発生します。2層を統合し、用途の区別は命名規則で担保しました。",
                     "意味のある用途を維持しながら、重複 Token、同期リスク、追加・保守に伴う判断コストを抑えるための選択でした。"
@@ -4252,13 +4293,13 @@
                       "asset": "assets/images/original/onesleeveProcess3.png",
                       "layout": "wide",
                       "frameRatio": "auto",
-                      "caption": "Token Flow — パレットから基盤・意味・コンポーネントの役割へ流れる構造。",
-                      "alt": "Token Flow — パレットから基盤・意味・コンポーネントの役割へ流れる構造。"
+                      "caption": "Token Flow：パレットから基盤・意味・コンポーネントの役割へ流れる構造。",
+                      "alt": "Token Flow：パレットから基盤・意味・コンポーネントの役割へ流れる構造。"
                     }
                   ]
                 },
                 {
-                  "title": "3-3. 予測可能な2系統の命名規則",
+                  "title": "4-3. 残すべき差異を明確に定義する",
                   "body": [
                     "再利用性の高いコンポーネントは Standard：{Component}–{Property}–{State}。",
                     "スコープ固有・例外的なケースは Contextual：{Scope}–{Component}–{Property}–{State}。",
@@ -4267,7 +4308,7 @@
                   "media": []
                 },
                 {
-                  "title": "3-4. 同じ構造、異なるパレット",
+                  "title": "4-4. 同じ構造、異なるパレット",
                   "body": [
                     "同じ Token 構造に Cymetrics と Vulcan のブランドパレットを適用し、Theme Color、Sidebar、Text、Surface を共通ルールで管理。各製品のビジュアルアイデンティティも維持できます。"
                   ],
@@ -4276,15 +4317,15 @@
                       "asset": "assets/images/original/onesleeveCymetricsPanel.png",
                       "layout": "half",
                       "frameRatio": "16:10",
-                      "caption": "Cymetrics Token Table — 共通構造をライトパレットで表現。",
-                      "alt": "Cymetrics Token Table — 共通構造をライトパレットで表現。"
+                      "caption": "Cymetrics Token Table：共通構造をライトパレットで表現。",
+                      "alt": "Cymetrics Token Table：共通構造をライトパレットで表現。"
                     },
                     {
                       "asset": "assets/images/original/onesleeveVulcanPanel.png",
                       "layout": "half",
                       "frameRatio": "16:10",
-                      "caption": "Vulcan Token Table — 同じ構造をダークパレットで表現。",
-                      "alt": "Vulcan Token Table — 同じ構造をダークパレットで表現。"
+                      "caption": "Vulcan Token Table：同じ構造をダークパレットで表現。",
+                      "alt": "Vulcan Token Table：同じ構造をダークパレットで表現。"
                     }
                   ]
                 }
@@ -4294,10 +4335,12 @@
               "media": []
             },
             {
-              "order": 4,
-              "label": "コンポーネント設計とグローバル対応",
-              "title": "一度の変更を全体へ同期しながら、製品ごとの柔軟性を守る",
-              "body": [],
+              "order": 5,
+              "label": "画面制作フロー",
+              "title": "共用コンポーネントと Pattern により、変更の起点を一つにする。",
+              "body": [
+                "システムは表面的な完全一致を目指しません。共用構造を統一した上で、残りの差異は明示的にマークし、変数で管理します。口頭での取り決めや個人の判断に頼りません。"
+              ],
               "subsections": [
                 {
                   "title": "4-1. クリーンな Master、柔軟な Children",
@@ -4311,8 +4354,8 @@
                       "asset": "assets/images/original/onesleeveProcess2.png",
                       "layout": "wide",
                       "frameRatio": "auto",
-                      "caption": "Master／Child — 共通ルールと製品固有の柔軟性を分ける境界。",
-                      "alt": "Master／Child — 共通ルールと製品固有の柔軟性を分ける境界。"
+                      "caption": "Master／Child：共通ルールと製品固有の柔軟性を分ける境界。",
+                      "alt": "Master／Child：共通ルールと製品固有の柔軟性を分ける境界。"
                     }
                   ]
                 },
@@ -4328,8 +4371,15 @@
                       "asset": "assets/images/original/onesleeveCooperation.png",
                       "layout": "wide",
                       "frameRatio": "auto",
-                      "caption": "Pattern Sync — すべての UI Flow を単一の Pattern から構成。",
-                      "alt": "Pattern Sync — すべての UI Flow を単一の Pattern から構成。"
+                      "caption": "Pattern Sync：すべての UI Flow を単一の Pattern から構成。",
+                      "alt": "Pattern Sync：すべての UI Flow を単一の Pattern から構成。"
+                    },
+                    {
+                      "asset": "assets/images/original/onesleeveResult1.png",
+                      "layout": "wide",
+                      "frameRatio": "auto",
+                      "caption": "Workspace：共用コンポーネント、ステート、Pattern の実際の規模。",
+                      "alt": "Workspace：共用コンポーネント、ステート、Pattern の実際の規模。"
                     }
                   ]
                 },
@@ -4347,30 +4397,17 @@
               "media": []
             },
             {
-              "order": 5,
-              "label": "ガバナンスと導入",
-              "title": "作ることが半分、使ってもらうことが残りの半分",
+              "order": 6,
+              "label": "チームへの定着",
+              "title": "システムの価値は、チームがそれを使って仕事を速く進められるかにある。",
               "body": [
-                "デザインシステムは、コンポーネントの品質不足よりも、チームに採用されないことで失敗します。本当の課題は、これまで個別に動いていたチームに同じルールを共有してもらうことでした。",
-                "権限だけで押し進めるのではなく、各ステークホルダーにとっての価値を先に可視化しました。"
+                "PM はデモの準備と仮説検証を素早く進める必要がありました。共用コンポーネントと Pattern は、一部の画面調整を検討する際の出発点となり、毎回ゼロから始める必要を減らしました。",
+                "エンジニアには、開発を進めながら保守しやすい規則が必要でした。命名規則と Token 構造により、コンポーネントの振る舞いを予測しやすくなり、デザインと開発が実装・保守の共通基盤を持てるようになりました。",
+                "デザイナーには、素早い制作とイテレーションを支える保守しやすいシステムが必要でした。集約された Workspace により、既存コンポーネントと新規作成が必要な要素を把握しやすくなり、重複作業を避けやすくなりました。",
+                "これにより、システムはブランド統一の成果物にとどまらず、継続的なプロダクトイテレーションを支える共通基盤となりました。"
               ],
-              "points": [
-                {
-                  "title": "PM — ビジネス価値",
-                  "text": "市場投入までの時間短縮と、仮説検証の高速化。"
-                },
-                {
-                  "title": "Engineering — 開発価値",
-                  "text": "一貫した仕様、一度の変更、共通コンポーネントによる日常保守の削減。"
-                },
-                {
-                  "title": "Management — 組織的支援",
-                  "text": "複数チームの課題を共通の組織課題へ変換し、共有方針へ変えました。"
-                }
-              ],
-              "afterPoints": [
-                "エンジニアが保守面の価値を理解したことで、導入は「指示されたから使う」状態から「現場が自ら推進する」状態へ変化しました。重複コンポーネントの個別保守はなくなり、Storybook が Single Source of Truth となり、PM も Figma 上で OneSleeve の Pattern を使い、一部の軽微な画面調整を行えるようになりました。"
-              ],
+              "points": [],
+              "afterPoints": [],
               "quote": null,
               "media": [
                 {
@@ -4383,50 +4420,43 @@
               ]
             },
             {
-              "order": 6,
+              "order": 7,
               "label": "成果",
-              "title": "1つのシステムで、小さなチームのデリバリー速度を高める",
+              "title": "1つのアーキテクチャで、開発・提供のスピードと保守性を改善する。",
               "body": [
-                "エンジニアは重複コンポーネントを個別に保守する必要がなくなり、Storybook は共通の仕様ソースとなりました。PM とデザインも、同じ Pattern を使ってより速く合意・調整できるようになりました。",
-                "OneSleeve の最大の成果は、コンポーネントライブラリそのものではありません。分散していたブランド・デザイン・開発の判断を1つの共通言語へ収束し、組織が個別のやり方を手放して共通アプローチを維持できる状態をつくったことです。"
+                "共用構造とブランド変数により、2つのプロダクトが同じ機能のために重複してデザイン・開発する必要がなくなりました。チームはプロダクトごとの差異を維持しながら、1つのシステム上でより速くイテレーションできるようになりました。",
+                "イテレーションサイクルと構築時間は社内計測値、共用カバー率はシステム完成後の棚卸し結果です。"
               ],
               "points": [],
               "quote": null,
               "media": [
                 {
-                  "asset": "assets/images/original/onesleeveResult1.png",
-                  "layout": "wide",
-                  "frameRatio": "auto",
-                  "caption": "Workspace — 共通コンポーネント、状態、Pattern の実際の規模。",
-                  "alt": "Workspace — 共通コンポーネント、状態、Pattern の実際の規模。"
-                },
-                {
                   "asset": "assets/images/original/onesleeveResult2.png",
                   "layout": "half",
                   "frameRatio": "16:10",
-                  "caption": "Vulcan Profile — 共通アーキテクチャのダーク製品への適用。",
-                  "alt": "Vulcan Profile — 共通アーキテクチャのダーク製品への適用。"
+                  "caption": "Vulcan Profile：共通アーキテクチャのダーク製品への適用。",
+                  "alt": "Vulcan Profile：共通アーキテクチャのダーク製品への適用。"
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult4.png",
                   "layout": "half",
                   "frameRatio": "16:10",
-                  "caption": "Vulcan Threat Detail — 製品固有の複雑性を保つ Child Pattern。",
-                  "alt": "Vulcan Threat Detail — 製品固有の複雑性を保つ Child Pattern。"
+                  "caption": "Vulcan Threat Detail：製品固有の複雑性を保つ Child Pattern。",
+                  "alt": "Vulcan Threat Detail：製品固有の複雑性を保つ Child Pattern。"
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult5.png",
                   "layout": "half",
                   "frameRatio": "16:10",
-                  "caption": "Cymetrics Dashboard — ライトブランドパレットでの展開。",
-                  "alt": "Cymetrics Dashboard — ライトブランドパレットでの展開。"
+                  "caption": "Cymetrics Dashboard：ライトブランドパレットでの展開。",
+                  "alt": "Cymetrics Dashboard：ライトブランドパレットでの展開。"
                 },
                 {
                   "asset": "assets/images/original/onesleeveResult6.png",
                   "layout": "half",
                   "frameRatio": "16:10",
-                  "caption": "Cymetrics Operations — 同じコンポーネントロジックの運用画面への展開。",
-                  "alt": "Cymetrics Operations — 同じコンポーネントロジックの運用画面への展開。"
+                  "caption": "Cymetrics Operations：同じコンポーネントロジックの運用画面への展開。",
+                  "alt": "Cymetrics Operations：同じコンポーネントロジックの運用画面への展開。"
                 }
               ]
             }
@@ -4434,15 +4464,15 @@
           "outcomes": [
             {
               "value": "2 → 1週間",
-              "label": "PM–デザインのイテレーション"
+              "label": "PM とデザインのイテレーション"
             },
             {
               "value": "3 → 2日",
               "label": "1画面あたりの構築時間"
             },
             {
-              "value": "ゼロから始めない",
-              "label": "新製品ラインはブランド変数を差し替え、既存システムを土台に直接立ち上げられる"
+              "value": "約80%",
+              "label": "共用コンポーネントと Pattern が支援する既存画面ニーズ"
             }
           ]
         },
@@ -4625,8 +4655,8 @@
       }
     }
   },
-  "updatedAt": "2026-09-07T03:00:00.000Z"
+  "updatedAt": "2026-09-08T02:00:00.000Z"
 }</script>
-  <script src="app.js?v=20260905a" data-portfolio-app></script>
+  <script src="app.js?v=20260908a" data-portfolio-app></script>
 </body>
 </html>

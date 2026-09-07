@@ -394,7 +394,12 @@
             ${section.pointsTitle ? `<h3>${escapeHtml(section.pointsTitle)}</h3>` : ""}
             ${section.pointsDescription ? `<p>${escapeHtml(section.pointsDescription)}</p>` : ""}
           </header>` : ""}
-        <div class="insight-grid">${section.points.map(point => `<article class="insight-card reveal"><h3>${escapeHtml(point.title)}</h3><p>${escapeHtml(point.text)}</p></article>`).join("")}</div>
+        <div class="insight-grid" data-count="${section.points.length}">${section.points.map(point => `
+          <article class="insight-card reveal"${point.statusTone ? ` data-status-tone="${escapeHtml(point.statusTone)}"` : ""}>
+            <div class="insight-card__heading"><h3>${escapeHtml(point.title)}</h3>${point.status ? `<span class="insight-card__status">${escapeHtml(point.status)}</span>` : ""}</div>
+            <p>${escapeHtml(point.text)}</p>
+            ${point.tags?.length ? `<div class="insight-card__tags">${point.tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join("")}</div>` : ""}
+          </article>`).join("")}</div>
       </div>` : "";
     const mergeResearchPoints = Boolean(
       section.pointsFirst &&
