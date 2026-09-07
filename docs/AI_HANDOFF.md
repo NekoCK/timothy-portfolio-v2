@@ -378,6 +378,11 @@ The two handoff files are intentionally the first local additions. Keep them ava
 - Updated the adjacent cross-reference note in each locale to match the renamed section. All section body copy, media, figures, and evidence claims remain unchanged.
 - Synchronized `content/portfolio.json` and the embedded fallback at `2026-09-08T05:00:00.000Z`. Next safe action: run content and JavaScript validation, then review the longer three-language titles at desktop and mobile widths before release.
 
+## 2026-09-08 Case snapshot heading hierarchy
+
+- Replaced the inline middle-dot separator between every case-study project name and subtitle in the snapshot heading with two deliberate type levels. This fixes the awkward Insurance SaaS title/subtitle punctuation and prevents the browser from balancing both phrases as one line.
+- Snapshot headings now use `text-wrap: pretty`; project names remain intact while subtitles wrap naturally only when the viewport requires it. Updated the stylesheet and application cache versions to `20260908d` and `20260908b`.
+
 ## State of the old working copy
 
 At backup time, the old working copy was on `codex/insurance-heading-unification` at `25817e8d6c0419c0c6f964a5bcd6bc05c78a98ec`. Relative to the locally recorded `origin/main`, it was ahead 4 and behind 8.

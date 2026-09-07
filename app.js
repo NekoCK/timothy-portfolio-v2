@@ -489,7 +489,7 @@
 
         <section class="snapshot-section">
           <div class="shell">
-            <header class="snapshot-header reveal"><span class="eyebrow">${escapeHtml(ui.snapshot)}</span><h2>${escapeHtml(project.name)} · ${escapeHtml(project.subtitle)}</h2></header>
+            <header class="snapshot-header reveal"><span class="eyebrow">${escapeHtml(ui.snapshot)}</span><h2><span class="snapshot-header__name">${escapeHtml(project.name)}</span><span class="snapshot-header__subtitle">${escapeHtml(project.subtitle)}</span></h2></header>
             <div class="snapshot-grid">${summary.map(([icon, title, text]) => `<article class="snapshot-card reveal"><span class="snapshot-card__icon">${icon}</span><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`).join("")}</div>
           </div>
         </section>

@@ -227,7 +227,9 @@ html[data-locale="zh-Hant"] [data-section="contact"] .contact-panel h2{font-size
 
 .snapshot-section{padding:58px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .snapshot-header{width:100%;max-width:none;margin-bottom:32px}
-.snapshot-header h2{width:100%;max-width:none;margin-bottom:0;font-size:clamp(2.15rem,3.2vw,3.35rem);line-height:1.14}
+.snapshot-header h2{width:100%;max-width:none;margin-bottom:0;font-size:clamp(2.15rem,3.2vw,3.35rem);line-height:1.14;text-wrap:pretty}
+.snapshot-header__name,.snapshot-header__subtitle{display:block}
+.snapshot-header__subtitle{max-width:920px;margin-top:.36em;color:var(--project-dark);font-family:var(--font-body);font-size:.52em;font-weight:680;line-height:1.42;letter-spacing:-.015em;text-wrap:pretty}
 .snapshot-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .snapshot-card{padding:26px;border:1px solid var(--border);border-radius:var(--radius);background:var(--paper)}
 .snapshot-card__icon{display:grid;place-items:center;width:42px;height:42px;margin-bottom:18px;border-radius:50%;background:var(--project-soft);color:var(--project-dark);font-weight:850}
