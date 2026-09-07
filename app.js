@@ -62,6 +62,10 @@
     return escapeHtml(value).replace(/\n/g, "<br>");
   }
 
+  function formatHeroBody(value) {
+    return escapeHtml(value).replace(/\n/g, '<br class="hero-copy__desktop-break">');
+  }
+
   function localeContent() {
     return DATA.content[state.locale] || DATA.content[DATA.defaultLocale];
   }
@@ -166,7 +170,7 @@
             <div class="hero-copy">
               <span class="eyebrow reveal">${escapeHtml(home.hero.eyebrow)}</span>
               <h1 class="reveal">${formatHeading(home.hero.titleBefore)} <span class="accent">${formatHeading(home.hero.titleAccent)}</span></h1>
-              <p class="reveal">${escapeHtml(home.hero.body)}</p>
+              <p class="reveal">${formatHeroBody(home.hero.body)}</p>
               <div class="hero-actions reveal">
                 <a class="button button-primary" href="#home" data-home-target="work">${escapeHtml(home.hero.primary)}</a>
               </div>

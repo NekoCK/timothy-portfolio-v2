@@ -398,6 +398,11 @@ The two handoff files are intentionally the first local additions. Keep them ava
 - Changed only the homepage Hero subtitle from the global `pretty` wrapping behavior to `balance`, so desktop subtitle lines distribute more evenly across Traditional Chinese, English, and Japanese. Copy, size, and responsive width remain unchanged; mobile can still wrap naturally.
 - Updated the stylesheet cache version to `20260908e`. Review all three homepage Hero subtitles at desktop and mobile widths before release.
 
+## 2026-09-08 Traditional Chinese Hero subtitle punctuation break
+
+- Added one explicit desktop-only line break after `問題，` in the Traditional Chinese Hero subtitle, keeping the punctuation at the end of the first semantic line rather than leaving following text on that line. The mobile breakpoint suppresses this forced break and preserves natural responsive wrapping.
+- Added the narrowly scoped `formatHeroBody` renderer for safe line-break handling, synchronized `content/portfolio.json` with the embedded fallback at `2026-09-08T08:00:00.000Z`, and updated stylesheet/application cache versions to `20260908f` and `20260908c`.
+
 ## State of the old working copy
 
 At backup time, the old working copy was on `codex/insurance-heading-unification` at `25817e8d6c0419c0c6f964a5bcd6bc05c78a98ec`. Relative to the locally recorded `origin/main`, it was ahead 4 and behind 8.

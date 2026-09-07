@@ -457,6 +457,7 @@ body.modal-open{overflow:hidden}
   .hero-section{padding-top:14px}
   .hero-shell{height:auto;min-height:0}
   .hero-copy{padding:38px 30px 46px}.hero-copy h1{font-size:clamp(3rem,10vw,5.2rem)}
+  .hero-copy__desktop-break{display:none}
   html[data-locale="zh-Hant"] .hero-copy h1,html[data-locale="en"] .hero-copy h1,html[data-locale="ja"] .hero-copy h1{white-space:normal}
   .about-layout{grid-template-columns:1fr}.about-media{width:min(100%,540px);margin-inline:auto}.about-copy{max-width:none}
   .section-header,.outcomes-header{align-items:flex-start;flex-direction:column}.section-header>p,.outcomes-header p{text-align:left}
