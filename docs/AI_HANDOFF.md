@@ -1,6 +1,6 @@
 # Clean Release Clone — AI / CLI / Desktop Handoff
 
-Last updated: 2026-09-08 00:00 +08:00
+Last updated: 2026-09-08 13:00 +08:00
 
 Read this file before editing, synchronizing, committing, or publishing the portfolio.
 
@@ -371,6 +371,12 @@ The two handoff files are intentionally the first local additions. Keep them ava
 - Corrected the component-workflow subsection titles from 4-1 through 4-3 to 5-1 through 5-3 in all three OneSleeve locales.
 - Added the user-supplied `assets/images/original/RTL.png` as the wide, zoomable visual under 5-3 in each locale, documenting bidirectional behavior within the shared component structure.
 - Synchronized `content/portfolio.json` and the embedded fallback at `2026-09-08T04:00:00.000Z`. The new user-supplied asset remains untracked until an explicitly requested release commit.
+
+## 2026-09-08 Insurance SaaS decision framing
+
+- Reframed section 4 of the Insurance SaaS case study in English, Traditional Chinese, and Japanese from implementation language to decision language. The updated labels are `Design Decisions`, `設計決策`, and `設計判断`; each heading now makes the compliance and experience trade-offs explicit.
+- Updated the adjacent cross-reference note in each locale to match the renamed section. All section body copy, media, figures, and evidence claims remain unchanged.
+- Synchronized `content/portfolio.json` and the embedded fallback at `2026-09-08T05:00:00.000Z`. Next safe action: run content and JavaScript validation, then review the longer three-language titles at desktop and mobile widths before release.
 
 ## State of the old working copy
 
