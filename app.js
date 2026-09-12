@@ -474,6 +474,29 @@
       return;
     }
     document.body.classList.add("case-view");
+
+    if (slug === "insurance" && window.INSURANCE_CASE_PAGE) {
+      const approvedCase = window.INSURANCE_CASE_PAGE.getContent(state.locale);
+      document.title = `${approvedCase.pageTitle} | Timothy Lau`;
+      const tail = `
+        ${renderRelated(slug)}
+        <section class="section section-tight">
+          <div class="shell contact-panel reveal">
+            <div><span class="eyebrow">${escapeHtml(ui.contactEyebrow)}</span><h2>${escapeHtml(ui.contactTitle)}</h2><p>${escapeHtml(ui.contactBody)}</p><a class="button button-primary" href="mailto:nekoking2010@gmail.com">${escapeHtml(ui.contactButton)} ↗</a></div>
+            <div class="contact-details"><a class="contact-detail text-link" href="mailto:nekoking2010@gmail.com"><span aria-hidden="true">✉</span><span>nekoking2010@gmail.com</span></a><a class="contact-detail text-link" href="#home" data-home-target="work"><span aria-hidden="true">⌂</span><span>${escapeHtml(ui.returnHome)}</span></a></div>
+          </div>
+        </section>
+        ${footer()}`;
+      APP.innerHTML = window.INSURANCE_CASE_PAGE.render({
+        locale: state.locale,
+        project,
+        ui,
+        site,
+        tail,
+      });
+      return;
+    }
+
     document.title = state.locale === "en"
       ? `${project.name} — ${project.canonicalSubtitle} | Timothy Lau`
       : `${project.name} — ${project.subtitle} | Timothy Lau`;
@@ -578,11 +601,15 @@
   }
 
   function render({ preserveScroll = false } = {}) {
+    window.INSURANCE_CASE_PAGE?.destroy?.();
     updateHeader();
     const route = currentRoute();
     if (route.type === "case") renderCase(route.slug);
     else renderHome();
     setupReveal();
+    if (route.type === "case" && route.slug === "insurance") {
+      window.INSURANCE_CASE_PAGE?.setup?.();
+    }
     APP.dataset.renderComplete = "true";
     closeMenu();
     requestAnimationFrame(() => {
@@ -627,6 +654,17 @@
     const localeButton = event.target.closest("button[data-locale]");
     if (localeButton) {
       setLocale(localeButton.dataset.locale);
+      return;
+    }
+
+    const insuranceSectionLink = event.target.closest("[data-insurance-section-link]");
+    if (insuranceSectionLink) {
+      event.preventDefault();
+      const target = document.getElementById(insuranceSectionLink.dataset.section);
+      target?.scrollIntoView({
+        behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+        block: "start",
+      });
       return;
     }
 
