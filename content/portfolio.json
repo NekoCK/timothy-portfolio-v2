@@ -7,10 +7,10 @@
     "ja"
   ],
   "projectOrder": [
-    "onesleeve",
     "insurance",
-    "alphacamp",
-    "ferqo"
+    "onesleeve",
+    "ferqo",
+    "alphacamp"
   ],
   "sharedAssets": {
     "portrait": "assets/images/original/portrait.jpg",
@@ -37,36 +37,36 @@
           "eyebrow": "",
           "titleBefore": "Identify the right problem to solve,\nthen turn the answer into a sustainable architecture.",
           "titleAccent": "",
-          "body": "AI can generate answers. Deciding which problem to solve and how to make the solution last still requires human judgment.",
+          "body": "I find the core problem within ambiguous user, business, and technical constraints, make the product decision clear, then turn the solution into a system the team can keep using.",
           "primary": "View selected work",
           "secondary": "Contact me",
           "imageAlt": "Product designer in a calm studio setting"
         },
         "about": {
           "eyebrow": "My Process",
-          "titleBefore": "Start from the root of the problem, work through strategy, land on a system that sustains itself.",
+          "titleBefore": "Clarify the problem. Make the decision. Build the system.",
           "titleAccent": "",
-          "body": "Challenge existing assumptions and use research to find the real problem. Then structure the ambiguity into options with clear trade-offs, so stakeholders can make evidence-based decisions. Finally, build the solution into a scalable architecture that helps the team move forward, maintain it, and evolve it consistently.",
+          "body": "I move ambiguous product work forward through three deliberate steps.",
           "imageAlt": "A Post-it-covered workshop wall",
           "principles": [
             {
-              "title": "Challenge assumptions, find the real problem",
-              "body": "Don't accept surface-level requirements. Use research to surface the blind spots the team hasn't seen, and confirm the direction before opening any design tool."
+              "title": "Find the core problem",
+              "body": "Separate surface symptoms from the constraints that truly shape the problem."
             },
             {
-              "title": "Structure decisions, align stakeholders",
-              "body": "Break ambiguous problems into comparable options so people across roles can choose based on evidence, not preference."
+              "title": "Make the decision clear",
+              "body": "Compare options, trade-offs, and boundaries instead of jumping straight into UI."
             },
             {
-              "title": "Build systems, not just deliverables",
-              "body": "Design scalable architectures, governance rules, and naming conventions. Make the solution infrastructure the team can run on, not a one-time output."
+              "title": "Turn decisions into systems",
+              "body": "Build solutions the team can keep using, rather than solving the problem only once."
             }
           ],
-          "backgroundFacts": "Nine years across four industries (IoT · Insurtech · Cybersecurity · AI Security) and three markets (Taiwan · Japan · Hong Kong). Born in Japan and lived there for eight years. JLPT N1."
+          "backgroundFacts": "Nine years in product design across B2B SaaS, fintech, cybersecurity, and IoT, working across Taiwan, Japan, and Hong Kong. My work extends beyond interface delivery into problem framing, product decisions, and systems."
         },
         "work": {
           "eyebrow": "Selected work",
-          "title": "Find the core problem, then build the solution into a sustainable architecture.",
+          "title": "Four cases, from product decisions to durable delivery.",
           "body": ""
         },
         "strengths": {
@@ -90,19 +90,19 @@
         },
         "teamValue": {
           "eyebrow": "What teams get",
-          "title": "Help teams move faster and more steadily.",
+          "title": "Turn clear judgment into steady progress.",
           "items": [
             {
-              "title": "Fewer course corrections",
-              "body": "Less circular debate. See the real constraints, weigh the trade-offs, and move forward."
+              "title": "A steadier direction",
+              "body": "See the constraints and trade-offs early, with fewer late course corrections."
             },
             {
-              "title": "Faster decisions",
-              "body": "Fewer rounds of debate. Move quickly on reversible experiments. Give irreversible decisions the diligence they deserve."
+              "title": "Faster alignment",
+              "body": "Make the problem, options, and boundaries clear so cross-functional teams can choose the next step."
             },
             {
-              "title": "Delivery that keeps working",
-              "body": "Speed is not just a short-term gain. When the people who build and maintain the system shape decisions from day one, the team can keep evolving it."
+              "title": "Delivery that lasts",
+              "body": "Carry decisions into shared architecture and rules the team can maintain and evolve."
             }
           ]
         },
@@ -148,7 +148,7 @@
       "projects": {
         "ferqo": {
           "slug": "ferqo",
-          "index": "04",
+          "index": "03",
           "title": "Ferqo — Orchestrating a Zero-Friction Smart Home Ecosystem",
           "role": "Product Designer (Acting PM)",
           "timeline": "2018.11–2019.11",
@@ -540,18 +540,29 @@
           "subtitle": "Breaking vendor lock-in by abstracting fragmented IoT protocols into a true, scenario-driven B2C experience.",
           "year": "2019",
           "keyAchievement": "In task-comparison testing, time to complete everyday scenarios fell by about 50% and SUS increased from approximately 40 to approximately 80. This is directional usability evidence, not market performance.",
+          "cardMetrics": [
+            {
+              "value": "~50% less",
+              "label": "Task completion time"
+            },
+            {
+              "value": "~40 → ~80",
+              "label": "SUS score"
+            }
+          ],
+          "cardMetricNote": "Directional usability evidence; the product did not launch.",
           "cover": "assets/images/original/ferqoHero.png",
           "sourceBoard": "assets/images/original/ferqoArtifact.png",
-          "cardDescription": "Nine depth interviews overturned the team's product thesis. Won executive alignment for a strategic pivot and built \"one-tap comfort\" into a scalable platform architecture.",
+          "cardDescription": "Research overturned the universal-remote assumption and reframed the product around rooms, scenarios, and one-tap comfort.",
           "category": "IoT · Smart Home",
           "description": "As a former distributor for closed smart home systems, our business scalability was severely restricted by single-protocol limitations (like Z-Wave) and the manufacturer’s rigid product roadmap. To achieve strategic independence, we initiated the Ferqo 0-to-1 project. I led the end-to-end product design, translating the vision of an open, multi-protocol platform into an intuitive ecosystem that truly prioritizes everyday consumers over system integrators.",
           "cardTitle": "Ferqo: Orchestrating a Zero-Friction Smart Home Ecosystem"
         },
         "insurance": {
           "slug": "insurance",
-          "index": "02",
+          "index": "01",
           "title": "Modularizing Online Insurance Delivery",
-          "cardTitle": "Building Scalable Insurance SaaS: From Custom Silos to a Modular Ecosystem",
+          "cardTitle": "Building Scalable Insurance SaaS: From One-Off Work to Controlled Modularity",
           "role": "Lead Product Designer",
           "timeline": "2024.11–2024.12 (1 month)",
           "team": "Sales, product, design, and engineering",
@@ -1029,15 +1040,26 @@
           "subtitle": "From ‘Customization Hell’ to a Scalable Insurance Platform",
           "year": "2024",
           "keyAchievement": "Based on sales feedback and internal project comparisons, client-alignment time and development costs each fell by about 50%; the framework is now used in 3+ active enterprise collaborations.",
+          "cardMetrics": [
+            {
+              "value": "3+ mo → ~1 mo",
+              "label": "End-to-end delivery"
+            },
+            {
+              "value": "9 → ~2.4",
+              "label": "Engineering + Design person-weeks"
+            }
+          ],
+          "cardMetricNote": "Internal before-and-after project comparison.",
           "cover": "assets/images/original/insuranceHero.png",
           "sourceBoard": "assets/images/original/insuranceArtifact.png",
-          "cardDescription": "Identified the structural problem behind customization that could not scale. Built a modular architecture for cross-market replication.",
+          "cardDescription": "Redefined the customization boundary, replacing one-off rebuilds with a Template and controlled modularity.",
           "category": "Insurtech · B2B SaaS",
           "description": "IXT is AIFT's digital insurance platform. I led the transformation of one module line from one-off custom delivery into a reusable framework for application flows, brand adaptation, and client communication."
         },
         "onesleeve": {
           "slug": "onesleeve",
-          "index": "01",
+          "index": "02",
           "accent": "#d8a72d",
           "soft": "#f5e9bd",
           "dark": "#6d5313",
@@ -1046,6 +1068,7 @@
           "sourceBoard": "assets/images/original/onesleeveArtifact.png",
           "title": "OneSleeve: One Design System for Two Security Brands",
           "name": "OneSleeve",
+          "cardTitle": "OneSleeve: One System for Two Cybersecurity Brands",
           "canonicalSubtitle": "One Design System for Two Security Brands",
           "subtitle": "One Design System for Two Security Brands",
           "category": "Cybersecurity · Design System",
@@ -1053,9 +1076,20 @@
           "timeline": "Dec 2025 – Mar 2026",
           "team": "Product, Design & Engineering",
           "scope": "Design system architecture, cross-functional collaboration, component governance",
-          "cardDescription": "Brand unification was the surface ask. Uncovered the design debt underneath and built a four-layer token architecture with governance, letting a small team move like a big one.",
+          "cardDescription": "Unified fragmented brand and component rules into a four-layer token architecture shared by Product, Design, and Engineering.",
           "description": "Converging Cymetrics and Vulcan into one product family inside a resource-constrained startup, shortening iteration cycles, accelerating delivery, and building a foundation for new markets.",
           "keyAchievement": "One system cut the iteration cycle between PM and design in half and reduced per-screen build time from three days to two.",
+          "cardMetrics": [
+            {
+              "value": "2 → 1 week",
+              "label": "PM–Design iteration"
+            },
+            {
+              "value": "3 → 2 days",
+              "label": "Per-screen build time"
+            }
+          ],
+          "cardMetricNote": "Internal workflow comparison.",
           "summary": {
             "goal": "Build one shared design system for two cybersecurity products, accelerating delivery and enabling scale without slowing market validation.",
             "challenge": "Brand fragmentation, design and engineering debt, and multi-market requirements inside a resource-constrained startup expected to remain demo-ready.",
@@ -1389,7 +1423,7 @@
         },
         "alphacamp": {
           "slug": "alphacamp",
-          "index": "03",
+          "index": "04",
           "title": "Retention Strategy for Coding Education Platforms: Shifting from Functional Delivery to Deep User Connection",
           "cardTitle": "Coding Education Retention Strategy: From Feature Delivery to Deep User Connection",
           "role": "UX Researcher",
@@ -1557,9 +1591,19 @@
           "subtitle": "Using UXR to address learner isolation: a roadmap from transactional relationships to partnership.",
           "year": "2021",
           "keyAchievement": "Defined 8+ service proposals; research insights informed the company’s annual product roadmap.",
+          "cardMetrics": [
+            {
+              "value": "8+",
+              "label": "Service proposals"
+            },
+            {
+              "value": "Annual roadmap",
+              "label": "Research adopted into planning"
+            }
+          ],
           "cover": "assets/images/original/alphacampHero.jpg",
           "sourceBoard": "assets/images/original/alphacampArtifact.png",
-          "cardDescription": "UXR found learner isolation to be a core driver of churn, informing a roadmap from transactional relationships to partnership.",
+          "cardDescription": "Research identified learner isolation as a core churn driver and reframed the service roadmap around an ongoing partnership.",
           "category": "EdTech · Service Strategy",
           "description": "At ALPHAcamp, Taiwan’s leading programming education platform, we faced a critical business challenge: a sharp decline in student engagement and a lack of continued retention once they completed their courses. To address this, I partnered with a colleague on a three-month user research and service design initiative."
         }
@@ -1585,36 +1629,36 @@
           "eyebrow": "",
           "titleBefore": "判斷產品該解什麼問題，\n把答案做成可持續的架構。",
           "titleAccent": "",
-          "body": "AI 能產出答案，但判斷該解什麼問題，\n以及如何讓解法持續運作，仍需要人的判斷。",
+          "body": "從模糊的使用者、商業與技術限制中找到核心問題，\n做出清楚的產品決策，再把解法變成團隊能持續使用的系統。",
           "primary": "查看精選作品",
           "secondary": "聯絡我",
           "imageAlt": "在工作室中的產品設計師"
         },
         "about": {
           "eyebrow": "我的方法",
-          "titleBefore": "從問題的本質出發，\n經過策略推導，\n最後落地成持續運作的系統。",
+          "titleBefore": "先釐清，再決定，\n最後把解法系統化。",
           "titleAccent": "",
-          "body": "先質疑現有假設，用研究找到真正該解的問題。再把模糊的方向整理成有明確取捨的選項，讓利害關係人能做出有根據的決策。最後把解法建構成可擴展的架構，讓團隊能更一致地推進、維護與演進。",
+          "body": "我習慣把模糊的產品問題，依序推進成三個清楚的步驟。",
           "imageAlt": "貼滿便利貼的工作坊白板",
           "principles": [
             {
-              "title": "質疑假設，找到真正要解的問題",
-              "body": "不接受表面需求。用研究挖出團隊沒看到的盲點，在動手設計之前先確認方向是對的。"
+              "title": "找到核心問題",
+              "body": "分開表象症狀與真正限制。"
             },
             {
-              "title": "結構化決策，對齊利害關係人",
-              "body": "把模糊的問題拆成可比較的選項，讓不同角色的人能基於事實做選擇，而不是基於偏好。"
+              "title": "做清楚的決策",
+              "body": "比較方案、取捨與邊界，而不是直接跳到 UI。"
             },
             {
-              "title": "建造系統，不只交付畫面",
-              "body": "設計能擴展的架構、治理規則和命名體系。讓解法不只是一次性的產出，而是團隊能持續運作的基礎設施。"
+              "title": "把決策變成系統",
+              "body": "讓解法能被團隊持續使用，而不是只解一次。"
             }
           ],
-          "backgroundFacts": "九年、四個產業（IoT · 保險科技 · 資安 · AI 安全）、三個市場（台灣 · 日本 · 香港）。日本出生，在日八年，JLPT N1。"
+          "backgroundFacts": "9 年產品設計經驗，橫跨 B2B SaaS、金融科技、資安與 IoT，曾在台灣、日本與香港市場工作。專注於介面之外的問題定義、產品決策與系統落地。"
         },
         "work": {
           "eyebrow": "精選作品",
-          "title": "找到核心問題，把解法做成可持續的架構。",
+          "title": "四個案例，從產品決策走到實際交付。",
           "body": ""
         },
         "strengths": {
@@ -1638,19 +1682,19 @@
         },
         "teamValue": {
           "eyebrow": "團隊得到什麼",
-          "title": "讓團隊更快、更穩地往前。",
+          "title": "讓清楚的判斷，變成團隊前進的基礎。",
           "items": [
             {
-              "title": "更少的方向修正",
-              "body": "減少繞圈討論。看見真正的限制條件，權衡取捨，然後前進。"
+              "title": "方向更穩",
+              "body": "提早看清限制與取捨，減少做到一半才回頭。"
             },
             {
-              "title": "更快的決策速度",
-              "body": "反覆討論的次數變少。可逆的實驗快速推進，不可逆的決定得到該有的審慎。"
+              "title": "協作更快",
+              "body": "把問題、選項與邊界說清楚，讓跨職能更快決定下一步。"
             },
             {
-              "title": "能持續運作的交付",
-              "body": "交付不只在當下加快。因為負責建造與維護的人從一開始就參與決策，團隊之後也能持續演進。"
+              "title": "交付能延續",
+              "body": "把決策留下成架構與規則，讓團隊持續維護與演進。"
             }
           ]
         },
@@ -1696,7 +1740,7 @@
       "projects": {
         "ferqo": {
           "slug": "ferqo",
-          "index": "04",
+          "index": "03",
           "title": "Ferqo——打造零摩擦智慧家庭生態系",
           "role": "產品設計師（兼任產品經理）",
           "timeline": "2018.11–2019.11",
@@ -2088,18 +2132,29 @@
           "subtitle": "抽象化破碎的 IoT 協定、打破供應商綁定，打造真正以情境驅動的 B2C 體驗。",
           "year": "2019",
           "keyAchievement": "任務式比較測試中，日常情境時間約縮短 50%，SUS 由約 40 提升至約 80。這是方向性的可用性證據，並非市場成效。",
+          "cardMetrics": [
+            {
+              "value": "約減少 50%",
+              "label": "任務完成時間"
+            },
+            {
+              "value": "約 40 → 80",
+              "label": "SUS 分數"
+            }
+          ],
+          "cardMetricNote": "方向性可用性證據；產品未上線。",
           "cover": "assets/images/original/ferqoHero.png",
           "sourceBoard": "assets/images/original/ferqoArtifact.png",
-          "cardDescription": "用九次深度訪談推翻團隊的產品假設，說服管理層轉向，把「一鍵舒適」建構成可擴展的平台架構。",
+          "cardDescription": "用研究推翻通用遙控器假設，將產品轉向以房間、情境與「一鍵舒適」為核心的體驗架構。",
           "category": "IoT · 智慧家庭",
           "description": "過去作為封閉式智慧家庭系統的代理商，我們的商業擴展受到單一協定（如 Z-Wave）與原廠僵化產品路線圖的嚴重限制。為了取得策略自主性，我們啟動 Ferqo 0 到 1 專案。我負責端到端產品設計，把開放、多協定平台的願景轉化為真正優先服務一般消費者、而非系統整合商的直覺生態系。",
           "cardTitle": "Ferqo：打造零摩擦智慧家庭生態系"
         },
         "insurance": {
           "slug": "insurance",
-          "index": "02",
+          "index": "01",
           "title": "模組化線上保險交付",
-          "cardTitle": "建構可擴展的保險 SaaS：從客製孤島走向模組化生態系",
+          "cardTitle": "建立可擴展的保險 SaaS：從客製孤島走向模組化生態系",
           "role": "主責產品設計師",
           "timeline": "2024.11–2024.12（1 個月）",
           "team": "業務、產品、設計與工程",
@@ -2577,16 +2632,27 @@
           "subtitle": "從「客製地獄」走向可擴展的保險平台",
           "year": "2024",
           "keyAchievement": "依業務回饋與內部專案比較，客戶對齊時間與開發成本各降低約 50%，框架已應用於 3 個以上進行中的企業合作案。",
+          "cardMetrics": [
+            {
+              "value": "3+ 月 → 約 1 月",
+              "label": "端到端交付週期"
+            },
+            {
+              "value": "9 → 約 2.4 人週",
+              "label": "工程＋設計投入"
+            }
+          ],
+          "cardMetricNote": "內部專案導入前後比較。",
           "cover": "assets/images/original/insuranceHero.png",
           "sourceBoard": "assets/images/original/insuranceArtifact.png",
-          "cardDescription": "找到客製化無法擴展的結構性問題，用模組化架構讓平台能跨市場複製。",
+          "cardDescription": "重新定義客製邊界，以 Template + 受控模組化取代逐案重做。",
           "category": "保險科技 · B2B SaaS",
           "description": "IXT 是 AIFT 的數位保險平台。我主導其中一條模組線，將一次性客製交付轉成可重用的申請流程、品牌適配與客戶溝通框架。"
         },
         "onesleeve": {
           "slug": "onesleeve",
-          "index": "01",
-          "cardTitle": "OneSleeve",
+          "index": "02",
+          "cardTitle": "OneSleeve：一套設計系統，支撐兩個資安品牌",
           "accent": "#d8a72d",
           "soft": "#f5e9bd",
           "dark": "#6d5313",
@@ -2602,9 +2668,20 @@
           "timeline": "2025.12–2026.03",
           "team": "產品、設計與工程",
           "scope": "設計系統架構、跨職能協作、元件治理",
-          "cardDescription": "品牌統一只是表面需求。挖出底層設計債，建造了一套四層 Token 架構和治理體系，讓小團隊跑出大團隊的速度。",
+          "cardDescription": "把分散的品牌與元件規則整合成四層 Token 架構，讓產品、設計與工程從同一套基礎迭代。",
           "description": "在資源有限、仍需快速驗證市場的新創環境中，將 Cymetrics 與 Vulcan 收斂為同一產品家族，縮短迭代、加快交付，並建立多市場擴展的基礎。",
           "keyAchievement": "一套系統讓 PM 與設計迭代減半，單畫面建置時間從三天降至兩天。",
+          "cardMetrics": [
+            {
+              "value": "2 → 1 週",
+              "label": "PM—設計迭代週期"
+            },
+            {
+              "value": "3 → 2 天",
+              "label": "單畫面建置時間"
+            }
+          ],
+          "cardMetricNote": "內部工作週期與建置時間比較。",
           "summary": {
             "goal": "建立一套共用設計系統，統一兩個資安產品，在不拖慢市場驗證的前提下加快交付並支援擴展。",
             "challenge": "品牌分裂、設計與工程債、多市場與 RTL 需求，同時發生在資源有限且必須隨時 Demo-ready 的新創環境。",
@@ -2950,7 +3027,7 @@
         },
         "alphacamp": {
           "slug": "alphacamp",
-          "index": "03",
+          "index": "04",
           "title": "程式教育平台留存策略：從功能交付走向深度使用者連結",
           "cardTitle": "程式教育平台留存策略：從功能交付走向深度使用者連結",
           "role": "UX 研究員",
@@ -3118,9 +3195,19 @@
           "subtitle": "透過 UXR 打破學習的「孤立感」：從交易關係走向夥伴關係的策略路線圖。",
           "year": "2021",
           "keyAchievement": "定義 8+ 項服務提案，研究洞察納入公司年度產品路線圖。",
+          "cardMetrics": [
+            {
+              "value": "8+",
+              "label": "服務提案"
+            },
+            {
+              "value": "年度路線圖",
+              "label": "研究洞察納入產品規劃"
+            }
+          ],
           "cover": "assets/images/original/alphacampHero.jpg",
           "sourceBoard": "assets/images/original/alphacampArtifact.png",
-          "cardDescription": "UXR 發現學習的「孤立感」是流失的核心原因，據此規劃從交易關係轉向夥伴關係的策略路線圖。",
+          "cardDescription": "UXR 發現學習的「孤立感」是流失的核心原因，據此把服務策略從交易關係轉向長期夥伴。",
           "category": "教育科技 · 服務策略",
           "description": "在台灣領先的程式教育平台 ALPHAcamp，我們面臨關鍵商業挑戰：學生完成課程後，互動與持續留存明顯下降。為此，我與一位夥伴進行三個月的使用者研究與服務設計。"
         }
@@ -3146,36 +3233,36 @@
           "eyebrow": "",
           "titleBefore": "解くべき問題を見極め、\n解決策を持続可能な仕組みに落とし込む。",
           "titleAccent": "",
-          "body": "AI は答えを生成できる。しかし、どの問題を解くべきかを見極め、解決策を持続させるには、人の判断が必要です。",
+          "body": "曖昧なユーザー課題、事業要件、技術制約から本質的な課題を見極め、判断を明確にし、解決策をチームが継続して使える仕組みに落とし込みます。",
           "primary": "主な実績を見る",
           "secondary": "お問い合わせ",
           "imageAlt": "落ち着いたスタジオにいるプロダクトデザイナー"
         },
         "about": {
           "eyebrow": "私のアプローチ",
-          "titleBefore": "問題の本質から出発し、戦略を経て、持続的に機能するシステムに着地させる。",
+          "titleBefore": "課題を明らかにし、判断し、\n仕組みにする。",
           "titleAccent": "",
-          "body": "まず既存の前提を疑い、リサーチで本当に解くべき問題を見つける。次に、曖昧さを明確なトレードオフのある選択肢に整理し、ステークホルダーがエビデンスに基づいて意思決定できるようにする。最後に、解決策をスケーラブルなアーキテクチャに落とし込み、チームが一貫して前に進み、維持・進化させ続けられるようにする。",
+          "body": "曖昧なプロダクト課題を、3つのステップで前に進めます。",
           "imageAlt": "付箋で埋められたワークショップのホワイトボード",
           "principles": [
             {
-              "title": "前提を疑い、本当に解くべき問題を見つける",
-              "body": "表面的な要件を受け入れない。リサーチでチームが見落としている盲点を明らかにし、設計に入る前に方向性を確認する。"
+              "title": "本質的な課題を見つける",
+              "body": "表面的な症状と、本当に向き合うべき制約を切り分けます。"
             },
             {
-              "title": "意思決定を構造化し、関係者の足並みを揃える",
-              "body": "曖昧な問題を比較可能な選択肢に分解し、異なる役割を担う人が好みではなく根拠に基づいて判断できるようにする。"
+              "title": "判断を明確にする",
+              "body": "すぐUIに進まず、選択肢、トレードオフ、境界を比較します。"
             },
             {
-              "title": "画面ではなく、システムを構築する",
-              "body": "スケーラブルなアーキテクチャ、ガバナンスルール、命名規則を設計する。一度きりのアウトプットではなく、チームが運用し続けられるインフラにする。"
+              "title": "判断を仕組みにする",
+              "body": "一度きりの解決で終わらせず、チームが継続して使える形にします。"
             }
           ],
-          "backgroundFacts": "日本生まれ、日本で8年間暮らし、JLPT N1。9年間で4つの業界（IoT・インシュアテック・サイバーセキュリティ・AIセキュリティ）と3つの市場（台湾・日本・香港）を経験。"
+          "backgroundFacts": "プロダクトデザイン歴9年。B2B SaaS、FinTech、サイバーセキュリティ、IoTに携わり、台湾・日本・香港の市場で経験を積んできました。UI制作にとどまらず、課題設定、プロダクト判断、仕組みへの落とし込みまで担います。"
         },
         "work": {
           "eyebrow": "主な実績",
-          "title": "本質的な問題を見つけ、解決策を持続可能な仕組みに変える。",
+          "title": "4つの事例で、プロダクト判断から継続可能なデリバリーまで。",
           "body": ""
         },
         "strengths": {
@@ -3199,19 +3286,19 @@
         },
         "teamValue": {
           "eyebrow": "チームが得るもの",
-          "title": "チームがより速く、より安定して前に進めるように。",
+          "title": "明確な判断を、チームが前進する力に。",
           "items": [
             {
-              "title": "軌道修正が減る",
-              "body": "堂々巡りの議論が減る。本当の制約条件を把握し、トレードオフを見極め、前に進む。"
+              "title": "方向がぶれにくい",
+              "body": "制約とトレードオフを早く見極め、途中での大きな方向修正を減らします。"
             },
             {
-              "title": "意思決定が速くなる",
-              "body": "繰り返しの議論が減る。可逆的な実験は素早く進め、不可逆的な決定には相応の慎重さを払う。"
+              "title": "合意形成が速い",
+              "body": "課題、選択肢、境界を明確にし、職種を越えて次の一手を決めやすくします。"
             },
             {
-              "title": "持続する成果",
-              "body": "スピードは短期的な成果にとどまらない。システムを構築・維持する人が最初から意思決定に参加しているからこそ、チームはその後も進化し続けられる。"
+              "title": "デリバリーが続く",
+              "body": "判断を共通のアーキテクチャとルールに残し、チームが継続して運用・改善できるようにします。"
             }
           ]
         },
@@ -3257,7 +3344,7 @@
       "projects": {
         "ferqo": {
           "slug": "ferqo",
-          "index": "04",
+          "index": "03",
           "title": "Ferqo — 摩擦のないスマートホーム・エコシステムの構築",
           "role": "プロダクトデザイナー（PM 兼任）",
           "timeline": "2018.11–2019.11",
@@ -3649,18 +3736,29 @@
           "subtitle": "断片化したIoTプロトコルを抽象化し、ベンダーロックインを解消。シナリオ主導の真のB2C体験へ。",
           "year": "2019",
           "keyAchievement": "タスク比較テストで、日常シナリオの完了時間は約50%短縮され、SUSは約40から約80に向上。これは方向性を示すユーザビリティの証拠であり、市場での成果を示すものではない。",
+          "cardMetrics": [
+            {
+              "value": "約50%短縮",
+              "label": "タスク完了時間"
+            },
+            {
+              "value": "約40 → 80",
+              "label": "SUSスコア"
+            }
+          ],
+          "cardMetricNote": "方向性を示すユーザビリティの証拠。製品は未リリース。",
           "cover": "assets/images/original/ferqoHero.png",
           "sourceBoard": "assets/images/original/ferqoArtifact.png",
-          "cardDescription": "9回のデプスインタビューでチームのプロダクト仮説を覆し、経営層から戦略転換への合意を得た。「ワンタップの快適さ」をスケーラブルなプラットフォームアーキテクチャに落とし込んだ。",
+          "cardDescription": "リサーチで汎用リモコンという前提を覆し、部屋・シーン・ワンタップの快適さを中心とする体験へ転換した。",
           "category": "IoT · スマートホーム",
           "description": "閉鎖型スマートホーム製品の販売代理を行っていた当時、単一プロトコルとメーカーの固定ロードマップが事業拡張を強く制限していました。そこで戦略的な自立を目指し、Ferqoの0→1プロジェクトを開始。私はエンドツーエンドの製品設計を主導し、オープンなマルチプロトコル基盤を、システムインテグレーターではなく生活者を優先する直感的な体験へ翻訳しました。",
           "cardTitle": "Ferqo：ゼロフリクションのスマートホームエコシステム"
         },
         "insurance": {
           "slug": "insurance",
-          "index": "02",
+          "index": "01",
           "title": "オンライン保険デリバリーのモジュール化",
-          "cardTitle": "スケーラブルな保険 SaaS の構築：カスタムサイロからモジュラーエコシステムへ",
+          "cardTitle": "スケーラブルな保険SaaS：案件ごとの作り直しから制御されたモジュール化へ",
           "role": "リードプロダクトデザイナー",
           "timeline": "2024.11–2024.12（1か月）",
           "team": "営業、プロダクト、デザイン、開発",
@@ -4138,15 +4236,26 @@
           "subtitle": "「カスタマイズ地獄」からスケーラブルな保険プラットフォームへ",
           "year": "2024",
           "keyAchievement": "営業からのフィードバックと社内プロジェクト比較に基づき、顧客との調整時間と開発コストをそれぞれ約50%削減。フレームワークは3件以上の進行中エンタープライズ案件で適用されている。",
+          "cardMetrics": [
+            {
+              "value": "3か月超 → 約1か月",
+              "label": "デリバリー期間"
+            },
+            {
+              "value": "9 → 約2.4人週",
+              "label": "開発＋デザイン工数"
+            }
+          ],
+          "cardMetricNote": "社内プロジェクトの導入前後比較。",
           "cover": "assets/images/original/insuranceHero.png",
           "sourceBoard": "assets/images/original/insuranceArtifact.png",
-          "cardDescription": "スケールしないカスタマイズの構造的課題を特定。クロスマーケット展開を可能にするモジュラーアーキテクチャを構築した。",
+          "cardDescription": "カスタマイズの境界を再定義し、案件ごとの作り直しをTemplate＋制御されたモジュール化へ置き換えた。",
           "category": "Insurtech · B2B SaaS",
           "description": "IXTはAIFTのデジタル保険プラットフォームです。私は一つのモジュールラインを主導し、単発の個別対応を、申請フロー、ブランド適用、顧客コミュニケーションに再利用できる基盤へ変えました。"
         },
         "onesleeve": {
           "slug": "onesleeve",
-          "index": "01",
+          "index": "02",
           "accent": "#d8a72d",
           "soft": "#f5e9bd",
           "dark": "#6d5313",
@@ -4155,6 +4264,7 @@
           "sourceBoard": "assets/images/original/onesleeveArtifact.png",
           "title": "OneSleeve：1つのデザインシステムで2つのセキュリティブランドを支える",
           "name": "OneSleeve",
+          "cardTitle": "OneSleeve：2つのセキュリティブランドを支える1つのデザインシステム",
           "canonicalSubtitle": "One Design System for Two Security Brands",
           "subtitle": "1つのデザインシステムで2つのセキュリティブランドを支える",
           "category": "サイバーセキュリティ · デザインシステム",
@@ -4162,9 +4272,20 @@
           "timeline": "2025年12月〜2026年3月",
           "team": "プロダクト・デザイン・エンジニアリング",
           "scope": "デザインシステム設計、クロスファンクショナル連携、コンポーネントガバナンス",
-          "cardDescription": "ブランド統一は表面的な課題。その下にあるデザイン負債を掘り出し、4層の Token アーキテクチャとガバナンス体制を構築。小さなチームが大きなチームのように動けるようにしました。",
+          "cardDescription": "分散していたブランドとコンポーネントのルールを4層のToken構造に統合し、Product・Design・Engineeringの共通基盤をつくった。",
           "description": "限られたリソースの中でも市場検証の速度を落とさず、Cymetrics と Vulcan を1つのプロダクトファミリーへ統合。イテレーション短縮、デリバリー加速、新市場展開の基盤構築を進めました。",
           "keyAchievement": "PM とデザインのイテレーションを半減し、1画面あたりの構築を3日から2日へ短縮。",
+          "cardMetrics": [
+            {
+              "value": "2 → 1週間",
+              "label": "PM・デザインの反復期間"
+            },
+            {
+              "value": "3 → 2日",
+              "label": "1画面の構築時間"
+            }
+          ],
+          "cardMetricNote": "社内ワークフローの比較。",
           "summary": {
             "goal": "2つのセキュリティ製品を支える共通デザインシステムを構築し、市場検証を止めずにデリバリー速度と拡張性を高める。",
             "challenge": "ブランドの分断、デザイン・開発負債、多市場と RTL への対応を、常にデモ可能な状態が求められる限られた体制の中で同時に解決する。",
@@ -4486,7 +4607,7 @@
         },
         "alphacamp": {
           "slug": "alphacamp",
-          "index": "03",
+          "index": "04",
           "title": "プログラミング教育プラットフォームの継続戦略：機能提供から深いユーザー接点へ",
           "cardTitle": "プログラミング教育プラットフォームのリテンション戦略",
           "role": "UXリサーチャー",
@@ -4654,14 +4775,24 @@
           "subtitle": "UXRで学習者の「孤立感」に向き合う：取引的関係からパートナーシップへの戦略ロードマップ",
           "year": "2021",
           "keyAchievement": "8件以上のサービス提案を策定。リサーチのインサイトは会社の年間プロダクトロードマップに反映された。",
+          "cardMetrics": [
+            {
+              "value": "8+",
+              "label": "サービス提案"
+            },
+            {
+              "value": "年間ロードマップ",
+              "label": "調査知見を製品計画へ反映"
+            }
+          ],
           "cover": "assets/images/original/alphacampHero.jpg",
           "sourceBoard": "assets/images/original/alphacampArtifact.png",
-          "cardDescription": "UXRにより、学習者の孤立感が離脱の主要因の一つであることが判明。取引ベースの関係からパートナーシップへの戦略ロードマップを策定した。",
+          "cardDescription": "学習者の孤立感を離脱の主要因と捉え、取引中心の関係から継続的なパートナーシップへサービス戦略を転換した。",
           "category": "EdTech · サービス戦略",
           "description": "台湾のプログラミング教育プラットフォームALPHAcampでは、受講修了後に学生の関与と継続率が急落する課題がありました。そこで同僚と3か月間のユーザーリサーチ／サービスデザインを実施しました。"
         }
       }
     }
   },
-  "updatedAt": "2026-09-08T08:00:00.000Z"
+  "updatedAt": "2026-09-12T09:32:21.000+09:00"
 }

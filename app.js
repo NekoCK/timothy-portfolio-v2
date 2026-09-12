@@ -126,8 +126,10 @@
   function projectCard(project) {
     const ui = localeContent().ui;
     const cardTitle = project.cardTitle || project.name;
+    const metrics = Array.isArray(project.cardMetrics) ? project.cardMetrics.slice(0, 2) : [];
+    const priorityClass = ["onesleeve", "insurance"].includes(project.slug) ? " project-card--priority" : "";
     return `
-      <a class="project-card reveal" style="--card-accent:${escapeHtml(project.accent)}" href="${projectHref(project.slug)}" data-project-link="${escapeHtml(project.slug)}">
+      <a class="project-card${priorityClass} reveal" style="--card-accent:${escapeHtml(project.accent)}" href="${projectHref(project.slug)}" data-project-link="${escapeHtml(project.slug)}">
         <div class="project-card__media">
           <img src="${escapeHtml(project.cover)}" alt="${escapeHtml(`${cardTitle} — ${project.subtitle}`)}" loading="lazy" style="view-transition-name:${escapeHtml(projectCoverTransitionName(project.slug))}">
           <span class="project-card__index">${escapeHtml(project.index)}</span>
@@ -135,11 +137,15 @@
         <div class="project-card__body">
           <div class="project-card__meta"><span>${escapeHtml(project.category)}</span><span>${escapeHtml(project.year)}</span></div>
           <h3 class="project-card__title">${escapeHtml(cardTitle)}</h3>
-          <p class="project-card__subtitle">${escapeHtml(project.subtitle)}</p>
           <p class="project-card__description">${escapeHtml(project.cardDescription)}</p>
           <div class="project-card__achievement">
             <span>${escapeHtml(ui.keyAchievement)}</span>
-            <strong>${escapeHtml(project.keyAchievement)}</strong>
+            ${metrics.length ? `
+              <div class="project-card__metrics">
+                ${metrics.map(metric => `<div class="project-card__metric"><strong>${escapeHtml(metric.value)}</strong><small>${escapeHtml(metric.label)}</small></div>`).join("")}
+              </div>
+              ${project.cardMetricNote ? `<p class="project-card__metric-note">${escapeHtml(project.cardMetricNote)}</p>` : ""}
+            ` : `<strong class="project-card__achievement-copy">${escapeHtml(project.keyAchievement)}</strong>`}
           </div>
           <span class="project-card__cta">${escapeHtml(ui.viewCase)}</span>
         </div>
@@ -206,7 +212,7 @@
               <p class="reveal">${escapeHtml(home.about.body)}</p>
               <div class="principle-grid reveal">
                 ${home.about.principles.map((item, index) => `
-                  <article class="principle-card"><span class="principle-icon">${["◉", "⇄", "⌘"][index]}</span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.body)}</p></article>`).join("")}
+                  <article class="principle-card"><span class="principle-icon">${String(index + 1).padStart(2, "0")}</span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.body)}</p></article>`).join("")}
               </div>
               ${home.about.backgroundFacts ? `<p class="reveal">${escapeHtml(home.about.backgroundFacts)}</p>` : ""}
             </div>

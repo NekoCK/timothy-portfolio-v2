@@ -4,6 +4,18 @@ Last updated: 2026-09-12 09:23 +09:00
 
 Read this file before editing, synchronizing, committing, or publishing the portfolio.
 
+## 2026-09-12 Homepage hierarchy V1 review
+
+- Applied a low-risk homepage refinement without changing the Hero container, About/Method layout, 2×2 Selected Work grid, team-value section, Contact panel, navigation, responsive architecture, or global visual language.
+- Reordered the reviewed V1 grid to lead with Insurance, followed by OneSleeve, Ferqo, and EdTech. Synchronized the visible 01–04 card indexes across all three locales; no case-study content changed.
+- Replaced the AI-led Hero support line with a clearer positioning statement about finding the core problem across user, business, and technical constraints, making the product decision clear, and turning it into a reusable team system.
+- Shortened the existing About/Method introduction and converted its three existing cards into a numbered working sequence: find the core problem, make the decision clear, and turn the decision into a system. The background line now concisely covers nine years, B2B SaaS/fintech/cybersecurity/IoT, Taiwan/Japan/Hong Kong, and work beyond interface delivery.
+- Kept the existing four-card grid and project order. Removed the redundant homepage subtitle line from each rendered card, shortened each problem/decision summary, and added optional two-metric homepage data. Insurance now uses the approved `3+ months → ~1 month` and `9 → ~2.4 person-weeks` evidence instead of the obsolete development-cost wording. OneSleeve and Insurance receive only a restrained title/metric emphasis; all cards retain the same structure.
+- Simplified the rendered team-value copy so it describes downstream team benefits rather than repeating the working method. Contact structure and wording remain unchanged.
+- Updated the same homepage hierarchy and evidence meaning in English, Traditional Chinese, and Japanese. `content/portfolio.json` and the embedded `index.html` fallback remain synchronized.
+- Visual QA used only local `file://` content, temporary profiles under `/private/tmp`, and headless Chrome screenshots written to `/private/tmp`. Desktop review confirmed the Hero, three-step Method, 2×2 work grid, shortened team-value block, and Contact panel retain the existing visual language. Chrome emitted non-fatal macOS compositor/updater logs after writing the screenshots.
+- This V1 is intentionally uncommitted and unpushed pending user visual review. Next safe action: review the desktop screenshots, make any requested copy/spacing adjustments, then run the standard validation suite before a separately authorized commit or push.
+
 ## 2026-09-12 Insurance decision case production integration
 
 - Promoted the user-approved Chinese Insurance decision case into the production SPA without changing the homepage, other case studies, global navigation, or shared case renderer. `app.js` now routes only the `insurance` slug through the scoped `insurance-case.js` renderer; all other cases retain the existing generic renderer.

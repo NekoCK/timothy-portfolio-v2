@@ -150,10 +150,10 @@ p{color:var(--muted);text-wrap:pretty}
 .about-media img{width:100%;aspect-ratio:1/1.02;object-fit:cover}
 .about-copy{max-width:730px}
 .about-copy h2{margin-bottom:22px}
-.about-copy>p{max-width:700px;font-size:1.07rem}
+.about-copy>p{max-width:660px;font-size:1.04rem}
 .principle-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:34px}
 .principle-card{padding:21px;border:1px solid var(--border);border-radius:var(--radius-sm);background:rgba(255,255,255,.62)}
-.principle-icon{display:grid;place-items:center;width:36px;height:36px;margin-bottom:14px;border-radius:50%;background:var(--sage-100);color:var(--sage-700);font-weight:800}
+.principle-icon{display:grid;place-items:center;width:36px;height:36px;margin-bottom:14px;border-radius:50%;background:var(--sage-100);color:var(--sage-700);font-size:.72rem;font-weight:820;letter-spacing:.08em}
 .principle-card h3{margin-bottom:7px;font-family:var(--font-body);font-size:1rem;font-weight:780;letter-spacing:0}
 .principle-card p{margin-bottom:0;font-size:.88rem;line-height:1.55}
 
@@ -165,14 +165,21 @@ p{color:var(--muted);text-wrap:pretty}
 .project-card__media img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
 .project-card:hover .project-card__media img{transform:scale(1.035)}
 .project-card__index{position:absolute;top:17px;left:17px;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background-color:rgba(255,253,250,.94);background-image:linear-gradient(rgba(86,106,86,.11) 1px,transparent 1px),linear-gradient(90deg,rgba(86,106,86,.11) 1px,transparent 1px);background-size:8px 8px;font-size:.74rem;font-weight:820;box-shadow:0 6px 18px rgba(0,0,0,.08)}
-.project-card__body{display:flex;flex-direction:column;min-height:390px;padding:27px 28px 0}
+.project-card__body{display:flex;flex-direction:column;min-height:370px;padding:27px 28px 0}
 .project-card__meta{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:15px;color:var(--card-accent);font-size:.7rem;font-weight:820;letter-spacing:.1em;text-transform:uppercase}
-.project-card__title{margin-bottom:7px;font-size:clamp(1.75rem,2.6vw,2.45rem)}
-.project-card__subtitle{margin-bottom:17px;color:var(--ink);font-family:var(--font-display);font-size:clamp(1.12rem,1.65vw,1.42rem);line-height:1.2;letter-spacing:-.02em}
-.project-card__description{margin-bottom:20px;line-height:1.58}
+.project-card__title{margin-bottom:13px;font-size:clamp(1.72rem,2.45vw,2.3rem);text-wrap:pretty}
+.project-card--priority .project-card__title{font-weight:600}
+.project-card__description{max-width:53ch;margin-bottom:22px;color:var(--ink-soft);font-size:.96rem;line-height:1.58}
 .project-card__achievement{margin-top:auto;padding:17px 18px;border-left:3px solid var(--card-accent);border-radius:0 12px 12px 0;background:color-mix(in srgb,var(--card-accent) 8%,var(--paper))}
-.project-card__achievement span{display:block;margin-bottom:5px;color:var(--card-accent);font-size:.68rem;font-weight:820;letter-spacing:.1em;text-transform:uppercase}
-.project-card__achievement strong{display:block;color:var(--ink);font-size:.91rem;line-height:1.48}
+.project-card__achievement>span{display:block;margin-bottom:11px;color:var(--card-accent);font-size:.68rem;font-weight:820;letter-spacing:.1em;text-transform:uppercase}
+.project-card__achievement-copy{display:block;color:var(--ink);font-size:.91rem;line-height:1.48}
+.project-card__metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.project-card__metric{min-width:0}
+.project-card__metric+.project-card__metric{padding-left:18px;border-left:1px solid color-mix(in srgb,var(--card-accent) 24%,var(--border))}
+.project-card__metric strong{display:block;color:var(--ink);font-family:var(--font-display);font-size:clamp(1.32rem,2vw,1.78rem);font-weight:620;line-height:1.08;letter-spacing:-.025em}
+.project-card--priority .project-card__metric strong{color:color-mix(in srgb,var(--card-accent) 82%,var(--ink));font-size:clamp(1.42rem,2.15vw,1.92rem)}
+.project-card__metric small{display:block;margin-top:7px;color:var(--ink-soft);font-size:.75rem;font-weight:650;line-height:1.4}
+.project-card__metric-note{margin:11px 0 0;color:var(--muted);font-size:.7rem;line-height:1.45}
 .project-card__cta{display:flex;align-items:center;justify-content:space-between;margin:24px -28px 0;padding:19px 28px;border-top:1px solid var(--border);color:var(--card-accent);font-size:.82rem;font-weight:820;transition:background .2s ease,color .2s ease,padding-left .2s ease}
 .project-card__cta::after{content:"↗";font-size:1.05rem;transition:transform .2s ease}
 .project-card:hover .project-card__cta{background:color-mix(in srgb,var(--card-accent) 8%,transparent);padding-left:32px}
