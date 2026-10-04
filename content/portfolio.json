@@ -406,9 +406,9 @@
             {
               "number": "04",
               "label": "Design Decisions",
-              "title": "Connect Every Interface Decision Back to the Research",
+              "title": "Replace Device Categories with Rooms and Scenarios to Make Daily Control More Intuitive",
               "body": [
-                "The interface was not reorganized as a visual refresh alone. Each structural decision directly answered a behavior identified in research: how people remember their homes, what they use most often, and how much complexity belongs in a daily task."
+                "Research showed that people understand their homes through spaces and everyday scenarios, not hardware inventories. I therefore made rooms and scenarios the primary navigation model, surfaced frequent controls, and moved complex settings out of the main flow. Users could reach everyday controls without first understanding device categories or protocols."
               ],
               "subsections": [
                 {
@@ -426,7 +426,7 @@
                   ]
                 },
                 {
-                  "title": "4-2. Frequent Actions Came First — and Stayed Easy to Identify",
+                  "title": "4-2. Make the Most-Used Controls Visible First",
                   "body": [
                     "The most frequently used actions were placed first so common tasks required no scrolling. Larger labels and touch targets made controls easy to identify, while secondary devices remained available without competing for attention."
                   ],
@@ -464,43 +464,41 @@
             {
               "number": "05",
               "label": "Validation & Limits",
-              "title": "The Direction Tested Better — but the Product Did Not Launch",
+              "title": "In Prototype Comparison, Task Time Fell by About 50% and SUS Rose from ~40 to ~80",
               "body": [
-                "In a separate task-comparison test sample—not the interview participants—the new direction reduced daily scenario completion time by about 50%. SUS usability scores improved from approximately 40 to approximately 80, indicating a substantial improvement in perceived usability.",
-                "Given the limited sample size and the fact that the product did not launch, these figures represent directional usability improvements, not market adoption outcomes.",
-                "What the project did validate was a durable product direction: organize the home around rooms and scenarios, abstract protocol complexity, and treat one-tap comfort as the core value. That model became a reference for later IoT explorations."
+                "In a task-comparison sample separate from the research interview participants, the new prototype reduced daily-scenario task time by about 50%, while SUS usability scores rose from approximately 40 to approximately 80.",
+                "The results support a room- and scenario-based interaction model, showing that participants could complete everyday tasks with less searching and page switching."
               ],
               "visual": {
                 "type": "outcome-shift",
-                "eyebrow": "Directional validation",
-                "title": "A clearer interaction model, with explicit evidence limits",
-                "description": "The comparison summarizes what changed and separates usability evidence from launch status.",
-                "beforeLabel": "Existing model",
-                "afterLabel": "Ferqo direction",
+                "eyebrow": "Prototype usability comparison",
+                "title": "Existing Interface vs. Ferqo Prototype",
+                "description": "The same evaluation criteria compare the interaction model, task time, and perceived usability.",
+                "beforeLabel": "Existing interface",
+                "afterLabel": "Ferqo prototype",
                 "rows": [
                   {
                     "label": "Interaction model",
-                    "before": "Device lists",
+                    "before": "Device categories and lists",
                     "after": "Rooms and scenarios"
                   },
                   {
-                    "label": "Daily scenario time",
-                    "before": "Baseline",
+                    "label": "Task flow",
+                    "before": "5 steps",
+                    "after": "3 steps"
+                  },
+                  {
+                    "label": "Daily-scenario task time",
+                    "before": "Comparison baseline",
                     "after": "About 50% lower"
                   },
                   {
-                    "label": "SUS",
-                    "before": "Original version",
-                    "after": "Approximately 40→80"
-                  },
-                  {
-                    "label": "Status",
-                    "before": "Concept validation",
-                    "after": "Direction validated; not launched"
+                    "label": "SUS usability score",
+                    "before": "~40",
+                    "after": "~80"
                   }
                 ],
-                "result": "Directional validation, not a production-market result.",
-                "note": "Based on the available comparison sample; no adoption or retention data is claimed."
+                "note": "These are prototype usability-comparison results from a limited sample. The product did not launch, so they do not represent market adoption, retention, or long-term usage outcomes."
               },
               "subsections": [
                 {
@@ -518,7 +516,7 @@
                   ]
                 }
               ],
-              "quote": "A product can fail to launch and still produce a durable design decision — when the evidence is stated with its limits."
+              "quote": "Research reframed the product direction; prototype comparison tested whether that direction was actually easier to use."
             }
           ],
           "outcomes": [
@@ -1998,9 +1996,9 @@
             {
               "number": "04",
               "label": "設計決策",
-              "title": "讓每個介面決策都能回扣研究洞察",
+              "title": "以房間與情境取代裝置分類，讓日常控制更直覺",
               "body": [
-                "這次重整不只是視覺更新。每個結構決策都直接回應研究裡的行為：人們如何記住自己的家、什麼動作最常使用，以及日常任務裡應該容納多少複雜度。"
+                "研究顯示，使用者以空間與生活情境理解自己的家，而不是硬體清單。因此我把主要導覽改為房間與情境，讓高頻控制優先被看見，並將複雜設定移出主要操作流程。使用者不必先理解裝置分類與協定，就能找到日常需要的控制。"
               ],
               "subsections": [
                 {
@@ -2018,7 +2016,7 @@
                   ]
                 },
                 {
-                  "title": "4-2. 高頻操作優先，並維持容易辨識",
+                  "title": "4-2. 讓最常用的控制先被看見",
                   "body": [
                     "最常使用的操作被放在前面，讓常見任務不必捲動。更大的標籤與觸控範圍讓控制更容易辨識，次要裝置仍然可用，但不搶走注意力。"
                   ],
@@ -2056,43 +2054,41 @@
             {
               "number": "05",
               "label": "驗證與限制",
-              "title": "方向在測試中更好，但產品最終未上線",
+              "title": "原型比較中，操作時間約減少 50%，SUS 約 40 → 約 80",
               "body": [
-                "在另一批不同於訪談對象的任務式比較樣本中，日常情境操作時間約降低 50%，SUS 易用性分數從約 40 提升至約 80，顯示感知可用性有大幅改善。",
-                "由於樣本數有限且產品最終未上線，這些數字代表方向性的可用性改善，不代表市場採用成效。",
-                "專案真正驗證的是一個可延續的產品方向：用房間與情境組織家庭、抽象化協定複雜度，並把一鍵舒適當成核心價值。這個模型後來成為其他 IoT 探索的參考。"
+                "在另一批不同於研究訪談對象的任務式比較樣本中，新版原型完成日常情境任務的時間約減少 50%，SUS 易用性分數也從約 40 提升至約 80。",
+                "結果支持以房間與情境作為主要操作模型，並顯示使用者能以更少的尋找與頁面切換完成日常任務。"
               ],
               "visual": {
                 "type": "outcome-shift",
-                "eyebrow": "方向性驗證",
-                "title": "更清楚的互動模型，也清楚標示證據邊界",
-                "description": "比較整理了改變內容，並把可用性證據與上線狀態分開。",
-                "beforeLabel": "既有模式",
-                "afterLabel": "Ferqo 方向",
+                "eyebrow": "原型可用性比較",
+                "title": "既有介面與 Ferqo 原型",
+                "description": "以相同評估項目比較互動模型、任務時間與感知易用性。",
+                "beforeLabel": "既有介面",
+                "afterLabel": "Ferqo 原型",
                 "rows": [
                   {
                     "label": "互動模型",
-                    "before": "裝置清單",
+                    "before": "裝置分類與清單",
                     "after": "房間與情境"
                   },
                   {
-                    "label": "日常情境時間",
-                    "before": "基準",
-                    "after": "約降低 50%"
+                    "label": "操作流程",
+                    "before": "5 步",
+                    "after": "3 步"
                   },
                   {
-                    "label": "SUS",
-                    "before": "原始版本",
-                    "after": "約 40→約 80"
+                    "label": "日常情境操作時間",
+                    "before": "比較基準",
+                    "after": "約減少 50%"
                   },
                   {
-                    "label": "狀態",
-                    "before": "概念驗證",
-                    "after": "方向獲驗證；未上線"
+                    "label": "SUS 易用性分數",
+                    "before": "約 40",
+                    "after": "約 80"
                   }
                 ],
-                "result": "方向性驗證，不是正式市場成果。",
-                "note": "根據可用比較樣本；不宣稱採用率或留存結果。"
+                "note": "以上為有限樣本的原型可用性比較結果。產品未正式上線，因此不代表市場採用、留存或長期使用成效。"
               },
               "subsections": [
                 {
@@ -2110,7 +2106,7 @@
                   ]
                 }
               ],
-              "quote": "即使產品沒有上線，只要誠實說明證據限制，仍能產生可延續的設計決策。"
+              "quote": "研究重新定義產品方向，原型比較則檢查這個方向是否真的更容易使用。"
             }
           ],
           "outcomes": [
@@ -3602,9 +3598,9 @@
             {
               "number": "04",
               "label": "設計判断",
-              "title": "すべてのUI判断をリサーチインサイトにつなげる",
+              "title": "デバイス分類を部屋とシナリオに置き換え、日常操作を直感的にする",
               "body": [
-                "今回の再設計は視覚刷新だけではありません。家をどう記憶するか、何を最も使うか、日常タスクにどれだけの複雑さを置くべきかという行動インサイトに、各構造判断を対応させました。"
+                "調査から、ユーザーはハードウェア一覧ではなく、空間と日常のシナリオを通して自宅を理解していると分かりました。そこで部屋とシナリオを主要なナビゲーションとし、よく使う操作を前面に出し、複雑な設定を主要フローの外へ移しました。デバイス分類やプロトコルを理解しなくても、日常的な操作にたどり着ける構成です。"
               ],
               "subsections": [
                 {
@@ -3622,7 +3618,7 @@
                   ]
                 },
                 {
-                  "title": "4-2. 頻繁な操作を優先し、識別しやすくする",
+                  "title": "4-2. よく使う操作を最初に見せる",
                   "body": [
                     "よく使う操作を先に配置し、スクロールせず実行できるようにしました。大きなラベルとタッチ領域で識別しやすくし、低頻度の機器は利用可能なまま注意の競合を抑えました。"
                   ],
@@ -3660,43 +3656,41 @@
             {
               "number": "05",
               "label": "検証と制約",
-              "title": "方向性はテストで改善したが、製品はローンチしなかった",
+              "title": "プロトタイプ比較で操作時間を約50％短縮、SUSは約40から約80へ",
               "body": [
-                "インタビュー参加者とは別のサンプルによるタスク比較テストでは、新しい方向性で日常シナリオの完了時間が約50％短縮しました。SUS ユーザビリティスコアは約40から約80に向上し、知覚されたユーザビリティの大幅な改善を示しました。",
-                "サンプル数が限られており、プロダクトも正式ローンチに至らなかったため、これらは方向性としてのユーザビリティ改善を示すものであり、市場での採用成果を意味しません。",
-                "検証できたのは持続可能な製品方向です。部屋とシナリオで家を整理し、プロトコルの複雑さを抽象化し、ワンタップの快適さを中核価値にする。このモデルは後続のIoT検討の参照点になりました。"
+                "リサーチインタビュー参加者とは別のタスク比較サンプルでは、新しいプロトタイプにより日常シナリオの操作時間が約50％短縮し、SUSユーザビリティスコアは約40から約80へ向上しました。",
+                "この結果は、部屋とシナリオを中心とする操作モデルを支持し、デバイス探索や画面切り替えを減らして日常タスクを完了できる可能性を示しています。"
               ],
               "visual": {
                 "type": "outcome-shift",
-                "eyebrow": "方向性の検証",
-                "title": "明確なインタラクションモデルと、明確な証拠の限界",
-                "description": "何が変わったかを整理し、ユーザビリティの証拠とローンチ状況を分けて示します。",
-                "beforeLabel": "既存モデル",
-                "afterLabel": "Ferqoの方向性",
+                "eyebrow": "プロトタイプのユーザビリティ比較",
+                "title": "既存UIとFerqoプロトタイプ",
+                "description": "同じ評価項目で、操作モデル、タスク時間、知覚ユーザビリティを比較します。",
+                "beforeLabel": "既存UI",
+                "afterLabel": "Ferqoプロトタイプ",
                 "rows": [
                   {
                     "label": "操作モデル",
-                    "before": "デバイスリスト",
+                    "before": "デバイス分類とリスト",
                     "after": "部屋とシナリオ"
                   },
                   {
-                    "label": "日常シナリオ時間",
-                    "before": "ベースライン",
+                    "label": "操作フロー",
+                    "before": "5ステップ",
+                    "after": "3ステップ"
+                  },
+                  {
+                    "label": "日常シナリオの操作時間",
+                    "before": "比較基準",
                     "after": "約50％短縮"
                   },
                   {
-                    "label": "SUS",
-                    "before": "旧バージョン",
-                    "after": "約40→約80"
-                  },
-                  {
-                    "label": "状態",
-                    "before": "コンセプト検証",
-                    "after": "方向性を検証・未ローンチ"
+                    "label": "SUSユーザビリティスコア",
+                    "before": "約40",
+                    "after": "約80"
                   }
                 ],
-                "result": "方向性の検証であり、市場での本番成果ではありません。",
-                "note": "利用可能な比較サンプルに基づく結果で、採用率や継続率は主張しません。"
+                "note": "以上は限られたサンプルによるプロトタイプのユーザビリティ比較結果です。製品は正式ローンチしていないため、市場採用、継続率、長期利用の成果を示すものではありません。"
               },
               "subsections": [
                 {
@@ -3714,7 +3708,7 @@
                   ]
                 }
               ],
-              "quote": "製品がローンチしなくても、証拠の限界を明示すれば、長く使える設計判断を残せます。"
+              "quote": "リサーチで製品方向を再定義し、プロトタイプ比較でその方向が本当に使いやすいかを確認しました。"
             }
           ],
           "outcomes": [
@@ -4794,5 +4788,5 @@
       }
     }
   },
-  "updatedAt": "2026-09-12T09:32:21.000+09:00"
+  "updatedAt": "2026-10-04T00:00:00.000+08:00"
 }
