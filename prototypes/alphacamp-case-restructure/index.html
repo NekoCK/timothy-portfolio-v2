@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AlphaCamp 案例重整 Prototype</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    :root {
+      --alpha-accent: #e5531f;
+      --alpha-deep: #772c16;
+      --alpha-soft: #f8dfd3;
+      --alpha-ink: #20231f;
+      --alpha-muted: #6d7068;
+      --alpha-paper: #f5f1e8;
+      --alpha-card: #fffdf8;
+      --alpha-line: rgba(32, 35, 31, .14);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--alpha-paper); color: var(--alpha-ink); }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+
+    .alpha-prototype {
+      background:
+        radial-gradient(circle at 84% 10%, rgba(229, 83, 31, .08), transparent 25rem),
+        var(--alpha-paper);
+      min-height: 100vh;
+    }
+
+    .alpha-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 64px;
+      padding: 0 4vw;
+      border-bottom: 1px solid var(--alpha-line);
+      background: color-mix(in srgb, var(--alpha-paper) 88%, transparent);
+      backdrop-filter: blur(16px);
+    }
+
+    .alpha-topbar strong { letter-spacing: -.02em; }
+    .alpha-topbar span { color: var(--alpha-muted); font-size: .82rem; }
+
+    .alpha-shell { width: min(1240px, calc(100% - 48px)); margin-inline: auto; }
+
+    .alpha-hero { padding: 48px 0 36px; }
+    .alpha-hero__frame {
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(360px, .85fr);
+      min-height: 600px;
+      border: 1px solid rgba(119, 44, 22, .18);
+      border-radius: 30px;
+      background: var(--alpha-card);
+    }
+
+    .alpha-hero__copy { display: flex; flex-direction: column; padding: clamp(36px, 5vw, 72px); }
+    .alpha-eyebrow {
+      color: var(--alpha-accent);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .alpha-hero h1 {
+      max-width: 760px;
+      margin: 24px 0 18px;
+      font-size: clamp(2.75rem, 5vw, 5.3rem);
+      line-height: .98;
+      letter-spacing: -.055em;
+      text-wrap: balance;
+    }
+    .alpha-hero__lead {
+      max-width: 720px;
+      margin: 0;
+      color: #4e514b;
+      font-size: clamp(1.05rem, 1.5vw, 1.28rem);
+      line-height: 1.75;
+    }
+
+    .alpha-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      margin-top: auto;
+      border: 1px solid var(--alpha-line);
+      background: var(--alpha-line);
+    }
+    .alpha-meta div { min-height: 84px; padding: 18px 20px; background: var(--alpha-card); }
+    .alpha-meta .alpha-meta__wide { grid-column: 1 / -1; min-height: auto; }
+    .alpha-meta span { display: block; margin-bottom: 7px; color: var(--alpha-muted); font-size: .72rem; }
+    .alpha-meta strong { font-size: .92rem; line-height: 1.45; }
+
+    .alpha-hero__visual {
+      position: relative;
+      overflow: hidden;
+      min-height: 100%;
+      margin: 0;
+      background: #efe8dd;
+    }
+    .alpha-hero__visual img { width: 100%; height: 100%; object-fit: cover; object-position: 54% center; }
+    .alpha-hero__visual figcaption {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.9);
+      color: var(--alpha-deep);
+      font-size: .74rem;
+      font-weight: 800;
+    }
+
+    .alpha-summary { padding: 34px 0 76px; }
+    .alpha-summary__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--alpha-line);
+      border-bottom: 1px solid var(--alpha-line);
+    }
+    .alpha-summary article { position: relative; padding: 26px 28px 28px 0; }
+    .alpha-summary article:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: 18px;
+      top: 46%;
+      color: var(--alpha-accent);
+    }
+    .alpha-summary span { color: var(--alpha-accent); font-size: .7rem; font-weight: 800; letter-spacing: .1em; }
+    .alpha-summary strong { display: block; margin-top: 8px; font-size: 1rem; line-height: 1.45; }
+
+    .alpha-contribution { padding: 0 0 76px; }
+    .alpha-contribution__intro { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 28px; margin-bottom: 24px; padding-top: 30px; border-top: 1px solid var(--alpha-line); }
+    .alpha-contribution__intro h2 { margin: 0; color: var(--alpha-deep); font-size: 1.4rem; }
+    .alpha-contribution__intro p { max-width: 720px; margin: 0; color: var(--alpha-muted); line-height: 1.7; }
+    .alpha-contribution__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; border: 1px solid var(--alpha-line); background: var(--alpha-line); }
+    .alpha-contribution__grid article { padding: 24px; background: var(--alpha-card); }
+    .alpha-contribution__grid span { display: block; margin-bottom: 7px; color: var(--alpha-accent); font-size: .68rem; font-weight: 850; letter-spacing: .09em; }
+    .alpha-contribution__grid h3 { margin: 0 0 8px; font-size: 1.08rem; }
+    .alpha-contribution__grid p { margin: 0; color: var(--alpha-muted); font-size: .88rem; line-height: 1.65; }
+
+    .alpha-layout { position: relative; }
+    .alpha-index {
+      position: fixed;
+      z-index: 8;
+      left: max(24px, calc((100vw - 1240px) / 2 - 176px));
+      top: 124px;
+      width: 148px;
+      padding-left: 16px;
+      border-left: 1px solid var(--alpha-line);
+    }
+    .alpha-index a {
+      display: block;
+      padding: 7px 0;
+      color: #888980;
+      font-size: .78rem;
+      text-decoration: none;
+    }
+    .alpha-index a.is-active { color: var(--alpha-accent); font-weight: 800; }
+
+    .alpha-section { padding: 96px 0; border-top: 1px solid var(--alpha-line); scroll-margin-top: 76px; }
+    .alpha-section__grid { display: grid; grid-template-columns: 136px minmax(0, 1fr); gap: 46px; }
+    .alpha-marker strong { display: block; color: var(--alpha-accent); font-size: 2.5rem; line-height: 1; }
+    .alpha-marker span { display: block; margin-top: 10px; color: var(--alpha-deep); font-size: .78rem; font-weight: 800; }
+    .alpha-content { max-width: 1020px; }
+    .alpha-content > h2 {
+      max-width: 930px;
+      margin: 0 0 24px;
+      font-size: clamp(2.2rem, 4vw, 4.2rem);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+      text-wrap: balance;
+    }
+    .alpha-deck { max-width: 840px; margin: 0 0 44px; color: var(--alpha-muted); font-size: 1.05rem; line-height: 1.85; }
+    .alpha-deck + .alpha-deck { margin-top: -22px; }
+
+    .alpha-note {
+      margin: 34px 0;
+      padding: 18px 0 18px 20px;
+      border-left: 2px solid var(--alpha-accent);
+      color: #555951;
+      line-height: 1.7;
+    }
+
+    .alpha-card-grid { display: grid; gap: 16px; }
+    .alpha-card-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .alpha-card-grid--5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .alpha-card {
+      padding: 24px;
+      border: 1px solid var(--alpha-line);
+      border-radius: 18px;
+      background: rgba(255,253,248,.72);
+    }
+    .alpha-card b { color: var(--alpha-accent); font-size: .72rem; letter-spacing: .08em; }
+    .alpha-card h3 { margin: 10px 0 10px; font-size: 1.15rem; line-height: 1.35; }
+    .alpha-card p { margin: 0; color: var(--alpha-muted); font-size: .9rem; line-height: 1.65; }
+    .alpha-persona-card img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      margin-bottom: 20px;
+      border-radius: 13px;
+      object-fit: contain;
+      background: white;
+    }
+
+    .alpha-split {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      margin-top: 42px;
+      border: 1px solid var(--alpha-line);
+      background: var(--alpha-line);
+    }
+    .alpha-split article { padding: 28px; background: var(--alpha-card); }
+    .alpha-split h3 { margin: 0 0 14px; font-size: 1.3rem; }
+    .alpha-split ul { margin: 0; padding-left: 1.15rem; color: var(--alpha-muted); line-height: 1.75; }
+
+    .alpha-letter-study { margin: 42px 0 0; }
+    .alpha-letter-study__intro { max-width: 780px; margin-bottom: 20px; }
+    .alpha-letter-study__intro h3 { margin: 9px 0 10px; font-size: 1.45rem; line-height: 1.35; }
+    .alpha-letter-study__intro p { margin: 0; color: var(--alpha-muted); line-height: 1.75; }
+    .alpha-letter-study__frame {
+      overflow: hidden;
+      padding: 18px;
+      border: 1px solid var(--alpha-line);
+      border-radius: 20px 20px 0 0;
+      background: white;
+    }
+    .alpha-letter-study__frame img { width: 100%; border-radius: 11px; }
+    .alpha-letter-study__legend {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      border: 1px solid var(--alpha-line);
+      border-top: 0;
+      background: var(--alpha-line);
+    }
+    .alpha-letter-study__legend article { padding: 24px 26px; background: var(--alpha-card); }
+    .alpha-letter-study__legend span { color: var(--alpha-accent); font-size: .7rem; font-weight: 900; letter-spacing: .1em; }
+    .alpha-letter-study__legend h4 { margin: 8px 0 7px; font-size: 1.16rem; }
+    .alpha-letter-study__legend p { margin: 0; color: var(--alpha-muted); font-size: .9rem; line-height: 1.65; }
+    .alpha-letter-study figcaption { margin-top: 12px; color: var(--alpha-muted); font-size: .78rem; line-height: 1.55; }
+
+    .alpha-media { margin: 42px 0 0; }
+    .alpha-media a {
+      display: block;
+      overflow: hidden;
+      padding: 18px;
+      border: 1px solid var(--alpha-line);
+      border-radius: 20px;
+      background: white;
+      text-decoration: none;
+    }
+    .alpha-media img { width: 100%; border-radius: 10px; }
+    .alpha-media figcaption { margin-top: 13px; color: var(--alpha-muted); font-size: .82rem; line-height: 1.5; }
+
+    .alpha-native-visual {
+      margin-top: 42px;
+      padding: clamp(26px, 4vw, 46px);
+      border: 1px solid var(--alpha-line);
+      border-radius: 22px;
+      background: rgba(255,253,248,.84);
+    }
+    .alpha-native-visual__label { color: var(--alpha-accent); font-size: .7rem; font-weight: 900; letter-spacing: .1em; }
+    .alpha-native-visual h3 { margin: 9px 0 26px; font-size: 1.45rem; }
+
+    .alpha-spectrum {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 0;
+    }
+    .alpha-spectrum article { position: relative; min-height: 148px; padding: 24px 22px; border-top: 2px solid rgba(229,83,31,.22); }
+    .alpha-spectrum article:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      top: -13px;
+      right: -7px;
+      color: var(--alpha-accent);
+      background: var(--alpha-card);
+      padding: 0 4px;
+    }
+    .alpha-spectrum span { color: var(--alpha-accent); font-size: .7rem; font-weight: 900; }
+    .alpha-spectrum strong { display: block; margin: 8px 0; font-size: 1rem; }
+    .alpha-spectrum p { margin: 0; color: var(--alpha-muted); font-size: .82rem; line-height: 1.55; }
+
+    .alpha-scenario-visual {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 44px minmax(0, 1fr);
+      align-items: center;
+      min-height: 360px;
+      padding: clamp(24px, 3vw, 38px);
+      border: 1px solid var(--alpha-line);
+      border-radius: 20px;
+      background: rgba(255,253,248,.88);
+    }
+    .alpha-scenario-visual__side { display: grid; gap: 10px; }
+    .alpha-scenario-visual__side > span { margin-bottom: 4px; color: var(--alpha-accent); font-size: .68rem; font-weight: 900; letter-spacing: .1em; }
+    .alpha-scenario-visual__item {
+      padding: 12px 14px;
+      border: 1px solid var(--alpha-line);
+      border-radius: 12px;
+      background: white;
+      font-size: .8rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+    .alpha-scenario-visual__side--answer .alpha-scenario-visual__item { border-color: rgba(229,83,31,.25); background: rgba(248,223,211,.42); }
+    .alpha-scenario-visual__arrow { color: var(--alpha-accent); font-size: 1.5rem; text-align: center; }
+
+    .alpha-proof-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      margin-top: 38px;
+      border-top: 1px solid var(--alpha-line);
+      border-bottom: 1px solid var(--alpha-line);
+      background: var(--alpha-line);
+    }
+    .alpha-proof-strip article { padding: 28px; background: var(--alpha-card); }
+    .alpha-proof-strip span { color: var(--alpha-accent); font-size: .7rem; font-weight: 900; letter-spacing: .1em; }
+    .alpha-proof-strip strong { display: block; margin: 9px 0; font-size: 1.12rem; }
+    .alpha-proof-strip p { margin: 0; color: var(--alpha-muted); font-size: .86rem; line-height: 1.6; }
+
+    .alpha-direction-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin: 38px 0;
+    }
+    .alpha-direction-grid article { padding-top: 20px; border-top: 2px solid var(--alpha-accent); }
+    .alpha-direction-grid h3 { margin: 0 0 12px; font-size: 1.35rem; }
+    .alpha-direction-grid p { margin: 0; color: var(--alpha-muted); line-height: 1.75; }
+
+    .alpha-scenario { display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px; align-items: start; padding: 64px 0; border-top: 1px solid var(--alpha-line); }
+    .alpha-scenario:first-of-type { margin-top: 60px; }
+    .alpha-scenario h3 { margin: 8px 0 18px; font-size: 1.8rem; line-height: 1.2; }
+    .alpha-scenario h4 { margin: 22px 0 8px; color: var(--alpha-deep); font-size: .78rem; letter-spacing: .08em; }
+    .alpha-scenario p { margin: 0; color: var(--alpha-muted); line-height: 1.75; }
+    .alpha-scenario .alpha-media { margin: 0; }
+    .alpha-status { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 42px; }
+    .alpha-status article { padding-top: 22px; border-top: 1px solid var(--alpha-line); }
+    .alpha-status article:first-child { border-color: var(--alpha-accent); }
+    .alpha-status h3 { margin: 0 0 14px; font-size: 1.2rem; }
+    .alpha-status ul { margin: 0; padding-left: 1.1rem; color: var(--alpha-muted); line-height: 1.72; }
+
+    .alpha-conclusion { margin-top: 54px; padding: 30px 0; border-top: 1px solid var(--alpha-line); border-bottom: 1px solid var(--alpha-line); }
+    .alpha-conclusion p { max-width: 920px; margin: 0; font-size: 1.35rem; line-height: 1.65; }
+
+    .alpha-footer { padding: 52px 0 80px; color: var(--alpha-muted); font-size: .82rem; }
+
+    @media (max-width: 1480px) { .alpha-index { display: none; } }
+    @media (max-width: 980px) {
+      .alpha-hero__frame, .alpha-section__grid, .alpha-scenario { grid-template-columns: 1fr; }
+      .alpha-hero__visual { min-height: 320px; order: -1; }
+      .alpha-marker { display: flex; align-items: baseline; gap: 12px; }
+      .alpha-marker strong { font-size: 1.7rem; }
+      .alpha-card-grid--5 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .alpha-card-grid--3, .alpha-status { grid-template-columns: 1fr; }
+      .alpha-spectrum { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .alpha-proof-strip { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .alpha-shell { width: min(100% - 28px, 1240px); }
+      .alpha-topbar { padding-inline: 18px; }
+      .alpha-topbar span { display: none; }
+      .alpha-hero { padding-top: 20px; }
+      .alpha-hero__frame { border-radius: 20px; }
+      .alpha-hero__copy { padding: 28px 22px; }
+      .alpha-hero h1 { font-size: 2.45rem; }
+      .alpha-meta, .alpha-summary__grid, .alpha-split, .alpha-direction-grid, .alpha-letter-study__legend { grid-template-columns: 1fr; }
+      .alpha-meta .alpha-meta__wide { grid-column: auto; }
+      .alpha-summary article:not(:last-child)::after { content: "↓"; top: auto; right: 4px; bottom: -8px; }
+      .alpha-section { padding: 68px 0; }
+      .alpha-section__grid { gap: 24px; }
+      .alpha-contribution__intro, .alpha-contribution__grid { grid-template-columns: 1fr; }
+      .alpha-content > h2 { font-size: 2.25rem; }
+      .alpha-card-grid--5 { grid-template-columns: 1fr; }
+      .alpha-scenario { gap: 24px; }
+      .alpha-spectrum { grid-template-columns: 1fr; }
+      .alpha-spectrum article:not(:last-child)::after { content: "↓"; top: auto; right: 8px; bottom: -13px; }
+      .alpha-scenario-visual { grid-template-columns: 1fr; gap: 18px; }
+      .alpha-scenario-visual__arrow { transform: rotate(90deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="alpha-prototype">
+    <header class="alpha-topbar">
+      <strong>Timothy Lau</strong>
+      <span>AlphaCamp case restructure · discussion prototype</span>
+      <a href="../../index.html#case/alphacamp">返回目前案例</a>
+    </header>
+
+    <main>
+      <section class="alpha-hero">
+        <div class="alpha-shell">
+          <div class="alpha-hero__frame">
+            <div class="alpha-hero__copy">
+              <span class="alpha-eyebrow">案例研究 · 使用者研究 · 服務設計 · 2021</span>
+              <h1>從課後互動不足，找出學生關係的五個改善切入點</h1>
+              <p class="alpha-hero__lead">AlphaCamp 發現學生完成課程後，與平台及學習社群的互動逐漸減少。研究團隊透過學生訪談、關係研究與參與式工作坊，把影響信任、學習支持與社群參與的因素，轉成不同學習情境的服務改善方向。</p>
+              <div class="alpha-meta">
+                <div><span>角色</span><strong>使用者研究員｜研究團隊成員</strong></div>
+                <div><span>團隊</span><strong>Timothy、Ricky、Kim、Evy</strong></div>
+                <div><span>期間</span><strong>2020.11–2021.01</strong></div>
+                <div><span>範圍</span><strong>訪談、人物誌、關係研究、工作坊</strong></div>
+                <div class="alpha-meta__wide"><span>證據狀態</span><strong>研究與服務構想；未宣稱上線成效</strong></div>
+              </div>
+            </div>
+            <figure class="alpha-hero__visual">
+              <img src="../../assets/AlphaCamp/alphacamp-hero-v2.png" alt="程式教育學習歷程、社群支持與職涯方向的概念封面">
+              <figcaption>研究情境概念圖</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="alpha-summary">
+        <div class="alpha-shell alpha-summary__grid">
+          <article><span>問題</span><strong>課後互動、社群參與與主動分享不足</strong></article>
+          <article><span>研究</span><strong>9 位學生訪談＋關係研究</strong></article>
+          <article><span>收斂</span><strong>5 個關係改善切入點</strong></article>
+          <article><span>發想</span><strong>Kelly 8 個／Tom 9 個方向</strong></article>
+        </div>
+      </section>
+
+      <section class="alpha-contribution">
+        <div class="alpha-shell">
+          <div class="alpha-contribution__intro">
+            <h2>我的貢獻</h2>
+            <p>我是四人研究團隊成員之一。以下分開標示我主責與共同執行的工作，團隊研究產出不等同於個人單獨完成。</p>
+          </div>
+          <div class="alpha-contribution__grid">
+            <article><span>主責</span><h3>研究規劃</h3><p>規劃研究框架、研究流程，以及內部與參與式工作坊的進行方式。</p></article>
+            <article><span>共同執行</span><h3>訪談與歸納</h3><p>參與學生、助教與專家訪談，整理紀錄並歸納人物誌與關係因素。</p></article>
+            <article><span>主責主持</span><h3>服務發想工作坊</h3><p>帶領團隊針對 Kelly 與 Tom 展開服務方向，並依急迫性與發生頻率整理情境。</p></article>
+            <article><span>設計轉譯</span><h3>流程與服務草圖</h3><p>把學習需求整理成服務流程與概念草圖，例如技能樹與提問介面。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <nav class="alpha-index" aria-label="案例章節">
+        <a href="#problem">01 商業問題</a>
+        <a href="#research">02 研究洞察</a>
+        <a href="#synthesis">03 研究收斂</a>
+        <a href="#ideation">04 服務發想</a>
+        <a href="#outcome">05 產出與狀態</a>
+      </nav>
+
+      <div class="alpha-layout">
+        <section class="alpha-section" id="problem">
+          <div class="alpha-shell alpha-section__grid">
+            <aside class="alpha-marker"><strong>01</strong><span>商業問題與研究目標</span></aside>
+            <div class="alpha-content">
+              <h2>學生完成課程後，為什麼很少繼續與平台互動？</h2>
+              <p class="alpha-deck">AlphaCamp 觀察到三個現象：課程結束後互動逐漸減少、學習社群參與不如預期，學生也較少主動分享學習成果。團隊知道關係沒有延續，卻還不清楚問題發生在哪些學習環節。</p>
+              <p class="alpha-deck">研究因此不直接尋找新功能，而是回到完整學習歷程，理解學生如何建立信任、哪些經驗會促進或破壞關係，以及什麼條件會讓他們更願意持續參與和分享。</p>
+              <div class="alpha-note"><strong>這裡的「關係」</strong>指學生與 AlphaCamp 在課程及課後的持續互動、信任、學習支持、社群參與與主動分享意願，不只是抽象的品牌好感。</div>
+              <div class="alpha-card-grid alpha-card-grid--3">
+                <article class="alpha-card"><b>01</b><h3>利益關係人</h3><p>整理學生、助教、專家與平台之間的互動網絡。</p></article>
+                <article class="alpha-card"><b>02</b><h3>課程旅程</h3><p>定位可能影響關係的學習階段與接觸點。</p></article>
+                <article class="alpha-card"><b>03</b><h3>早期假設</h3><p>把人物誌假設轉成待訪談檢查的研究問題。</p></article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="alpha-section" id="research">
+          <div class="alpha-shell alpha-section__grid">
+            <aside class="alpha-marker"><strong>02</strong><span>使用者研究與關係洞察</span></aside>
+            <div class="alpha-content">
+              <h2>不同學生面臨不同阻力，影響關係的因素也不一樣</h2>
+              <p class="alpha-deck">團隊實際訪談 9 位正在學習程式的學生，包含 4 位 AlphaCamp 學員與 5 位非 AlphaCamp 學員，並整理助教與專家觀點。訪談涵蓋學習動機、能力焦慮、助教影響、情緒支持、社群價值與品牌定位。</p>
+              <div class="alpha-card-grid alpha-card-grid--3">
+                <article class="alpha-card alpha-persona-card"><img src="../../assets/AlphaCamp/persona-kelly-mosaic.png" alt="Kelly 原始人物誌頁面，照片已馬賽克"><b>KELLY</b><h3>轉職者</h3><p>想確認能力與業界需求的差距，也需要在不確定與挫折中得到方向和鼓勵。</p></article>
+                <article class="alpha-card alpha-persona-card"><img src="../../assets/AlphaCamp/persona-tom-mosaic.png" alt="Tom 原始人物誌頁面，照片已馬賽克"><b>TOM</b><h3>在職進修者</h3><p>需要兼顧工作與學習，重視內容品質、時間效率、課程彈性與持續習慣。</p></article>
+                <article class="alpha-card alpha-persona-card"><img src="../../assets/AlphaCamp/persona-amy-mosaic.png" alt="Amy 原始人物誌頁面，照片已馬賽克"><b>AMY</b><h3>探索者</h3><p>重視同儕交流與共同學習；獨自學習和找不到程度相近的夥伴會影響參與。</p></article>
+              </div>
+              <div class="alpha-native-visual">
+                <span class="alpha-native-visual__label">關係光譜</span>
+                <h3>關係不是有或沒有，而是從交易逐步走向理解與支持</h3>
+                <div class="alpha-spectrum">
+                  <article><span>01</span><strong>單向交易</strong><p>付費取得內容或服務，互動以功能交換為主。</p></article>
+                  <article><span>02</span><strong>互利夥伴</strong><p>彼此提供價值，開始形成持續合作。</p></article>
+                  <article><span>03</span><strong>雙向交流</strong><p>願意分享經驗，也期待被理解與回應。</p></article>
+                  <article><span>04</span><strong>深入支持</strong><p>理解個人目標，在困難與成長中提供支持。</p></article>
+                </div>
+              </div>
+              <figure class="alpha-letter-study">
+                <div class="alpha-letter-study__intro">
+                  <span class="alpha-native-visual__label">研究方法｜情書與分手信</span>
+                  <h3>請學生描述什麼讓關係加深，又是什麼讓他們想離開</h3>
+                  <p>團隊將參與者的內容整理成兩組關係訊號。下圖是依研究內容重新製作的匿名視覺摘要，不是原始手寫資料。</p>
+                </div>
+                <div class="alpha-letter-study__frame">
+                  <img src="../../assets/AlphaCamp/alphacamp-letters-summary-v1.png" alt="情書與分手信研究內容的匿名視覺摘要，左側呈現支持、引導與成長，右側呈現壓力、孤立與互動斷裂">
+                </div>
+                <div class="alpha-letter-study__legend">
+                  <article><span>情書</span><h4>安全感、引導與成長支持</h4><p>有人及時回應問題、協助理解進度，並把學習內容與個人目標連結起來。</p></article>
+                  <article><span>分手信</span><h4>壓力、孤單與聯繫中斷</h4><p>課程負荷難以維持、缺少即時互動，也不清楚自己的學習狀態與下一步。</p></article>
+                </div>
+                <figcaption>研究內容經匿名化與視覺重製；未保留參與者姓名、照片、筆跡或原句。</figcaption>
+              </figure>
+              <div class="alpha-note">孤立感是其中一項關係阻力，不是這份研究已驗證的單一流失原因。</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="alpha-section" id="synthesis">
+          <div class="alpha-shell alpha-section__grid">
+            <aside class="alpha-marker"><strong>03</strong><span>研究收斂</span></aside>
+            <div class="alpha-content">
+              <h2>把抽象的學生關係，轉成五個可以改善的方向</h2>
+              <p class="alpha-deck">團隊把分散的關係因素整理成五個改善切入點，讓後續工作坊能從共同問題出發。它們是機會領域，不是五項已上線服務。</p>
+              <div class="alpha-card-grid alpha-card-grid--5">
+                <article class="alpha-card"><b>01</b><h3>品牌第一印象</h3><p>釐清內容價值、服務方式與平台定位。</p></article>
+                <article class="alpha-card"><b>02</b><h3>助教品質</h3><p>提高回應品質、深度與信任。</p></article>
+                <article class="alpha-card"><b>03</b><h3>社群互動</h3><p>讓學生感受到真實交流與同儕支持。</p></article>
+                <article class="alpha-card"><b>04</b><h3>個人成長</h3><p>看見進度、能力差距與下一步。</p></article>
+                <article class="alpha-card"><b>05</b><h3>業界心態</h3><p>連結實務需求、職涯與產業資源。</p></article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="alpha-section" id="ideation">
+          <div class="alpha-shell alpha-section__grid">
+            <aside class="alpha-marker"><strong>04</strong><span>服務發想與情境整合</span></aside>
+            <div class="alpha-content">
+              <h2>從五個改善方向，發展成不同學習情境的服務構想</h2>
+              <p class="alpha-deck">團隊先針對不同學習需求展開服務發想：Kelly 形成 8 個方向，Tom 形成 9 個方向，再依情境的急迫性與發生頻率排列，找出優先討論的題目。這些是工作坊中的發想空間，不代表 17 項正式排入開發或已上線的功能。</p>
+              <div class="alpha-direction-grid">
+                <article><h3>Kelly｜8 個方向</h3><p>學習診療室、學習路徑圖、你問我答、練功房、Side Project、職涯透視、啦啦隊、大休息。</p></article>
+                <article><h3>Tom｜9 個方向</h3><p>碎片化小步學習、魔鬼藏在習慣裡、你問我答、新手村、學習指南針、個人化學習、資訊圖書館、業界情報站、你我共學。</p></article>
+              </div>
+              <div class="alpha-proof-strip" aria-label="從研究到服務構想的推導">
+                <article><span>研究輸入</span><strong>學生阻力與關係因素</strong><p>從訪談理解學習焦慮、時間限制、支持需求與職涯期待。</p></article>
+                <article><span>收斂方式</span><strong>五個改善切入點</strong><p>把分散洞察整理成團隊能共同發想的問題空間。</p></article>
+                <article><span>服務輸出</span><strong>Kelly 8／Tom 9 個方向</strong><p>依不同學習情境展開服務構想，而非直接定義功能清單。</p></article>
+              </div>
+
+              <article class="alpha-scenario">
+                <div><span class="alpha-eyebrow">代表情境 A</span><h3>作業卡關與不敢提問</h3><h4>研究阻力</h4><p>不會描述問題、找不到人問、不好意思公開發問、不信任回答，或無法判斷網路內容是否正確。</p><h4>服務構想</h4><p>問題描述練習、歷屆問題資料庫、匿名提問、依程度或背景分組、學生教練與問題屬性辨識。</p></div>
+                <div>
+                  <div class="alpha-scenario-visual" aria-label="提問阻力與服務回應對照">
+                    <div class="alpha-scenario-visual__side">
+                      <span>卡關原因</span>
+                      <div class="alpha-scenario-visual__item">不知道怎麼描述問題</div>
+                      <div class="alpha-scenario-visual__item">害怕公開提問</div>
+                      <div class="alpha-scenario-visual__item">難以判斷答案是否可信</div>
+                    </div>
+                    <div class="alpha-scenario-visual__arrow">→</div>
+                    <div class="alpha-scenario-visual__side alpha-scenario-visual__side--answer">
+                      <span>服務回應</span>
+                      <div class="alpha-scenario-visual__item">問題描述練習</div>
+                      <div class="alpha-scenario-visual__item">匿名提問與同程度分組</div>
+                      <div class="alpha-scenario-visual__item">助教／教練與可信答案</div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="alpha-scenario">
+                <div><span class="alpha-eyebrow">代表情境 B</span><h3>不知道自己學到了什麼</h3><h4>研究阻力</h4><p>學習一段時間後，學生仍不確定自己的能力、進度，以及離目標職位還有多少差距。</p><h4>服務構想</h4><p>章節技能檢視表、個人能力檢視、技能樹、階段學習清單，以及連結實作或職涯目標的視覺化方式。</p></div>
+                <div>
+                  <div class="alpha-scenario-visual" aria-label="學習進度問題與服務回應對照">
+                    <div class="alpha-scenario-visual__side">
+                      <span>目前感受</span>
+                      <div class="alpha-scenario-visual__item">只看見完成的章節</div>
+                      <div class="alpha-scenario-visual__item">不知道能力是否提升</div>
+                      <div class="alpha-scenario-visual__item">不清楚離目標還有多遠</div>
+                    </div>
+                    <div class="alpha-scenario-visual__arrow">→</div>
+                    <div class="alpha-scenario-visual__side alpha-scenario-visual__side--answer">
+                      <span>服務回應</span>
+                      <div class="alpha-scenario-visual__item">技能檢視與階段清單</div>
+                      <div class="alpha-scenario-visual__item">能力樹與成長回饋</div>
+                      <div class="alpha-scenario-visual__item">連結實作與職涯目標</div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="alpha-scenario">
+                <div><span class="alpha-eyebrow">代表情境 C</span><h3>時間限制與職涯方向</h3><h4>研究阻力</h4><p>在職學生的學習時間不固定；部分學生也不確定適合的職涯方向，或需要更輕量的內容維持節奏。</p><h4>服務構想</h4><p>不同密度的學習節奏、彈性課程、章節摘要、職涯方向分析、Mentor 支持，以及依學習習慣調整的建議。</p></div>
+                <div>
+                  <div class="alpha-scenario-visual" aria-label="時間與職涯問題及服務回應對照">
+                    <div class="alpha-scenario-visual__side">
+                      <span>現實限制</span>
+                      <div class="alpha-scenario-visual__item">工作與學習時間衝突</div>
+                      <div class="alpha-scenario-visual__item">難以維持固定進度</div>
+                      <div class="alpha-scenario-visual__item">不確定適合的職涯方向</div>
+                    </div>
+                    <div class="alpha-scenario-visual__arrow">→</div>
+                    <div class="alpha-scenario-visual__side alpha-scenario-visual__side--answer">
+                      <span>服務回應</span>
+                      <div class="alpha-scenario-visual__item">彈性節奏與章節摘要</div>
+                      <div class="alpha-scenario-visual__item">依習慣調整學習建議</div>
+                      <div class="alpha-scenario-visual__item">職涯分析與 Mentor 支持</div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <div class="alpha-note">工作坊以急迫性與發生頻率協助排序；作品集從中挑選三組代表情境呈現，不代表團隊當時只產出這三個方案。</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="alpha-section" id="outcome">
+          <div class="alpha-shell alpha-section__grid">
+            <aside class="alpha-marker"><strong>05</strong><span>研究產出與目前狀態</span></aside>
+            <div class="alpha-content">
+              <h2>研究完成了哪些產出，服務構想走到哪一步？</h2>
+              <p class="alpha-deck">這個專案完成了問題定義、關係洞察與服務方向，並把抽象的「關係不夠深」轉成後續可以排序與驗證的機會。以下分開呈現已完成的研究、已形成的服務構想，以及仍需驗證的產品成效。</p>
+              <div class="alpha-status">
+                <article><h3>研究產出｜已完成</h3><ul><li>9 位學生訪談</li><li>3 種人物誌</li><li>關係促進與破壞因素</li><li>5 個改善切入點</li></ul></article>
+                <article><h3>服務構想｜已形成</h3><ul><li>Kelly 8／Tom 9 個方向</li><li>提問與同儕支持</li><li>技能檢視與學習引導</li><li>彈性學習與職涯支持</li></ul></article>
+                <article><h3>產品成效｜尚待驗證</h3><ul><li>方案優先順序與可行性</li><li>原型易用性與需求驗證</li><li>正式採用與上線狀態</li><li>留存與商業成效</li></ul></article>
+              </div>
+              <div class="alpha-conclusion"><p>這個階段的價值，是讓團隊不再只談「如何增加黏著」，而是能針對信任、學習引導、社群參與、時間限制與職涯期待，討論具體的服務機會與下一步驗證。</p></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="alpha-footer"><div class="alpha-shell">Discussion prototype · Source: 2021 新服務設計專案 Wrap up · No production content changed.</div></footer>
+  </div>
+  <script>
+    const links = [...document.querySelectorAll('.alpha-index a')];
+    const sections = links.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+    const update = () => {
+      let active = sections[0];
+      sections.forEach(section => { if (section.getBoundingClientRect().top <= 150) active = section; });
+      links.forEach(link => link.classList.toggle('is-active', link.getAttribute('href') === `#${active.id}`));
+    };
+    addEventListener('scroll', update, { passive: true });
+    update();
+  </script>
+</body>
+</html>
