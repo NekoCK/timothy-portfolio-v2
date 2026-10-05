@@ -1027,7 +1027,6 @@ addEventListener('resize',onScroll);
   "agent": {
     "n": "AIエージェントのスタートアップ",
     "k": [
-      "agent",
       "分身",
       "nlp",
       "スタートアップ",
@@ -1186,18 +1185,25 @@ addEventListener('resize',onScroll);
     ]
   },
   "ai": {
-    "q": "AIに関する経験は？",
+    "q": "AIをどう仕事に使っていますか？",
     "k": [
       "ai",
       "人工知能",
       "llm",
-      "生成ai"
+      "生成ai",
+      "エージェント",
+      "agent",
+      "claude",
+      "codex",
+      "harness",
+      "自動化"
     ],
     "a": [
-      "直接関連する経験は3つあります：",
-      "・<b>AIエージェントのスタートアップ</b>（創業メンバー）：B2Cのみの製品に一貫したB2Bサービスを設計",
-      "・<b>AIカスタマーサポート</b>（AIFT）：年間約720時間の工数削減を見込む",
-      "・日常的にClaudeとAI支援ツールを使ってプロトタイプを制作"
+      "AIは検証と日常業務を速めるために使い、判断と事実の確認は自分で行います：",
+      "・<b>プロトタイプ制作</b>：アイデアをすぐに操作できるプロトタイプにし、チームやユーザーと確認します。このポートフォリオもその方法で制作しました",
+      "・<b>日常業務の効率化</b>：エージェントにルール・手順・チェック項目を設定して繰り返し作業を任せ、結果は自分で確認します",
+      "・<b>線引き</b>：数値と事実は必ず元資料で確認します。外部に出す内容をAIに自由生成させることはせず、たとえばこのQ&Aの回答はすべて事前に自分で書いたものです",
+      "AIプロダクトの経験もあります。続けて質問できます："
     ],
     "next": [
       "agent",
@@ -1607,7 +1613,7 @@ addEventListener('resize',onScroll);
   document.addEventListener('pointerdown',e=>{if(!box.contains(e.target))open(false)});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.dataset.open==='true'){open(false);inp.blur()}});
   /* the placeholder suggests a follow-up while a topic is open, otherwise rotates through example questions */
-  const PH=DOC?DOC.ph:["質問例：得意なことは？","質問：これまでの成果は？","質問：AIに関する経験は？","質問：使える言語は？"];let pi=0;
+  const PH=DOC?DOC.ph:["質問例：得意なことは？","質問：これまでの成果は？","質問例：AIをどう仕事に使っていますか？","質問：使える言語は？"];let pi=0;
   const local=()=>DOC&&(!ctx||ctx===DOC.id);
   function list(){const r=DOC&&DOC.reading&&DOC.items[DOC.reading];return r?['「'+r.n+'」を読んでいます。気になる点を質問してください。'].concat(PH):PH}
   const deep=()=>ctx&&!local()&&ENT[ctx]&&(ENT[ctx].url||ENT[ctx].go);

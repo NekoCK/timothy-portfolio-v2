@@ -1842,7 +1842,6 @@ addEventListener('keydown',e=>{if(viewer.dataset.open!=='true')return;if(e.key==
   "agent": {
     "n": "AI Agent 新創",
     "k": [
-      "agent",
       "分身",
       "nlp",
       "新創",
@@ -2015,19 +2014,25 @@ addEventListener('keydown',e=>{if(viewer.dataset.open!=='true')return;if(e.key==
     ]
   },
   "ai": {
-    "q": "AI 相關經驗？",
+    "q": "你怎麼用 AI 工作？",
     "k": [
       "ai",
       "人工智慧",
       "llm",
       "gpt",
-      "生成式"
+      "生成式",
+      "agent",
+      "claude",
+      "codex",
+      "harness",
+      "自動化"
     ],
     "a": [
-      "有三段直接相關的經驗：",
-      "・<b>AI Agent 新創</b>（創始成員）：替只有 ToC 的產品設計出 ToB 一站式服務",
-      "・<b>AI 客服</b>（AIFT）：預估每年省下約 720 小時工時",
-      "・日常用 Claude 與 AI-assisted Prototyping 做原型"
+      "我用 AI 加快驗證與日常作業，判斷和事實由我負責：",
+      "・<b>做原型</b>：把想法直接做成可以操作的原型，再和團隊或使用者確認。這個作品集就是這樣做出來的",
+      "・<b>加速日常作業</b>：替 Agent 設定好規則、流程與檢查步驟，讓它完成重複的工作，我負責確認結果",
+      "・<b>守住界線</b>：數字和事實一律回到原始資料核對；對外的內容不交給 AI 自由生成，例如這個問答框的答案全部是我事先寫好的",
+      "也做過 AI 產品，可以接著問："
     ],
     "next": [
       "agent",
@@ -2194,7 +2199,7 @@ addEventListener('keydown',e=>{if(viewer.dataset.open!=='true')return;if(e.key==
       "tools"
     ],
     "a": [
-      "Figma、Claude、Photoshop、Illustrator，以及 AI-assisted Prototyping。"
+      "Figma、Claude、Photoshop、Illustrator，以及用 AI 輔助製作原型。"
     ],
     "next": [
       "ai",
@@ -2480,7 +2485,7 @@ addEventListener('keydown',e=>{if(viewer.dataset.open!=='true')return;if(e.key==
   document.addEventListener('pointerdown',e=>{if(!box.contains(e.target))open(false)});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.dataset.open==='true'){open(false);inp.blur()}});
   /* the placeholder suggests a follow-up while a topic is open, otherwise rotates through example questions */
-  const PH=DOC?DOC.ph:["問我：你擅長什麼？","問我：過去的成果？","問我：AI 相關經驗？","問我：會哪些語言？"];let pi=0;
+  const PH=DOC?DOC.ph:["問我：你擅長什麼？","問我：過去的成果？","問我：你怎麼用 AI 工作？","問我：會哪些語言？"];let pi=0;
   const local=()=>DOC&&(!ctx||ctx===DOC.id);
   function list(){const r=DOC&&DOC.reading&&DOC.items[DOC.reading];return r?['正在看「'+r.n+'」，有問題可以直接問我'].concat(PH):PH}
   const deep=()=>ctx&&!local()&&ENT[ctx]&&(ENT[ctx].url||ENT[ctx].go);

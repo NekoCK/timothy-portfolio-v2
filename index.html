@@ -1014,7 +1014,6 @@ addEventListener('resize',onScroll);
   "agent": {
     "n": "AI Agent Startup",
     "k": [
-      "agent",
       "avatar",
       "nlp",
       "startup",
@@ -1173,20 +1172,27 @@ addEventListener('resize',onScroll);
     ]
   },
   "ai": {
-    "q": "What is your AI experience?",
+    "q": "How do you use AI in your work?",
     "k": [
       "ai experience",
       "ai",
       "artificial intelligence",
       "llm",
       "gpt",
-      "generative"
+      "generative",
+      "agent",
+      "agents",
+      "claude",
+      "codex",
+      "harness",
+      "automation"
     ],
     "a": [
-      "Three directly relevant experiences:",
-      "・<b>AI agent startup</b> (founding member): designed an end-to-end B2B service for a B2C-only product",
-      "・<b>AI customer service</b> (AIFT): estimated annual savings of about 720 staff hours",
-      "・Day-to-day prototyping with Claude and AI-assisted tools"
+      "I use AI to speed up validation and day-to-day work, while the judgment and the facts stay with me:",
+      "・<b>Prototyping</b>: I turn ideas straight into working prototypes, then check them with the team or users. This portfolio was built that way",
+      "・<b>Day-to-day work</b>: I set up rules, workflows, and checks for agents so they can handle repetitive tasks, and I review the results",
+      "・<b>Clear limits</b>: numbers and facts always go back to the source material, and public-facing content is never left to free generation. Every answer in this Q&A box, for example, was written by me in advance",
+      "I have also worked on AI products. You can ask about:"
     ],
     "next": [
       "agent",
@@ -1600,7 +1606,7 @@ addEventListener('resize',onScroll);
   document.addEventListener('pointerdown',e=>{if(!box.contains(e.target))open(false)});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.dataset.open==='true'){open(false);inp.blur()}});
   /* the placeholder suggests a follow-up while a topic is open, otherwise rotates through example questions */
-  const PH=DOC?DOC.ph:["Ask: What are you good at?","Ask: What outcomes have you delivered?","Ask: What is your AI experience?","Ask: Which languages do you speak?"];let pi=0;
+  const PH=DOC?DOC.ph:["Ask: What are you good at?","Ask: What outcomes have you delivered?","Ask: How do you use AI in your work?","Ask: Which languages do you speak?"];let pi=0;
   const local=()=>DOC&&(!ctx||ctx===DOC.id);
   function list(){const r=DOC&&DOC.reading&&DOC.items[DOC.reading];return r?['You’re reading “'+r.n+'”. Ask if you have questions.'].concat(PH):PH}
   const deep=()=>ctx&&!local()&&ENT[ctx]&&(ENT[ctx].url||ENT[ctx].go);
