@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1672" height="680" viewBox="0 0 1672 680" role="img" aria-labelledby="title description">
+  <title id="title">保險 SaaS 交付流程 Before 與 After</title>
+  <desc id="description">Before 為開放式需求造成反覆對齊與重工。After 為 Template 先界定選擇範圍，再由團隊於框架內配置可複用模組。</desc>
+  <defs>
+    <linearGradient id="beforeFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff8f7"/>
+      <stop offset="1" stop-color="#fbe9e7"/>
+    </linearGradient>
+    <linearGradient id="afterFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5fbf8"/>
+      <stop offset="1" stop-color="#e4f2ed"/>
+    </linearGradient>
+    <linearGradient id="configFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef8f4"/>
+      <stop offset="1" stop-color="#d9ece5"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="10" flood-color="#183044" flood-opacity=".055"/>
+    </filter>
+    <style>
+      .sans{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+      .serif{font-family:"Noto Serif TC","Songti TC","PMingLiU",serif}
+      .label{font-size:22px;font-weight:800;letter-spacing:5px}
+      .heading{font-size:42px;font-weight:700;fill:#102033;letter-spacing:-1.2px}
+      .body{font-size:22px;font-weight:500;fill:#657487}
+      .card-title{font-size:23px;font-weight:800;fill:#102033}
+      .card-copy{font-size:17px;font-weight:500;fill:#657487}
+      .micro-label{font-size:11.5px;font-weight:800;fill:#235d52}
+      .micro-copy{font-size:11.5px;font-weight:600;fill:#52746d}
+      .arrow{stroke:#6d7884;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;fill:none}
+      .icon{stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none}
+    </style>
+  </defs>
+
+  <rect width="1672" height="680" fill="#faf7f2"/>
+
+  <g class="sans">
+    <text x="55" y="66" class="label" fill="#d94740">BEFORE</text>
+    <text x="55" y="120" class="heading serif">每個客戶都需要</text>
+    <text x="55" y="170" class="heading serif">重新客製</text>
+    <text x="55" y="228" class="body">開放式需求缺少邊界，</text>
+    <text x="55" y="262" class="body">造成反覆對齊與重工。</text>
+
+    <text x="1010" y="90" text-anchor="middle" font-size="20" font-weight="800" fill="#c83d37">需要多次來回調整</text>
+    <line x1="880" y1="102" x2="1140" y2="102" stroke="#e56a64" stroke-width="2" stroke-dasharray="7 7"/>
+
+    <g transform="translate(410 120)" filter="url(#softShadow)">
+      <rect width="180" height="174" rx="16" fill="#f8f8f7" stroke="#d9dde1"/>
+      <g transform="translate(72 26)" color="#59636c" class="icon">
+        <path d="M4 0h21l9 9v31H4z"/>
+        <path d="M25 0v10h9M11 21h16M11 29h13"/>
+      </g>
+      <text x="90" y="112" text-anchor="middle" class="card-title">客戶需求</text>
+      <text x="90" y="143" text-anchor="middle" class="card-copy">新的需求</text>
+    </g>
+
+    <g class="arrow"><path d="M606 207h25m-7-7 7 7-7 7"/></g>
+
+    <g transform="translate(650 120)" filter="url(#softShadow)">
+      <rect width="190" height="174" rx="16" fill="url(#beforeFill)" stroke="#f1d8d5"/>
+      <g transform="translate(73 27)" color="#9e2f2b" class="icon">
+        <path d="M1 18c0-10 8-18 19-18s19 8 19 18-8 18-19 18c-3 0-6-.7-8.5-2L2 37l3-9A17 17 0 0 1 1 18z"/>
+        <circle cx="37" cy="31" r="8" fill="#fff"/>
+      </g>
+      <text x="95" y="112" text-anchor="middle" class="card-title">業務溝通</text>
+      <text x="95" y="143" text-anchor="middle" class="card-copy">討論與對齊</text>
+    </g>
+
+    <g class="arrow"><path d="M856 207h25m-7-7 7 7-7 7"/></g>
+
+    <g transform="translate(900 120)" filter="url(#softShadow)">
+      <rect width="200" height="174" rx="16" fill="url(#beforeFill)" stroke="#f1d8d5"/>
+      <g transform="translate(84 25)" color="#9e2f2b" class="icon">
+        <path d="M5 35 28 12l8 8L13 43 3 45zM24 16l8 8"/>
+      </g>
+      <text x="100" y="112" text-anchor="middle" class="card-title">多次內部修改</text>
+      <text x="100" y="143" text-anchor="middle" class="card-copy">調整與確認</text>
+    </g>
+
+    <g class="arrow"><path d="M1116 207h25m-7-7 7 7-7 7"/></g>
+
+    <g transform="translate(1160 120)" filter="url(#softShadow)">
+      <rect width="190" height="174" rx="16" fill="url(#beforeFill)" stroke="#f1d8d5"/>
+      <g transform="translate(71 29)" color="#9e2f2b" class="icon">
+        <path d="m13 1-12 15 12 15M35 1l12 15-12 15M28 0l-8 33"/>
+      </g>
+      <text x="95" y="112" text-anchor="middle" class="card-title">開發實作</text>
+      <text x="95" y="143" text-anchor="middle" class="card-copy">開發與測試</text>
+    </g>
+
+    <g class="arrow"><path d="M1366 207h25m-7-7 7 7-7 7"/></g>
+
+    <g transform="translate(1410 120)" filter="url(#softShadow)">
+      <rect width="200" height="174" rx="16" fill="#f8f8f7" stroke="#d9dde1"/>
+      <g transform="translate(82 24)" color="#59636c" class="icon">
+        <path d="M3 45V1M4 4c10-7 20 7 31 0v22c-11 7-21-7-31 0"/>
+      </g>
+      <text x="100" y="112" text-anchor="middle" class="card-title">交付</text>
+      <text x="100" y="143" text-anchor="middle" class="card-copy">交付客戶</text>
+    </g>
+
+    <line x1="54" y1="350" x2="1618" y2="350" stroke="#dfe3e5" stroke-width="1.5"/>
+
+    <text x="55" y="412" class="label" fill="#3c7468">AFTER</text>
+    <text x="55" y="462" class="heading serif">從可重用基礎開始</text>
+    <text x="55" y="512" class="body">Template 先界定客戶的</text>
+    <text x="55" y="544" class="body">選擇範圍，再以可複用模組</text>
+    <text x="55" y="576" class="body">回應差異需求，減少重複</text>
+    <text x="55" y="608" class="body">製作並加速交付。</text>
+
+    <g transform="translate(410 435)" filter="url(#softShadow)">
+      <rect width="180" height="188" rx="16" fill="#f8f8f7" stroke="#d9dde1"/>
+      <g transform="translate(72 31)" color="#59636c" class="icon">
+        <path d="M4 0h21l9 9v31H4z"/>
+        <path d="M25 0v10h9M11 21h16M11 29h13"/>
+      </g>
+      <text x="90" y="121" text-anchor="middle" class="card-title">客戶需求</text>
+      <text x="90" y="153" text-anchor="middle" class="card-copy">業務需求</text>
+    </g>
+
+    <g class="arrow"><path d="M606 529h21m-7-7 7 7-7 7"/></g>
+
+    <g transform="translate(646 435)" filter="url(#softShadow)">
+      <rect width="180" height="188" rx="16" fill="url(#afterFill)" stroke="#d4e8e1"/>
+      <g transform="translate(68 31)" color="#235d52" class="icon">
+        <path d="M1 18c0-10 8-18 19-18s19 8 19 18-8 18-19 18c-3 0-6-.7-8.5-2L2 37l3-9A17 17 0 0 1 1 18z"/>
+        <circle cx="37" cy="31" r="8" fill="#fff"/>
+      </g>
+      <text x="90" y="121" text-anchor="middle" class="card-title">業務確認</text>
+      <text x="90" y="153" text-anchor="middle" class="card-copy">確認需求與範圍</text>
+    </g>
+
+    <g class="arrow"><path d="M842 529h21m-7-7 7 7-7 7"/></g>
+
+    <g transform="translate(882 423)" filter="url(#softShadow)">
+      <rect width="250" height="212" rx="18" fill="url(#configFill)" stroke="#bdddd2" stroke-width="1.5"/>
+      <text x="125" y="31" text-anchor="middle" font-size="12" font-weight="800" letter-spacing="2" fill="#4c776e">團隊配置</text>
+      <g transform="translate(100 42)" color="#174f45" class="icon">
+        <path d="m25 0 17 10v20L25 40 8 30V10zM8 10l17 10 17-10M25 20v20"/>
+      </g>
+      <text x="125" y="112" text-anchor="middle" font-size="21" font-weight="800" fill="#102033">Template + 模組配置</text>
+      <text x="125" y="141" text-anchor="middle" font-size="15" font-weight="500" fill="#526d67">界定範圍，再於框架內組合</text>
+      <g transform="translate(20 151)">
+        <rect width="210" height="25" rx="12.5" fill="#fff" stroke="#bad9cf"/>
+        <text x="14" y="17" class="micro-label">Template</text>
+        <text x="196" y="17" text-anchor="end" class="micro-copy">界定選擇</text>
+        <rect y="30" width="210" height="25" rx="12.5" fill="#fff" stroke="#bad9cf"/>
+        <text x="14" y="47" class="micro-label">模組</text>
+        <text x="196" y="47" text-anchor="end" class="micro-copy">配置與複用</text>
+      </g>
+    </g>
+
+    <g class="arrow"><path d="M1148 529h21m-7-7 7 7-7 7"/></g>
+
+    <g transform="translate(1188 435)" filter="url(#softShadow)">
+      <rect width="180" height="188" rx="16" fill="url(#afterFill)" stroke="#d4e8e1"/>
+      <g transform="translate(66 34)" color="#235d52" class="icon">
+        <path d="m13 1-12 15 12 15M35 1l12 15-12 15M28 0l-8 33"/>
+      </g>
+      <text x="90" y="121" text-anchor="middle" class="card-title">開發實作</text>
+      <text x="90" y="153" text-anchor="middle" class="card-copy">實作與調整</text>
+    </g>
+
+    <g class="arrow"><path d="M1384 529h21m-7-7 7 7-7 7"/></g>
+
+    <g transform="translate(1424 435)" filter="url(#softShadow)">
+      <rect width="188" height="188" rx="16" fill="#f8f8f7" stroke="#d9dde1"/>
+      <g transform="translate(76 31)" color="#59636c" class="icon">
+        <path d="M3 45V1M4 4c10-7 20 7 31 0v22c-11 7-21-7-31 0"/>
+      </g>
+      <text x="94" y="121" text-anchor="middle" class="card-title">交付</text>
+      <text x="94" y="153" text-anchor="middle" class="card-copy">交付客戶</text>
+    </g>
+  </g>
+</svg>
