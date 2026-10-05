@@ -959,7 +959,13 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
         <a role="menuitemradio" aria-checked="false" href="../../ja/work/insurance/" data-locale="ja">日本語</a>
       </div>
     </div>
-    <a class="pill" href="../../assets/v3/Timothy-Lau-Resume-EN.pdf" target="_blank" rel="noopener">Resume ↓</a>
+    <div class="resume-wrap">
+      <button class="pill resume-button" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="resume-menu">Resume <span aria-hidden="true">↓</span></button>
+      <div class="resume-menu" id="resume-menu" data-open="false">
+        <a href="../../assets/v3/Timothy-Lau-Resume-EN.pdf" download>English resume</a>
+        <a href="../../assets/v3/Timothy-Lau-Resume-ZH.pdf" download>Chinese resume</a>
+      </div>
+    </div>
   </nav>
 </header>
 <div class="ask in" id="ask" data-dock="true" data-open="false">
@@ -2237,7 +2243,7 @@ addEventListener('keydown',e=>{if(viewer.dataset.open!=='true')return;if(e.key==
       "download"
     ],
     "a": [
-      "Download my <a href=\"../../assets/v3/Timothy-Lau-Resume-EN.pdf\" target=\"_blank\" rel=\"noopener\">English resume PDF ↓</a>."
+      "Download my <a href=\"../../assets/v3/Timothy-Lau-Resume-EN.pdf\" download>English resume PDF ↓</a> or <a href=\"../../assets/v3/Timothy-Lau-Resume-ZH.pdf\" download>Chinese resume PDF ↓</a>."
     ],
     "next": [
       "intro",

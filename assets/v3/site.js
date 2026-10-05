@@ -20,7 +20,11 @@
   header.insertBefore(button,nav);
 
   const media=matchMedia('(max-width:860px)');
+  const resumeWrap=nav.querySelector('.resume-wrap');
+  const resumeButton=resumeWrap&&resumeWrap.querySelector('.resume-button');
+  const resumeMenu=resumeWrap&&resumeWrap.querySelector('.resume-menu');
   let open=false;
+  let resumeOpen=false;
   let scrollY=0;
   const visible=el=>!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);
   const focusables=()=>[button,...nav.querySelectorAll('a[href],button:not([disabled])')].filter(visible);
@@ -39,6 +43,14 @@
     document.body.style.width='';
     window.scrollTo(0,scrollY);
   }
+  function setResumeOpen(next,{restoreFocus=false}={}){
+    if(!resumeButton||!resumeMenu)return;
+    resumeOpen=next;
+    resumeMenu.dataset.open=next?'true':'false';
+    resumeButton.setAttribute('aria-expanded',String(next));
+    if(next)requestAnimationFrame(()=>resumeMenu.querySelector('a[href]')?.focus());
+    else if(restoreFocus)resumeButton.focus();
+  }
   function setOpen(next,{restoreFocus=false}={}){
     if(!media.matches)next=false;
     if(next===open)return;
@@ -50,19 +62,28 @@
       lockPage();
       requestAnimationFrame(()=>{const items=focusables();(items[1]||items[0])?.focus()});
     }else{
+      setResumeOpen(false);
       unlockPage();
       if(restoreFocus)button.focus();
     }
   }
 
   button.addEventListener('click',()=>setOpen(!open));
+  resumeButton?.addEventListener('click',()=>setResumeOpen(!resumeOpen));
+  resumeMenu?.querySelectorAll('a[href]').forEach(link=>link.addEventListener('click',()=>setResumeOpen(false)));
   nav.addEventListener('click',event=>{
     if(event.target.closest('a[href]'))setOpen(false);
   });
   document.addEventListener('pointerdown',event=>{
+    if(resumeOpen&&!resumeWrap.contains(event.target))setResumeOpen(false);
     if(open&&!header.contains(event.target))setOpen(false);
   });
   document.addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&resumeOpen){
+      event.preventDefault();
+      setResumeOpen(false,{restoreFocus:true});
+      return;
+    }
     if(!open)return;
     if(event.key==='Escape'){
       event.preventDefault();

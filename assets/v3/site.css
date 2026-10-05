@@ -3,6 +3,18 @@ img{height:auto}
 /* Shared mobile navigation. Desktop remains owned by each approved page. */
 .mobile-menu-button{display:none}
 
+.resume-wrap{position:relative;margin-left:6px}
+.resume-wrap > .pill{margin-left:0}
+button.resume-button{font-family:inherit;color:inherit;background:transparent;cursor:pointer}
+button.resume-button:focus-visible,.resume-menu a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.resume-menu{
+  position:absolute;right:0;top:calc(100% + 12px);display:none;min-width:190px;padding:6px;
+  border-radius:16px;background:var(--card);color:var(--text);box-shadow:0 14px 36px rgba(6,11,24,.24)
+}
+.resume-menu[data-open="true"]{display:block}
+.resume-menu a{display:block;padding:11px 12px;border-radius:10px;font-size:14px;font-weight:600;white-space:nowrap}
+.resume-menu a:hover{background:var(--sand);color:var(--blue)}
+
 @media (max-width:860px){
   :root{--mobile-header-height:64px}
   html.mobile-menu-lock,html.mobile-menu-lock body{overflow:hidden}
@@ -49,11 +61,22 @@ img{height:auto}
     box-shadow:0 20px 46px rgba(4,8,20,.36)
   }
   header.mobile-menu-open nav{display:flex!important;flex-direction:column}
-  header nav a.link,header nav a.pill{
+  header nav a.link,header nav .resume-button{
     display:flex!important;align-items:center;width:100%;min-height:44px;margin:0;padding:11px 13px;
     border:0;border-radius:12px;color:inherit;font-size:15px;font-weight:600
   }
-  header nav a.link:hover,header nav a.pill:hover{background:rgba(255,255,255,.1);color:#fff}
+  header nav a.link:hover,header nav .resume-button:hover{background:rgba(255,255,255,.1);color:#fff}
+  header .resume-wrap{width:100%;margin:0}
+  header .resume-menu,header .resume-menu[data-open="true"]{
+    position:static;display:none;grid-template-columns:repeat(2,minmax(0,1fr));min-width:0;margin:4px 0 2px;padding:0;gap:4px;
+    border-radius:0;background:transparent;color:inherit;box-shadow:none
+  }
+  header .resume-menu[data-open="true"]{display:grid}
+  header .resume-menu a{
+    min-width:0;min-height:42px;padding:10px 8px;border:1px solid rgba(246,246,244,.13);
+    border-radius:11px;color:inherit;text-align:center;white-space:normal
+  }
+  header .resume-menu a:hover{background:rgba(255,255,255,.1);color:#fff}
   header .langwrap{width:100%;margin-top:4px;padding-top:9px;border-top:1px solid rgba(246,246,244,.13)}
   header .langbtn{display:none!important}
   header .langmenu,header .langmenu[data-open="true"]{

@@ -954,7 +954,13 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
         <a role="menuitemradio" aria-checked="false" href="../../../ja/work/alphacamp/" data-locale="ja">日本語</a>
       </div>
     </div>
-    <a class="pill" href="../../../assets/v3/Timothy-Lau-Resume-EN.pdf" target="_blank" rel="noopener">履歷（英文）↓</a>
+    <div class="resume-wrap">
+      <button class="pill resume-button" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="resume-menu">履歷 <span aria-hidden="true">↓</span></button>
+      <div class="resume-menu" id="resume-menu" data-open="false">
+        <a href="../../../assets/v3/Timothy-Lau-Resume-EN.pdf" download>英文履歷</a>
+        <a href="../../../assets/v3/Timothy-Lau-Resume-ZH.pdf" download>中文履歷</a>
+      </div>
+    </div>
   </nav>
 </header>
 <div class="ask in" id="ask" data-dock="true" data-open="false">
@@ -2342,7 +2348,7 @@ addEventListener('keydown',e=>{if(viewer.dataset.open!=='true')return;if(e.key==
       "cv"
     ],
     "a": [
-      "可以下載我的<a href=\"../../../assets/v3/Timothy-Lau-Resume-EN.pdf\" target=\"_blank\" rel=\"noopener\">英文履歷 PDF ↓</a>。"
+      "可下載<a href=\"../../../assets/v3/Timothy-Lau-Resume-EN.pdf\" download>英文履歷 PDF ↓</a>或<a href=\"../../../assets/v3/Timothy-Lau-Resume-ZH.pdf\" download>中文履歷 PDF ↓</a>。"
     ],
     "next": [
       "intro",
