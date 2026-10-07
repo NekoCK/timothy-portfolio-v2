@@ -98,8 +98,7 @@ button.resume-button:focus-visible,.resume-menu a:focus-visible{outline:2px soli
     height:auto!important;min-height:100svh;padding:84px var(--pad) 88px!important;
     justify-content:flex-start!important;transform:none!important
   }
-  body[data-page="home"] #hero .name{display:none!important}
-  html[lang="en"] body[data-page="home"] #hero .name{
+  body[data-page="home"] #hero .name{
     display:block!important;margin-bottom:10px;font-size:11px;line-height:1.3;letter-spacing:.08em;white-space:nowrap
   }
   body[data-page="home"] #hero .copy{max-width:none}
