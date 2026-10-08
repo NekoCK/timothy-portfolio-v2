@@ -7,9 +7,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&amp;family=Noto+Sans+TC:wght@400;500;700;900&amp;family=Noto+Serif+TC:wght@700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../../assets/v3/site.css">
-<script src="../../../assets/v3/site.js" defer></script>
-<style>
+<link rel="stylesheet" href="../../../assets/v3/site.css"><style>
 
 :root{
   --ink:#0B132B;--ink-dim:#060B18;--sand:#F3F4F6;--sand-2:#E9EBEF;--card:#FFFFFF;--text:#17233F;--muted:#62656C;
@@ -728,6 +726,67 @@ figure.mc.narrow{max-width:760px}
 .tracks + .prose{margin-top:40px}
 .crit + .note2{margin-top:32px}
 @media (max-width:860px){.tracks{grid-template-columns:1fr}.track dl > div{grid-template-columns:1fr;gap:2px}.ccover.art img{display:none}}
+/* research-case parts (NextDrive, usable by any case) */
+/* a drawing as the cover, without the paper treatment */
+.ccover.art.plain img{top:44%;width:min(34%,480px);border-radius:0;box-shadow:none;transform:translateY(-50%)}
+/* three columns of the two-up track cards */
+.tracks.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tracks.three .track{padding:26px 24px 20px}
+.tracks.three .track h4{font-size:21px}
+.tracks.three .track dl > div{grid-template-columns:76px minmax(0,1fr);gap:12px}
+.track dd b{display:inline-block;min-width:5em;font-size:13px;font-weight:800;color:var(--blue)}
+.track .pl{display:block;margin-top:18px;font-size:14px;font-weight:800;color:var(--text)}
+.track .pl + .pills{margin-top:10px}
+.track .pills li{padding:5px 11px;font-size:13.5px}
+.track .pay dd{font-weight:800;color:var(--deep)}
+/* five-axis profile of a persona */
+.radar{display:block;width:100%;max-width:300px;margin:14px auto 2px}
+.radar .rg{fill:none;stroke:rgba(23,35,63,.16);stroke-width:1}
+.radar .rd{fill:rgba(46,91,214,.82);stroke:var(--deep);stroke-width:1.5;stroke-linejoin:round}
+.radar text{font-size:12.5px;font-weight:700;fill:var(--muted)}
+.radar text.hi{fill:var(--blue);font-weight:800}
+/* the research steps in a row; the middle step holds the two studies that were checked against each other */
+.rflow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px;margin:32px 0 0;padding:0;list-style:none}
+.rflow li{position:relative;display:flex;flex-direction:column;justify-content:center;padding:18px 16px;border-radius:14px;background:var(--card);box-shadow:0 0 0 1px var(--line)}
+.rflow li + li::before{content:"→";position:absolute;left:-22px;top:50%;transform:translateY(-50%);font-weight:900;color:var(--blue)}
+.rflow b{font-size:16px;font-weight:850;color:var(--deep)}
+.rflow span{margin-top:4px;font-size:13.5px;line-height:1.6;color:var(--muted)}
+.rflow .x2{box-shadow:inset 0 0 0 2px var(--blue)}
+.rflow .x2 i{margin:10px 0;padding:6px 0;border-top:1px dashed rgba(46,91,214,.5);border-bottom:1px dashed rgba(46,91,214,.5);font-style:normal;font-size:12.5px;font-weight:800;text-align:center;color:var(--blue)}
+/* what was assumed, what the survey showed, and the figures behind it */
+.hyp{margin:48px 0 0;border-top:1px solid var(--line)}
+.hyp .tr{display:grid;grid-template-columns:28px minmax(0,1fr) minmax(0,1.1fr) minmax(0,1.25fr);gap:20px;align-items:start;padding:18px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.65;color:var(--muted)}
+.hyp .th{font-size:13px;font-weight:800;color:var(--text)}
+.hyp .th > :nth-child(3){color:var(--blue)}
+.hyp .tr > i{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--deep);font-style:normal;font-size:12.5px;font-weight:800;color:#fff}
+.hyp .tr > b{font-size:16px;font-weight:850;line-height:1.55;color:var(--deep)}
+.hyp .tr > b em{display:inline-block;margin-left:8px;padding:1px 9px;border-radius:999px;background:#FFF3D6;font-style:normal;font-size:12px;font-weight:800;color:#8A6200;vertical-align:1px}
+.hyp .tr > span:last-child{font-size:14px}
+/* a ranked list as horizontal bars */
+.bars{display:grid;gap:10px;max-width:860px;margin:28px 0 0;padding:0;list-style:none}
+.bars li{display:grid;grid-template-columns:150px minmax(0,1fr) 56px;align-items:center;gap:16px;font-size:15px;color:var(--text)}
+.bars i{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--blue),var(--blue)) no-repeat left/calc(var(--v) * 2.6%) 100%,#E6E9F0}
+.bars b{font-weight:800;font-variant-numeric:tabular-nums;color:var(--deep)}
+/* Kano: where each feature sits, beside what each number is */
+.kano{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:16px 48px;align-items:center;margin:48px 0 0;padding:28px clamp(18px,2.6vw,34px);border-radius:20px;background:var(--card);box-shadow:0 0 0 1px var(--line)}
+.kplot{display:block;width:100%;height:auto}
+.kplot .fr{fill:none;stroke:rgba(23,35,63,.3);stroke-width:1}
+.kplot .ql{font-size:12.5px;font-weight:800;fill:var(--muted)}
+.kplot .tk{font-size:11.5px;fill:var(--muted)}
+.kplot .ax{font-size:12px;font-weight:700;fill:var(--text)}
+.kplot .kp{fill:var(--deep)}
+.kplot .kn{font-size:12px;font-weight:800;fill:#fff}
+.klist{margin:0;padding:0;list-style:none;counter-reset:kl}
+.klist li{counter-increment:kl;display:grid;grid-template-columns:26px minmax(0,1fr);gap:2px 12px;padding:10px 0;border-top:1px solid var(--line)}
+.klist li:first-child{border-top:0}
+.klist li::before{content:counter(kl);grid-row:span 2;display:grid;place-items:center;width:24px;height:24px;margin-top:1px;border-radius:50%;background:var(--deep);font-size:12px;font-weight:800;color:#fff}
+.klist b{font-size:15.5px;font-weight:800;color:var(--text)}
+.klist span{font-size:14px;color:var(--muted)}
+.kano figcaption{grid-column:1/-1;padding-top:14px;border-top:1px solid var(--line);font-size:14.5px;color:var(--muted)}
+.crit.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.crit + .prose{margin-top:40px}
+@media (max-width:1100px){.tracks.three,.rflow{grid-template-columns:1fr}.rflow li + li::before{left:50%;top:-24px;transform:translateX(-50%) rotate(90deg)}.kano{grid-template-columns:1fr}.hyp .tr{grid-template-columns:28px minmax(0,1fr)}.hyp .tr > :nth-child(n+3){grid-column:2}.hyp .th > :nth-child(n+3){display:none}.crit.three{grid-template-columns:1fr}}
+@media (max-width:860px){.bars li{grid-template-columns:1fr 56px}.bars li span{grid-column:1/-1}.ccover.art.plain img{display:none}}
 /* research-to-service parts (AlphaCamp, usable by any case) */
 /* what I did on a team project: one panel under the summary, grouped by phase */
 .mine{margin-top:40px;padding:28px clamp(20px,2.6vw,34px) 30px;border-radius:20px;background:var(--card);box-shadow:0 0 0 1px var(--line)}
@@ -933,8 +992,128 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
   .csub::before{left:-10px}
   .csub > h3{font-size:24px}
 }
+
+/* problem boxes: an icon, a short label and one sentence each */
+.pboxes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:36px}
+.pboxes.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pbox{padding:24px 24px 26px;border-radius:16px;background:var(--card,#fff);box-shadow:0 0 0 1px var(--line)}
+.pbox svg{display:block;width:28px;height:28px;fill:none;stroke:var(--blue);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.pbox .k{display:block;margin-top:18px;font-size:13px;font-weight:800;color:var(--muted)}
+.pbox h4{margin-top:6px;font-size:18px;line-height:1.45;color:var(--text)}
+.pbox p{margin-top:10px;font-size:15px;line-height:1.8;color:var(--muted)}
+.principle.tight{margin-top:44px}
+@media (max-width:860px){.pboxes,.pboxes.two{grid-template-columns:1fr}}
+
+/* problem → answer rows: each answer sits beside the problem it solves */
+.vs{margin-top:36px;border-bottom:1px solid var(--line)}
+.vs .hd,.vs .row{display:grid;grid-template-columns:minmax(0,1fr) 56px minmax(0,1fr);align-items:start}
+.vs .hd{padding-bottom:14px;font-size:13px;font-weight:800;color:var(--muted)}
+.vs .hd span:last-child{grid-column:3;color:var(--blue)}
+.vs .row{padding:26px 0;border-top:1px solid var(--line)}
+.vs .pq{display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:16px}
+.vs .pq svg{width:28px;height:28px;fill:none;stroke:var(--muted);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.vs .k{display:block;font-size:13px;font-weight:800;color:var(--muted)}
+.vs h4{margin-top:4px;font-size:18px;line-height:1.45;color:var(--text)}
+.vs p{margin-top:8px;font-size:15px;line-height:1.8;color:var(--muted)}
+.vs .ar{justify-self:center;margin-top:26px;font-style:normal;font-size:18px;color:var(--blue)}
+.vs .pa{padding-left:22px;border-left:2px solid var(--blue)}
+.vs .pa .k{color:var(--blue)}
+/* three screens that change as the reader scrolls; the track gives the scroll distance, the player stays pinned */
+.ftrack{height:230vh;margin-top:48px}
+.fplay{position:sticky;top:104px;display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:44px;align-items:start}
+.fplay .tabs{display:grid;gap:8px}
+.fplay .tabs button{position:relative;padding:16px 0 14px;border:0;border-top:2px solid var(--line);background:none;text-align:left;font:inherit;color:var(--muted);cursor:pointer}
+.fplay .tabs b{display:block;font-size:13px;color:var(--muted)}
+.fplay .tabs span{display:block;margin-top:4px;font-size:17px;font-weight:700;color:var(--text)}
+.fplay .tabs small{display:block;margin-top:6px;font-size:14px;line-height:1.7}
+.fplay .tabs button::before{content:"";position:absolute;left:0;top:-2px;width:calc(var(--p,0)*100%);height:2px;background:var(--blue)}
+.fplay .tabs button[aria-selected="true"] b{color:var(--blue)}
+.fplay .tabs button[aria-selected="false"] span{color:var(--muted)}
+.fplay .stage{position:relative;width:min(100%,calc((100vh - 150px)*1280/1190));aspect-ratio:1280/1190;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 0 0 1px var(--line)}
+.fplay .stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .55s var(--ease)}
+.fplay .stage img.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.fplay .stage img{transition:none;transform:none}}
+@media (max-width:860px){.ftrack{height:auto;margin-top:36px}.fplay{position:static;grid-template-columns:1fr;gap:24px}.fplay .tabs button::before{display:none}.fplay .tabs button[aria-selected="false"] span{color:var(--text)}
+  .fplay .stage{width:100%;aspect-ratio:auto;display:grid;gap:16px;overflow:visible;background:none;box-shadow:none;border-radius:0}
+  .fplay .stage img{position:static;height:auto;opacity:1;transform:none;border-radius:12px;box-shadow:0 0 0 1px var(--line)}}
+@media (max-width:860px){.vs .hd{display:none}.vs .row{grid-template-columns:1fr;row-gap:16px}.vs .ar{display:none}}
+
+.pcard .k{display:block;margin-top:20px;font-size:13px;font-weight:800;color:var(--blue)}
+.pcard .k+h4{margin-top:4px}
+.ans{margin-top:12px;font-size:14px;line-height:1.7;color:var(--muted)}
+.ans b{color:var(--blue);font-weight:800}
+
+.pbox ul{margin-top:12px;padding-left:1.15em;font-size:15px;line-height:1.9;color:var(--muted)}
+.pbox ul li+li{margin-top:2px}
+/* three short facts in one row: a label and a few words each */
+.strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:20px;border-radius:14px;background:var(--card,#fff);box-shadow:0 0 0 1px var(--line);overflow:hidden}
+.strip>div{padding:18px 22px}
+.strip>div+div{border-left:1px solid var(--line)}
+.strip .k{display:block;font-size:13px;font-weight:800;color:var(--muted)}
+.strip b{display:block;margin-top:6px;font-size:16px;line-height:1.5;color:var(--text)}
+.strip>div[data-open] .k{color:var(--blue)}
+@media (max-width:860px){.strip{grid-template-columns:1fr}.strip>div+div{border-left:0;border-top:1px solid var(--line)}}
+
+h4.sub{margin-top:72px;font-size:22px;font-weight:850;line-height:1.4;color:var(--text)}
+.fplay .side h4{margin-bottom:22px;font-size:20px;font-weight:850;line-height:1.45;color:var(--text)}
+/* 情境＋共同限制：沿用頁面既有的細線欄位，不用色塊提示框 */
+.scn{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:72px;margin-top:28px;border-top:1px solid var(--line)}
+.scn section{position:relative;padding:22px 0 28px}
+.scn section + section::before{content:"";position:absolute;top:0;bottom:0;left:-36px;width:1px;background:var(--line)}
+.scn .k{display:block;font-size:13px;font-weight:800;color:var(--blue)}
+.scn h4{margin-top:6px;font-size:20px;line-height:1.45;color:var(--text)}
+.scn ul{margin:12px 0 0;padding:0;list-style:none;font-size:15px;line-height:1.9;color:var(--muted)}
+.scn .lim{grid-column:1/-1;display:grid;grid-template-columns:132px minmax(0,1fr);gap:24px;align-items:baseline;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.scn .lim .k{color:#C0392F}
+.scn .lim p{margin:0;font-size:19px;font-weight:750;line-height:1.6;color:var(--text)}
+.ctxbox + .intro2{margin-top:48px}
+h4.sub + .csub{margin-top:40px}
+/* 摘要的前後對照：兩列流程，用頁面自己的字與線，不用外部圖檔 */
+.ba{margin-top:48px;border-bottom:1px solid var(--line)}
+.ba .row{display:grid;grid-template-columns:minmax(0,310px) minmax(0,1fr);gap:40px;align-items:center;padding:44px 0 36px;border-top:1px solid var(--line)}
+.ba .hd .k{display:block;font-size:13px;font-weight:800;color:var(--muted)}
+.ba .row.after .hd .k{color:var(--blue)}
+.ba .hd b{display:block;margin-top:6px;font-size:19px;font-weight:850;line-height:1.5;color:var(--text)}
+.ba .fl{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:750;color:var(--deep)}
+.ba .n{flex:1;display:grid;place-items:center;min-height:54px;padding:8px 10px;border-radius:10px;background:var(--card,#fff);box-shadow:0 0 0 1px var(--line);text-align:center;line-height:1.35}
+.ba .n.hot{background:var(--deep);box-shadow:none;color:#fff}
+.ba .fl,.ba .grp{align-items:stretch}
+.ba .fl i{flex:none;align-self:center;font-style:normal;font-weight:900;color:var(--blue)}
+.ba .grp{position:relative;flex:2.2;display:flex;align-items:center;gap:12px}
+.ba .grp[data-note]::before{content:attr(data-note);position:absolute;left:0;right:0;bottom:calc(100% + 8px);height:22px;border:1px dashed #C0392F;border-bottom:0;border-radius:8px 8px 0 0;font-size:13px;font-weight:800;line-height:1;color:#C0392F;text-align:center}
+.ba .grp[data-note]::after{content:attr(data-note);position:absolute;left:50%;bottom:calc(100% + 21px);transform:translateX(-50%);padding:0 10px;background:var(--sand);font-size:13px;font-weight:800;line-height:18px;color:#C0392F;white-space:nowrap}
+.ba .grp[data-note]::before{color:transparent}
+.ba .grp[data-note] i{color:#C0392F}
+@media (max-width:860px){
+  .ba .row{grid-template-columns:1fr;gap:26px;padding:32px 0 28px}
+  .ba .fl,.ba .grp{flex-direction:column;align-items:stretch;gap:6px}
+  .ba .n{min-height:46px}
+  .ba .fl i{align-self:center;transform:rotate(90deg)}
+  .ba .grp{flex:none}
+  .ba .grp[data-note]{padding:30px 10px 10px;border:1px dashed #C0392F;border-radius:10px}
+  .ba .grp[data-note]::before{display:none}
+  .ba .grp[data-note]::after{left:12px;top:8px;bottom:auto;transform:none;padding:0;background:none}
+}
+.vs a.pa{display:block}
+.vs a.pa:hover h4{color:var(--blue)}
+.chosen figure.mc{margin-top:28px}
+/* 五個頁面並排：欄位標籤對齊圖片內的五欄 */
+.flow + figure.pages{margin-top:28px}
+figure.pages .cols{counter-reset:pg;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));column-gap:1.308%;margin:0 0 12px;padding:0 1.501%;list-style:none}
+figure.pages .cols li{counter-increment:pg;font-size:15px;font-weight:800;line-height:1.4;color:var(--text)}
+figure.pages .cols li::before{content:"0" counter(pg);display:block;font-size:13px;color:var(--blue)}
+@media (max-width:860px){
+  .scn{grid-template-columns:1fr}.scn section + section{border-top:1px solid var(--line)}.scn section + section::before{display:none}.scn .lim{grid-template-columns:1fr;gap:6px}
+  figure.pages .cols li{font-size:11px}figure.pages .cols li::before{font-size:10px}
+}
+/* 四個客戶 */
+.clients.four{grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.client .src{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--blue)}
+.client .src:hover{text-decoration:underline;text-underline-offset:3px}
+@media (max-width:1100px){.clients.four{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:860px){.clients.four{grid-template-columns:1fr}}
 </style>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&amp;display=swap"><style>html[lang="ja"] body{font-family:"Inter Tight","Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif}</style><style>.dg{min-width:0;max-width:100%}.dg .r{min-width:0}.dg .n{min-width:0;white-space:normal;text-align:center;overflow-wrap:normal}.dg .c{min-width:0}.metric b small{display:block;margin-top:10px;font-size:16px;font-weight:500}</style></head>
+<script src="../../../assets/v3/site.js" defer></script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&amp;display=swap"><style>html[lang="ja"] body{font-family:"Inter Tight","Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif}</style><style>.dg{min-width:0;max-width:100%}.dg .r{min-width:0}.dg .n{min-width:0;white-space:normal;text-align:center;overflow-wrap:normal}.dg .c{min-width:0}.metric b small{display:block;margin-top:10px;font-size:16px;font-weight:500}</style></head>
 <body data-page="insurance">
 <header data-tone="dark" data-compact="false">
   <a class="brand" href="../../../ja/" aria-label="Timothy Lau">
@@ -954,14 +1133,7 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
         <a role="menuitemradio" aria-checked="true" href="../../../ja/work/insurance/" data-locale="ja">日本語</a>
       </div>
     </div>
-    <div class="resume-wrap">
-      <button class="pill resume-button" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="resume-menu">履歴書 <span aria-hidden="true">↓</span></button>
-      <div class="resume-menu" id="resume-menu" data-open="false">
-        <a href="../../../assets/v3/Timothy-Lau-Resume-EN.pdf" download>英語版履歴書</a>
-        <a href="../../../assets/v3/Timothy-Lau-Resume-ZH.pdf" download>中国語版履歴書</a>
-      </div>
-    </div>
-  </nav>
+    <div class="resume-wrap"><button class="pill resume-button" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="resume-menu">履歴書 <span aria-hidden="true">↓</span></button><div class="resume-menu" id="resume-menu" data-open="false"><a href="../../../assets/v3/Timothy-Lau-Resume-EN.pdf" download="">英語版履歴書</a><a href="../../../assets/v3/Timothy-Lau-Resume-ZH.pdf" download="">中国語版履歴書</a></div></div></nav>
 </header>
 <div class="ask in" id="ask" data-dock="true" data-open="false">
   <div class="ask-panel" id="askpanel" role="dialog" aria-label="Timothy についてのクイックQ&amp;A">
@@ -987,7 +1159,7 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
       <div class="ccopy">
         <p class="cmeta">事例 · InsurTech · B2B SaaS · 2024</p>
         <h1 class="ch1">カスタマイズの境界を再定義し、<br>新規顧客ごとにゼロから作り直さない</h1>
-        <p class="clede">チームは標準フローでデリバリーを速めようとしていました。しかし、インタビューと案件振り返りから、真のボトルネックは「何を固定し、どこに柔軟性を残すか」が未定義なことだと分かりました。そこでテンプレート＋制御されたモジュール化によるモデルを構築し、要件の収束とデザイン・開発資産の再利用を可能にしました。</p>
+        <p class="clede">チームは当初、標準フローでデリバリーを速めようとしていました。しかしインタビューと案件の振り返りから、本当のボトルネックは「何を固定し、どこに柔軟性を残すか」を決めることだと分かりました。そこで、要件を収束しやすくし、デザインと開発が既存成果を再利用できるよう、テンプレート＋制御されたモジュール化によるデリバリーモデルを構築しました。</p>
         <dl class="facts">
           <div><dt>役割</dt><dd>リードプロダクトデザイナー</dd></div>
           <div><dt>期間</dt><dd>2024年11月〜12月</dd></div>
@@ -995,7 +1167,7 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
           <div><dt>範囲</dt><dd><span class="ph">課題定義、</span><span class="ph">デリバリーモデル、</span><span class="ph">設定境界、</span><span class="ph">フォーム・申込フロー設計</span></dd></div>
         </dl>
         <div class="kfig" id="kfig">
-          <div><b aria-label="3か月超から約1か月へ短縮"><span class="n" data-to="3">3</span><small>か月超</small><i>→</i><small>約</small><span class="n" data-to="1">1</span><small>か月</small></b><span>要件確定からデリバリーまでに要する期間</span><em>約67%短縮</em></div>
+          <div><b aria-label="3か月超から約1か月へ短縮"><span class="n" data-to="3">3</span><small>か月超</small><i>→</i><small>約</small><span class="n" data-to="1">1</span><small>か月</small></b><span>新規案件ごとの、要件確定から初版提出までの期間</span><em>約67%短縮</em></div>
           <div><b aria-label="9人週から2.4人週へ削減"><span class="n" data-to="9">9</span><i>→</i><span class="n" data-to="2.4" data-dec="1">2.4</span><small>人週</small></b><span>案件ごとに必要な開発＋デザイン工数</span><em>約73%削減</em></div>
         </div>
       </div>
@@ -1007,7 +1179,7 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
   <li><a href="#s-summary" data-sec="s-summary"><b>00</b>概要</a></li>
   <li><a href="#s-bg" data-sec="s-bg"><b>01</b>背景</a></li>
   <li><a href="#s-decision" data-sec="s-decision"><b>02</b>プロダクトとデリバリーの判断</a></li>
-  <li><a href="#s-ix" data-sec="s-ix"><b>03</b>インタラクションの意思決定</a></li>
+  <li><a href="#s-ix" data-sec="s-ix"><b>03</b>設計判断</a></li>
   <li><a href="#s-adopt" data-sec="s-adopt"><b>04</b>実案件への適用</a></li>
   <li><a href="#s-result" data-sec="s-result"><b>05</b>成果</a></li>
 </ol></nav>
@@ -1015,32 +1187,61 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
 <div class="csheet" id="csheet">
 <section class="csec" id="s-summary"><div class="cshell cin">
   <div class="prose rv"><span class="eb">概要</span>
-    <h2>問題はカスタマイズの多さだけではなく、<br>「何を変えられるか」が明確でないこと<small>柔軟性の境界が曖昧だと、営業は要件を絞り込めず、<br>デザインと開発も既存成果を安定して再利用できませんでした。</small></h2></div>
-  <figure class="mc rv"><img data-zoom alt="変更前はオープンエンドな要件による調整と手戻りが発生。変更後はテンプレートで選択範囲を定め、チームが再利用可能なモジュールを構成する。" src="../../../assets/Insurance/BeforeAfter_JPv4.svg" width="1672" height="680"><figcaption><span>変更前：案件ごとに範囲を定義し、何度も修正。変更後：テンプレートで意思決定の境界を定め、再利用可能なモジュールで差分に対応してデリバリーを高速化。</span><button class="zoom" type="button">全体を見る ↗</button></figcaption></figure>
+    <h2>変更前は顧客ごとにゼロから協議、<br>変更後はテンプレートから選ぶ<small>テンプレートで選べる範囲を先に定め、<br>差異は再利用できるモジュールで対応します。</small></h2></div>
+  <div class="ba rv" role="img" aria-label="変更前：顧客要件は営業との調整と社内での修正を何度も往復してから、開発とデリバリーへ進みました。変更後：顧客がテンプレートから選び、チームがモジュールを設定し、開発とデリバリーへ進みます。">
+    <div class="row">
+      <div class="hd"><span class="k">変更前</span><b>要件に範囲がなく、確定までに何度も往復が必要</b></div>
+      <div class="fl"><span class="n">顧客要件</span><i>→</i><span class="grp" data-note="何度も往復"><span class="n">営業との調整</span><i>⇄</i><span class="n">社内での修正</span></span><i>→</i><span class="n">開発</span><i>→</i><span class="n">デリバリー</span></div>
+    </div>
+    <div class="row after">
+      <div class="hd"><span class="k">変更後</span><b>テンプレートの範囲内で選択・設定</b></div>
+      <div class="fl"><span class="n">顧客要件</span><i>→</i><span class="grp"><span class="n hot">テンプレートから選択</span><i>→</i><span class="n hot">モジュールを設定</span></span><i>→</i><span class="n">開発</span><i>→</i><span class="n">デリバリー</span></div>
+    </div>
+  </div>
 </div></section>
 
 <section class="csec" id="s-bg"><div class="cshell cin">
   <div class="prose rv"><span class="eb">01 · 背景</span>
-    <h2>ボトルネックはカスタマイズ自体ではなく、<br>カスタマイズに境界がないこと<small>要件を話し直し、デザインを作り直し、開発工数を見積もり直していた</small></h2>
+    <h2>本当のボトルネックはカスタマイズ自体ではなく、<br>カスタマイズに境界がないこと<small>要件を話し直し、デザインを作り直し、開発工数を見積もり直していた</small></h2>
 </div>
-  <div class="intro2 rv"><p>異なる保険商品やブランドに対応するため、多くの調整項目が開放されていました。しかし、何を変更でき、何を共通化すべきかは定義されていませんでした。その結果、新規案件ごとに要件範囲を確認し直し、デザインと開発も既存成果を再利用しにくい状態でした。</p>
-    <p>営業・プロダクト・開発チームへのインタビューと過去案件の記録を比較し、3つの問題を整理しました。</p></div>
+  <div class="intro2 rv"><p>異なる保険商品やブランドに対応するため、多くの調整項目が開放されていました。しかし、何を変更でき、何を共通化すべきかは定義されていませんでした。その結果、新規案件ごとに要件範囲を確認し直し、デザインと開発も既存成果を再利用しにくい状態でした。</p></div>
+  <div class="ctxbox rv"><b>同時に進んだ最初の顧客案件</b><p>ちょうどその頃、保険ブローカーの Marsh が自動車保険の提供を準備していました。スケジュールは厳しく、判断を固めて Marsh に初版を提示するまでの期間は1か月しかありません。そのため、再利用できるフレームワークの整理と、Marsh 案件への適用を同時に進める必要がありました。Marsh はこのフレームワークを採用した最初の顧客になりました。</p></div>
+  <div class="intro2 rv"><p>営業・プロダクト・開発チームへのインタビューと過去案件の記録を比較し、3つの問題を整理しました。</p></div>
   <div class="trio">
-    <article class="pcard rv"><img alt="具体的なテンプレートがなく、顧客と営業が要件を繰り返し確認する状況" loading="lazy" src="../../../assets/Insurance/01SalesAndClients.webp" width="1448" height="1086"><div class="bd"><h4>要件に共通の起点がない</h4><p>共通テンプレートがないため、顧客は要望を具体化しづらく、営業も方向性の確認を繰り返していました。</p></div></article>
-    <article class="pcard rv" style="--d:.08s"><img alt="明確なカスタマイズ境界がない柔軟なプロダクト" loading="lazy" src="../../../assets/Insurance/HighFlexible.webp" width="1448" height="1086"><div class="bd"><h4>カスタマイズ境界が不明確</h4><p>設定可能な範囲が定義されておらず、再利用できる機能と追加開発が必要な機能をすぐに判断できませんでした。</p></div></article>
-    <article class="pcard rv" style="--d:.16s"><img alt="案件ごとにデザインと開発を繰り返す状況" loading="lazy" src="../../../assets/Insurance/01RepeatToDevelop.webp" width="1448" height="1086"><div class="bd"><h4>デリバリーを安定して再利用できない</h4><p>案件ごとにデザイン・見積もり・開発をやり直し、既存成果を再利用可能な資産として蓄積できませんでした。</p></div></article>
+    <article class="pcard rv"><img alt="具体的なテンプレートがなく、顧客と営業が要件を繰り返し確認する状況" loading="lazy" src="../../../assets/Insurance/01SalesAndClients.webp" width="1448" height="1086"><div class="bd"><span class="k">問題1</span><h4>要件に共通の起点がない</h4><p>共通テンプレートがないため、顧客は要望を具体化しづらく、営業も方向性の確認を繰り返していました。</p></div></article>
+    <article class="pcard rv" style="--d:.08s"><img alt="明確なカスタマイズ境界がない柔軟なプロダクト" loading="lazy" src="../../../assets/Insurance/HighFlexible.webp" width="1448" height="1086"><div class="bd"><span class="k">問題2</span><h4>カスタマイズ境界が不明確</h4><p>設定可能な範囲が定義されておらず、再利用できる機能と追加開発が必要な機能をすぐに判断できませんでした。</p></div></article>
+    <article class="pcard rv" style="--d:.16s"><img alt="案件ごとにデザインと開発を繰り返す状況" loading="lazy" src="../../../assets/Insurance/01RepeatToDevelop.webp" width="1448" height="1086"><div class="bd"><span class="k">問題3</span><h4>デリバリーを安定して再利用できない</h4><p>案件ごとにデザイン・見積もり・開発をやり直し、既存成果を再利用可能な資産として蓄積できませんでした。</p></div></article>
   </div>
 </div></section>
 
 <section class="csec" id="s-decision"><div class="cshell cin">
   <div class="prose rv"><span class="eb">02 · プロダクトとデリバリーの判断</span>
-    <h2>完全標準化を選ぶのではなく、<br><span class="ph">まず定義したのは</span><span class="ph">「柔軟性をどこまで許容するか」</span></h2>
-    <p>チームは当初、標準フローで納期を短縮したいと考えていました。しかしインタビューと案件の振り返りから、繰り返し起きていた問題は標準化の不足ではなく、「何を固定し、何を顧客が調整できるようにするか」に答えがないことだと分かりました。</p>
-    <p>そこで、まずデリバリーモデルを選び、次にテンプレートの設定境界を定義するという2つの判断に分けました。</p></div>
+    <h2><span class="ph">2つの意思決定で、</span><span class="ph">3つの問題に応える</span></h2>
+    <p>期限は1か月しかなかったため、まずデリバリーの方式を決め、次に顧客が調整できる範囲を決めました。この2つを合わせたものが、以降で「フレームワーク」と呼ぶものです。下の表は、3つの問題と2つの意思決定の対応です。</p></div>
+  <div class="vs">
+    <div class="hd rv"><span>背景の問題</span><span>対応する意思決定</span></div>
+    <div class="row rv">
+      <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M5 6h14v9H10l-5 4V6z"></path></svg><div><span class="k">問題1</span><h4>要件に共通の起点がない</h4><p>顧客は要望を言葉にできず、営業が方向性の確認を繰り返していました。</p></div></div>
+      <i class="ar" aria-hidden="true">→</i>
+      <div class="pa"><span class="k">意思決定1 · デリバリーモデル</span><h4>テンプレートを共通の起点にする</h4><p>具体的な画面と選べる範囲を先に示し、要件を白紙からではなく選択肢から絞り込みます。</p></div>
+    </div>
+    <div class="row rv" style="--d:0.06s">
+      <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2" stroke-dasharray="3 3"></rect></svg><div><span class="k">問題2</span><h4>カスタマイズ境界が不明確</h4><p>顧客から変更の要望が出ても、そのまま流用できるものと追加開発が必要なものを区別できませんでした。</p></div></div>
+      <i class="ar" aria-hidden="true">→</i>
+      <div class="pa"><span class="k">意思決定2 · 設定境界</span><h4>変更できる範囲を3つのレベルに分ける</h4><p>差し替えられるもの（ブランドカラー、画像）、既存モジュールから選ぶだけのもの、変更できないもの（フローとレイアウト）。顧客から変更の要望が出た時点で、どのレベルに当たるか、追加開発が必要かが分かります。</p></div>
+    </div>
+    <div class="row rv" style="--d:0.12s">
+      <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M17 4l3 3-3 3"></path><path d="M20 7H9a5 5 0 0 0-5 5"></path><path d="M7 20l-3-3 3-3"></path><path d="M4 17h11a5 5 0 0 0 5-5"></path></svg><div><span class="k">問題3</span><h4>デリバリーを安定して再利用できない</h4><p>案件ごとにデザイン・見積もり・開発をやり直していました。</p></div></div>
+      <i class="ar" aria-hidden="true">→</i>
+      <div class="pa"><span class="k">意思決定1＋意思決定2</span><h4>中核を固定し、限られたモジュールだけを差し替える</h4><p>中核フローとコンポーネントを共通化し、差異は定義済みの位置だけに限定することで、作ったものをそのまま再利用できます。</p></div>
+    </div>
+  </div>
 
+  <h4 class="sub rv">2つの意思決定の内容</h4>
   <div class="csub" id="s-model">
     <span class="k rv">意思決定1 · デリバリーモデル</span>
-    <h3 class="rv">必要な差異を残しながら、顧客ごとの作り直しをなくす</h3>
+    <h3 class="rv">3つの案を比較し、期限内に実現できるものを選ぶ</h3>
+    <p class="ans rv">背景の<b>問題1</b>（要件に共通の起点がない）と<b>問題3</b>（デリバリーを安定して再利用できない）に対応します。</p>
     <div class="opts">
       <article class="opt rv">
         <div class="viz"><div class="dg" aria-hidden="true">
@@ -1048,53 +1249,53 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
           <div class="r"><span class="n">顧客B</span><i>→</i><span class="n">デザインB</span><i>→</i><span class="n">開発B</span></div>
           <div class="r"><span class="n">顧客C</span><i>→</i><span class="n">デザインC</span><i>→</i><span class="n">開発C</span></div>
         </div></div>
-        <div class="bd"><div class="meta"><span>案A</span><span class="st">不採用</span></div><h4>案件ごとのフルカスタマイズ</h4>
+        <div class="bd"><div class="meta"><span>案A</span></div><h4>案件ごとのフルカスタマイズ</h4>
           <dl><dt>進め方</dt><dd>顧客ごとに画面・フロー・要件を定義し直し、デザインと開発を個別に進める。</dd><dt>利点</dt><dd>個別要件への柔軟性が最も高い。</dd><dt>制約</dt><dd>要件を収束しにくく、案件ごとにデザインと開発が必要なため、期間も予測しにくい。</dd></dl></div>
       </article>
       <article class="opt rv" style="--d:.08s">
         <div class="viz"><div class="dg" aria-hidden="true">
           <div class="r"><div class="c"><span class="n">顧客A</span><span class="n">顧客B</span><span class="n">顧客C</span></div><i>→</i><span class="n wide">同一の固定フロー</span><i>→</i><span class="n">デリバリー</span></div>
         </div></div>
-        <div class="bd"><div class="meta"><span>案B</span><span class="st">不十分</span></div><h4>単一の標準フロー</h4>
+        <div class="bd"><div class="meta"><span>案B</span></div><h4>単一の標準フロー</h4>
           <dl><dt>進め方</dt><dd>すべての顧客が同じ固定画面・フローを利用し、標準化によってデザインと開発コストを抑える。</dd><dt>利点</dt><dd>デリバリー・見積もり・保守が最も速い。</dd><dt>制約</dt><dd>ブランド、商品、提携形態に必要な差異へ対応できない。</dd></dl></div>
       </article>
-      <article class="opt rv" data-status="chosen" style="--d:.16s">
+      <article class="opt rv" style="--d:.16s">
         <div class="viz"><div class="dg" aria-hidden="true">
           <div class="r"><span class="n">顧客要件</span><i>→</i><span class="n hot">テンプレート境界</span><i>→</i><div class="c"><span class="n">モジュールA</span><span class="n">モジュールB</span><span class="n">モジュールC</span></div><i>→</i><span class="n">デリバリー</span></div>
         </div></div>
-        <div class="bd"><div class="meta"><span>案C</span><span class="st">採用</span></div><h4>テンプレート＋制御されたモジュール化</h4>
-          <dl><dt>進め方</dt><dd>基礎版を起点に、テンプレートで選択範囲を定義し、テンプレートと購入フローの所定位置で限定モジュールを挿入・置換する。</dd><dt>利点</dt><dd>中核構造と体験を維持しつつ、ブランド・商品・提携要件の差異に対応し、案件ごとの作り直しを避けられる。</dd><dt>制約</dt><dd>設定可能な位置と選択肢、変更できない中核構造を事前に定義する必要がある。</dd></dl></div>
+        <div class="bd"><div class="meta"><span>案C</span></div><h4>テンプレート＋制御されたモジュール化</h4>
+          <dl><dt>進め方</dt><dd>基礎版を起点に、テンプレートで選択範囲を定義し、テンプレートと購入フローの所定位置で限定モジュールを挿入・置換する。</dd><dt>利点</dt><dd>中核構造と体験を維持しつつ、ブランド・商品・提携要件の差異に対応し、案件ごとの作り直しを避けられる。</dd><dt>制約</dt><dd>設定可能な位置と変更できない中核構造を事前に定義する必要があります。選べるモジュールも複数の案件を通じて少しずつ蓄積されるため、最初は選択肢が多くありません。</dd></dl></div>
       </article>
     </div>
 
     <section class="chosen rv" aria-label="採用モデル">
       <div class="ch-l"><span class="lbl">採用モデル</span>
       <h4>テンプレート＋制御されたモジュール化</h4>
-      <p class="intro">基礎版で中核体験を維持し、<br>予測可能な差異だけを<b>限定設定</b>にする。</p></div>
+      <p class="intro">基礎版で中核体験を維持し、<br>予測可能な差異だけを<b>限定設定</b>。</p>
+      <p class="note2">案件ごとのフルカスタマイズは1か月では終わりません。単一の標準フローなら間に合いますが、Marsh のブランドと商品の要件には応えられません。この案は期限内に実現でき、以降の顧客にも再利用できます。</p></div>
       <div class="ch-r">
       <div class="eq"><div><b>テンプレート</b><p>選択範囲を定め、要件の話し合いを白紙から始めない。</p></div><i aria-hidden="true">＋</i><div><b>制御されたモジュール化</b><p>基礎版を中心に、定義済みの位置で限られた選択肢を挿入・置換・有効化する。</p></div></div>
+      <figure class="mc"><img data-zoom data-full="../../../assets/images/original/insuranceProcess3.png" alt="セクション順が固定で仮テキストが入ったテンプレートのランディングページ。3つの配色を並べたもの" loading="lazy" src="../../../assets/v3/insurance/template-themes.webp" width="1518" height="800"><figcaption><span><b>テンプレート</b>セクションの順序は固定で、内容には仮のテキストを入れてあります。顧客は白紙からではなく、ここから選び始めます。画像は同じテンプレートの3つの配色です。</span><button class="zoom" type="button">原寸で見る ↗</button></figcaption></figure>
       <div class="blk">
         <span class="lbl">商業展開</span>
-        <p>カスタマイズをなくすのではなく、要望を段階化しました。</p>
+        <p>カスタマイズは残したまま、3つの段階に分けました。</p>
         <ol class="tiers3">
-          <li><span class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></span><b>基本プラン</b><span>基本テンプレート</span><small>標準価格</small></li>
+          <li><span class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></span><b>基本版</b><span>基本テンプレート</span><small>標準価格</small></li>
           <li><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span><b>モジュール追加</b><span>選択モジュール</span><small>追加要件に対応</small></li>
           <li><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>フルカスタマイズ</b><span>個別対応</span><small>既存の設定境界を超える要件に対応</small></li>
         </ol>
       </div>
-      <div class="blk">
-        <span class="lbl">実際のデザイン</span>
-        <figure class="mc"><img data-zoom alt="同じランディングページテンプレートを3つの保険ブランドへ適用" loading="lazy" src="../../../assets/images/original/insuranceProcess3.webp" width="1518" height="1442" data-full="../../../assets/images/original/insuranceProcess3.png"><figcaption><span>同一の情報構造を異なるブランドに適用し、営業・プロダクト・デザイン・顧客が共通画面から議論できるようにしました。</span><button class="zoom" type="button">原寸で見る ↗</button></figcaption></figure>
-      </div>
-      <div class="res"><span class="lbl">結果</span><b>約50% ↓</b><strong>営業からのフィードバック：要件調整時間を削減</strong><p>範囲を何度も定義する話し合いから、具体的な選択肢をもとに収束する進め方へ変わりました。</p><small>厳密な時間計測による数値ではありません。</small></div></div>
+      <div class="res"><span class="lbl">結果 · 問題1に対応</span><b>約50% ↓</b><strong>営業からのフィードバック：要件調整時間を削減</strong><p>範囲を何度も定義する話し合いから、具体的な選択肢をもとに収束する進め方へ変わりました。</p><small>厳密な時間計測による数値ではありません。</small></div></div>
     </section>
   </div>
 
   <div class="csub" id="s-boundary">
     <span class="k rv">意思決定2 · 設定境界</span>
-    <h3 class="rv"><span class="ph">次に、残すべき差異と</span><span class="ph">固定すべき要素を決める</span></h3>
-    <div class="prose rv"><p>開放しすぎれば顧客ごとの再設計が残り、制限しすぎれば必要なブランド・ビジネス差異に対応できません。</p>
-      <p>そこで画面要素を洗い出し、プロダクト・開発と一つずつ評価して、設定可能・限定設定・固定の3段階に分類しました。</p></div>
+    <h3 class="rv"><span class="ph">残す価値のあるカスタマイズと、</span><span class="ph">固定すべきものを決める</span></h3>
+    <p class="ans rv">背景の<b>問題2</b>（カスタマイズ境界が不明確）に対応し、<b>問題3</b>の再利用にも明確なルールを与えます。</p>
+    <div class="prose rv"><p>開放しすぎれば顧客ごとの再設計が残り、制限しすぎれば必要なブランド・ビジネス差異に対応できません。</p></div>
+    <h4 class="sub rv">解決策</h4>
+    <div class="prose rv"><p>画面要素を洗い出し、プロダクト・開発と一つずつ評価して、設定可能・限定設定・固定の3段階に分類しました。</p></div>
     <div class="lvl rv"><b>設定レベル</b><span>設定の自由度が高い</span><i></i><span>制約が強くなる</span></div>
     <div class="tiers rv">
       <section class="tier">
@@ -1103,82 +1304,202 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
       </section>
       <section class="tier">
         <div class="viz"><div class="dg" aria-hidden="true"><div class="r"><span class="n">中核</span><i>→</i><span class="n hot">位置</span><i>→</i><span class="n">中核</span></div><div class="r"><span class="n">＋ モジュール</span><span class="n">↔ バリアント</span></div></div></div>
-        <div class="hd"><h4>定義済みモジュールを選択</h4><b class="lv">限定設定</b></div><p>設計済みのモジュールと選択肢を組み合わせ、再設計はしません。</p><ul><li>選択モジュール</li><li>定義済みバリアント</li><li>情報ブロックの挿入</li><li>既存モジュールの有効化</li></ul>
+        <div class="hd"><h4>定義済みモジュールを選択</h4><b class="lv">限定設定</b></div><p>複数の案件で繰り返し使われるスタイルやページ形式をモジュールとして整理し、以降の顧客はそこから選びます。再設計はしません。モジュールの蓄積には時間がかかり、案件を1つ進めるごとに少しずつ増えていきます。</p><ul><li>選択モジュール</li><li>定義済みバリアント</li><li>情報ブロックの挿入</li><li>既存モジュールの有効化</li></ul>
       </section>
       <section class="tier">
         <div class="viz"><div class="dg" aria-hidden="true"><span class="n hot">固定</span><div class="r"><span class="n">配置</span><i>→</i><span class="n">挙動</span><i>→</i><span class="n">フロー</span></div></div></div>
         <div class="hd"><h4>中核アーキテクチャを固定</h4><b class="lv">固定</b></div><p>フロー理解・一貫した操作・デリバリー再利用に必要なルールを共通化します。</p><ul><li>情報アーキテクチャ</li><li>レイアウト・グリッド</li><li>コンポーネント挙動</li><li>バリデーション</li><li>中核フロー</li></ul>
       </section>
     </div>
-    <div class="principle rv"><span class="lbl">デザイン原則</span><strong>中核体験を損なわず、チームが安定して再利用できる差異だけを開放する。</strong><p>テンプレート＋制御されたモジュール化の方向性を主導し、プロダクト・開発と設定境界を定義しました。</p></div>
-    <h4 class="mini rv">実際の適用</h4>
+    <p class="ans rv">この方向性は私が主導しました。各要素をどのレベルに置くかは、プロダクト・開発チームと一つずつ評価したうえで一緒に決めました。</p>
+    <h4 class="sub rv">実際の進め方</h4>
+    <div class="prose rv"><p>Figma のバリアブルで「色を変えられる範囲」を定めました。バリアブル1つがUIの用途1つに対応し、ブランドごとに値のセットを持ちます。切り替えるだけで全画面に反映され、ページごとの修正は不要です。</p>
+      <p>営業が顧客のブランドガイドラインを受け取ると、デザイナーは約3分で配色を適用でき、調整が必要な箇所をすぐに顧客へ見せられます。</p></div>
     <div class="figs2">
-      <figure class="mc rv"><img data-zoom alt="同一のデザイントークンを異なる保険ブランドのカラーパレットへ対応" loading="lazy" src="../../../assets/images/original/insuranceColorVariant.webp" width="1516" height="702" data-full="../../../assets/images/original/insuranceColorVariant.png"><figcaption><span><b>ブランド表現｜設定可能</b>同一のデザイントークン構造を異なるブランドカラーパレットへ対応させました。</span><button class="zoom" type="button">原寸で見る ↗</button></figcaption></figure>
-      <figure class="mc rv" style="--d:.08s"><img data-zoom alt="保険プロダクトの共通スタイルとフォームコンポーネント" loading="lazy" src="../../../assets/images/original/insuranceDesignSystem.webp" width="1528" height="1220" data-full="../../../assets/images/original/insuranceDesignSystem.png"><figcaption><span><b>中核体験｜固定</b>共通コンポーネントの構造・状態・バリデーション挙動を統一しました。</span><button class="zoom" type="button">原寸で見る ↗</button></figcaption></figure>
+      <figure class="mc rv"><img data-zoom alt="Figma のバリアブル一覧。同じバリアブルにブランドごとの値の列がある" loading="lazy" src="../../../assets/images/original/insuranceColorVariant.webp" width="1516" height="702" data-full="../../../assets/images/original/insuranceColorVariant.png"><figcaption><span><b>設定</b>同じバリアブルのセットに、ブランドごとの値を1列ずつ。</span><button class="zoom" type="button">原寸で見る ↗</button></figcaption></figure>
+      <figure class="mc rv" style="--d:.08s"><img data-zoom data-full="../../../assets/v3/insurance/brands-top-full.jpg" alt="同じレイアウトに3つの顧客ブランドを適用したランディングページ" loading="lazy" src="../../../assets/v3/insurance/brands-top.webp" width="2000" height="700"><figcaption><span><b>結果</b>同じレイアウトに3つのブランドを適用した状態。</span><button class="zoom" type="button">原寸で見る ↗</button></figcaption></figure>
     </div>
-    <div class="res rv"><span class="lbl">結果</span><b>1週間 → 2日</b><strong>新規顧客向けデザイン適用時間</strong><p>設定境界と共通ルールを定義したことで、新規案件を白紙からデザインし直す必要がなくなりました。</p></div>
+    <div class="res rv"><span class="lbl">結果 · 問題2と問題3に対応</span><b>1週間 → 2日</b><strong>新規顧客向けデザイン適用時間</strong><p>設定境界と共通ルールを定義したことで、新規案件を白紙からデザインし直す必要がなくなりました。</p></div>
   </div>
 </div></section>
 
 <section class="csec" id="s-ix"><div class="cshell cin">
-  <div class="prose rv"><span class="eb">03 · インタラクション設計の判断</span>
-    <h2><span class="ph">プロダクト判断を</span><span class="ph">実際の申込体験へ</span></h2>
-    <p>残った課題は、必須の法規情報を申込を妨げずに参照可能にすること、そして複雑なフォームを明確なタスクへ分割することでした。</p></div>
+  <div class="prose rv"><span class="eb">03 · 設計判断</span>
+    <h2><span class="ph">このフレームワークを</span><span class="ph">Marsh の自動車保険にどう適用したか</span></h2>
+    <p>テンプレートを最初の顧客に適用したところ、大部分はそのまま使えました。設計し直す必要があったのは3か所だけです。</p></div>
+  <div class="strip rv">
+    <div><span class="k">そのまま流用</span><b>ランディングページのレイアウト、フローの骨組み</b></div>
+    <div><span class="k">設定の変更だけ</span><b>ブランドカラー、画像、プラン内容</b></div>
+    <div data-open><span class="k">設計し直したもの</span><b>入口、入力の進め方、基本補償・特約ページのレイアウト</b></div>
+  </div>
 
-  <div class="csub" id="s-disclosure">
-    <span class="k rv">インタラクション判断1 · 法規情報の提示</span>
-    <h3 class="rv">必須情報をフロー内に残し、ユーザーをタスクから離脱させない</h3>
-    <div class="ctxbox rv"><b>制約</b><p>保険パートナーからは、法規情報を目立つ位置に置くことを求められていました。しかし全文を表示すると、主な申込タスクを圧迫します。</p></div>
-    <div class="opts two">
-      <article class="opt rv" data-status="chosen"><div class="bd"><div class="meta"><span>案A</span><span class="st">採用</span></div><h4>ページ内FAQ／アコーディオン</h4><p>必要情報を確認可能な状態に保ち、申込フローを中断させません。</p></div></article>
-      <article class="opt rv" style="--d:.08s"><div class="bd"><div class="meta"><span>案B</span><span class="st">不採用</span></div><h4>別ページ／モーダル</h4><p>全文を表示できますが、現在の文脈から離れ、モバイルでは主画面を遮る可能性があります。</p></div></article>
+  <h4 class="sub rv">Marsh には2つの利用シーンがある</h4>
+  <div class="prose rv"><p>実際に操作するのは、保険に加入するオーナーと、ショールームでオーナーと一緒に操作する販売担当者の2者です。</p></div>
+  <div class="scn rv">
+    <section><span class="k">シーン1</span><h4>ショールームで、販売担当者と一緒に操作</h4><ul><li>販売担当者は操作しながら説明する必要がある</li><li>オーナーは待てず、フローが長いとやめてしまう</li><li>途中で中断されることが多い</li></ul></section>
+    <section><span class="k">シーン2</span><h4>帰宅後、オーナーが自分のスマートフォンで操作</h4><ul><li>途中で情報を探しに離れる</li><li>プランを比較し、家族と相談したい</li><li>入力を間違えると直せないのではと不安</li></ul></section>
+    <div class="lim"><span class="k">共通の制約</span><p>アカウントがなく、データを保存できないため、一度で入力を終える必要があります。</p></div>
+  </div>
+  <p class="note2 rv">出典：同僚へのインタビュー、操作の観察、社内営業へのインタビュー、顧客側からのフィードバック。</p>
+
+  <h4 class="sub rv">2つのシーンに対する3つの設計判断</h4>
+  <div class="vs">
+    <div class="hd rv"><span>シーンと制約</span><span>対応する設計判断</span></div>
+    <div class="row rv">
+      <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M7 11V8a5 5 0 0 1 10 0v3"></path><rect x="5" y="11" width="14" height="9" rx="2"></rect></svg><div><span class="k">シーン1・シーン2</span><h4>先にプランを見たい。情報の入力から始める余裕はない</h4><p>ショールームのオーナーは待てず、フローが長いとやめてしまいます。自宅で操作するオーナーは、まずプランを比較して家族と相談したいと考えます。</p></div></div>
+      <i class="ar" aria-hidden="true">→</i>
+      <a class="pa" href="#s-entry"><span class="k">設計判断1 · 入口</span><h4>プラン比較をランディングページに置く</h4><p>個人情報を入力する前に、各社のプランと最低保険料を確認できます。</p></a>
     </div>
-    <figure class="mc rv"><img data-zoom alt="ページ内FAQとアコーディオン状態の拡大" loading="lazy" src="../../../assets/images/original/insuranceModular.webp" width="766" height="756" data-full="../../../assets/images/original/insuranceModular.png"><figcaption><span><b>FAQ／アコーディオンの拡大</b>必要な条項を現在の申込文脈内で展開できます。画像を開くとページ全体を確認できます。</span><button class="zoom" type="button">原寸で見る ↗</button></figcaption></figure>
+    <div class="row rv" style="--d:0.06s">
+      <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l3 2"></path></svg><div><span class="k">シーン1・シーン2・共通の制約</span><h4>一度で終える必要があるのに、途中で中断されやすい</h4><p>販売担当者は操作しながら説明し、中断も多くあります。自分で操作するオーナーは途中で情報を探しに離れ、入力ミスを直せないことも心配しています。</p></div></div>
+      <i class="ar" aria-hidden="true">→</i>
+      <a class="pa" href="#s-flow"><span class="k">設計判断2 · 入力の進め方</span><h4>ページを分け、1ページで扱うのは1つだけ</h4><p>ステップ表示で現在地を示し、最も負担の大きいステップを前に置き、最後のページで確認と修正ができます。</p></a>
+    </div>
+    <div class="row rv" style="--d:0.12s">
+      <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h3"></path></svg><div><span class="k">保険会社からの要件</span><h4>すべての補償項目を表示する必要がある</h4><p>これはシーンとは関係なく、掲載内容の要件と開発コストのトレードオフです。</p></div></div>
+      <i class="ar" aria-hidden="true">→</i>
+      <a class="pa" href="#s-list"><span class="k">設計判断3 · 開発上のトレードオフ</span><h4>基本補償・特約ページをリスト形式に変更</h4><p>項目を1つずつ並べ、ほかのステップと同じ幅にすることで、開発コストを増やしません。</p></a>
+    </div>
+  </div>
+  <p class="ans rv">3つの設計判断は、ユーザーが進む順に説明します：ランディングページ → その後の4ステップ → 基本補償・特約ページ。</p>
+
+  <div class="csub" id="s-entry">
+    <span class="k rv">設計判断1 · 入口</span>
+    <h3 class="rv">プラン比較をランディングページに置き、個人情報の入力は後に回す</h3>
+    <div class="ctxbox rv"><b>当時の状況</b><p>詳細な補償内容は、所有者と車両登録の情報がなければ算出できません。この制約どおりに作ると、先にすべての情報を入力し、その後で補償内容を表示して、同じページで複数の保険会社のプランを比較する流れになります。当時、顧客側にはフローについての考えがまだなく、技術面でも解決方法の分からない問題が多く残っていたため、私から進め方を提案しました。</p></div>
+    <div class="vs">
+      <div class="hd rv"><span>制約どおりに作った場合の問題</span><span>私の提案</span></div>
+      <div class="row rv">
+        <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M7 11V8a5 5 0 0 1 10 0v3"></path><rect x="5" y="11" width="14" height="9" rx="2"></rect></svg><div><span class="k">問題</span><h4>心理的な負担が大きい</h4><p>サイトをまだ信頼していない段階で個人情報を求められ、プランも見えていないため、先へ進む理由がありません。</p></div></div>
+        <i class="ar" aria-hidden="true">→</i>
+        <div class="pa"><span class="k">解決策</span><h4>ランディングページでプランと保険料が見える</h4><p>車種や年齢層などの基本条件を選ぶだけで、各社の基本プランと最低保険料を表示します。</p></div>
+      </div>
+      <div class="row rv" style="--d:0.06s">
+        <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><circle cx="4" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="20" cy="12" r="2"></circle><path d="M6 12h4M14 12h4"></path></svg><div><span class="k">問題</span><h4>フローが長くなる</h4><p>情報を入力してから保険会社を選ぶ流れでは、比較する会社が1社増えるたびに手順が長くなります。</p></div></div>
+        <i class="ar" aria-hidden="true">→</i>
+        <div class="pa"><span class="k">解決策</span><h4>先に選び、その後で見積もる</h4><p>ランディングページで保険会社とプランを決めてから見積もりに進むため、会社が増えてもフローは長くなりません。</p></div>
+      </div>
+      <div class="row rv" style="--d:0.12s">
+        <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M12 4 3 19h18L12 4z"></path><path d="M12 10v4M12 16.8v.2"></path></svg><div><span class="k">問題</span><h4>接続のリスク</h4><p>1つのページで複数の保険会社の見積もりシステムへ同時に接続するため、読み込みが長くなりやすく、1社でも不具合があればページ全体が表示できません。</p></div></div>
+        <i class="ar" aria-hidden="true">→</i>
+        <div class="pa"><span class="k">解決策</span><h4>一度に接続するのは1社だけ</h4><p>プランを決めた後に、その保険会社の見積もりシステムだけへ接続します。読み込みが速くなり、他社の不具合の影響も受けません。</p></div>
+      </div>
+    </div>
+    <div class="ftrack"><div class="fplay" data-fplay>
+      <div class="side"><h4>変更後、ユーザーが順に見る3つの画面</h4>
+      <div class="tabs" role="tablist" aria-label="変更後のフロー">
+        <button type="button" role="tab" aria-selected="true"><b>01</b><span>ランディングページでプランを選ぶ</span><small>基本条件をいくつか選び、各社のプランと最低保険料を比較します。</small></button>
+        <button type="button" role="tab" aria-selected="false"><b>02</b><span>見積もり情報を入力</span><small>保険料の算出に必要な所有者と車両の情報だけを入力します。車種はランディングページから引き継ぎます。</small></button>
+        <button type="button" role="tab" aria-selected="false"><b>03</b><span>基本補償と特約を選ぶ</span><small>見積もり結果をもとに項目を1つずつ確認・追加し、下部に保険料の合計を表示します。</small></button>
+      </div></div>
+      <div class="stage">
+        <img class="on" alt="ランディングページ：4つのプランと最低保険料が並ぶ" src="../../../assets/v3/insurance/flow-1-landing.webp" width="1280" height="1190">
+        <img alt="見積もりページ：所有者と車両登録の情報を入力" loading="lazy" src="../../../assets/v3/insurance/flow-2-quotation.webp" width="1280" height="1190">
+        <img alt="補償内容ページ：基本補償と特約を1項目ずつ表示" loading="lazy" src="../../../assets/v3/insurance/flow-3-plan.webp" width="1280" height="1190">
+      </div>
+    </div></div>
+    <p class="ans rv"><b>テンプレートへ反映</b>　ランディングページのプラン比較はテンプレートの固定セクションになり、他の顧客はプラン内容と価格を差し替えるだけです。</p>
+    <figure class="mc rv"><img data-zoom alt="他の3ブランドのランディングページ。いずれもプランと最低保険料を表示している" loading="lazy" src="../../../assets/v3/insurance/template-plans.webp" width="2000" height="375" data-full="../../../assets/v3/insurance/template-plans.jpg"><figcaption><span><b>他の顧客のランディングページ</b>3つのブランドとも同じ進め方で、プランと最低保険料を先に見せています。</span><button class="zoom" type="button">原寸で見る ↗</button></figcaption></figure>
   </div>
 
   <div class="csub" id="s-flow">
-    <span class="k rv">インタラクション判断2 · 申込フロー</span>
-    <h3 class="rv">長い申込を、1ステップ1タスクに分割</h3>
-    <div class="trio">
-      <div class="ecard rv"><span class="k">変更前</span><p>本人情報、プラン、書類、申告事項が1つの長いページに集中していました。</p></div>
-      <div class="ecard rv" style="--d:.08s"><span class="k">参考調査とインタビュー</span><p>一般的な保険申込フローを参照し、自動車保険の購入経験がある同僚へ実際の購入プロセスを聞きました。</p></div>
-      <div class="ecard rv" style="--d:.16s"><span class="k">設計判断</span><p>情報タスクごとに、個人情報、プラン選択、書類・申告、確認・支払いの4段階へ分け、各ステップを1つの主要タスクに集中させました。</p></div>
+    <span class="k rv">設計判断2 · 入力の進め方</span>
+    <h3 class="rv">フローをページに分け、1ページで扱うのは1つだけ</h3>
+    <div class="prose rv"><p>プランをランディングページへ移した後は、残りの情報をどう入力してもらうかを決める必要がありました。私は、すべての項目を1ページに置くのではなく、ページを分けて入力する方式を提案しました。</p></div>
+    <div class="vs">
+      <div class="hd rv"><span>すべてを1ページに置いた場合の問題</span><span>私の提案</span></div>
+      <div class="row rv">
+        <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h3"></path></svg><div><span class="k">問題</span><h4>開いた瞬間に長く感じる</h4><p>データを保存できないため、一度で入力を終える必要があります。すべての項目が1ページにあるとフローが長く見え、ユーザーは途中で嫌になりがちです。</p></div></div>
+        <i class="ar" aria-hidden="true">→</i>
+        <div class="pa"><span class="k">解決策</span><h4>4ページに分け、1ページで扱うのは1つだけ</h4><p>見積もり情報、基本補償と特約、連絡先情報、内容確認をそれぞれ1ページにしました。上部のステップ表示で現在のステップが分かり、最後のページで内容を確認でき、前のステップに戻って修正することもできます。</p></div>
+      </div>
+      <div class="row rv" style="--d:0.06s">
+        <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l3 2"></path></svg><div><span class="k">問題</span><h4>目の前の1つに集中しにくい</h4><p>ショールームでは販売担当者が操作しながら説明し、中断も多くあります。すべての内容が1ページに詰まっていると集中できません。</p></div></div>
+        <i class="ar" aria-hidden="true">→</i>
+        <div class="pa"><span class="k">解決策</span><h4>画面にはそのステップの内容だけ</h4><p>販売担当者は1ページで1つのことを説明でき、中断後に戻ったときもステップ表示でどこまで進んだか分かります。</p></div>
+      </div>
+      <div class="row rv" style="--d:0.12s">
+        <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M10 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4"></path><path d="M15 8l4 4-4 4M19 12H9"></path></svg><div><span class="k">問題</span><h4>最も負担の大きいステップで離脱しやすい</h4><p>基本補償と特約の選択に最も時間がかかり、ユーザーは何度も比較します。顧客側からのフィードバックでも、このステップでの離脱が最も多いと指摘されました。</p></div></div>
+        <i class="ar" aria-hidden="true">→</i>
+        <div class="pa"><span class="k">解決策</span><h4>最も負担の大きいステップを前に置く</h4><p>見積もりの直後に基本補償と特約を選んでもらい、ユーザーに余力があるうちに終えます。連絡先情報は後に回し、進むほど入力が楽になるようにしました。</p></div>
+      </div>
     </div>
-    <div class="flow rv"><span class="lbl">変更後</span><strong>1ステップにつき1つの主要タスク</strong>
-      <div class="steps"><span>本人情報</span><i>→</i><span>プラン選択</span><i>→</i><span>書類・申告</span><i>→</i><span>確認・支払い</span></div></div>
-    <div class="figs2">
-      <figure class="mc rv"><img data-zoom alt="タスク中心の保険申込画面" loading="lazy" src="../../../assets/images/original/insuranceTaskCentered.webp" width="798" height="888" data-full="../../../assets/images/original/insuranceTaskCentered.png"><figcaption><span>各ステップには、現在のタスクに必要な項目と説明だけを表示しました。</span><button class="zoom" type="button">原寸で見る ↗</button></figcaption></figure>
-      <figure class="mc rv" style="--d:.08s"><img data-zoom alt="複数ステップに分割した保険申込フロー" loading="lazy" src="../../../assets/images/original/insuranceSplitFlow.webp" width="1542" height="652" data-full="../../../assets/images/original/insuranceSplitFlow.png"><figcaption><span>本人情報、プラン、書類・申告、確認・支払いまでの全体フロー。</span><button class="zoom" type="button">原寸で見る ↗</button></figcaption></figure>
-    </div>
+    <div class="flow rv"><span class="lbl">変更後の順序</span><strong>負担の大きいステップを前に、連絡先情報を後に</strong></div>
+    <figure class="mc pages rv">
+      <ol class="cols" aria-hidden="true"><li>プラン選択</li><li>見積もり情報</li><li>基本補償と特約</li><li>連絡先情報</li><li>内容確認</li></ol>
+      <img data-zoom data-full="../../../assets/v3/insurance/flow-pages-full.jpg" alt="Marsh 自動車保険の5ページを順に並べたもの：プラン選択のランディングページ、見積もり情報、基本補償と特約、連絡先情報、内容確認" loading="lazy" src="../../../assets/v3/insurance/flow-pages.webp" width="2000" height="1317">
+      <figcaption><span><b>Marsh 自動車保険の5つのページ</b>ランディングページの後は4ページに分かれています。4ページのうち基本補償と特約が最も長く、前半に置きました。連絡先情報と内容確認は短く、最後に置いています。</span><button class="zoom" type="button">原寸で見る ↗</button></figcaption>
+    </figure>
+    <p class="ans rv"><b>テンプレートへ反映</b>　ページ分けの入力方式とこの順序は、以降の案件で使う標準フローになりました。</p>
   </div>
+
+  <div class="csub" id="s-list">
+    <span class="k rv">設計判断3 · 開発上のトレードオフ</span>
+    <h3 class="rv">基本補償・特約ページをカードからリストへ変更</h3>
+    <div class="prose rv"><p>ページを分けた結果、内容が最も多いのは基本補償・特約ページで、元のカードレイアウトには収まりませんでした。</p></div>
+    <div class="vs">
+      <div class="hd rv"><span>カード版の問題</span><span>変更後</span></div>
+      <div class="row rv">
+        <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h3"></path></svg><div><span class="k">問題</span><h4>補償項目が収まらない</h4><p>保険会社からは、基本補償と特約のすべての項目を明示するよう求められていましたが、カードには名称と価格しか入りません。</p></div></div>
+        <i class="ar" aria-hidden="true">→</i>
+        <div class="pa"><span class="k">解決策</span><h4>項目を1つずつ表示</h4><p>基本補償と特約を1項目1行で並べ、補償内容と保険料の両方が見えるようにしました。</p></div>
+      </div>
+      <div class="row rv" style="--d:0.06s">
+        <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><circle cx="4" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="20" cy="12" r="2"></circle><path d="M6 12h4M14 12h4"></path></svg><div><span class="k">問題</span><h4>開発コストが増える</h4><p>カードを横に並べるにはほかのステップより広いページが必要で、レイアウトを別途設計・開発しなければなりません。</p></div></div>
+        <i class="ar" aria-hidden="true">→</i>
+        <div class="pa"><span class="k">解決策</span><h4>ほかのステップと同じ幅</h4><p>同じ幅のリストに変えることで既存のレイアウトを使い回せ、追加開発は不要です。</p></div>
+      </div>
+    </div>
+    <div class="figs2">
+      <figure class="mc rv"><img data-zoom alt="以前の選択画面。プランをカードで横に並べている" loading="lazy" src="../../../assets/v3/insurance/plan-cards-old.webp" width="594" height="838" data-full="../../../assets/v3/insurance/plan-cards-old.png"><figcaption><span><b>変更前 · カードを横並び</b>カード1枚には名称と価格しか入りません。</span><button class="zoom" type="button">原寸で見る ↗</button></figcaption></figure>
+      <figure class="mc rv" style="--d:.08s"><img data-zoom data-full="../../../assets/v3/insurance/plan-list-full.jpg" alt="現在の選択画面。基本補償と特約を同じ幅のリストで1項目ずつ表示している" loading="lazy" src="../../../assets/v3/insurance/plan-list-new.webp" width="1200" height="1692"><figcaption><span><b>変更後 · 同じ幅のリスト</b>基本補償と特約を1項目ずつ表示し、下部に保険料の合計を固定表示します。</span><button class="zoom" type="button">原寸で見る ↗</button></figcaption></figure>
+    </div>
+    <p class="ans rv"><b>テンプレートへ反映</b>　リスト形式の基本補償・特約ページがカードに代わり、以降の案件で使う標準レイアウトになりました。</p>
+  </div>
+
+  <div class="principle rv"><span class="lbl">結果</span><strong>Marsh はこの提案を受け入れ、約1か月の調整を経て、自動車保険サイトは公開されました。</strong><p>この3つの設計判断は、テンプレートへ最初に戻した内容でもあります。モジュールは案件を重ねるごとに蓄積されるもので、最初からそろっていたわけではありません。追加した後は、以降の顧客が同じことを決め直す必要はありません。</p></div>
+  <script>
+  document.querySelectorAll('[data-fplay]').forEach(p=>{
+    const track=p.parentElement,tabs=[...p.querySelectorAll('.tabs button')],imgs=[...p.querySelectorAll('.stage img')],n=imgs.length,mq=matchMedia('(max-width:860px)');
+    let cur=-1;
+    const show=i=>{if(i===cur)return;cur=i;tabs.forEach((b,k)=>b.setAttribute('aria-selected',k===i));imgs.forEach((m,k)=>m.classList.toggle('on',k===i))};
+    const geo=()=>{const r=track.getBoundingClientRect();return {top:r.top,pin:parseFloat(getComputedStyle(p).top)||0,span:Math.max(r.height-p.offsetHeight,1)}};
+    const upd=()=>{if(mq.matches)return;const g=geo(),pr=Math.min(Math.max((g.pin-g.top)/g.span,0),.9999),i=Math.floor(pr*n);
+      show(i);tabs.forEach((b,k)=>b.style.setProperty('--p',k<i?1:k>i?0:pr*n-i))};
+    addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);
+    tabs.forEach((b,k)=>b.addEventListener('click',()=>{if(mq.matches)return;const g=geo();scrollTo({top:scrollY+g.top-g.pin+g.span*(k+.05)/n,behavior:'smooth'})}));
+    show(0);upd();
+  });
+  </script>
 </div></section>
 
 <section class="csec" id="s-adopt"><div class="cshell cin">
   <div class="prose rv"><span class="eb">04 · 実案件への適用</span>
-    <h2><span class="ph">同じフレームワークを、</span><span class="ph">進行中の3つの企業案件へ</span></h2>
-    <p>この基盤は3件の進行中エンタープライズ案件で活用されています。定義済みの設定境界内でブランドとプラン内容を変更し、中核フローとコンポーネントは共通化しています。</p></div>
-  <figure class="mc rv"><img data-zoom alt="申込・プラン・業務画面へ適用した保険デリバリー基盤" loading="lazy" src="../../../assets/images/original/insuranceCaseStudies.webp" width="1526" height="790" data-full="../../../assets/images/original/insuranceCaseStudies.png"><figcaption><span>ランディングページ、プラン、法規情報、申込フォーム、保険業務フローを同じ基盤でカバーしています。</span><button class="zoom" type="button">原寸で見る ↗</button></figcaption></figure>
-  <div class="clients">
-    <article class="client rv"><img alt="Marsh Taiwanの自動車保険画面" loading="lazy" src="../../../assets/images/original/insuranceMarsh.webp" width="1514" height="838"><div class="bd"><em>進行中</em><b>Marsh Taiwan · 自動車保険</b></div></article>
-    <article class="client rv" style="--d:.08s"><img alt="新光ベトナムの生命保険画面" loading="lazy" src="../../../assets/images/original/insuranceShinKong.webp" width="1516" height="852"><div class="bd"><em>進行中</em><b>新光ベトナム · 生命保険</b></div></article>
-    <article class="client rv" style="--d:.16s"><img alt="Richmondのデジタル保険体験" loading="lazy" src="../../../assets/images/original/insuranceRichmond.webp" width="1514" height="838"><div class="bd"><em>進行中</em><b>Richmond · デジタル保険体験</b></div></article>
+    <h2><span class="ph">同じフレームワークで、</span><span class="ph">公開済みの4つの企業案件</span></h2>
+    <p>このフレームワークは4つの企業案件で使われ、4件とも公開済みです。各案件は定義済みの設定境界内でブランドとプラン内容を変更し、中核フローとコンポーネントは変えていません。</p></div>
+  <figure class="mc rv"><img data-zoom alt="申込・プラン・業務画面へ適用した保険デリバリー基盤" loading="lazy" src="../../../assets/images/original/insuranceCaseStudies.webp" width="1526" height="790" data-full="../../../assets/images/original/insuranceCaseStudies.png"><figcaption><span>ランディングページ、プラン、法規情報、申込フォーム、保険業務フローを同じフレームワークでカバーしています。</span><button class="zoom" type="button">原寸で見る ↗</button></figcaption></figure>
+  <div class="clients four">
+    <article class="client rv"><img alt="Marsh Taiwanの自動車保険画面" loading="lazy" src="../../../assets/images/original/insuranceMarsh.webp" width="1514" height="838"><div class="bd"><em>公開済み</em><b>Marsh Taiwan · 自動車保険</b></div></article>
+    <article class="client rv" style="--d:.06s"><img alt="新光ベトナムの保険商品画面" loading="lazy" src="../../../assets/images/original/insuranceShinKong.webp" width="1516" height="852"><div class="bd"><em>公開済み</em><b>新光ベトナム · 自動車保険などの個人向け保険</b><a class="src" href="https://fintech.global/2025/07/07/shin-kong-and-pvi-join-forces-to-advance-insurtech-in-vietnam/" target="_blank" rel="noopener">関連報道（英語）↗</a></div></article>
+    <article class="client rv" style="--d:.12s"><img alt="Richmond の企業向け保険プラットフォーム画面" loading="lazy" src="../../../assets/images/original/insuranceRichmond.webp" width="1514" height="838"><div class="bd"><em>公開済み</em><b>Richmond · 企業向け保険</b><a class="src" href="https://technode.global/2025/08/05/aift-and-richmond-join-forces-to-drive-innovation-in-digital-insurance/" target="_blank" rel="noopener">関連報道（英語）↗</a></div></article>
+    <article class="client rv" style="--d:.18s"><img alt="Lexasure と QBE のサイバー保険画面" loading="lazy" src="../../../assets/v3/insurance/client-lexasure.webp" width="1514" height="838"><div class="bd"><em>公開済み</em><b>Lexasure（QBE）· サイバー保険</b></div></article>
   </div>
 </div></section>
 
 <section class="csec" id="s-result"><div class="cshell cin">
   <div class="prose rv"><span class="eb">05 · 成果</span>
     <h2><span class="ph">一度きりのデリバリーから、</span><span class="ph">再利用できる基盤へ</span></h2>
-    <p>成果は基盤導入前後の人員・期間比較に基づくもので、後続のUX改善による行動成果ではありません。</p></div>
+    <p>成果はフレームワーク導入前後の人員・期間比較に基づくもので、後続のUX改善による行動成果ではありません。</p></div>
   <div class="metrics">
     <div class="metric rv"><small>案件ごとの工数</small><b>9 → 約2.4人週</b><span>案件ごとに必要な開発＋デザイン工数</span><em>約73%削減</em></div>
-    <div class="metric rv" style="--d:.08s"><small>エンドツーエンドのデリバリー</small><b>3か月超 → 約1か月</b><span>要件確定からデリバリーまでに要する期間</span><em>約67%短縮</em></div>
-    <div class="metric rv" style="--d:.16s"><small>デザイン適用</small><b>1週間 → 2日</b><span>既存基盤で新規顧客のブランド・内容を調整</span><em>白紙からの再設計が不要</em></div>
+    <div class="metric rv" style="--d:.08s"><small>デリバリー期間</small><b>3か月超 → 約1か月</b><span>新規案件ごとの、要件確定から初版提出まで</span><em>約67%短縮</em></div>
+    <div class="metric rv" style="--d:.16s"><small>デザイン適用</small><b>1週間 → 2日</b><span>既存フレームワークで新規顧客のブランド・内容を調整</span><em>白紙からの再設計が不要</em></div>
   </div>
   <div class="calc rv">
     <div><span>導入前</span><strong>開発4名 × 2週間<br>＋ デザイナー1名 × 1週間<br>＝ 9人週</strong></div><i>→</i>
     <div><span>導入後</span><strong>開発2名 × 1週間<br>＋ デザイナー1名 × 2日<br>≈ 2.4人週</strong></div>
   </div>
-  <p class="note2 rv">開発＋デザイン工数は、基盤導入前後の人員配置を比較したものです。エンドツーエンドの期間も同じ社内比較に基づき、デザイン適用時間は実作業時間の前後比較です。3件のエンタープライズ案件はいずれも進行中です。</p>
+  <p class="note2 rv">デリバリー期間は同じ区間を比較しています。要件確定から初版提出まで、以前のプロセスでは3か月超、新しいプロセスでは約1か月です。以前のプロセスでは、デザイン、営業と顧客のやり取り、開発に時間がかかっていました。人週は開発とデザインが実際に投入した時間だけを数えるため、カレンダー上の期間より短くなります。デザイン適用時間は、デザイナーの実作業時間の前後比較です。4つの企業案件はすべて公開済みです。</p>
 </div></section>
 
 <section class="related" id="s-related"><div class="cshell cin">
@@ -1199,7 +1520,7 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
     <span style="font-size:14px;color:var(--on-ink-muted)">nekoking2010@gmail.com</span>
     <a href="../../../ja/" style="font-size:14px;color:var(--on-ink-muted)">ホームへ戻る</a>
   </div>
-  <footer><span>© 2026 Timothy Lau.</span></footer>
+  <footer><span>© 2026 Timothy Lau.</span><a href="../../../ja/#about" class="totop">↑ 私について</a></footer>
 </section>
 </div>
 </main>
@@ -1255,10 +1576,10 @@ window.ASK_DOC={
       ],
       "a": [
         "・<b>課題</b>：新規顧客ごとに営業・デザイン・開発が要件、設計、工数見積もりをやり直していました",
-        "・<b>判断</b>：標準化の不足よりも、「柔軟性をどこまで許容するか」が未定義であることが障害でした",
-        "・<b>決定</b>：案件ごとの個別対応や単一固定フローではなく、テンプレート＋制御されたモジュール化を選び、要素を設定可能・限定設定・固定の三層に分けました",
-        "・<b>成果</b>：デリバリー期間3か月以上 → 約1か月、案件あたり工数9 → 約2.4人週",
-        "・<b>現況</b>：進行中のエンタープライズ案件3件に適用しています"
+        "・<b>判断</b>：繰り返し問題になっていたのは、「どこまで変更でき、何を固定すべきか」が未定義だったことです",
+        "・<b>決定</b>：3つの案を比較して「テンプレート＋制御されたモジュール化」を選び、画面要素を設定可能・限定設定・固定の3段階に分類しました",
+        "・<b>成果</b>：要件確定から初版提出まで3か月超 → 約1か月、案件あたり工数9 → 約2.4人週",
+        "・<b>現況</b>：4つの企業案件で利用され、すべて公開済みです"
       ],
       "acts": [
         {
@@ -1347,11 +1668,11 @@ window.ASK_DOC={
         "フルカスタマイズ"
       ],
       "a": [
-        "比較した3つの案：",
+        "3つの案の比較：",
         "・<b>案件ごとの個別対応</b>（不採用）：柔軟性は最大ですが、要件が収束せず毎回新たな工数が必要で、期間を見積もりにくい案です",
         "・<b>単一標準フロー</b>（不十分）：最速で見積もりやすい一方、ブランド・商品・協業条件の必要な差分に対応できません",
         "・<b>テンプレート＋制御されたモジュール化</b>（採用）：主要構造と体験を保ちながら必要な差分に対応します",
-        "個別対応をなくすのではなく、基礎プラン・追加モジュール・完全カスタムの三段階に分けました。営業のフィードバックでは要件調整時間が約<b>50%</b>減少しましたが、厳密な計測値ではありません。"
+        "個別対応をなくすのではなく、基本版・モジュール追加・フルカスタマイズの三段階に分けました。営業のフィードバックでは要件調整時間が約<b>50%</b>減少しましたが、厳密な計測値ではありません。"
       ],
       "next": [
         "boundary",
@@ -1373,7 +1694,7 @@ window.ASK_DOC={
       "a": [
         "画面要素を洗い出し、プロダクト・開発と一つずつ評価して三層に分けました：",
         "・<b>設定可能</b>：ブランド色、書体、イラスト、画像",
-        "・<b>限定設定</b>：事前設計したモジュール・バリエーション・コンテンツを組み合わせます",
+        "・<b>限定設定</b>：案件を通じて蓄積したモジュール、バリエーション、コンテンツブロックから選びます",
         "・<b>固定</b>：情報構造、レイアウト・グリッド、コンポーネントの動作、入力検証、中核フロー",
         "ルール整備後、新規顧客向けのデザイン調整時間は<b>1週間から2日</b>に短縮しました。"
       ],
@@ -1383,20 +1704,26 @@ window.ASK_DOC={
       ]
     },
     "interaction": {
-      "q": "インタラクションでの判断は？",
-      "n": "インタラクション設計",
+      "q": "どのような設計判断をしましたか？",
+      "n": "設計判断",
       "sec": "ix",
       "k": [
-        "インタラクション",
-        "アコーディオン",
-        "faq",
-        "法規",
-        "申込フロー"
+        "設計判断",
+        "入口",
+        "ランディングページ",
+        "見積もり",
+        "基本補償",
+        "特約",
+        "ショールーム",
+        "ページ分け",
+        "リスト"
       ],
       "a": [
-        "製品レベルの判断を申込体験に落とし込み、2つの問題に対応しました：",
-        "・<b>法規情報</b>：ページ内FAQとアコーディオンで、申込から離れず必要な情報を確認できるようにしました",
-        "・<b>申込フロー</b>：長いページを4つのタスクに分割しました。個人情報 → プラン選択 → 書類・申告 → 確認・支払い"
+        "Marsh はこのフレームワークを採用した最初の顧客だったため、自動車保険案件が実地での検証になりました。ランディングページのレイアウトとフローの骨組みはテンプレートを流用し、不足した3か所は別途設計し、後にテンプレートの標準としました。同じフローで、ショールームで販売担当者と一緒に操作する場合と、帰宅後にオーナーが自分で操作する場合の2つに対応する必要がありました。また、データを保存できないため、申込は一度で終える必要がありました：",
+        "・<b>入口</b>：プラン比較をランディングページに置きます。基本条件をいくつか選ぶと各社のプランと最低保険料が表示され、選択後に見積もりへ進みます。個人情報を先に渡す必要はなく、複数の保険会社へ同時接続する必要もありません",
+        "・<b>入力の進め方</b>：ランディングページの後を4ページに分け、1ページで1つの作業だけを扱うことで、一度で入力を終えられるようにします。順序は見積もり情報 → 基本補償と特約 → 連絡先情報 → 内容確認で、最も負担の大きい作業を前に置きました",
+        "・<b>開発上のトレードオフ</b>：基本補償・特約ページをカードからほかのステップと同じ幅のリストに変更し、項目を1つずつ表示しながら開発コストは増やしません",
+        "Marsh はこの提案を受け入れ、その後、自動車保険サイトは公開されました。"
       ],
       "next": [
         "adoption",
@@ -1409,14 +1736,17 @@ window.ASK_DOC={
       "sec": "adopt",
       "k": [
         "導入",
+        "公開済み",
         "利用",
-        "使われ",
-        "適用",
-        "活用",
-        "エンタープライズ案件"
+        "顧客",
+        "marsh",
+        "新光",
+        "richmond",
+        "lexasure",
+        "qbe"
       ],
       "a": [
-        "<b>進行中のエンタープライズ案件3件</b>に適用しています。Marsh台湾（自動車保険）、新光ベトナム（生命保険）、Richmond（デジタル保険体験）です。",
+        "このフレームワークは<b>公開済みの4つの企業案件</b>で利用されています。Marsh 台湾（自動車保険）、新光ベトナム（自動車保険などの個人向け保険）、Richmond（企業向け保険）、Lexasure（サイバー保険）です。",
         "各案件では定義済みの範囲内でブランドとプラン内容を調整し、中核フローとコンポーネントは共通に保っています。"
       ],
       "next": [
@@ -1438,7 +1768,7 @@ window.ASK_DOC={
         "測定"
       ],
       "a": [
-        "・<b>全体のデリバリー期間</b>：3か月以上 → 約1か月（約67%短縮）",
+        "・<b>デリバリー期間</b>：要件確定から初版提出まで3か月超 → 約1か月（約67%短縮）。同じ区間を比較しており、以前はデザイン、営業と顧客のやり取り、開発にその時間がかかっていました",
         "・<b>案件あたり工数</b>：9 → 約2.4人週（約73%減）。導入前はエンジニア4人×2週間＋デザイナー1人×1週間、導入後はエンジニア2人×1週間＋デザイナー1人×2日です",
         "・<b>デザイン調整</b>：1週間 → 2日",
         "導入前後の人員配置と期間の比較であり、ユーザー行動の成果ではありません。"
@@ -1450,7 +1780,7 @@ window.ASK_DOC={
     }
   }
 };
-window.CASE_SECMAP={bg:'problem',decision:'decisions',model:'decisions',boundary:'boundary',ix:'interaction',disclosure:'interaction',flow:'interaction',adopt:'adoption',result:'results'};
+window.CASE_SECMAP={bg:'problem',decision:'decisions',model:'decisions',boundary:'boundary',ix:'interaction',entry:'interaction',list:'interaction',flow:'interaction',adopt:'adoption',result:'results'};
 
 /* header: compact glass pill once scrolled, tone follows the surface under it */
 const header=document.querySelector('header'),sheet=document.getElementById('csheet'),contact=document.getElementById('contact');
@@ -1481,7 +1811,7 @@ document.querySelectorAll('.csec,.csub').forEach(s=>ro.observe(s));
 /* hero figures count up once when they come into view (as on the live case page) */
 (function(){
   const box=document.getElementById('kfig'),nums=[...box.querySelectorAll('[data-to]')];
-  const fmt=(el,v)=>{el.textContent=v.toFixed(+(el.dataset.dec||0))+(el.dataset.suffix||'')};
+  const fmt=(el,v)=>{let t=v.toFixed(+(el.dataset.dec||0));if(el.dataset.sep)t=t.replace(/\B(?=(\d{3})+(?!\d))/g,',');el.textContent=t+(el.dataset.suffix||'')};
   if(reduce)return;
   nums.forEach(n=>fmt(n,0));
   const run=()=>nums.forEach(el=>{const to=+el.dataset.to;let t0=null;
@@ -1725,10 +2055,10 @@ addEventListener('keydown',e=>{if(viewer.dataset.open!=='true')return;if(e.key==
       "コンポーネント"
     ],
     "sum": [
-      "二つの大規模セキュリティ製品に共通デザインシステムを構築し、保守コストを<b>50%</b>削減、制作効率を2倍にしました。"
+      "2つの大規模セキュリティ製品に共通デザインシステムを構築し、保守コストを<b>50%</b>削減、制作効率を2倍にしました。"
     ],
     "why": [
-      "二つの大規模セキュリティ製品でブランドとコンポーネントのルールが分散し、保守コストが高く、新製品のMVPでも再設計が発生していました。"
+      "2つの大規模セキュリティ製品でブランドとコンポーネントのルールが分散し、保守コストが高く、新製品のMVPでも再設計が発生していました。"
     ],
     "how": [
       "分散したブランドとコンポーネントのルールを共通の<b>四層Token構造</b>に統合し、製品・デザイン・開発が同じ基盤から改善できるようにしました。"
@@ -1795,6 +2125,7 @@ addEventListener('keydown',e=>{if(viewer.dataset.open!=='true')return;if(e.key==
   },
   "energy": {
     "n": "NextDriveエネルギー製品",
+    "url": "nextdrive-proto.html",
     "k": [
       "エネルギー",
       "電力メーター",
@@ -1931,7 +2262,7 @@ addEventListener('keydown',e=>{if(viewer.dataset.open!=='true')return;if(e.key==
       "専門"
     ],
     "a": [
-      "ユーザーの障壁を見つけ、解決案とリスクを検討し、限られた資源で効果の高い判断を行います。主な強みは四つです：",
+      "ユーザーの障壁を見つけ、解決案とリスクを検討し、限られた資源で効果の高い判断を行います。主な強みは4つです：",
       "・フローの最適化と成功率の改善",
       "・新製品の価値とニーズの探索",
       "・調査・データ・プロトタイプによる検証",
@@ -2217,7 +2548,7 @@ addEventListener('keydown',e=>{if(viewer.dataset.open!=='true')return;if(e.key==
       "プロジェクト"
     ],
     "a": [
-      "保険SaaS、OneSleeveデザインシステム、Ferqoスマートホーム、プログラミング教育の四つの事例を掲載しています。どれから知りたいですか？"
+      "保険SaaS、OneSleeveデザインシステム、Ferqoスマートホーム、プログラミング教育の4つの事例を掲載しています。どれから知りたいですか？"
     ],
     "acts": [
       {
@@ -2352,6 +2683,7 @@ addEventListener('keydown',e=>{if(viewer.dataset.open!=='true')return;if(e.key==
     const [e,es]=top(ENT,q),[f,fs]=top(FACET,q),[g,gs]=top(GEN,q),other=/他の|別の|全部|全体|すべて/.test(q);
     if(DOC){
       const [d,ds]=top(DOC.items,q),here=!ctx||ctx===DOC.id||/この事例|このプロジェクト|このページ/.test(q);
+      /* another experience is only followed when it is named more clearly than anything on this page */
       if(e&&e!==DOC.id&&es>ds)return f?e+'.'+f:e;
       if(!here&&f&&!other&&fs>=gs&&fs>=ds&&follow(q))return ctx+'.'+f;
       if(d&&ds>=gs)return tie(DOC.items,q,'d.')||'d.'+d;

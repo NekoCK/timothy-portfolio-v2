@@ -7,9 +7,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&amp;family=Noto+Sans+TC:wght@400;500;700;900&amp;family=Noto+Serif+TC:wght@700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/v3/site.css">
-<script src="../../assets/v3/site.js" defer></script>
-<style>
+<link rel="stylesheet" href="../../assets/v3/site.css"><style>
 
 :root{
   --ink:#0B132B;--ink-dim:#060B18;--sand:#F3F4F6;--sand-2:#E9EBEF;--card:#FFFFFF;--text:#17233F;--muted:#62656C;
@@ -728,6 +726,67 @@ figure.mc.narrow{max-width:760px}
 .tracks + .prose{margin-top:40px}
 .crit + .note2{margin-top:32px}
 @media (max-width:860px){.tracks{grid-template-columns:1fr}.track dl > div{grid-template-columns:1fr;gap:2px}.ccover.art img{display:none}}
+/* research-case parts (NextDrive, usable by any case) */
+/* a drawing as the cover, without the paper treatment */
+.ccover.art.plain img{top:44%;width:min(34%,480px);border-radius:0;box-shadow:none;transform:translateY(-50%)}
+/* three columns of the two-up track cards */
+.tracks.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tracks.three .track{padding:26px 24px 20px}
+.tracks.three .track h4{font-size:21px}
+.tracks.three .track dl > div{grid-template-columns:76px minmax(0,1fr);gap:12px}
+.track dd b{display:inline-block;min-width:5em;font-size:13px;font-weight:800;color:var(--blue)}
+.track .pl{display:block;margin-top:18px;font-size:14px;font-weight:800;color:var(--text)}
+.track .pl + .pills{margin-top:10px}
+.track .pills li{padding:5px 11px;font-size:13.5px}
+.track .pay dd{font-weight:800;color:var(--deep)}
+/* five-axis profile of a persona */
+.radar{display:block;width:100%;max-width:300px;margin:14px auto 2px}
+.radar .rg{fill:none;stroke:rgba(23,35,63,.16);stroke-width:1}
+.radar .rd{fill:rgba(46,91,214,.82);stroke:var(--deep);stroke-width:1.5;stroke-linejoin:round}
+.radar text{font-size:12.5px;font-weight:700;fill:var(--muted)}
+.radar text.hi{fill:var(--blue);font-weight:800}
+/* the research steps in a row; the middle step holds the two studies that were checked against each other */
+.rflow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px;margin:32px 0 0;padding:0;list-style:none}
+.rflow li{position:relative;display:flex;flex-direction:column;justify-content:center;padding:18px 16px;border-radius:14px;background:var(--card);box-shadow:0 0 0 1px var(--line)}
+.rflow li + li::before{content:"→";position:absolute;left:-22px;top:50%;transform:translateY(-50%);font-weight:900;color:var(--blue)}
+.rflow b{font-size:16px;font-weight:850;color:var(--deep)}
+.rflow span{margin-top:4px;font-size:13.5px;line-height:1.6;color:var(--muted)}
+.rflow .x2{box-shadow:inset 0 0 0 2px var(--blue)}
+.rflow .x2 i{margin:10px 0;padding:6px 0;border-top:1px dashed rgba(46,91,214,.5);border-bottom:1px dashed rgba(46,91,214,.5);font-style:normal;font-size:12.5px;font-weight:800;text-align:center;color:var(--blue)}
+/* what was assumed, what the survey showed, and the figures behind it */
+.hyp{margin:48px 0 0;border-top:1px solid var(--line)}
+.hyp .tr{display:grid;grid-template-columns:28px minmax(0,1fr) minmax(0,1.1fr) minmax(0,1.25fr);gap:20px;align-items:start;padding:18px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.65;color:var(--muted)}
+.hyp .th{font-size:13px;font-weight:800;color:var(--text)}
+.hyp .th > :nth-child(3){color:var(--blue)}
+.hyp .tr > i{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--deep);font-style:normal;font-size:12.5px;font-weight:800;color:#fff}
+.hyp .tr > b{font-size:16px;font-weight:850;line-height:1.55;color:var(--deep)}
+.hyp .tr > b em{display:inline-block;margin-left:8px;padding:1px 9px;border-radius:999px;background:#FFF3D6;font-style:normal;font-size:12px;font-weight:800;color:#8A6200;vertical-align:1px}
+.hyp .tr > span:last-child{font-size:14px}
+/* a ranked list as horizontal bars */
+.bars{display:grid;gap:10px;max-width:860px;margin:28px 0 0;padding:0;list-style:none}
+.bars li{display:grid;grid-template-columns:150px minmax(0,1fr) 56px;align-items:center;gap:16px;font-size:15px;color:var(--text)}
+.bars i{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--blue),var(--blue)) no-repeat left/calc(var(--v) * 2.6%) 100%,#E6E9F0}
+.bars b{font-weight:800;font-variant-numeric:tabular-nums;color:var(--deep)}
+/* Kano: where each feature sits, beside what each number is */
+.kano{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:16px 48px;align-items:center;margin:48px 0 0;padding:28px clamp(18px,2.6vw,34px);border-radius:20px;background:var(--card);box-shadow:0 0 0 1px var(--line)}
+.kplot{display:block;width:100%;height:auto}
+.kplot .fr{fill:none;stroke:rgba(23,35,63,.3);stroke-width:1}
+.kplot .ql{font-size:12.5px;font-weight:800;fill:var(--muted)}
+.kplot .tk{font-size:11.5px;fill:var(--muted)}
+.kplot .ax{font-size:12px;font-weight:700;fill:var(--text)}
+.kplot .kp{fill:var(--deep)}
+.kplot .kn{font-size:12px;font-weight:800;fill:#fff}
+.klist{margin:0;padding:0;list-style:none;counter-reset:kl}
+.klist li{counter-increment:kl;display:grid;grid-template-columns:26px minmax(0,1fr);gap:2px 12px;padding:10px 0;border-top:1px solid var(--line)}
+.klist li:first-child{border-top:0}
+.klist li::before{content:counter(kl);grid-row:span 2;display:grid;place-items:center;width:24px;height:24px;margin-top:1px;border-radius:50%;background:var(--deep);font-size:12px;font-weight:800;color:#fff}
+.klist b{font-size:15.5px;font-weight:800;color:var(--text)}
+.klist span{font-size:14px;color:var(--muted)}
+.kano figcaption{grid-column:1/-1;padding-top:14px;border-top:1px solid var(--line);font-size:14.5px;color:var(--muted)}
+.crit.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.crit + .prose{margin-top:40px}
+@media (max-width:1100px){.tracks.three,.rflow{grid-template-columns:1fr}.rflow li + li::before{left:50%;top:-24px;transform:translateX(-50%) rotate(90deg)}.kano{grid-template-columns:1fr}.hyp .tr{grid-template-columns:28px minmax(0,1fr)}.hyp .tr > :nth-child(n+3){grid-column:2}.hyp .th > :nth-child(n+3){display:none}.crit.three{grid-template-columns:1fr}}
+@media (max-width:860px){.bars li{grid-template-columns:1fr 56px}.bars li span{grid-column:1/-1}.ccover.art.plain img{display:none}}
 /* research-to-service parts (AlphaCamp, usable by any case) */
 /* what I did on a team project: one panel under the summary, grouped by phase */
 .mine{margin-top:40px;padding:28px clamp(20px,2.6vw,34px) 30px;border-radius:20px;background:var(--card);box-shadow:0 0 0 1px var(--line)}
@@ -933,8 +992,128 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
   .csub::before{left:-10px}
   .csub > h3{font-size:24px}
 }
+
+/* problem boxes: an icon, a short label and one sentence each */
+.pboxes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:36px}
+.pboxes.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pbox{padding:24px 24px 26px;border-radius:16px;background:var(--card,#fff);box-shadow:0 0 0 1px var(--line)}
+.pbox svg{display:block;width:28px;height:28px;fill:none;stroke:var(--blue);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.pbox .k{display:block;margin-top:18px;font-size:13px;font-weight:800;color:var(--muted)}
+.pbox h4{margin-top:6px;font-size:18px;line-height:1.45;color:var(--text)}
+.pbox p{margin-top:10px;font-size:15px;line-height:1.8;color:var(--muted)}
+.principle.tight{margin-top:44px}
+@media (max-width:860px){.pboxes,.pboxes.two{grid-template-columns:1fr}}
+
+/* problem → answer rows: each answer sits beside the problem it solves */
+.vs{margin-top:36px;border-bottom:1px solid var(--line)}
+.vs .hd,.vs .row{display:grid;grid-template-columns:minmax(0,1fr) 56px minmax(0,1fr);align-items:start}
+.vs .hd{padding-bottom:14px;font-size:13px;font-weight:800;color:var(--muted)}
+.vs .hd span:last-child{grid-column:3;color:var(--blue)}
+.vs .row{padding:26px 0;border-top:1px solid var(--line)}
+.vs .pq{display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:16px}
+.vs .pq svg{width:28px;height:28px;fill:none;stroke:var(--muted);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.vs .k{display:block;font-size:13px;font-weight:800;color:var(--muted)}
+.vs h4{margin-top:4px;font-size:18px;line-height:1.45;color:var(--text)}
+.vs p{margin-top:8px;font-size:15px;line-height:1.8;color:var(--muted)}
+.vs .ar{justify-self:center;margin-top:26px;font-style:normal;font-size:18px;color:var(--blue)}
+.vs .pa{padding-left:22px;border-left:2px solid var(--blue)}
+.vs .pa .k{color:var(--blue)}
+/* three screens that change as the reader scrolls; the track gives the scroll distance, the player stays pinned */
+.ftrack{height:230vh;margin-top:48px}
+.fplay{position:sticky;top:104px;display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:44px;align-items:start}
+.fplay .tabs{display:grid;gap:8px}
+.fplay .tabs button{position:relative;padding:16px 0 14px;border:0;border-top:2px solid var(--line);background:none;text-align:left;font:inherit;color:var(--muted);cursor:pointer}
+.fplay .tabs b{display:block;font-size:13px;color:var(--muted)}
+.fplay .tabs span{display:block;margin-top:4px;font-size:17px;font-weight:700;color:var(--text)}
+.fplay .tabs small{display:block;margin-top:6px;font-size:14px;line-height:1.7}
+.fplay .tabs button::before{content:"";position:absolute;left:0;top:-2px;width:calc(var(--p,0)*100%);height:2px;background:var(--blue)}
+.fplay .tabs button[aria-selected="true"] b{color:var(--blue)}
+.fplay .tabs button[aria-selected="false"] span{color:var(--muted)}
+.fplay .stage{position:relative;width:min(100%,calc((100vh - 150px)*1280/1190));aspect-ratio:1280/1190;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 0 0 1px var(--line)}
+.fplay .stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .55s var(--ease)}
+.fplay .stage img.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.fplay .stage img{transition:none;transform:none}}
+@media (max-width:860px){.ftrack{height:auto;margin-top:36px}.fplay{position:static;grid-template-columns:1fr;gap:24px}.fplay .tabs button::before{display:none}.fplay .tabs button[aria-selected="false"] span{color:var(--text)}
+  .fplay .stage{width:100%;aspect-ratio:auto;display:grid;gap:16px;overflow:visible;background:none;box-shadow:none;border-radius:0}
+  .fplay .stage img{position:static;height:auto;opacity:1;transform:none;border-radius:12px;box-shadow:0 0 0 1px var(--line)}}
+@media (max-width:860px){.vs .hd{display:none}.vs .row{grid-template-columns:1fr;row-gap:16px}.vs .ar{display:none}}
+
+.pcard .k{display:block;margin-top:20px;font-size:13px;font-weight:800;color:var(--blue)}
+.pcard .k+h4{margin-top:4px}
+.ans{margin-top:12px;font-size:14px;line-height:1.7;color:var(--muted)}
+.ans b{color:var(--blue);font-weight:800}
+
+.pbox ul{margin-top:12px;padding-left:1.15em;font-size:15px;line-height:1.9;color:var(--muted)}
+.pbox ul li+li{margin-top:2px}
+/* three short facts in one row: a label and a few words each */
+.strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:20px;border-radius:14px;background:var(--card,#fff);box-shadow:0 0 0 1px var(--line);overflow:hidden}
+.strip>div{padding:18px 22px}
+.strip>div+div{border-left:1px solid var(--line)}
+.strip .k{display:block;font-size:13px;font-weight:800;color:var(--muted)}
+.strip b{display:block;margin-top:6px;font-size:16px;line-height:1.5;color:var(--text)}
+.strip>div[data-open] .k{color:var(--blue)}
+@media (max-width:860px){.strip{grid-template-columns:1fr}.strip>div+div{border-left:0;border-top:1px solid var(--line)}}
+
+h4.sub{margin-top:72px;font-size:22px;font-weight:850;line-height:1.4;color:var(--text)}
+.fplay .side h4{margin-bottom:22px;font-size:20px;font-weight:850;line-height:1.45;color:var(--text)}
+/* 情境＋共同限制：沿用頁面既有的細線欄位，不用色塊提示框 */
+.scn{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:72px;margin-top:28px;border-top:1px solid var(--line)}
+.scn section{position:relative;padding:22px 0 28px}
+.scn section + section::before{content:"";position:absolute;top:0;bottom:0;left:-36px;width:1px;background:var(--line)}
+.scn .k{display:block;font-size:13px;font-weight:800;color:var(--blue)}
+.scn h4{margin-top:6px;font-size:20px;line-height:1.45;color:var(--text)}
+.scn ul{margin:12px 0 0;padding:0;list-style:none;font-size:15px;line-height:1.9;color:var(--muted)}
+.scn .lim{grid-column:1/-1;display:grid;grid-template-columns:132px minmax(0,1fr);gap:24px;align-items:baseline;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.scn .lim .k{color:#C0392F}
+.scn .lim p{margin:0;font-size:19px;font-weight:750;line-height:1.6;color:var(--text)}
+.ctxbox + .intro2{margin-top:48px}
+h4.sub + .csub{margin-top:40px}
+/* 摘要的前後對照：兩列流程，用頁面自己的字與線，不用外部圖檔 */
+.ba{margin-top:48px;border-bottom:1px solid var(--line)}
+.ba .row{display:grid;grid-template-columns:minmax(0,310px) minmax(0,1fr);gap:40px;align-items:center;padding:44px 0 36px;border-top:1px solid var(--line)}
+.ba .hd .k{display:block;font-size:13px;font-weight:800;color:var(--muted)}
+.ba .row.after .hd .k{color:var(--blue)}
+.ba .hd b{display:block;margin-top:6px;font-size:19px;font-weight:850;line-height:1.5;color:var(--text)}
+.ba .fl{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:750;color:var(--deep)}
+.ba .n{flex:1;display:grid;place-items:center;min-height:54px;padding:8px 10px;border-radius:10px;background:var(--card,#fff);box-shadow:0 0 0 1px var(--line);text-align:center;line-height:1.35}
+.ba .n.hot{background:var(--deep);box-shadow:none;color:#fff}
+.ba .fl,.ba .grp{align-items:stretch}
+.ba .fl i{flex:none;align-self:center;font-style:normal;font-weight:900;color:var(--blue)}
+.ba .grp{position:relative;flex:2.2;display:flex;align-items:center;gap:12px}
+.ba .grp[data-note]::before{content:attr(data-note);position:absolute;left:0;right:0;bottom:calc(100% + 8px);height:22px;border:1px dashed #C0392F;border-bottom:0;border-radius:8px 8px 0 0;font-size:13px;font-weight:800;line-height:1;color:#C0392F;text-align:center}
+.ba .grp[data-note]::after{content:attr(data-note);position:absolute;left:50%;bottom:calc(100% + 21px);transform:translateX(-50%);padding:0 10px;background:var(--sand);font-size:13px;font-weight:800;line-height:18px;color:#C0392F;white-space:nowrap}
+.ba .grp[data-note]::before{color:transparent}
+.ba .grp[data-note] i{color:#C0392F}
+@media (max-width:860px){
+  .ba .row{grid-template-columns:1fr;gap:26px;padding:32px 0 28px}
+  .ba .fl,.ba .grp{flex-direction:column;align-items:stretch;gap:6px}
+  .ba .n{min-height:46px}
+  .ba .fl i{align-self:center;transform:rotate(90deg)}
+  .ba .grp{flex:none}
+  .ba .grp[data-note]{padding:30px 10px 10px;border:1px dashed #C0392F;border-radius:10px}
+  .ba .grp[data-note]::before{display:none}
+  .ba .grp[data-note]::after{left:12px;top:8px;bottom:auto;transform:none;padding:0;background:none}
+}
+.vs a.pa{display:block}
+.vs a.pa:hover h4{color:var(--blue)}
+.chosen figure.mc{margin-top:28px}
+/* 五個頁面並排：欄位標籤對齊圖片內的五欄 */
+.flow + figure.pages{margin-top:28px}
+figure.pages .cols{counter-reset:pg;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));column-gap:1.308%;margin:0 0 12px;padding:0 1.501%;list-style:none}
+figure.pages .cols li{counter-increment:pg;font-size:15px;font-weight:800;line-height:1.4;color:var(--text)}
+figure.pages .cols li::before{content:"0" counter(pg);display:block;font-size:13px;color:var(--blue)}
+@media (max-width:860px){
+  .scn{grid-template-columns:1fr}.scn section + section{border-top:1px solid var(--line)}.scn section + section::before{display:none}.scn .lim{grid-template-columns:1fr;gap:6px}
+  figure.pages .cols li{font-size:11px}figure.pages .cols li::before{font-size:10px}
+}
+/* 四個客戶 */
+.clients.four{grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.client .src{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--blue)}
+.client .src:hover{text-decoration:underline;text-underline-offset:3px}
+@media (max-width:1100px){.clients.four{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:860px){.clients.four{grid-template-columns:1fr}}
 </style>
-<style>.dg{min-width:0;max-width:100%}.dg .r{min-width:0}.dg .n{min-width:0;white-space:normal;text-align:center;overflow-wrap:normal}.dg .c{min-width:0}.metric b small{display:block;margin-top:10px;font-size:16px;font-weight:500}</style><style>#s-model .dg{font-size:clamp(9px,3.45cqi,12.5px)}
+<script src="../../assets/v3/site.js" defer></script><style>.dg{min-width:0;max-width:100%}.dg .r{min-width:0}.dg .n{min-width:0;white-space:normal;text-align:center;overflow-wrap:normal}.dg .c{min-width:0}.metric b small{display:block;margin-top:10px;font-size:16px;font-weight:500}</style><style>#s-model .dg{font-size:clamp(9px,3.45cqi,12.5px)}
 #s-model .dg .n{overflow-wrap:anywhere;line-height:1.25;padding:.45em .35em}
 #s-model .dg .r > .n{flex:1 1 0}
 #s-model .dg .r > .n.hot{flex:1.5 1 0}
@@ -959,14 +1138,7 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
         <a role="menuitemradio" aria-checked="false" href="../../ja/work/insurance/" data-locale="ja">日本語</a>
       </div>
     </div>
-    <div class="resume-wrap">
-      <button class="pill resume-button" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="resume-menu">Resume <span aria-hidden="true">↓</span></button>
-      <div class="resume-menu" id="resume-menu" data-open="false">
-        <a href="../../assets/v3/Timothy-Lau-Resume-EN.pdf" download>English resume</a>
-        <a href="../../assets/v3/Timothy-Lau-Resume-ZH.pdf" download>Chinese resume</a>
-      </div>
-    </div>
-  </nav>
+    <div class="resume-wrap"><button class="pill resume-button" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="resume-menu">Resume <span aria-hidden="true">↓</span></button><div class="resume-menu" id="resume-menu" data-open="false"><a href="../../assets/v3/Timothy-Lau-Resume-EN.pdf" download="">English resume</a><a href="../../assets/v3/Timothy-Lau-Resume-ZH.pdf" download="">Chinese resume</a></div></div></nav>
 </header>
 <div class="ask in" id="ask" data-dock="true" data-open="false">
   <div class="ask-panel" id="askpanel" role="dialog" aria-label="Quick Q&amp;A about Timothy">
@@ -992,7 +1164,7 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
       <div class="ccopy">
         <p class="cmeta">Case Study · InsurTech · B2B SaaS · 2024</p>
         <h1 class="ch1">Redefining the customization boundary<br>so every new client doesn’t mean starting over</h1>
-        <p class="clede">The team initially wanted a standard flow to speed up delivery. Through interviews and delivery reviews, I found the real bottleneck was deciding what should stay fixed and where flexibility was necessary. I created a delivery model based on templates and controlled modularity so requirements could converge faster and design and engineering could reuse existing work.</p>
+        <p class="clede">The team initially wanted a standard flow to speed up delivery. Through interviews and delivery reviews, I found the real bottleneck was deciding what should stay fixed and where flexibility was necessary. I created a delivery model based on templates and controlled modularity so requirements could converge faster and Design and Engineering could reuse existing work.</p>
         <dl class="facts">
           <div><dt>Role</dt><dd>Lead Product Designer</dd></div>
           <div><dt>Timeline</dt><dd>Nov–Dec 2024</dd></div>
@@ -1000,7 +1172,7 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
           <div><dt>Scope</dt><dd><span class="ph">Problem framing,</span> <span class="ph">delivery model,</span> <span class="ph">configuration boundaries,</span> <span class="ph">form and application-flow design</span></dd></div>
         </dl>
         <div class="kfig" id="kfig">
-          <div><b aria-label="3+ months reduced to about 1 month"><span class="n" data-to="3" data-suffix="+">3+</span><small>mo</small><i>→</i><small>~</small><span class="n" data-to="1">1</span><small>mo</small></b><span>Time from confirmed requirements to delivery for each new client</span><em>~67% shorter</em></div>
+          <div><b aria-label="3+ months reduced to about 1 month"><span class="n" data-to="3" data-suffix="+">3+</span><small>mo</small><i>→</i><small>~</small><span class="n" data-to="1">1</span><small>mo</small></b><span>Time from confirmed requirements to a first version, per new client</span><em>~67% shorter</em></div>
           <div><b aria-label="9 person-weeks reduced to 2.4"><span class="n" data-to="9">9</span><i>→</i><span class="n" data-to="2.4" data-dec="1">2.4</span><small>person-weeks</small></b><span>Engineering + Design effort required per client</span><em>~73% less</em></div>
         </div>
       </div>
@@ -1012,7 +1184,7 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
   <li><a href="#s-summary" data-sec="s-summary"><b>00</b>At a Glance</a></li>
   <li><a href="#s-bg" data-sec="s-bg"><b>01</b>Background</a></li>
   <li><a href="#s-decision" data-sec="s-decision"><b>02</b>Product &amp; delivery decisions</a></li>
-  <li><a href="#s-ix" data-sec="s-ix"><b>03</b>Interaction Decisions</a></li>
+  <li><a href="#s-ix" data-sec="s-ix"><b>03</b>Design decisions</a></li>
   <li><a href="#s-adopt" data-sec="s-adopt"><b>04</b>Real-World Adoption</a></li>
   <li><a href="#s-result" data-sec="s-result"><b>05</b>Outcome</a></li>
 </ol></nav>
@@ -1020,32 +1192,61 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
 <div class="csheet" id="csheet">
 <section class="csec" id="s-summary"><div class="cshell cin">
   <div class="prose rv"><span class="eb">At a Glance</span>
-    <h2>The problem was not simply too much customization,<br>but the absence of a clear definition of “what can change”<small>Without clear boundaries, Sales struggled to converge requirements;<br>Design and Engineering also could not reliably reuse existing work.</small></h2></div>
-  <figure class="mc rv"><img data-zoom alt="Before: open-ended requirements create repeated alignment and rework. After: a template defines the choice boundary before the team configures reusable modules within it." src="../../assets/Insurance/BeforeAfter_ENv4.svg" width="1672" height="680"><figcaption><span>Before: define scope and revise it engagement by engagement. After: use a template to establish the decision boundary, then address differences with reusable modules and accelerate delivery.</span><button class="zoom" type="button">View full image ↗</button></figcaption></figure>
+    <h2>Before, every client started from scratch.<br>After, they choose from a template.<small>The template defines what can be chosen;<br>reusable modules handle the differences.</small></h2></div>
+  <div class="ba rv" role="img" aria-label="Before: client needs went back and forth between Sales alignment and internal revisions many times before development and delivery. After: the client chooses from a template, the team configures modules, then development and delivery follow.">
+    <div class="row">
+      <div class="hd"><span class="k">Before</span><b>With no defined scope, requirements took many rounds to settle</b></div>
+      <div class="fl"><span class="n">Client need</span><i>→</i><span class="grp" data-note="Many rounds"><span class="n">Sales alignment</span><i>⇄</i><span class="n">Internal revisions</span></span><i>→</i><span class="n">Development</span><i>→</i><span class="n">Delivery</span></div>
+    </div>
+    <div class="row after">
+      <div class="hd"><span class="k">After</span><b>Choose and configure within the template's scope</b></div>
+      <div class="fl"><span class="n">Client need</span><i>→</i><span class="grp"><span class="n hot">Choose from template</span><i>→</i><span class="n hot">Configure modules</span></span><i>→</i><span class="n">Development</span><i>→</i><span class="n">Delivery</span></div>
+    </div>
+  </div>
 </div></section>
 
 <section class="csec" id="s-bg"><div class="cshell cin">
   <div class="prose rv"><span class="eb">01 · Background</span>
     <h2>Customization itself was not the bottleneck,<br>but customization without boundaries<small>Requirements were renegotiated, designs rebuilt, and Engineering re-estimated</small></h2>
 </div>
-  <div class="intro2 rv"><p>The platform had opened many adjustable elements to support different insurance products and brands, but had not defined what could change and what should remain shared. Each new client therefore required another round of scope definition, while Design and Engineering struggled to reuse existing work.</p>
-    <p>I interviewed Sales, Product, and Engineering and reviewed past alignment and delivery records. Three recurring problems emerged:</p></div>
+  <div class="intro2 rv"><p>The platform had opened many adjustable elements to support different insurance products and brands, but had not defined what could change and what should remain shared. Each new client therefore required another round of scope definition, while Design and Engineering struggled to reuse existing work.</p></div>
+  <div class="ctxbox rv"><b>The first client project, running in parallel</b><p>At the same time, the insurance broker Marsh was preparing to launch motor insurance. The schedule was tight: one month to make the decisions and present a first version to Marsh. So two things had to happen at once: shaping a reusable framework and applying it directly to the Marsh project. Marsh became the first client to adopt it.</p></div>
+  <div class="intro2 rv"><p>I interviewed Sales, Product, and Engineering and reviewed past alignment and delivery records. Three recurring problems emerged:</p></div>
   <div class="trio">
-    <article class="pcard rv"><img alt="Clients and Sales repeatedly aligning because they lack a concrete template" loading="lazy" src="../../assets/Insurance/01SalesAndClients.webp" width="1448" height="1086"><div class="bd"><h4>No shared starting point</h4><p>Without a shared template, clients struggled to articulate requirements and Sales had to repeatedly confirm the direction.</p></div></article>
-    <article class="pcard rv" style="--d:.08s"><img alt="A highly flexible product without a clear customization boundary" loading="lazy" src="../../assets/Insurance/HighFlexible.webp" width="1448" height="1086"><div class="bd"><h4>No clear customization boundary</h4><p>Without a defined configuration boundary, the team could not quickly tell what was reusable and what required additional development.</p></div></article>
-    <article class="pcard rv" style="--d:.16s"><img alt="Design and Engineering repeating implementation for each new client" loading="lazy" src="../../assets/Insurance/01RepeatToDevelop.webp" width="1448" height="1086"><div class="bd"><h4>Delivery could not be reliably reused</h4><p>Every engagement required another design, estimate, and build, so prior work rarely became reusable delivery assets.</p></div></article>
+    <article class="pcard rv"><img alt="Clients and Sales repeatedly aligning because they lack a concrete template" loading="lazy" src="../../assets/Insurance/01SalesAndClients.webp" width="1448" height="1086"><div class="bd"><span class="k">Problem 1</span><h4>No shared starting point</h4><p>Without a shared template, clients struggled to articulate requirements and Sales had to repeatedly confirm the direction.</p></div></article>
+    <article class="pcard rv" style="--d:.08s"><img alt="A highly flexible product without a clear customization boundary" loading="lazy" src="../../assets/Insurance/HighFlexible.webp" width="1448" height="1086"><div class="bd"><span class="k">Problem 2</span><h4>No clear customization boundary</h4><p>Without a defined configuration boundary, the team could not quickly tell what was reusable and what required additional development.</p></div></article>
+    <article class="pcard rv" style="--d:.16s"><img alt="Design and Engineering repeating implementation for each new client" loading="lazy" src="../../assets/Insurance/01RepeatToDevelop.webp" width="1448" height="1086"><div class="bd"><span class="k">Problem 3</span><h4>Delivery could not be reliably reused</h4><p>Every engagement required another design, estimate, and build, so prior work rarely became reusable delivery assets.</p></div></article>
   </div>
 </div></section>
 
 <section class="csec" id="s-decision"><div class="cshell cin">
   <div class="prose rv"><span class="eb">02 · Product &amp; Delivery Decisions</span>
-    <h2>I did not choose complete standardization.<br><span class="ph">I first defined</span> <span class="ph">where flexibility should stop.</span></h2>
-    <p>The team hoped a standard flow would shorten delivery, but interviews and delivery reviews showed the recurring issue was not insufficient standardization. The unanswered question was what should stay fixed and what could vary by client.</p>
-    <p>I split the problem into two decisions: choose the delivery model first, then define the template’s configuration boundary.</p></div>
+    <h2><span class="ph">Two decisions</span> <span class="ph">to answer these three problems</span></h2>
+    <p>With only one month, I decided how we would deliver first, then what clients could adjust. Together, these two decisions are what the rest of this page calls the framework. The table below maps the three problems to the two decisions.</p></div>
+  <div class="vs">
+    <div class="hd rv"><span>Problems from the background</span><span>Decision that answers it</span></div>
+    <div class="row rv">
+      <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M5 6h14v9H10l-5 4V6z"></path></svg><div><span class="k">Problem 1</span><h4>No shared starting point</h4><p>Clients could not say what they wanted, so Sales kept re-confirming the direction.</p></div></div>
+      <i class="ar" aria-hidden="true">→</i>
+      <div class="pa"><span class="k">Decision 1 · Delivery Model</span><h4>Use a template as the shared starting point</h4><p>Start with concrete screens and a defined set of choices, so requirements converge from options instead of a blank page.</p></div>
+    </div>
+    <div class="row rv" style="--d:0.06s">
+      <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2" stroke-dasharray="3 3"></rect></svg><div><span class="k">Problem 2</span><h4>No clear customization boundary</h4><p>When a client asked for a change, the team could not tell what could be reused as is and what needed extra development.</p></div></div>
+      <i class="ar" aria-hidden="true">→</i>
+      <div class="pa"><span class="k">Decision 2 · Configuration Boundary</span><h4>Sort what can change into three levels</h4><p>What can be swapped (brand colors, images), what can only be chosen from existing modules, and what cannot change (flow and layout). As soon as a client asks for a change, it is clear which level it belongs to and whether it needs extra development.</p></div>
+    </div>
+    <div class="row rv" style="--d:0.12s">
+      <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M17 4l3 3-3 3"></path><path d="M20 7H9a5 5 0 0 0-5 5"></path><path d="M7 20l-3-3 3-3"></path><path d="M4 17h11a5 5 0 0 0 5-5"></path></svg><div><span class="k">Problem 3</span><h4>Delivery could not be reliably reused</h4><p>Every new engagement was designed, estimated, and built again.</p></div></div>
+      <i class="ar" aria-hidden="true">→</i>
+      <div class="pa"><span class="k">Decision 1 + Decision 2</span><h4>Keep the core fixed; swap only a limited set of modules</h4><p>The core flow and components are shared, differences appear only in predefined positions, and finished work carries over.</p></div>
+    </div>
+  </div>
 
+  <h4 class="sub rv">The two decisions in detail</h4>
   <div class="csub" id="s-model">
     <span class="k rv">Decision 1 · Delivery Model</span>
-    <h3 class="rv">Keep necessary differences without restarting for every client</h3>
+    <h3 class="rv">Compare three options and choose the one achievable within the deadline</h3>
+    <p class="ans rv">Answers <b>Problem 1</b> (no shared starting point) and <b>Problem 3</b> (delivery could not be reliably reused).</p>
     <div class="opts">
       <article class="opt rv">
         <div class="viz"><div class="dg" aria-hidden="true">
@@ -1053,53 +1254,53 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
           <div class="r"><span class="n">Client B</span><i>→</i><span class="n">Design B</span><i>→</i><span class="n">Development B</span></div>
           <div class="r"><span class="n">Client C</span><i>→</i><span class="n">Design C</span><i>→</i><span class="n">Development C</span></div>
         </div></div>
-        <div class="bd"><div class="meta"><span>Option A</span><span class="st">Rejected</span></div><h4>Bespoke delivery</h4>
+        <div class="bd"><div class="meta"><span>Option A</span></div><h4>Bespoke delivery</h4>
           <dl><dt>Approach</dt><dd>Redefine pages, flows, and requirements for every new client, then deliver each engagement through Design and Engineering.</dd><dt>Benefit</dt><dd>Maximum flexibility for individual client needs.</dd><dt>Limitation</dt><dd>Requirements are difficult to converge; Design and Engineering restart for every engagement, and delivery time remains unpredictable.</dd></dl></div>
       </article>
       <article class="opt rv" style="--d:.08s">
         <div class="viz"><div class="dg" aria-hidden="true">
           <div class="r"><div class="c"><span class="n">Client A</span><span class="n">Client B</span><span class="n">Client C</span></div><i>→</i><span class="n wide">Same fixed flow</span><i>→</i><span class="n">Delivery</span></div>
         </div></div>
-        <div class="bd"><div class="meta"><span>Option B</span><span class="st">Not enough</span></div><h4>One standard flow</h4>
+        <div class="bd"><div class="meta"><span>Option B</span></div><h4>One standard flow</h4>
           <dl><dt>Approach</dt><dd>Require every client to use the same fixed pages and flow, reducing design and development effort through standardization.</dd><dt>Benefit</dt><dd>Fastest to deliver, estimate, and maintain.</dd><dt>Limitation</dt><dd>Cannot accommodate necessary differences across brands, products, and partnership models.</dd></dl></div>
       </article>
-      <article class="opt rv" data-status="chosen" style="--d:.16s">
+      <article class="opt rv" style="--d:.16s">
         <div class="viz"><div class="dg" aria-hidden="true">
           <div class="r"><span class="n">Client need</span><i>→</i><span class="n hot">Template boundary</span><i>→</i><div class="c"><span class="n">Module A</span><span class="n">Module B</span><span class="n">Module C</span></div><i>→</i><span class="n">Delivery</span></div>
         </div></div>
-        <div class="bd"><div class="meta"><span>Option C</span><span class="st">Chosen</span></div><h4>Template + controlled modularity</h4>
-          <dl><dt>Approach</dt><dd>Start from a baseline. The template defines the choice boundary, while predefined modules can be inserted or replaced at specific points in the template and purchase flow.</dd><dt>Benefit</dt><dd>Preserves the core structure and experience while supporting necessary brand, product, and partnership differences without rebuilding each engagement.</dd><dt>Limitation</dt><dd>Requires clear rules for configurable positions, available modules, and the core structures that cannot change.</dd></dl></div>
+        <div class="bd"><div class="meta"><span>Option C</span></div><h4>Template + controlled modularity</h4>
+          <dl><dt>Approach</dt><dd>Start from a baseline. The template defines the choice boundary, while predefined modules can be inserted or replaced at specific points in the template and purchase flow.</dd><dt>Benefit</dt><dd>Preserves the core structure and experience while supporting necessary brand, product, and partnership differences without rebuilding each engagement.</dd><dt>Limitation</dt><dd>Requires defining upfront which positions are configurable and which core structures cannot change. The set of modules also has to build up across projects, so there is little to choose from at first.</dd></dl></div>
       </article>
     </div>
 
     <section class="chosen rv" aria-label="Chosen Model">
       <div class="ch-l"><span class="lbl">Chosen Model</span>
       <h4>Template + controlled modularity</h4>
-      <p class="intro">Preserve the core experience through a baseline,<br>and turn only predictable differences into <b>bounded configuration</b>.</p></div>
+      <p class="intro">Preserve the core experience through a baseline,<br>and turn only predictable differences into <b>bounded configuration</b>.</p>
+      <p class="note2">Bespoke delivery could not be finished in a month. One standard flow could, but it could not meet Marsh's brand and product needs. This option was achievable within the deadline and reusable for later clients.</p></div>
       <div class="ch-r">
       <div class="eq"><div><b>Template</b><p>Defines the choice set so requirements no longer start from a blank page.</p></div><i aria-hidden="true">＋</i><div><b>Controlled modularity</b><p>Uses a baseline with predefined positions where limited options can be inserted, replaced, or enabled.</p></div></div>
+      <figure class="mc"><img data-zoom data-full="../../assets/images/original/insuranceProcess3.png" alt="Template landing page with a fixed section order and placeholder content, shown in three color themes" loading="lazy" src="../../assets/v3/insurance/template-themes.webp" width="1518" height="800"><figcaption><span><b>Template</b>The section order is fixed and the content starts as placeholder text, so clients choose from here instead of starting from a blank page. Shown: the same template in three color themes.</span><button class="zoom" type="button">View full size ↗</button></figcaption></figure>
       <div class="blk">
         <span class="lbl">Commercial Extension</span>
-        <p>Customization was not removed; it was tiered.</p>
+        <p>Customization is still available; it is simply split into three tiers.</p>
         <ol class="tiers3">
           <li><span class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></span><b>Base offering</b><span>Base template</span><small>Standard pricing</small></li>
           <li><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span><b>Module add-ons</b><span>Optional modules</span><small>Additional needs</small></li>
           <li><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>Full customization</b><span>Custom service</span><small>Needs beyond the existing configuration boundary</small></li>
         </ol>
       </div>
-      <div class="blk">
-        <span class="lbl">Decision in Practice</span>
-        <figure class="mc"><img data-zoom alt="One landing-page template adapted to three insurance brands" loading="lazy" src="../../assets/images/original/insuranceProcess3.webp" width="1518" height="1442" data-full="../../assets/images/original/insuranceProcess3.png"><figcaption><span>The same content structure supports different brands, giving Sales, Product, Design, and clients a shared screen for discussion.</span><button class="zoom" type="button">View full size ↗</button></figcaption></figure>
-      </div>
-      <div class="res"><span class="lbl">Result</span><b>~50% ↓</b><strong>Sales feedback: less time spent aligning requirements</strong><p>Conversations shifted from repeatedly defining scope to converging around concrete options.</p><small>This was not measured with precise time tracking.</small></div></div>
+      <div class="res"><span class="lbl">Result · Answers Problem 1</span><b>~50% ↓</b><strong>Sales feedback: less time spent aligning requirements</strong><p>Conversations shifted from repeatedly defining scope to converging around concrete options.</p><small>This was not measured with precise time tracking.</small></div></div>
     </section>
   </div>
 
   <div class="csub" id="s-boundary">
     <span class="k rv">Decision 2 · Configuration Boundary</span>
-    <h3 class="rv"><span class="ph">Then decide which differences should remain</span> <span class="ph">and what must stay fixed</span></h3>
-    <div class="prose rv"><p>Open too much and the team still redesigns case by case; open too little and the product cannot support necessary brand and business differences.</p>
-      <p>I inventoried the interface elements with Product and Engineering, then classified differences into three levels: configurable, bounded, and locked.</p></div>
+    <h3 class="rv"><span class="ph">Decide which customizations are worth keeping</span> <span class="ph">and which must stay fixed</span></h3>
+    <p class="ans rv">Answers <b>Problem 2</b> (no clear customization boundary) and gives <b>Problem 3</b> a clear rule for reuse.</p>
+    <div class="prose rv"><p>Open too much and the team still redesigns case by case; open too little and the product cannot support necessary brand and business differences.</p></div>
+    <h4 class="sub rv">Solution</h4>
+    <div class="prose rv"><p>I inventoried the interface elements with Product and Engineering, then classified differences into three levels: configurable, bounded configuration, and locked.</p></div>
     <div class="lvl rv"><b>Configuration Levels</b><span>More configuration flexibility</span><i></i><span>Increasing constraints</span></div>
     <div class="tiers rv">
       <section class="tier">
@@ -1108,65 +1309,185 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
       </section>
       <section class="tier">
         <div class="viz"><div class="dg" aria-hidden="true"><div class="r"><span class="n">Core</span><i>→</i><span class="n hot">Slot</span><i>→</i><span class="n">Core</span></div><div class="r"><span class="n">+ Module</span><span class="n">↔ Variant</span></div></div></div>
-        <div class="hd"><h4>Select predefined modules</h4><b class="lv">Bounded Configuration</b></div><p>Compose from designed modules and options; do not redesign them.</p><ul><li>Optional modules</li><li>Predefined variant</li><li>Insert content block</li><li>Enable existing module</li></ul>
+        <div class="hd"><h4>Select predefined modules</h4><b class="lv">bounded configuration</b></div><p>Styles and page formats that kept recurring across projects were turned into modules. Later clients choose from them instead of commissioning a redesign. Modules take time to build up; each project adds a few.</p><ul><li>Optional modules</li><li>Predefined variant</li><li>Insert content block</li><li>Enable existing module</li></ul>
       </section>
       <section class="tier">
         <div class="viz"><div class="dg" aria-hidden="true"><span class="n hot">Locked</span><div class="r"><span class="n">Layout</span><i>→</i><span class="n">Behavior</span><i>→</i><span class="n">Flow</span></div></div></div>
         <div class="hd"><h4>Keep the core architecture fixed</h4><b class="lv">Locked</b></div><p>The rules required for flow comprehension, interaction consistency, and delivery reuse remain shared.</p><ul><li>Information architecture</li><li>Layout and grid</li><li>Component behavior</li><li>Validation logic</li><li>Core flow</li></ul>
       </section>
     </div>
-    <div class="principle rv"><span class="lbl">Design Principle</span><strong>Open only the differences that preserve the core experience and can be reused reliably by the team.</strong><p>I led the template + controlled modularity direction and defined the configuration boundary with Product and Engineering.</p></div>
-    <h4 class="mini rv">In Practice</h4>
+    <p class="ans rv">I led this direction. Which level each item belongs to was decided together with Product and Engineering, item by item.</p>
+    <h4 class="sub rv">How it works in practice</h4>
+    <div class="prose rv"><p>We used Figma variables to mark what can be recolored: each variable maps to one interface role, and each brand has its own set of values. Switching the set updates every screen at once, with no page-by-page edits.</p>
+      <p>Once Sales receives a client's brand guidelines, a designer can apply the colors in about three minutes and show the client right away what still needs adjusting.</p></div>
     <div class="figs2">
-      <figure class="mc rv"><img data-zoom alt="One set of design tokens mapped to different insurance brand palettes" loading="lazy" src="../../assets/images/original/insuranceColorVariant.webp" width="1516" height="702" data-full="../../assets/images/original/insuranceColorVariant.png"><figcaption><span><b>Brand expression | Configurable</b>One token structure maps to different client brand palettes.</span><button class="zoom" type="button">View full size ↗</button></figcaption></figure>
-      <figure class="mc rv" style="--d:.08s"><img data-zoom alt="Shared insurance styles and form components" loading="lazy" src="../../assets/images/original/insuranceDesignSystem.webp" width="1528" height="1220" data-full="../../assets/images/original/insuranceDesignSystem.png"><figcaption><span><b>Core experience | Locked</b>Shared components keep the same structure, states, and validation behavior.</span><button class="zoom" type="button">View full size ↗</button></figcaption></figure>
+      <figure class="mc rv"><img data-zoom alt="Figma variables table: one set of variables with a column of values per brand" loading="lazy" src="../../assets/images/original/insuranceColorVariant.webp" width="1516" height="702" data-full="../../assets/images/original/insuranceColorVariant.png"><figcaption><span><b>Setup</b>One set of variables, one column of values per brand.</span><button class="zoom" type="button">View full size ↗</button></figcaption></figure>
+      <figure class="mc rv" style="--d:.08s"><img data-zoom data-full="../../assets/v3/insurance/brands-top-full.jpg" alt="Landing pages of three client brands built on the same layout" loading="lazy" src="../../assets/v3/insurance/brands-top.webp" width="2000" height="700"><figcaption><span><b>Result</b>The same layout with three brands applied.</span><button class="zoom" type="button">View full size ↗</button></figcaption></figure>
     </div>
-    <div class="res rv"><span class="lbl">Result</span><b>1 wk → 2 days</b><strong>New-client design adaptation time</strong><p>Once the boundary and shared rules were established, new clients no longer started from a blank design.</p></div>
+    <div class="res rv"><span class="lbl">Result · Answers Problems 2 and 3</span><b>1 wk → 2 days</b><strong>New-client design adaptation time</strong><p>Once the boundary and shared rules were established, new clients no longer started from a blank design.</p></div>
   </div>
 </div></section>
 
 <section class="csec" id="s-ix"><div class="cshell cin">
-  <div class="prose rv"><span class="eb">03 · Interaction Decisions</span>
-    <h2><span class="ph">Turning product decisions</span> <span class="ph">into the application experience</span></h2>
-    <p>Two interaction questions remained: how to keep mandatory regulatory information accessible without interrupting the application, and how to divide a complex form into clear tasks.</p></div>
+  <div class="prose rv"><span class="eb">03 · Design Decisions</span>
+    <h2><span class="ph">How the framework</span> <span class="ph">was applied to Marsh motor insurance</span></h2>
+    <p>When the template was applied to the first client, most of it worked as is. Only three areas needed new design.</p></div>
+  <div class="strip rv">
+    <div><span class="k">Reused as is</span><b>Landing page layout, flow structure</b></div>
+    <div><span class="k">Changed by configuration</span><b>Brand colors, images, plan content</b></div>
+    <div data-open><span class="k">Needed new design</span><b>Entry point, form structure, layout of the coverage page</b></div>
+  </div>
 
-  <div class="csub" id="s-disclosure">
-    <span class="k rv">Interaction Decision 1 · Regulatory Disclosure</span>
-    <h3 class="rv">Keep mandatory information in the flow instead of sending users away from the task</h3>
-    <div class="ctxbox rv"><b>Constraint</b><p>Insurance partners required regulatory content to be prominent, but full legal copy could overwhelm the primary application task.</p></div>
-    <div class="opts two">
-      <article class="opt rv" data-status="chosen"><div class="bd"><div class="meta"><span>Option A</span><span class="st">Chosen</span></div><h4>In-page FAQ / accordion</h4><p>Keeps required information accessible without interrupting the application flow.</p></div></article>
-      <article class="opt rv" style="--d:.08s"><div class="bd"><div class="meta"><span>Option B</span><span class="st">Rejected</span></div><h4>New page / modal</h4><p>Shows the full content, but removes users from the current context and can obstruct the main screen on mobile.</p></div></article>
+  <h4 class="sub rv">Marsh has two usage scenarios</h4>
+  <div class="prose rv"><p>Two kinds of people actually use it: car owners buying the insurance, and showroom salespeople who go through it with them.</p></div>
+  <div class="scn rv">
+    <section><span class="k">Scenario 1</span><h4>In the car showroom, with a salesperson alongside</h4><ul><li>The salesperson has to operate and explain at the same time</li><li>Car owners are impatient; a long flow puts them off</li><li>The process is often interrupted midway</li></ul></section>
+    <section><span class="k">Scenario 2</span><h4>At home, the car owner alone on a phone</h4><ul><li>They leave midway to look up information</li><li>They want to compare plans and talk it over with family</li><li>They worry a mistake cannot be corrected later</li></ul></section>
+    <div class="lim"><span class="k">Shared constraint</span><p>There are no accounts and data cannot be stored, so the application has to be completed in one sitting.</p></div>
+  </div>
+  <p class="note2 rv">Sources: interviews with colleagues, observed use, interviews with internal Sales, and feedback from the client.</p>
+
+  <h4 class="sub rv">Three design decisions for these two scenarios</h4>
+  <div class="vs">
+    <div class="hd rv"><span>Scenario and constraint</span><span>Design decision that answers it</span></div>
+    <div class="row rv">
+      <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M7 11V8a5 5 0 0 1 10 0v3"></path><rect x="5" y="11" width="14" height="9" rx="2"></rect></svg><div><span class="k">Scenarios 1 and 2</span><h4>They want to see plans first and have no patience for filling in details</h4><p>Car owners in the showroom are impatient and give up on long flows; at home they want to compare plans and discuss them with family first.</p></div></div>
+      <i class="ar" aria-hidden="true">→</i>
+      <a class="pa" href="#s-entry"><span class="k">Design Decision 1 · Entry Point</span><h4>Move plan comparison to the landing page</h4><p>Plans and starting premiums from each insurer are visible before any personal details are entered.</p></a>
     </div>
-    <figure class="mc rv"><img data-zoom alt="Close-up of the in-page FAQ and accordion states" loading="lazy" src="../../assets/images/original/insuranceModular.webp" width="766" height="756" data-full="../../assets/images/original/insuranceModular.png"><figcaption><span><b>FAQ / Accordion close-up</b>Required terms expand directly within the current application context. Open the image to view the full page.</span><button class="zoom" type="button">View full size ↗</button></figcaption></figure>
+    <div class="row rv" style="--d:0.06s">
+      <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l3 2"></path></svg><div><span class="k">Scenarios 1 and 2, shared constraint</span><h4>It must be finished in one sitting, yet the process keeps getting interrupted</h4><p>Salespeople operate and explain at once and are often interrupted; car owners on their own leave to look things up and worry about mistakes they cannot fix.</p></div></div>
+      <i class="ar" aria-hidden="true">→</i>
+      <a class="pa" href="#s-flow"><span class="k">Design Decision 2 · Form Structure</span><h4>Split into pages, one task per page</h4><p>A step indicator shows progress; the most demanding step comes first, and the last page allows review and edits.</p></a>
+    </div>
+    <div class="row rv" style="--d:0.12s">
+      <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h3"></path></svg><div><span class="k">Insurer requirement</span><h4>Every coverage item has to be listed</h4><p>This one is unrelated to the scenarios; it is a trade-off between a content requirement and development cost.</p></div></div>
+      <i class="ar" aria-hidden="true">→</i>
+      <a class="pa" href="#s-list"><span class="k">Design Decision 3 · Development Trade-off</span><h4>Change the coverage page to a list</h4><p>Each item is listed, and the layout matches the width of the other steps, adding no development cost.</p></a>
+    </div>
+  </div>
+  <p class="ans rv">The three design decisions follow the user's path: landing page → the four steps after it → the coverage page.</p>
+
+  <div class="csub" id="s-entry">
+    <span class="k rv">Design Decision 1 · Entry Point</span>
+    <h3 class="rv">Move plan comparison to the landing page; personal details come later</h3>
+    <div class="ctxbox rv"><b>The situation at the time</b><p>Detailed coverage can only be calculated once the owner and vehicle registration details are available. Following that constraint literally, the flow would be: fill in everything first, then see coverage and compare plans from different insurers on one page. At the time the client had no view yet on the flow, and several technical problems had no known solution, so I proposed the approach.</p></div>
+    <div class="vs">
+      <div class="hd rv"><span>Problems if the constraint is followed literally</span><span>My proposal</span></div>
+      <div class="row rv">
+        <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M7 11V8a5 5 0 0 1 10 0v3"></path><rect x="5" y="11" width="14" height="9" rx="2"></rect></svg><div><span class="k">Problem</span><h4>Too much friction</h4><p>Users are asked for private information before they trust the site, and with no plan in sight they have no reason to continue.</p></div></div>
+        <i class="ar" aria-hidden="true">→</i>
+        <div class="pa"><span class="k">Solution</span><h4>Plans and premiums are visible on the landing page</h4><p>After choosing a few basics such as car model and age range, users see each insurer's base plans and starting premiums.</p></div>
+      </div>
+      <div class="row rv" style="--d:0.06s">
+        <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><circle cx="4" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="20" cy="12" r="2"></circle><path d="M6 12h4M14 12h4"></path></svg><div><span class="k">Problem</span><h4>A longer flow</h4><p>If users choose an insurer after filling in details, every additional insurer they compare lengthens the flow again.</p></div></div>
+        <i class="ar" aria-hidden="true">→</i>
+        <div class="pa"><span class="k">Solution</span><h4>Choose first, then get a quote</h4><p>Users pick an insurer and plan on the landing page before entering the quote, so the flow does not grow with each additional insurer.</p></div>
+      </div>
+      <div class="row rv" style="--d:0.12s">
+        <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M12 4 3 19h18L12 4z"></path><path d="M12 10v4M12 16.8v.2"></path></svg><div><span class="k">Problem</span><h4>Connection risk</h4><p>One page would have to connect to several insurers' quote systems at once, which makes loading slow, and a failure at any one of them would break the whole page.</p></div></div>
+        <i class="ar" aria-hidden="true">→</i>
+        <div class="pa"><span class="k">Solution</span><h4>Connect to one insurer at a time</h4><p>The quote system is called only for the insurer the user has chosen, so loading is faster and other insurers' issues have no effect.</p></div>
+      </div>
+    </div>
+    <div class="ftrack"><div class="fplay" data-fplay>
+      <div class="side"><h4>The three screens users see in order after the change</h4>
+      <div class="tabs" role="tablist" aria-label="Flow after the change">
+        <button type="button" role="tab" aria-selected="true"><b>01</b><span>Choose a plan on the landing page</span><small>Pick a few basics and compare each insurer's plans and starting premiums.</small></button>
+        <button type="button" role="tab" aria-selected="false"><b>02</b><span>Enter quote details</span><small>Only the owner and vehicle details needed to calculate the premium; the car model carries over from the landing page.</small></button>
+        <button type="button" role="tab" aria-selected="false"><b>03</b><span>Choose base coverage and add-ons</span><small>Review and add items one by one based on the quote, with the total premium shown below.</small></button>
+      </div></div>
+      <div class="stage">
+        <img class="on" alt="Landing page: four plans side by side with starting premiums" src="../../assets/v3/insurance/flow-1-landing.webp" width="1280" height="1190">
+        <img alt="Quote page: owner and vehicle registration details" loading="lazy" src="../../assets/v3/insurance/flow-2-quotation.webp" width="1280" height="1190">
+        <img alt="Coverage page: base coverage and add-ons listed item by item" loading="lazy" src="../../assets/v3/insurance/flow-3-plan.webp" width="1280" height="1190">
+      </div>
+    </div></div>
+    <p class="ans rv"><b>Back into the template</b>　Plan comparison on the landing page became a fixed section of the template; other clients only replace the plan content and prices.</p>
+    <figure class="mc rv"><img data-zoom alt="Landing pages of three other brands, each showing plans and starting premiums" loading="lazy" src="../../assets/v3/insurance/template-plans.webp" width="2000" height="375" data-full="../../assets/v3/insurance/template-plans.jpg"><figcaption><span><b>Other clients' landing pages</b>All three brands follow the same approach: plans and starting premiums come first.</span><button class="zoom" type="button">View full size ↗</button></figcaption></figure>
   </div>
 
   <div class="csub" id="s-flow">
-    <span class="k rv">Interaction Decision 2 · Application Flow</span>
-    <h3 class="rv">Split the long application so each step handles one primary task</h3>
-    <div class="trio">
-      <div class="ecard rv"><span class="k">Before</span><p>Identity details, plan selection, documents, and declarations appeared on one long page.</p></div>
-      <div class="ecard rv" style="--d:.08s"><span class="k">References &amp; interviews</span><p>I reviewed common insurance application flows and interviewed colleagues with car-insurance purchase experience to understand the actual journey.</p></div>
-      <div class="ecard rv" style="--d:.16s"><span class="k">Design Decisions</span><p>I grouped information by task—personal details, plan selection, documents and declarations, then review and payment—so each step focused on one primary task.</p></div>
+    <span class="k rv">Design Decision 2 · Form Structure</span>
+    <h3 class="rv">Split the flow into pages, one task per page</h3>
+    <div class="prose rv"><p>With plans moved to the landing page, the next question was how the remaining details should be filled in. I proposed a paged form instead of putting every field on one page.</p></div>
+    <div class="vs">
+      <div class="hd rv"><span>Problems with putting everything on one page</span><span>My proposal</span></div>
+      <div class="row rv">
+        <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h3"></path></svg><div><span class="k">Problem</span><h4>It looks too long from the start</h4><p>Data cannot be stored, so users have to finish in one sitting. With every field on one page the flow looks long, and users lose patience.</p></div></div>
+        <i class="ar" aria-hidden="true">→</i>
+        <div class="pa"><span class="k">Solution</span><h4>Four pages, one task each</h4><p>Quote details, base coverage and add-ons, contact details, and review each get a page. A step indicator at the top shows the current step; the last page is for checking, and users can go back to edit.</p></div>
+      </div>
+      <div class="row rv" style="--d:0.06s">
+        <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l3 2"></path></svg><div><span class="k">Problem</span><h4>Hard to focus on the task at hand</h4><p>In the showroom the salesperson operates and explains at once and is often interrupted. With everything crowded onto one page, it is hard to focus.</p></div></div>
+        <i class="ar" aria-hidden="true">→</i>
+        <div class="pa"><span class="k">Solution</span><h4>Only the current step is on screen</h4><p>The salesperson explains one thing per page, and after an interruption the step indicator shows where they left off.</p></div>
+      </div>
+      <div class="row rv" style="--d:0.12s">
+        <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M10 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4"></path><path d="M15 8l4 4-4 4M19 12H9"></path></svg><div><span class="k">Problem</span><h4>The most demanding step is where people give up</h4><p>Choosing base coverage and add-ons takes the longest, and users go back and forth comparing. Feedback from the client also pointed to this step as where users most often leave.</p></div></div>
+        <i class="ar" aria-hidden="true">→</i>
+        <div class="pa"><span class="k">Solution</span><h4>Put the most demanding step first</h4><p>Coverage selection comes right after the quote, while users still have patience. Contact details are left for later, so the form gets easier as it goes.</p></div>
+      </div>
     </div>
-    <div class="flow rv"><span class="lbl">After</span><strong>One primary task per step</strong>
-      <div class="steps"><span>Personal details</span><i>→</i><span>Plan selection</span><i>→</i><span>Documents and declarations</span><i>→</i><span>Review and payment</span></div></div>
-    <div class="figs2">
-      <figure class="mc rv"><img data-zoom alt="Task-centered insurance application interface" loading="lazy" src="../../assets/images/original/insuranceTaskCentered.webp" width="798" height="888" data-full="../../assets/images/original/insuranceTaskCentered.png"><figcaption><span>Each step shows only the fields and guidance required for the current task.</span><button class="zoom" type="button">View full size ↗</button></figcaption></figure>
-      <figure class="mc rv" style="--d:.08s"><img data-zoom alt="Multi-step insurance application flow" loading="lazy" src="../../assets/images/original/insuranceSplitFlow.webp" width="1542" height="652" data-full="../../assets/images/original/insuranceSplitFlow.png"><figcaption><span>Complete sequence: personal details, plan, documents and declarations, then review and payment.</span><button class="zoom" type="button">View full size ↗</button></figcaption></figure>
-    </div>
+    <div class="flow rv"><span class="lbl">Order after the change</span><strong>The most demanding step first, contact details last</strong></div>
+    <figure class="mc pages rv">
+      <ol class="cols" aria-hidden="true"><li>Choose a plan</li><li>Quote details</li><li>Coverage and add-ons</li><li>Contact details</li><li>Review</li></ol>
+      <img data-zoom data-full="../../assets/v3/insurance/flow-pages-full.jpg" alt="The five pages of Marsh motor insurance side by side: landing page with plan selection, quote details, coverage and add-ons, contact details, and review" loading="lazy" src="../../assets/v3/insurance/flow-pages.webp" width="2000" height="1317">
+      <figcaption><span><b>The five pages of Marsh motor insurance</b>After the landing page, the flow is split into four pages. Coverage and add-ons is the longest of the four and comes early; contact details and review are shorter and come last.</span><button class="zoom" type="button">View full size ↗</button></figcaption>
+    </figure>
+    <p class="ans rv"><b>Back into the template</b>　The paged form and this order became the default flow for later projects.</p>
   </div>
+
+  <div class="csub" id="s-list">
+    <span class="k rv">Design Decision 3 · Development Trade-off</span>
+    <h3 class="rv">Change the coverage page from cards to a list</h3>
+    <div class="prose rv"><p>Once the flow was paged, the coverage page carried the most content, and the original card layout could not hold it.</p></div>
+    <div class="vs">
+      <div class="hd rv"><span>Problems with the card version</span><span>After the change</span></div>
+      <div class="row rv">
+        <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h3"></path></svg><div><span class="k">Problem</span><h4>Coverage items do not fit</h4><p>The insurer required every item of base coverage and add-ons to be listed explicitly; a card only has room for a name and a price.</p></div></div>
+        <i class="ar" aria-hidden="true">→</i>
+        <div class="pa"><span class="k">Solution</span><h4>List every item</h4><p>One row per item of base coverage and add-ons, with both coverage and premium visible.</p></div>
+      </div>
+      <div class="row rv" style="--d:0.06s">
+        <div class="pq"><svg viewbox="0 0 24 24" aria-hidden="true"><circle cx="4" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="20" cy="12" r="2"></circle><path d="M6 12h4M14 12h4"></path></svg><div><span class="k">Problem</span><h4>Higher development cost</h4><p>Cards side by side need a wider page than the other steps, which means a separate layout to design and build.</p></div></div>
+        <i class="ar" aria-hidden="true">→</i>
+        <div class="pa"><span class="k">Solution</span><h4>Same width as the other steps</h4><p>A list at the same width reuses the existing layout and needs no extra development.</p></div>
+      </div>
+    </div>
+    <div class="figs2">
+      <figure class="mc rv"><img data-zoom alt="Earlier coverage selection screen with plans shown as cards side by side" loading="lazy" src="../../assets/v3/insurance/plan-cards-old.webp" width="594" height="838" data-full="../../assets/v3/insurance/plan-cards-old.png"><figcaption><span><b>Before · Cards side by side</b>Each card only fits a name and a price.</span><button class="zoom" type="button">View full size ↗</button></figcaption></figure>
+      <figure class="mc rv" style="--d:.08s"><img data-zoom data-full="../../assets/v3/insurance/plan-list-full.jpg" alt="Current coverage selection screen with base coverage and add-ons in a list at the same width as other steps" loading="lazy" src="../../assets/v3/insurance/plan-list-new.webp" width="1200" height="1692"><figcaption><span><b>After · Full-width list</b>Base coverage and add-ons are listed item by item, with the total premium fixed at the bottom.</span><button class="zoom" type="button">View full size ↗</button></figcaption></figure>
+    </div>
+    <p class="ans rv"><b>Back into the template</b>　The list-style coverage page replaced the cards and became the default layout for later projects.</p>
+  </div>
+
+  <div class="principle rv"><span class="lbl">Result</span><strong>Marsh accepted the proposal, and after about a month of adjustments the motor insurance site went live.</strong><p>These three design decisions were also the first things added back to the template. Modules build up project by project and were not complete at the start; once added, later clients do not have to make the same decisions again.</p></div>
+  <script>
+  document.querySelectorAll('[data-fplay]').forEach(p=>{
+    const track=p.parentElement,tabs=[...p.querySelectorAll('.tabs button')],imgs=[...p.querySelectorAll('.stage img')],n=imgs.length,mq=matchMedia('(max-width:860px)');
+    let cur=-1;
+    const show=i=>{if(i===cur)return;cur=i;tabs.forEach((b,k)=>b.setAttribute('aria-selected',k===i));imgs.forEach((m,k)=>m.classList.toggle('on',k===i))};
+    const geo=()=>{const r=track.getBoundingClientRect();return {top:r.top,pin:parseFloat(getComputedStyle(p).top)||0,span:Math.max(r.height-p.offsetHeight,1)}};
+    const upd=()=>{if(mq.matches)return;const g=geo(),pr=Math.min(Math.max((g.pin-g.top)/g.span,0),.9999),i=Math.floor(pr*n);
+      show(i);tabs.forEach((b,k)=>b.style.setProperty('--p',k<i?1:k>i?0:pr*n-i))};
+    addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);
+    tabs.forEach((b,k)=>b.addEventListener('click',()=>{if(mq.matches)return;const g=geo();scrollTo({top:scrollY+g.top-g.pin+g.span*(k+.05)/n,behavior:'smooth'})}));
+    show(0);upd();
+  });
+  </script>
 </div></section>
 
 <section class="csec" id="s-adopt"><div class="cshell cin">
   <div class="prose rv"><span class="eb">04 · Adoption</span>
-    <h2><span class="ph">One framework,</span> <span class="ph">three ongoing enterprise engagements</span></h2>
-    <p>The framework is being applied across three ongoing enterprise engagements. Each adapts brand and plan content within the defined configuration boundary while keeping the core flow and components unchanged.</p></div>
+    <h2><span class="ph">One framework,</span> <span class="ph">four enterprise engagements now live</span></h2>
+    <p>The framework has been used in four enterprise engagements, all of which are live. Each adapts brand and plan content within the defined configuration boundary, while the core flow and components stay the same.</p></div>
   <figure class="mc rv"><img data-zoom alt="Insurance framework applied across application, plan, and operations screens" loading="lazy" src="../../assets/images/original/insuranceCaseStudies.webp" width="1526" height="790" data-full="../../assets/images/original/insuranceCaseStudies.png"><figcaption><span>The framework covers landing pages, plans, disclosures, application forms, and insurance operations.</span><button class="zoom" type="button">View full size ↗</button></figcaption></figure>
-  <div class="clients">
-    <article class="client rv"><img alt="Marsh Taiwan motor-insurance interface" loading="lazy" src="../../assets/images/original/insuranceMarsh.webp" width="1514" height="838"><div class="bd"><em>Ongoing</em><b>Marsh Taiwan · Motor Insurance</b></div></article>
-    <article class="client rv" style="--d:.08s"><img alt="Shin Kong Vietnam life-insurance interface" loading="lazy" src="../../assets/images/original/insuranceShinKong.webp" width="1516" height="852"><div class="bd"><em>Ongoing</em><b>Shin Kong Vietnam · Life Insurance</b></div></article>
-    <article class="client rv" style="--d:.16s"><img alt="Richmond digital insurance experience" loading="lazy" src="../../assets/images/original/insuranceRichmond.webp" width="1514" height="838"><div class="bd"><em>Ongoing</em><b>Richmond · Digital Insurance Experience</b></div></article>
+  <div class="clients four">
+    <article class="client rv"><img alt="Marsh Taiwan motor-insurance interface" loading="lazy" src="../../assets/images/original/insuranceMarsh.webp" width="1514" height="838"><div class="bd"><em>Live</em><b>Marsh Taiwan · Motor Insurance</b></div></article>
+    <article class="client rv" style="--d:.06s"><img alt="Shin Kong Vietnam insurance product screen" loading="lazy" src="../../assets/images/original/insuranceShinKong.webp" width="1516" height="852"><div class="bd"><em>Live</em><b>Shin Kong Vietnam · Motor and other personal insurance</b><a class="src" href="https://fintech.global/2025/07/07/shin-kong-and-pvi-join-forces-to-advance-insurtech-in-vietnam/" target="_blank" rel="noopener">Press coverage ↗</a></div></article>
+    <article class="client rv" style="--d:.12s"><img alt="Richmond commercial insurance platform screen" loading="lazy" src="../../assets/images/original/insuranceRichmond.webp" width="1514" height="838"><div class="bd"><em>Live</em><b>Richmond · Commercial insurance</b><a class="src" href="https://technode.global/2025/08/05/aift-and-richmond-join-forces-to-drive-innovation-in-digital-insurance/" target="_blank" rel="noopener">Press coverage ↗</a></div></article>
+    <article class="client rv" style="--d:.18s"><img alt="Lexasure and QBE cyber insurance screen" loading="lazy" src="../../assets/v3/insurance/client-lexasure.webp" width="1514" height="838"><div class="bd"><em>Live</em><b>Lexasure (QBE) · Cyber insurance</b></div></article>
   </div>
 </div></section>
 
@@ -1176,14 +1497,14 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
     <p>These outcomes compare staffing and timelines before and after the framework—not behavioral outcomes from the later UX improvements.</p></div>
   <div class="metrics">
     <div class="metric rv"><small>Effort per engagement</small><b>9 → ~2.4<small>person-weeks</small></b><span>Engineering + Design effort required per client</span><em>~73% less</em></div>
-    <div class="metric rv" style="--d:.08s"><small>End-to-end delivery</small><b>3+ mo → ~1 mo</b><span>From confirmed requirements to completed delivery for each new client</span><em>~67% shorter</em></div>
+    <div class="metric rv" style="--d:.08s"><small>Delivery time</small><b>3+ mo → ~1 mo</b><span>From confirmed requirements to a first version, per new client</span><em>~67% shorter</em></div>
     <div class="metric rv" style="--d:.16s"><small>Design adaptation</small><b>1 wk → 2 days</b><span>Brand and content adaptation on the existing framework</span><em>No blank-slate redesign</em></div>
   </div>
   <div class="calc rv">
     <div><span>Before</span><strong>4 engineers × 2 weeks<br>+ 1 designer × 1 week<br>= 9 person-weeks</strong></div><i>→</i>
     <div><span>After</span><strong>2 engineers × 1 week<br>+ 1 designer × 2 days<br>≈ 2.4 person-weeks</strong></div>
   </div>
-  <p class="note2 rv">Engineering + Design effort compares staffing before and after the framework. The end-to-end delivery timeline comes from the same internal before/after comparison; design adaptation time compares actual designer working time. All three enterprise engagements are ongoing.</p>
+  <p class="note2 rv">Delivery time compares the same stretch of the process: from confirmed requirements to a first version, the old process took more than three months and the new one takes about one. In the old process that time went into design, communication between Sales and the client, and development. Person-weeks count only the time Engineering and Design actually spent, which is why they are shorter than calendar time. Design adaptation compares the designer's actual working time before and after. All four enterprise engagements are live.</p>
 </div></section>
 
 <section class="related" id="s-related"><div class="cshell cin">
@@ -1204,7 +1525,7 @@ details.src > figure.mc,details.src .figs3{margin:4px 0 24px}
     <span style="font-size:14px;color:var(--on-ink-muted)">nekoking2010@gmail.com</span>
     <a href="../../" style="font-size:14px;color:var(--on-ink-muted)">Return to homepage</a>
   </div>
-  <footer><span>© 2026 Timothy Lau.</span></footer>
+  <footer><span>© 2026 Timothy Lau.</span><a href="../../#about" class="totop">↑ About</a></footer>
 </section>
 </div>
 </main>
@@ -1261,10 +1582,10 @@ window.ASK_DOC={
       ],
       "a": [
         "・<b>Problem</b>: every new client required Sales, Design, and Engineering to redefine requirements, redesign, and estimate effort again",
-        "・<b>Key judgment</b>: the bottleneck was an undefined flexibility boundary, rather than insufficiently standardized processes",
-        "・<b>Decision</b>: choose template + controlled modularity over bespoke delivery or one fixed flow, with configurable, bounded, and locked elements",
-        "・<b>Outcomes</b>: delivery cycle 3+ months → ~1 month; effort per engagement 9 → ~2.4 person-weeks",
-        "・<b>Current use</b>: applied to three ongoing enterprise engagements"
+        "・<b>Key judgment</b>: what kept recurring was that no one had answered “what can change and what should stay fixed.”",
+        "・<b>Decision</b>: after comparing three options, I chose template + controlled modularity and classified interface elements into three levels: configurable, bounded configuration, and locked",
+        "・<b>Outcomes</b>: from confirmed requirements to a first version, 3+ months → ~1 month; effort per engagement, 9 → ~2.4 person-weeks",
+        "・<b>Current use</b>: used in four enterprise engagements, all live"
       ],
       "acts": [
         {
@@ -1354,11 +1675,11 @@ window.ASK_DOC={
         "custom delivery"
       ],
       "a": [
-        "The three options:",
+        "Comparison of the three options:",
         "・<b>Bespoke delivery</b> (not chosen): highest flexibility, but requirements are hard to converge and each engagement needs fresh effort and estimates",
         "・<b>One standard flow</b> (insufficient): fastest delivery and easiest estimation, but cannot accommodate necessary brand, product, and partnership differences",
-        "・<b>template + controlled modularity</b> (chosen): preserve the core structure and experience while supporting necessary variation",
-        "Customization remains available at three levels: base template, optional modules, and full customization. Sales reported roughly <b>50%</b> less alignment time; this was not precisely timed."
+        "・<b>Template + controlled modularity</b> (chosen): preserve the core structure and experience while supporting necessary variation",
+        "Customization remains available at three levels: base offering, module add-ons, and full customization. Sales reported roughly <b>50%</b> less alignment time; this was not precisely timed."
       ],
       "next": [
         "boundary",
@@ -1379,7 +1700,7 @@ window.ASK_DOC={
       "a": [
         "I inventoried UI elements and evaluated them with Product and Engineering, defining three levels:",
         "・<b>Configurable</b>: brand colors, typography, illustrations, and images",
-        "・<b>Bounded configuration</b>: combine predefined modules, variants, and content blocks",
+        "・<b>Bounded configuration</b>: select from modules, variants, and content blocks accumulated across projects",
         "・<b>Locked</b>: information architecture, layout/grid, component behavior, validation logic, and core flow",
         "With these rules in place, new-client design adaptation fell from <b>one week to two days</b>."
       ],
@@ -1389,20 +1710,26 @@ window.ASK_DOC={
       ]
     },
     "interaction": {
-      "q": "Which interaction decisions did you make?",
-      "n": "Interaction Design",
+      "q": "What design decisions did you make?",
+      "n": "Design Decisions",
       "sec": "ix",
       "k": [
-        "interaction",
-        "accordion",
-        "faq",
-        "regulatory",
-        "application flow"
+        "design decisions",
+        "entry point",
+        "landing page",
+        "quote",
+        "coverage",
+        "add-ons",
+        "showroom",
+        "paged form",
+        "list"
       ],
       "a": [
-        "I translated the product decisions into the application experience, addressing two core issues:",
-        "・<b>Regulatory information</b>: use an in-page FAQ/accordion so required information remains accessible without leaving the application flow",
-        "・<b>Application flow</b>: split the long page into four tasks: personal details → plan selection → documents/declarations → review/payment"
+        "Marsh was the first client to adopt the framework, so its motor-insurance project became the real-world test. The landing-page layout and flow structure reused the template. Three gaps required new decisions and later became template defaults. The same flow had to support two scenarios—guided use with a salesperson in a car showroom and independent use by the car owner at home—and, because data could not be stored, the application had to be completed in one sitting:",
+        "・<b>Entry point</b>: move plan comparison to the landing page. A few basic choices reveal each insurer’s plans and starting premiums; quoting begins only after a selection. No personal data is required upfront, and the system does not connect to multiple insurers at once",
+        "・<b>Form structure</b>: after the landing page, split the application into four pages, one task per page, so it can be finished in one sitting. The order is quote details → base coverage and add-ons → contact details → review, with the most demanding task first",
+        "・<b>Development trade-off</b>: change the coverage page from cards to a same-width list, showing every item without adding development cost",
+        "Marsh accepted the proposal, and the motor-insurance site subsequently went live."
       ],
       "next": [
         "adoption",
@@ -1415,15 +1742,17 @@ window.ASK_DOC={
       "sec": "adopt",
       "k": [
         "adoption",
-        "adopted",
-        "rollout",
+        "live",
         "in use",
-        "used",
         "clients",
-        "team use"
+        "marsh",
+        "shin kong",
+        "richmond",
+        "lexasure",
+        "qbe"
       ],
       "a": [
-        "The framework is being used in <b>three ongoing</b> enterprise engagements: Marsh Taiwan (motor insurance), Shin Kong Vietnam (life insurance), and Richmond (digital insurance experience).",
+        "The framework has been used in <b>four live</b> enterprise engagements: Marsh Taiwan (motor insurance), Shin Kong Vietnam (motor and other personal insurance), Richmond (commercial insurance), and Lexasure (cyber insurance).",
         "Each adapts brand and plan content within the defined boundary; core flows and components remain shared."
       ],
       "next": [
@@ -1446,7 +1775,7 @@ window.ASK_DOC={
         "sus"
       ],
       "a": [
-        "・<b>End-to-end delivery</b>: 3+ months → ~1 month (about 67% shorter)",
+        "・<b>Delivery time</b>: from confirmed requirements to a first version, 3+ months → ~1 month (about 67% shorter). This compares the same stretch of the process; the old flow spent that time on design, communication between Sales and the client, and development",
         "・<b>Effort per engagement</b>: 9 → ~2.4 person-weeks (about 73% less). Before: 4 engineers × 2 weeks + 1 designer × 1 week. After: 2 engineers × 1 week + 1 designer × 2 days",
         "・<b>Design adaptation</b>: 1 week → 2 days",
         "These compare staffing and timelines before and after the framework; they are not user-behavior outcomes."
@@ -1458,7 +1787,7 @@ window.ASK_DOC={
     }
   }
 };
-window.CASE_SECMAP={bg:'problem',decision:'decisions',model:'decisions',boundary:'boundary',ix:'interaction',disclosure:'interaction',flow:'interaction',adopt:'adoption',result:'results'};
+window.CASE_SECMAP={bg:'problem',decision:'decisions',model:'decisions',boundary:'boundary',ix:'interaction',entry:'interaction',list:'interaction',flow:'interaction',adopt:'adoption',result:'results'};
 
 /* header: compact glass pill once scrolled, tone follows the surface under it */
 const header=document.querySelector('header'),sheet=document.getElementById('csheet'),contact=document.getElementById('contact');
@@ -1489,7 +1818,7 @@ document.querySelectorAll('.csec,.csub').forEach(s=>ro.observe(s));
 /* hero figures count up once when they come into view (as on the live case page) */
 (function(){
   const box=document.getElementById('kfig'),nums=[...box.querySelectorAll('[data-to]')];
-  const fmt=(el,v)=>{el.textContent=v.toFixed(+(el.dataset.dec||0))+(el.dataset.suffix||'')};
+  const fmt=(el,v)=>{let t=v.toFixed(+(el.dataset.dec||0));if(el.dataset.sep)t=t.replace(/\B(?=(\d{3})+(?!\d))/g,',');el.textContent=t+(el.dataset.suffix||'')};
   if(reduce)return;
   nums.forEach(n=>fmt(n,0));
   const run=()=>nums.forEach(el=>{const to=+el.dataset.to;let t0=null;
@@ -1791,6 +2120,7 @@ addEventListener('keydown',e=>{if(viewer.dataset.open!=='true')return;if(e.key==
   },
   "energy": {
     "n": "NextDrive Energy Products",
+    "url": "nextdrive-proto.html",
     "k": [
       "energy",
       "meter",
@@ -2353,6 +2683,7 @@ addEventListener('keydown',e=>{if(viewer.dataset.open!=='true')return;if(e.key==
     const [e,es]=top(ENT,q),[f,fs]=top(FACET,q),[g,gs]=top(GEN,q),other=/other|all|overall|total/.test(q);
     if(DOC){
       const [d,ds]=top(DOC.items,q),here=!ctx||ctx===DOC.id||/this case|this project|this page/.test(q);
+      /* another experience is only followed when it is named more clearly than anything on this page */
       if(e&&e!==DOC.id&&es>ds)return f?e+'.'+f:e;
       if(!here&&f&&!other&&fs>=gs&&fs>=ds&&follow(q))return ctx+'.'+f;
       if(d&&ds>=gs)return tie(DOC.items,q,'d.')||'d.'+d;
